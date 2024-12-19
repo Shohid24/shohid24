@@ -2,21 +2,30 @@ import Link from "next/link";
 import MaxWidthWrapper from "./ui/MaxwidthWrapper";
 import ModeToggle from "./ui/ModeToggle";
 
+import { Inter } from "next/font/google";
+
+const interFont = Inter({ subsets: ["latin"] });
+
 const GITHUB_LINK = "https://github.com/Nusab19/shohid24";
 
 const Navbar = () => {
   return (
-    <MaxWidthWrapper className="mb-5 flex items-center justify-between border-b py-2">
+    <MaxWidthWrapper
+      className={`mb-5 flex items-center justify-between border-b py-2 ${interFont.className}`}
+    >
       <div>
-        <p className="text-2xl font-bold tracking-tight text-red-600/90 dark:text-red-500/90">
+        <Link
+          href="/"
+          className="text-2xl font-bold tracking-tight text-red-600/90 dark:text-red-500/90"
+        >
           Shohid24
-        </p>
+        </Link>
       </div>
       <div className="flex items-center justify-center gap-5">
         <Link href="/about">About</Link>
 
         <ModeToggle />
-        <Link href={GITHUB_LINK}>
+        <Link href={GITHUB_LINK} target="_blank">
           <svg
             className="h-8 w-8 fill-[#181717] dark:fill-white"
             viewBox="0 0 24 24"

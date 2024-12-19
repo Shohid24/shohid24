@@ -1,9 +1,13 @@
 import Link from "next/link";
 import MaxWidthWrapper from "./ui/MaxwidthWrapper";
+import { Inter } from "next/font/google";
+
+const interFont = Inter({ subsets: ["latin"] });
+
 
 const Footer = () => {
   return (
-    <MaxWidthWrapper className="my-10 border-t">
+    <MaxWidthWrapper className={`my-10 border-t ${interFont.className}`}>
       <p className="pt-6 text-center text-xl font-bold text-primary">
         &copy; {new Date().getFullYear()} Shohid24. All rights reserved.
       </p>

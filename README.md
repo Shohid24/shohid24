@@ -1,36 +1,39 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Shohid24
 
-## Getting Started
+An open-source website listing the martyrs of the July Student Movement 2024 in Bangladesh.
 
-First, run the development server:
+After the July Student Movement, numerous attempts were made to compile a list of students who were martyred during the protests. However, these lists were often closed-source, and the associated websites frequently became inaccessible.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## About This Repository
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+To solve this issue, I created **Shohid24**. Built as a static Next.js site, it ensures high availability and minimal chances of downtime. In the unlikely event that the website becomes unreachable, this repository will remain accessible.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Key Features
+- **Open Source**: Anyone can contribute to or verify the content of the repository.
+- **Static Site**: Built using Next.js, ensuring minimal downtime and high availability.
+- **Updatable Data**: Data is gathered from reliable sources, with the option for users to submit information about additional martyrs.
+- **Collaborative**: Contributions from the community help keep the repository current and comprehensive.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Why This Project?
 
-## Learn More
+The July Student Movement of 2024 was a significant moment in Bangladesh’s history. Students stood against systemic inequalities and sacrificed their lives for justice and equal opportunities. This repository aims to honor their memory and ensure that future generations remember their sacrifices.
 
-To learn more about Next.js, take a look at the following resources:
+## How to Contribute
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+1. **Submit a New Martyr**: If you have verified information about a martyr not listed on the website, you can contribute by submitting their details. [Learn how to submit a martyr](./CONTRIBUTING.md).
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+2. **Update Data**: Found incorrect information? Open an issue or submit a pull request with the correction.
 
-## Deploy on Vercel
+3. **Spread the Word**: Share this repository to ensure that the sacrifices of these heroes are not forgotten.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## The July Student Movement 2024
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+The July Student Movement began as a response to the reinstatement of a controversial quota system that reserved 30% of civil service jobs for descendants of Liberation War veterans. This policy led to nationwide protests, with students from Dhaka University at the forefront, demanding fairness and the abolition of discriminatory practices.
+
+The movement saw participation from students across Bangladesh and eventually led to significant political changes in the country. Sadly, many lives were lost during the protests due to violent crackdowns.
+
+## Let’s Not Forget
+
+This repository is more than just a list of names. It’s a tribute to the bravery and sacrifice of those who fought for justice and equality. Together, let us ensure their memories remain alive.
+
+Let’s unite to remember the heroes who gave their lives for their motherland. Let’s not forget them.

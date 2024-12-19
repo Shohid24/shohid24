@@ -1,14 +1,12 @@
+import { NuqsAdapter } from "nuqs/adapters/next/app";
 import ThemeProvider from "@/components/ui/ThemeProvider";
 import type { Metadata } from "next";
 import localFont from "next/font/local";
-import { Inter } from 'next/font/google'
-
 import "./globals.css";
 
 const myFont = localFont({
   src: "./../../public/fonts/Li Ador Noirrit Regular.ttf",
 });
-const interFont = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
   title: "Shohid24 - Martyrs of July Student Movement",
@@ -23,8 +21,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en,bn" suppressHydrationWarning>
+      <link rel="preload" as="image" href="/images/default.jpg" />
       <body
-        className={`${myFont.className} ${interFont.className} antialiased selection:bg-indigo-400 selection:text-gray-950 dark:selection:bg-indigo-800 dark:selection:text-gray-200`}
+        className={`${myFont.className} antialiased selection:bg-indigo-400 selection:text-gray-950 dark:selection:bg-indigo-800 dark:selection:text-gray-200`}
       >
         <ThemeProvider
           attribute="class"
@@ -32,7 +31,7 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          {children}
+          <NuqsAdapter>{children}</NuqsAdapter>
         </ThemeProvider>
       </body>
     </html>
