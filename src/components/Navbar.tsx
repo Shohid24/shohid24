@@ -11,7 +11,7 @@ const GITHUB_LINK = "https://github.com/Nusab19/shohid24";
 const Navbar = () => {
   return (
     <MaxWidthWrapper
-      className={`mb-5 flex items-center justify-between border-b py-2 ${interFont.className}`}
+      className={`flex items-center justify-between border-b py-2 ${interFont.className}`}
     >
       <div>
         <Link

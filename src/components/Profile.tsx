@@ -1,7 +1,5 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
 import Image from "next/image";
 import Link from "next/link";
-import ProfileSkeleton from "./ProfileSkeleton";
 import { Calendar } from "lucide-react";
 import type { Profile } from "@/lib/types";
 const Profile = ({
@@ -12,13 +10,6 @@ const Profile = ({
   martyrDate,
   imageUrl,
 }: Profile) => {
-  const variables = [name, profession, info, martyrDate];
-  const allUndefined = variables.every((v) => v === undefined);
-
-  if (allUndefined) {
-    return <ProfileSkeleton />;
-  }
-
   return (
     <div className="flex h-full w-40 flex-col items-center rounded-md border p-2.5 md:w-52">
       <div className="relative">
