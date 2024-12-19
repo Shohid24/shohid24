@@ -1,0 +1,53 @@
+import React from "react";
+import Link from "next/link";
+import { cn } from "@/lib/utils";
+import { buttonVariants } from "../ui/button";
+
+const Anchor = ({
+  children,
+  className,
+  raw = false,
+  href,
+  target,
+  title,
+}: {
+  children: React.ReactNode;
+  className?: string;
+  raw?: boolean;
+  href: string;
+  target?: string;
+  title?: string;
+}) => {
+  if (raw) {
+    return (
+      <a
+        href={href}
+        target={target}
+        title={title}
+        className={cn(
+          buttonVariants({ variant: "link" }),
+          "mx-1 px-1 lg:mx-2",
+          className,
+        )}
+      >
+        {children}
+      </a>
+    );
+  }
+  return (
+    <Link
+      href={href}
+      target={target}
+      title={title}
+      className={cn(
+        buttonVariants({ variant: "link" }),
+        "mx-1 px-0 focus:text-blue-500 dark:focus:text-blue-300 lg:mx-1 lg:px-1",
+        className,
+      )}
+    >
+      {children}
+    </Link>
+  );
+};
+
+export default Anchor;

@@ -1,10 +1,30 @@
+import { useEffect } from "react";
 import MaxWidthWrapper from "./ui/MaxwidthWrapper";
 import Image from "next/image";
+import { getFontClass } from "@/lib/fontLoader";
 
 const Banner = () => {
+  useEffect(() => {
+    const wrapper = document.getElementById("banner");
+    const isMobile = window.innerWidth < 768;
+    if (wrapper && isMobile) {
+      setTimeout(() => {
+        wrapper.classList.add("-translate-y-[130%]");
+        setTimeout(() => {
+          wrapper.style.display = "none";
+        }, 300);
+      }, 2000);
+    }
+  }, []);
+
   return (
-    <MaxWidthWrapper className="flex h-36 w-full items-center justify-center bg-muted/50 py-10 md:h-64 md:justify-between">
-      <q className="text-center text-lg font-bold leading-5 md:px-10 md:text-3xl md:leading-8 lg:px-28 lg:text-4xl lg:leading-[3rem]">
+    <MaxWidthWrapper
+      className="flex h-20 w-full items-center justify-center bg-muted/50 py-14 transition-all duration-300 ease-in-out md:h-64 md:justify-between"
+      id="banner"
+    >
+      <q
+        className={`text-center text-xl font-bold leading-5 md:px-10 md:text-3xl md:leading-8 lg:px-28 lg:text-4xl lg:leading-[3rem] ${getFontClass("bn")}`}
+      >
         তোমরা হয়তো যাইবা ভুলে
         <br />
         <span className="text-red-500 dark:text-red-400">

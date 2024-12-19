@@ -1,6 +1,10 @@
 import Link from "next/link";
+import Anchor from "./ui/Anchor";
 import MaxWidthWrapper from "./ui/MaxwidthWrapper";
 import ModeToggle from "./ui/ModeToggle";
+import ToggleLanguage from "./sub/ToggleLanguage";
+import { getTranslation } from "@/lib/translations";
+import { cn } from "@/lib/utils";
 
 const GITHUB_LINK = "https://github.com/Nusab19/shohid24";
 
@@ -11,6 +15,7 @@ const Navbar = ({
   lang: string;
   setLang: React.Dispatch<React.SetStateAction<string>>;
 }) => {
+  const translation = getTranslation(lang);
   return (
     <MaxWidthWrapper
       className={`flex items-center justify-between border-b py-2`}
@@ -18,14 +23,17 @@ const Navbar = ({
       <div>
         <Link
           href="/"
-          className="text-3xl font-bold tracking-tight text-red-600/90 dark:text-red-500/90"
+          className={cn(
+            "text-3xl font-bold tracking-tight text-red-600/90 dark:text-red-500/90",
+            translation.lang === "en" && "text-2xl",
+          )}
         >
-          শহীদ২৪
+          {translation.logoName}
         </Link>
       </div>
-      <div className="flex items-center justify-center gap-5">
-        <Link href="/about">{lang == "en" ? "About" : "সম্পর্কে"}</Link>
-
+      <div className="flex items-center justify-center gap-2 md:gap-5">
+        <Anchor href="/about">{translation.aboutName}</Anchor>
+        <ToggleLanguage lang={lang} setLang={setLang} />
         <ModeToggle />
         <Link href={GITHUB_LINK} target="_blank">
           <svg

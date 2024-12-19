@@ -18,7 +18,7 @@ const MaxWidthWrapper = ({
       )}
       id={id}
     >
-      {children||""}
+      {children || ""}
     </div>
   );
 };

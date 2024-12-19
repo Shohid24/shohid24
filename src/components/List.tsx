@@ -6,10 +6,19 @@ import Pagination from "./sub/Pagination";
 // import { DateConverter } from "@/lib/helpers/date";
 import DATA_BN from "../../public/shortData_bn.json";
 import DATA_EN from "../../public/shortData_en.json";
+import { SearchResults } from "@/lib/helpers/search";
 
 type ProfileData = (string | number)[];
 
-const List = ({ searchResult }: { searchResult: string[] }) => {
+const List = ({
+  searchResult,
+  lang,
+  query,
+}: {
+  searchResult: SearchResults;
+  lang: string;
+  query: string;
+}) => {
   const [wasFirstNill, setWasFirstNill] = useState(searchResult.length === 0);
   const [perPage, setPerPage] = useQueryState(
     "per",
@@ -27,27 +36,32 @@ const List = ({ searchResult }: { searchResult: string[] }) => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [searchResult]);
 
-  const actualData = DATA_BN;
-
-  if (searchResult.length > 0) {
+  const actualData = lang === "en" ? DATA_EN : DATA_BN;
+  console.log(`query: ${query}`);
+  if (query.trim().length > 0) {
+    if (searchResult.length == 0) {
+      return (
+        <div className="flex h-96 items-center justify-center">
+          <h1 className="text-2xl font-bold text-red-700">No results found</h1>
+        </div>
+      );
+    }
     return (
       <>
         <div className="grid grid-cols-[repeat(auto-fit,minmax(10rem,1fr))] place-items-center gap-y-2 md:grid-cols-[repeat(auto-fit,minmax(13rem,1fr))]">
           {searchResult
             .slice((currentPage - 1) * perPage, currentPage * perPage)
-            .map((id: string, index: number) => {
+            .map(({ item }, index) => {
               return (
                 <Profile
                   key={index}
-                  id={Number(id) + 1}
-                  name={String(actualData[Number(id)][1])}
-                  profession={String(actualData[Number(id)][2])}
-                  info={String(actualData[Number(id)][3])}
-                  martyrDate={String(actualData[Number(id)][4])}
+                  id={item.id}
+                  name={item.name[lang as "bn" | "en"]}
+                  profession={item.profession[lang as "bn" | "en"]}
+                  info={item.info[lang as "bn" | "en"]}
+                  martyrDate={item.date}
                   imageUrl={
-                    Number(actualData[Number(id)][5]) == 1
-                      ? `/photos/${id}.jpg`
-                      : "/default.jpg"
+                    item.hasImage ? `/photos/${item.id}.jpg` : "/default.jpg"
                   }
                 />
               );
@@ -92,7 +106,15 @@ const List = ({ searchResult }: { searchResult: string[] }) => {
   );
 };
 
-const SuspendedList = ({ searchResult }: { searchResult: string[] }) => (
+const SuspendedList = ({
+  searchResult,
+  lang,
+  query = "",
+}: {
+  searchResult: SearchResults;
+  lang: string;
+  query?: string;
+}) => (
   <Suspense
     fallback={
       <div className="grid grid-cols-[repeat(auto-fit,minmax(10rem,1fr))] place-items-center gap-y-2 md:grid-cols-[repeat(auto-fit,minmax(13rem,1fr))]">
@@ -102,7 +124,7 @@ const SuspendedList = ({ searchResult }: { searchResult: string[] }) => (
       </div>
     }
   >
-    <List searchResult={searchResult} />
+    <List searchResult={searchResult} lang={lang} query={query} />
   </Suspense>
 );
 
