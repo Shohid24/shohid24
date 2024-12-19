@@ -18,7 +18,6 @@ const Homepage = () => {
     parseAsInteger.withDefault(1),
   );
 
-  console.log(DATA[95]);
   return (
     <>
       <div className="grid grid-cols-[repeat(auto-fit,minmax(10rem,1fr))] place-items-center gap-y-2 md:grid-cols-[repeat(auto-fit,minmax(13rem,1fr))]">
