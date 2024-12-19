@@ -2,6 +2,87 @@
 @tailwind components;
 @tailwind utilities;
 
+@keyframes move-1 {
+  0% {
+    transform: translateX(-5%) translateY(3%);
+  }
+  50% {
+    transform: translateX(3%) translateY(-3%);
+  }
+  100% {
+    transform: translateX(-5%) translateY(3%);
+  }
+}
+
+@keyframes move-2 {
+  0% {
+    transform: translateX(-13%) translateY(3%);
+  }
+  50% {
+    transform: translateX(-7%) translateY(7%);
+  }
+  100% {
+    transform: translateX(-13%) translateY(3%);
+  }
+}
+
+@keyframes move-3 {
+  0% {
+    transform: translateX(55%) translateY(10%);
+  }
+  50% {
+    transform: translateX(45%) translateY(13%);
+  }
+  100% {
+    transform: translateX(55%) translateY(10%);
+  }
+}
+
+@keyframes move-4 {
+  0% {
+    transform: translateX(88%) translateY(5%);
+  }
+  50% {
+    transform: translateX(90%) translateY(10%);
+  }
+  100% {
+    transform: translateX(88%) translateY(5%);
+  }
+}
+
+@keyframes move-5 {
+  0% {
+    transform: translateX(0) translateY(0);
+  }
+  50% {
+    transform: translateX(3px) translateY(-7px);
+  }
+  100% {
+    transform: translateX(0) translateY(0);
+  }
+}
+
+.animate-image-move-1 {
+  animation: move-1 39s ease-in-out infinite forwards;
+}
+
+.animate-image-move-2 {
+  animation: move-2 33s ease-in-out infinite forwards;
+}
+
+.animate-image-move-3 {
+  animation: move-3 29s ease-in-out infinite forwards;
+}
+
+.animate-image-move-4 {
+  animation: move-4 17s ease-in-out infinite forwards;
+}
+
+.animate-image-move-5 {
+  animation: move-5 23s ease-in-out infinite forwards;
+}
+
+
 body {
   font-family:
     system-ui,

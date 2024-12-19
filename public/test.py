@@ -44,9 +44,13 @@ def generateJsonFile(content, lang="bn"):
             url = None
 
         if url and not os.path.exists(f"photos/{fileName}"):
-            with open(f"photos/{fileName}", "wb") as f:
-                f.write(ses.get(url).content)
-                print(f"{id:03}. {fileName}")
+            r = ses.get(url)
+            if r.status_code != 200:
+                print(f"Failed to download {url}")
+            else:
+                with open(f"photos/{fileName}", "wb") as f:
+                    f.write(r.content)
+                    print(f"{id:03}. {fileName}")
 
         data = {
             "id": id,

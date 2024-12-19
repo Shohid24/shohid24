@@ -1,4 +1,4 @@
-import React, { Suspense, useEffect } from "react";
+import React, { Suspense, useEffect, useState } from "react";
 import { parseAsInteger, useQueryState } from "nuqs";
 import Profile from "./Profile";
 import ProfileSkeleton from "./ProfileSkeleton";
@@ -10,6 +10,7 @@ import DATA_EN from "../../public/shortData_en.json";
 type ProfileData = (string | number)[];
 
 const List = ({ searchResult }: { searchResult: string[] }) => {
+  const [wasFirstNill, setWasFirstNill] = useState(searchResult.length === 0);
   const [perPage, setPerPage] = useQueryState(
     "per",
     parseAsInteger.withDefault(24),
@@ -19,12 +20,15 @@ const List = ({ searchResult }: { searchResult: string[] }) => {
     parseAsInteger.withDefault(1),
   );
   useEffect(() => {
-    setCurrentPage(1);
-  }, [searchResult, setCurrentPage]);
+    if (!wasFirstNill && searchResult.length > 0) {
+      setCurrentPage(1);
+      setWasFirstNill(false);
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [searchResult]);
 
   const actualData = DATA_BN;
 
-  
   if (searchResult.length > 0) {
     return (
       <>

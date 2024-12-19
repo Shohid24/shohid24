@@ -4,7 +4,13 @@ import ModeToggle from "./ui/ModeToggle";
 
 const GITHUB_LINK = "https://github.com/Nusab19/shohid24";
 
-const Navbar = () => {
+const Navbar = ({
+  lang,
+  setLang,
+}: {
+  lang: string;
+  setLang: React.Dispatch<React.SetStateAction<string>>;
+}) => {
   return (
     <MaxWidthWrapper
       className={`flex items-center justify-between border-b py-2`}
@@ -18,7 +24,7 @@ const Navbar = () => {
         </Link>
       </div>
       <div className="flex items-center justify-center gap-5">
-        <Link href="/about">About</Link>
+        <Link href="/about">{lang == "en" ? "About" : "সম্পর্কে"}</Link>
 
         <ModeToggle />
         <Link href={GITHUB_LINK} target="_blank">

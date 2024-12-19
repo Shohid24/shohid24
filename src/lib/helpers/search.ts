@@ -29,3 +29,6 @@ export function SearchPerson(query: string) {
 
   return ids;
 }
+
+
+export const totalMartyrs = DATA_BN.length;

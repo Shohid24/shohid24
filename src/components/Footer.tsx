@@ -4,7 +4,7 @@ import { Inter } from "next/font/google";
 
 const interFont = Inter({ subsets: ["latin"] });
 
-const Footer = () => {
+const Footer = ({ lang }: { lang: string }) => {
   return (
     <MaxWidthWrapper className={`my-10 border-t ${interFont.className}`}>
       <p className="pt-6 text-center text-lg font-bold text-primary md:text-xl">

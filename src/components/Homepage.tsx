@@ -40,7 +40,7 @@ const Homepage_Sus = () => {
     <main>
       <div className="m-3 flex flex-col items-center justify-between gap-2 border-b py-2 text-start md:flex-row">
         <p className="text-2xl font-bold md:text-3xl lg:text-4xl">
-          আন্দোলনে <span className="text-red-600">শহীদদের</span> তালিকা
+          আন্দোলনে <span className="text-red-600">শহীদদের</span> তালিকাঃ
         </p>
         <Input
           ref={queryRef}
@@ -56,7 +56,7 @@ const Homepage_Sus = () => {
   );
 };
 
-const Homepage = () => (
+const Homepage = ({lang}:{lang:string}) => (
   <Suspense
     fallback={
       <main>
