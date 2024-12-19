@@ -9,7 +9,7 @@ const myFont = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Shohid24 - Martyrs of July Student Movement", 
+  title: "Shohid24 - Martyrs of July Student Movement",
   description:
     "A list of students killed under the regime of Bangladesh's Prime Minister, Sheikh Hasina, accused of fascist practices.",
 };

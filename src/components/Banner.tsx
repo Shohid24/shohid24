@@ -4,10 +4,13 @@ import Image from "next/image";
 const Banner = () => {
   return (
     <MaxWidthWrapper className="flex h-36 w-full items-center justify-center bg-muted/50 py-10 md:h-64 md:justify-between">
-      <q className="text-center text-xl font-bold leading-7 md:px-10 md:text-3xl lg:px-28 lg:text-4xl lg:leading-[3rem]">
+      <q className="text-center text-lg font-bold leading-5 md:px-10 md:text-3xl md:leading-8 lg:px-28 lg:text-4xl lg:leading-[3rem]">
         তোমরা হয়তো যাইবা ভুলে
         <br />
-        <span className="text-red-500">খুনি <span className="text-red-600">হাসিনার</span></span> ইতিহাস,
+        <span className="text-red-500 dark:text-red-400">
+          খুনি <span className="text-red-600 dark:text-red-500">হাসিনার</span>
+        </span>{" "}
+        ইতিহাস,
         <br />
         সে মায়ে রাখবো মনে
         <br />
