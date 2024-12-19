@@ -101,13 +101,13 @@ const Pagination: React.FC<PaginationProps> = ({
               variant="outline"
               onClick={() => setCurrentPage(currentPage - 1)}
               disabled={currentPage === 1}
-              className="h-8 w-20 px-2 sm:min-w-[3rem] sm:px-3"
+              className="h-8 w-20 select-none px-2 sm:min-w-[3rem] sm:px-3"
             >
               <ChevronLeft className="h-4 w-4" />
               Prev
             </Button>
           </TooltipTrigger>
-          <TooltipContent className="bg-primary/85">
+          <TooltipContent className="hidden bg-primary/85 md:block">
             <kbd>Ctrl+&lt;</kbd>
           </TooltipContent>
         </Tooltip>
@@ -142,13 +142,13 @@ const Pagination: React.FC<PaginationProps> = ({
               variant="outline"
               onClick={() => setCurrentPage(currentPage + 1)}
               disabled={currentPage === totalPages}
-              className="h-8 w-20 px-2 sm:min-w-[3rem] sm:px-3"
+              className="h-8 w-20 select-none px-2 sm:min-w-[3rem] sm:px-3"
             >
               Next
               <ChevronRight className="h-4 w-4" />
             </Button>
           </TooltipTrigger>
-          <TooltipContent className="bg-primary/85">
+          <TooltipContent className="hidden bg-primary/85 md:block">
             <kbd>Ctrl+&gt;</kbd>
           </TooltipContent>
         </Tooltip>

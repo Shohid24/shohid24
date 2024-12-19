@@ -2,23 +2,19 @@ import Link from "next/link";
 import MaxWidthWrapper from "./ui/MaxwidthWrapper";
 import ModeToggle from "./ui/ModeToggle";
 
-import { Inter } from "next/font/google";
-
-const interFont = Inter({ subsets: ["latin"] });
-
 const GITHUB_LINK = "https://github.com/Nusab19/shohid24";
 
 const Navbar = () => {
   return (
     <MaxWidthWrapper
-      className={`flex items-center justify-between border-b py-2 ${interFont.className}`}
+      className={`flex items-center justify-between border-b py-2`}
     >
       <div>
         <Link
           href="/"
-          className="text-2xl font-bold tracking-tight text-red-600/90 dark:text-red-500/90"
+          className="text-3xl font-bold tracking-tight text-red-600/90 dark:text-red-500/90"
         >
-          Shohid24
+          শহীদ২৪
         </Link>
       </div>
       <div className="flex items-center justify-center gap-5">

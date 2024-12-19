@@ -4,11 +4,10 @@ import { Inter } from "next/font/google";
 
 const interFont = Inter({ subsets: ["latin"] });
 
-
 const Footer = () => {
   return (
     <MaxWidthWrapper className={`my-10 border-t ${interFont.className}`}>
-      <p className="pt-6 text-center text-xl font-bold text-primary">
+      <p className="pt-6 text-center text-lg font-bold text-primary md:text-xl">
         &copy; {new Date().getFullYear()} Shohid24. All rights reserved.
       </p>
       <p className="font-mono font-semibold tracking-tighter text-primary/70">
