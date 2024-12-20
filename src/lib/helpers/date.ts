@@ -84,9 +84,9 @@ export class DateConverter {
    * @param englishDate - Date string in English
    * @returns Date string in Bengali
    */
-  static toBengali(englishDate: string): string {
+  static toBengali(englishDate: string | number): string {
     // Replace English numerals with Bengali numerals
-    const bengaliNumerals = englishDate
+    const bengaliNumerals = String(englishDate)
       .split("")
       .map((char) => this.englishToBengaliNumerals[char] || char)
       .join("");

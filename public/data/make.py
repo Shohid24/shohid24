@@ -10,10 +10,55 @@ folder = "./../photos"
 # sort `en` by the date property. date is like: 16th July, 2024
 def getClearDate(date: str):
     d, m, y = date.split()
-    d = d[:-2]
+    d = d.replace("th", "").replace("st", "").replace("nd", "").replace("rd", "")
 
     return f"{d} {m} {y}"
 
+def bengaliToEnglishDate(date: str):
+    months = {
+        "জানুয়ারি": "January",
+        "ফেব্রুয়ারি": "February",
+        "মার্চ": "March",
+        "এপ্রিল": "April",
+        "মে": "May",
+        "জুন": "June",
+        "জুলাই": "July",
+        "আগস্ট": "August",
+        "সেপ্টেম্বর": "September",
+        "অক্টোবর": "October",
+        "নভেম্বর": "November",
+        "ডিসেম্বর": "December",
+    }
+
+    numbers = {
+        "০": "0",
+        "১": "1",
+        "২": "2",
+        "৩": "3",
+        "৪": "4",
+        "৫": "5",
+        "৬": "6",
+        "৭": "7",
+        "৮": "8",
+        "৯": "9",
+    }
+
+    for b, e in months.items():
+        date = date.replace(b, e)
+
+    for b, e in numbers.items():
+        date = date.replace(b, e)
+    return getClearDate(date)
+
+
+newEn = sorted(
+    en,
+    key=lambda x: datetime.datetime.strptime(getClearDate(x["date"]), "%d %B, %Y"),
+)
+newBn = sorted(
+    bn,
+    key=lambda x: datetime.datetime.strptime(bengaliToEnglishDate(x["date"]), "%d %B, %Y"),
+)
 
 def writeJsonFile(path: str, data: dict, **kw):
     with open(path, "w", encoding="utf-8") as f:
@@ -54,43 +99,7 @@ def makeShortData(data, lang):
     return shortData
 
 
-def renamePhotos():
-    newEn = sorted(
-        en,
-        key=lambda x: datetime.datetime.strptime(getClearDate(x["date"]), "%d %B, %Y"),
-    )
-    newBn = [bn[i["id"]] for i in newEn]
-
-    tempFolder = f"{folder}/temp"
-    os.makedirs(tempFolder, exist_ok=True)
-
-    for newID in range(len(newEn)):
-        newBn[newID]["id"] = newID
-        oldID = newEn[newID]["id"]
-        oldFilePath = f"{folder}/{oldID}.jpg"
-        tempFilePath = f"{tempFolder}/{oldID}.jpg"
-
-        if os.path.exists(oldFilePath):
-            os.rename(oldFilePath, tempFilePath)
-
-    for newID in range(len(newEn)):
-        newFilePath = f"{folder}/{newID}.jpg"
-        tempFilePath = f"{tempFolder}/{newID}.jpg"
-
-        if os.path.exists(tempFilePath):
-            os.rename(tempFilePath, newFilePath)
-
-        newEn[newID]["id"] = newID
-        newBn[newID]["id"] = newID
-
-    os.rmdir(tempFolder)
-
-    writeJsonFile("data_bn.json", newBn, indent=3)
-    writeJsonFile("data_en.json", newEn, indent=3)
-
-
 def dumpSearchableJson():
-    renamePhotos()
     enData = readJsonFile("shortData_en.json")
     bnData = readJsonFile("shortData_bn.json")
     finalData = []
@@ -121,6 +130,6 @@ def dumpSearchableJson():
 
 
 if __name__ == "__main__":
-    makeShortData(bn, "bn")
-    makeShortData(en, "en")
+    makeShortData(newBn, "bn")
+    makeShortData(newEn, "en")
     dumpSearchableJson()

@@ -1,5 +1,6 @@
 from bs4 import BeautifulSoup
 import json, requests, os
+from getID import getNthCombination
 
 
 ses = requests.Session()
@@ -26,8 +27,10 @@ def generateJsonFile(content, lang="bn"):
 
     allData = []
 
-    for id in range(0, len(them)):
-        profile: BeautifulSoup = them[id]
+    for index in range(0, len(them)):
+        profile: BeautifulSoup = them[index]
+
+        id = getNthCombination(index)
         name = profile.h3.text.strip()
         textInfo = profile.findAll("span")
         profession = sanitizeText(textInfo[0].text)
@@ -35,22 +38,26 @@ def generateJsonFile(content, lang="bn"):
         date = profile.find(
             "p", class_="text-sm text-gray-600 md:text-base"
         ).text.strip()
-        image = images[id]
+
+        # image
+        image = images[index]
         src = image["src"]
-        engName = src.split("/")[-1].split(".")[0].replace("-", " ").title()
         fileName = f"{id}.jpg"
+
         url = f"https://shohid.online/shohid/{src.split('/')[-1]}"
         if url.endswith("unknown-dead-body.jpg"):
             url = None
 
-        if url and not os.path.exists(f"photos/{fileName}"):
+        folder = "./../photos"
+
+        if url and not os.path.exists(f"{folder}/{fileName}"):
             r = ses.get(url)
             if r.status_code != 200:
                 print(f"Failed to download {url}")
             else:
-                with open(f"./../photos/{fileName}", "wb") as f:
+                with open(f"{folder}/{fileName}", "wb") as f:
                     f.write(r.content)
-                    print(f"{id:03}. {fileName}")
+                    print(f"{index}. {fileName}")
 
         data = {
             "id": id,
@@ -58,8 +65,7 @@ def generateJsonFile(content, lang="bn"):
             "profession": profession,
             "info": info,
             "date": date,
-            # "engName": engName,
-            "url": url,
+            "originalURL": url,
         }
 
         allData.append(data)

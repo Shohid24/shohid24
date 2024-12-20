@@ -5,6 +5,7 @@ import List from "./List";
 import { Input } from "./ui/input";
 import { parseAsString, useQueryState } from "nuqs";
 import type { Translation } from "@/lib/translations";
+import { DateConverter } from "@/lib/helpers/date";
 
 const Homepage_Sus = ({ translation }: { translation: Translation }) => {
   const [query, setQuery] = useQueryState(
@@ -35,13 +36,24 @@ const Homepage_Sus = ({ translation }: { translation: Translation }) => {
       enableOnFormTags: true,
     },
   );
+  useHotkeys(
+    "esc",
+    () => {
+      // blue the currently focused input
+      if (document.activeElement instanceof HTMLInputElement) {
+        document.activeElement.blur();
+      }
+    },
+    {
+      enableOnFormTags: true,
+    },
+  );
 
   return (
     <main>
       <div className="m-3 flex flex-col items-center justify-between gap-2 border-b py-2 text-start md:flex-row">
         <p className="text-xl font-semibold md:text-2xl lg:text-3xl">
           {translation.header}
-          <span className="ml-1 text-red-600">({translation.martyrCount})</span>
         </p>
         <Input
           ref={queryRef}
@@ -51,7 +63,47 @@ const Homepage_Sus = ({ translation }: { translation: Translation }) => {
           onChange={(e) => setQuery(e.target.value)}
         />
       </div>
-
+      <p
+        className={`-mt-1 mb-2 tracking-wide transition-all duration-100 md:text-lg ${query.length === 0 ? "scale-0" : ""}`}
+      >
+        {translation.lang === "en" ? (
+          <>
+            Found{" "}
+            <span className="inline-block w-8 font-bold text-red-700 dark:text-red-500">
+              {searchResult.length}
+            </span>{" "}
+            matching person
+          </>
+        ) : (
+          <>
+            <span className="inline-block w-8 font-bold text-red-700 dark:text-red-500">
+              {DateConverter.toBengali(searchResult.length)}
+            </span>{" "}
+            জন এর রেজাল্ট দেখানো হচ্ছে
+          </>
+        )}
+      </p>
+      <p
+        className={`-mt-9 mb-2.5 font-bold tracking-wide transition-all duration-100 md:text-lg ${query.length === 0 ? "" : "scale-0"}`}
+      >
+        {translation.lang == "en" ? (
+          <>
+            Out list currently has{" "}
+            <span className="inline-block w-8 font-bold text-red-700 dark:text-red-500">
+              {translation.martyrCount}
+            </span>{" "}
+            martyrs
+          </>
+        ) : (
+          <>
+            আমাদের তালিকায় বর্তমানে{" "}
+            <span className="inline-block w-8 font-bold text-red-700 dark:text-red-500">
+              {translation.martyrCount}
+            </span>{" "}
+            জন শহীদ রয়েছেন
+          </>
+        )}
+      </p>
       <List searchResult={searchResult} lang={translation.lang} query={query} />
     </main>
   );
@@ -65,7 +117,7 @@ const Homepage = ({ translation }: { translation: Translation }) => {
           <div className="m-3 flex flex-col items-center justify-between gap-2 border-b py-2 text-start md:flex-row">
             <h1 className="text-2xl font-semibold md:text-3xl lg:text-4xl">
               {translation.header}
-              <span className="ml-1 text-red-600">
+              <span className="ml-1 text-red-600 dark:text-red-200">
                 ({translation.martyrCount})
               </span>
             </h1>

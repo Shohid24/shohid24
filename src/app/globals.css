@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
+
 @keyframes move-1 {
   0% {
     transform: translateX(-5%) translateY(3%);

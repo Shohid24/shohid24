@@ -1,16 +1,22 @@
 import MaxWidthWrapper from "./ui/MaxwidthWrapper";
-import { Inter } from "next/font/google";
 import type { Translation } from "@/lib/translations";
-
-const interFont = Inter({ subsets: ["latin"] });
+import { getFontClass } from "@/lib/fontLoader";
+import { cn } from "@/lib/utils";
 
 const Footer = ({ translation }: { translation: Translation }) => {
   return (
-    <MaxWidthWrapper className={`my-10 border-t ${interFont.className}`}>
+    <MaxWidthWrapper
+      className={`my-10 border-t ${getFontClass(translation.lang)}`}
+    >
       <p className="pt-6 text-center text-lg font-bold text-primary md:text-xl">
         {translation.footerText}
       </p>
-      <p className="font-mono font-semibold tracking-tighter text-primary/70">
+      <p
+        className={cn(
+          "font-semibold tracking-wider text-primary/70",
+          translation.lang == "en" && "font-mono tracking-tighter",
+        )}
+      >
         {translation.maintainerText}
       </p>
     </MaxWidthWrapper>

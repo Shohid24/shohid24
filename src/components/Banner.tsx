@@ -39,35 +39,35 @@ const Banner = () => {
 
       <div className="z-10 hidden h-full w-96 scale-50 md:block md:scale-95 lg:scale-100">
         <Image
-          src="/photos/0.jpg"
+          src="/photos/aaa.jpg"
           alt="Martyr Abu Said"
           width={1}
           height={1}
           className="animate-image-move-1 absolute -left-5 -top-9 h-32 w-32 rounded-full"
         />
         <Image
-          src="/photos/9.jpg"
+          src="/photos/aaj.jpg"
           alt="Martyr Mir Mugdha"
           width={1}
           height={1}
           className="animate-image-move-2 absolute -bottom-3 -right-3 h-24 w-24 rounded-full"
         />
         <Image
-          src="/photos/2.jpg"
+          src="/photos/aac.jpg"
           alt="Martyr Wasim Akram"
           width={1}
           height={1}
           className="animate-image-move-3 absolute -bottom-7 -left-10 h-28 w-28 rounded-full"
         />
         <Image
-          src="/photos/8.jpg"
+          src="/photos/aai.jpg"
           alt="Martyr Farhan Faiyaz"
           width={1}
           height={1}
           className="animate-image-move-4 absolute h-36 w-36 rounded-full"
         />
         <Image
-          src="/photos/5.jpg"
+          src="/photos/aaf.jpg"
           alt="Martyr Tahmid Tamim"
           width={1}
           height={1}

@@ -10,7 +10,6 @@ const fuzzySearch = createFuzzySearch(searchableData, {
     item.info.bn,
     item.info.en,
     item.date,
-    String(item.id)
   ],
 });
 
@@ -19,10 +18,11 @@ export function SearchPerson(query: string) {
   return result;
 }
 
+export const MartyrList = searchableData;
 export const totalMartyrs = searchableData.length;
 
 export type SearchResults = FuzzyResult<{
-  id: number;
+  id: string;
   name: {
     bn: string;
     en: string;
@@ -38,3 +38,21 @@ export type SearchResults = FuzzyResult<{
   date: string;
   hasImage: number;
 }>[];
+
+export type MartyrType = {
+  id: string;
+  name: {
+    bn: string;
+    en: string;
+  };
+  profession: {
+    bn: string;
+    en: string;
+  };
+  info: {
+    bn: string;
+    en: string;
+  };
+  date: string;
+  hasImage: number;
+};

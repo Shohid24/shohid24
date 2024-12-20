@@ -3,24 +3,25 @@ import Link from "next/link";
 import { Calendar } from "lucide-react";
 import type { Profile } from "@/lib/types";
 const Profile = ({
-  id = 1,
+  id,
   name,
   profession,
   info,
   martyrDate,
-  imageUrl,
+  imageUrl = "",
+  index = 0,
 }: Profile) => {
   return (
-    <div className="flex h-full w-40 flex-col items-center rounded-md border p-1 md:p-2 md:w-52">
+    <div className="flex h-full w-40 flex-col items-center rounded-md border p-1 md:w-52 md:p-2">
       <div className="relative">
         <span className="absolute left-0 top-0 h-7 min-w-8 rounded-md bg-red-500 px-1 text-xl font-black text-gray-100">
-          {id}
+          {index + 1}
         </span>
         <Image
           priority
           src={imageUrl || ""}
           alt={name || "Unknown"}
-          key={imageUrl + String(id)} // unique key to instantly change the image when the src changes
+          key={imageUrl + id} // unique key to instantly change the image when the src changes
           width={1} // not needed
           height={1} // not needed
           className={`aspect-square w-52 rounded-md object-cover hover:cursor-pointer`}

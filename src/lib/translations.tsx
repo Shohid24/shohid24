@@ -13,7 +13,7 @@ export const ENGLISH = {
   martyrCount: String(totalMartyrs),
   header: (
     <>
-      List of <span className="text-red-600">martyrs</span> in the movement
+      List of <span className="text-red-600 dark:text-red-500">martyrs</span> in the movement:
     </>
   ),
   searchPlaceholder: "Search by name, institution or profession (ctrl+k)",
@@ -25,7 +25,7 @@ export const ENGLISH = {
       Maintained by{" "}
       <Link
         href="https://nusab19.pages.dev"
-        className="underline decoration-sky-600 underline-offset-2 transition-all duration-150 hover:text-primary"
+        className="px-1 underline decoration-sky-600 underline-offset-2 transition-all duration-150 hover:text-primary"
         target="_blank"
       >
         Nusab Taha
@@ -64,25 +64,26 @@ export const BANGLA = {
     "স্বৈরাচারী শাসক শেখ হাসিনার আমলে জুলাই গণঅভ্যুত্থানে শহীদ হওয়া ব্যক্তিদের তালিকা",
   aboutName: "আমাদের সম্পর্কে",
   submitButton: "শহীদের তথ্য যোগ করুন",
-  martyrCount: DateConverter.toBengali(String(totalMartyrs)),
+  martyrCount: DateConverter.toBengali(totalMartyrs),
   header: (
     <>
-      আন্দোলনে <span className="text-red-600">শহীদদের</span> তালিকা
+      আন্দোলনে <span className="text-red-600 dark:text-red-500">শহীদদের</span>{" "}
+      তালিকাঃ
     </>
   ),
   searchPlaceholder: "নাম, প্রতিষ্ঠান বা পেশা সার্চ করুন (ctrl+k)",
   footerText: (
-    <>
-      &copy; {DateConverter.toBengali(String(new Date().getFullYear()))} শহীদ২৪।
+    <span className="tracking-wide">
+      &copy; {DateConverter.toBengali(new Date().getFullYear())} শহীদ২৪ ।
       সর্বস্বত্ব সংরক্ষিত।
-    </>
+    </span>
   ),
   maintainerText: (
     <>
       রক্ষণাবেক্ষণে{" "}
       <Link
         href="https://nusab19.pages.dev"
-        className="underline decoration-sky-600 underline-offset-2 transition-all duration-150 hover:text-primary"
+        className="px-1 underline decoration-sky-600 underline-offset-4 transition-all duration-150 hover:text-primary"
         target="_blank"
       >
         নুসাব তাহা
