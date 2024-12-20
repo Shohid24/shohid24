@@ -37,7 +37,7 @@ const List = ({
     if (searchResult.length == 0) {
       return (
         <div className="flex h-52 items-center justify-center">
-          <h1 className="text-2xl font-bold md:text-4xl">No results found</h1>
+          <h2 className="text-2xl font-bold md:text-4xl">No results found</h2>
         </div>
       );
     }

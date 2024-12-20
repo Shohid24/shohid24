@@ -52,9 +52,9 @@ const Homepage_Sus = ({ translation }: { translation: Translation }) => {
   return (
     <main>
       <div className="m-3 flex flex-col items-center justify-between gap-2 border-b py-2 text-start md:flex-row">
-        <p className="text-xl font-semibold md:text-2xl lg:text-3xl">
+        <h1 className="text-xl font-semibold md:text-2xl lg:text-3xl">
           {translation.header}
-        </p>
+        </h1>
         <Input
           ref={queryRef}
           className={`w-full md:max-w-72 ${translation.lang == "en" && "tracking-tighter"}`}
@@ -115,11 +115,8 @@ const Homepage = ({ translation }: { translation: Translation }) => {
       fallback={
         <main>
           <div className="m-3 flex flex-col items-center justify-between gap-2 border-b py-2 text-start md:flex-row">
-            <h1 className="text-2xl font-semibold md:text-3xl lg:text-4xl">
+            <h1 className="text-xl font-semibold md:text-2xl lg:text-3xl">
               {translation.header}
-              <span className="ml-1 text-red-600 dark:text-red-200">
-                ({translation.martyrCount})
-              </span>
             </h1>
             <Input
               className="w-full md:max-w-64"
