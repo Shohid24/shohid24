@@ -5,7 +5,6 @@ import Head from "next/head";
 import MaxwidthWrapper from "@/components/ui/MaxwidthWrapper";
 import Navbar from "@/components/Navbar";
 import Banner from "@/components/Banner";
-import Hero from "@/components/Hero";
 import Homepage from "@/components/Homepage";
 import Footer from "@/components/Footer";
 
