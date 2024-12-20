@@ -4,8 +4,8 @@ import Profile from "./Profile";
 import ProfileSkeleton from "./ProfileSkeleton";
 import Pagination from "./sub/Pagination";
 // import { DateConverter } from "@/lib/helpers/date";
-import DATA_BN from "../../public/shortData_bn.json";
-import DATA_EN from "../../public/shortData_en.json";
+import DATA_BN from "../../public/data/shortData_bn.json";
+import DATA_EN from "../../public/data/shortData_en.json";
 import { SearchResults } from "@/lib/helpers/search";
 
 type ProfileData = (string | number)[];
@@ -53,7 +53,7 @@ const List = ({
             .map(({ item }, index) => {
               return (
                 <Profile
-                  key={index}
+                  key={item.id}
                   id={item.id}
                   name={item.name[lang as "bn" | "en"]}
                   profession={item.profession[lang as "bn" | "en"]}
