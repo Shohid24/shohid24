@@ -8,22 +8,12 @@ export const ENGLISH = {
   title: "Shohid24 - Martyrs of July Student Movement",
   description:
     "A list of students killed under the regime of Bangladesh's Prime Minister, Sheikh Hasina, accused of fascist practices.",
-  aboutName: "About",
+  aboutName: "About Us",
   submitButton: "Submit a Martyr",
-  martyrEstimate: (
-    <>
-      Number of martyrs <span className="text-red-600">1200+</span>
-    </>
-  ),
-  listedMartyrs: (
-    <>
-      Listed martyrs{" "}
-      <span className="font-bold text-sky-500">{totalMartyrs}</span>
-    </>
-  ),
+  martyrCount: String(totalMartyrs),
   header: (
     <>
-      List of <span className="text-red-600">martyrs</span> in the movement:
+      List of <span className="text-red-600">martyrs</span> in the movement
     </>
   ),
   searchPlaceholder: "Search by name, institution or profession (ctrl+k)",
@@ -72,25 +62,12 @@ export const BANGLA = {
   title: "শহীদ২৪ - জুলাই ছাত্র আন্দোলনের শহীদদের তালিকা",
   description:
     "স্বৈরাচারী শাসক শেখ হাসিনার আমলে জুলাই গণঅভ্যুত্থানে শহীদ হওয়া ব্যক্তিদের তালিকা",
-  aboutName: "সম্পর্কে",
+  aboutName: "আমাদের সম্পর্কে",
   submitButton: "শহীদের তথ্য যোগ করুন",
-  martyrEstimate: (
-    <>
-      শহীদদের সংখ্যা <span className="text-red-600">১২০০+</span>
-    </>
-  ),
-  listedMartyrs: (
-    <>
-      লিস্টে আছে{" "}
-      <span className="font-bold text-sky-600">
-        {DateConverter.toBengali(String(totalMartyrs))}
-      </span>{" "}
-      জন
-    </>
-  ),
+  martyrCount: DateConverter.toBengali(String(totalMartyrs)),
   header: (
     <>
-      আন্দোলনে <span className="text-red-600">শহীদদের</span> তালিকাঃ
+      আন্দোলনে <span className="text-red-600">শহীদদের</span> তালিকা
     </>
   ),
   searchPlaceholder: "নাম, প্রতিষ্ঠান বা পেশা সার্চ করুন (ctrl+k)",

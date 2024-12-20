@@ -37,7 +37,6 @@ const List = ({
   }, [searchResult]);
 
   const actualData = lang === "en" ? DATA_EN : DATA_BN;
-  console.log(`query: ${query}`);
   if (query.trim().length > 0) {
     if (searchResult.length == 0) {
       return (

@@ -4,18 +4,18 @@ import Image from "next/image";
 import { getFontClass } from "@/lib/fontLoader";
 
 const Banner = () => {
-  useEffect(() => {
-    const wrapper = document.getElementById("banner");
-    const isMobile = window.innerWidth < 768;
-    if (wrapper && isMobile) {
-      setTimeout(() => {
-        wrapper.classList.add("-translate-y-[130%]");
-        setTimeout(() => {
-          wrapper.style.display = "none";
-        }, 300);
-      }, 2000);
-    }
-  }, []);
+  // useEffect(() => {
+  //   const wrapper = document.getElementById("banner");
+  //   const isMobile = window.innerWidth < 768;
+  //   if (wrapper && isMobile) {
+  //     setTimeout(() => {
+  //       wrapper.classList.add("-translate-y-[130%]");
+  //       setTimeout(() => {
+  //         wrapper.style.display = "none";
+  //       }, 300);
+  //     }, 2000);
+  //   }
+  // }, []);
 
   return (
     <MaxWidthWrapper

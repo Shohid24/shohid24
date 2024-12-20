@@ -7,12 +7,9 @@ import { parseAsString, useQueryState } from "nuqs";
 import type { Translation } from "@/lib/translations";
 
 const Homepage_Sus = ({ translation }: { translation: Translation }) => {
-  const [isDesktop, setIsDesktop] = useState(false);
   const [query, setQuery] = useQueryState(
     "query",
-    parseAsString.withDefault("").withOptions({
-      // throttleMs: isDesktop ? 100 : 20000,
-    }),
+    parseAsString.withDefault(""),
   );
   const queryRef = useRef<HTMLInputElement | null>(null);
 
@@ -22,7 +19,6 @@ const Homepage_Sus = ({ translation }: { translation: Translation }) => {
   useEffect(() => {
     const res = SearchPerson(query);
     setSearchResult(res);
-    setIsDesktop(window.innerWidth > 768);
   }, [query]);
   useHotkeys(
     "mod+k",
@@ -43,8 +39,9 @@ const Homepage_Sus = ({ translation }: { translation: Translation }) => {
   return (
     <main>
       <div className="m-3 flex flex-col items-center justify-between gap-2 border-b py-2 text-start md:flex-row">
-        <p className="text-2xl font-semibold md:text-3xl lg:text-4xl">
+        <p className="text-xl font-semibold md:text-2xl lg:text-3xl">
           {translation.header}
+          <span className="ml-1 text-red-600">({translation.martyrCount})</span>
         </p>
         <Input
           ref={queryRef}
@@ -55,7 +52,7 @@ const Homepage_Sus = ({ translation }: { translation: Translation }) => {
         />
       </div>
 
-      <List searchResult={searchResult} lang={translation.lang} query={query}/>
+      <List searchResult={searchResult} lang={translation.lang} query={query} />
     </main>
   );
 };
@@ -68,6 +65,9 @@ const Homepage = ({ translation }: { translation: Translation }) => {
           <div className="m-3 flex flex-col items-center justify-between gap-2 border-b py-2 text-start md:flex-row">
             <h1 className="text-2xl font-semibold md:text-3xl lg:text-4xl">
               {translation.header}
+              <span className="ml-1 text-red-600">
+                ({translation.martyrCount})
+              </span>
             </h1>
             <Input
               className="w-full md:max-w-64"

@@ -1,0 +1,1 @@
+export const GITHUB_LINK = "https://github.com/Nusab19/shohid24";

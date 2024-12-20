@@ -11,7 +11,7 @@ const Profile = ({
   imageUrl,
 }: Profile) => {
   return (
-    <div className="flex h-full w-40 flex-col items-center rounded-md border p-2.5 md:w-52">
+    <div className="flex h-full w-40 flex-col items-center rounded-md border p-1 md:p-2 md:w-52">
       <div className="relative">
         <span className="absolute left-0 top-0 h-7 min-w-8 rounded-md bg-red-500 px-1 text-xl font-black text-gray-100">
           {id}

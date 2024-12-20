@@ -52,13 +52,13 @@
 
 @keyframes move-5 {
   0% {
-    transform: translateX(0) translateY(0);
+    transform: translateX(-13%) translateY(-33%);
   }
   50% {
-    transform: translateX(3px) translateY(-7px);
+    transform: translateX(-33%) translateY(-19%);
   }
   100% {
-    transform: translateX(0) translateY(0);
+    transform: translateX(-13%) translateY(-33%);
   }
 }
 
@@ -81,7 +81,6 @@
 .animate-image-move-5 {
   animation: move-5 23s ease-in-out infinite forwards;
 }
-
 
 body {
   font-family:

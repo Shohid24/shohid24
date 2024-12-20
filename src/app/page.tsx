@@ -12,6 +12,7 @@ import Footer from "@/components/Footer";
 import { parseAsString, useQueryState } from "nuqs";
 import { getTranslation } from "@/lib/translations";
 import { getFontClass } from "@/lib/fontLoader";
+import Link from "next/link";
 
 const GetComponent = ({
   lang,
@@ -34,7 +35,14 @@ const GetComponent = ({
             Site is still under development &rarr;
           </Link>
         </header> */}
-        <Hero translation={translation} />
+        <Link
+          href="https://forms.gle/efEVqZEHHR4fZuyG7"
+          className="rounded-full bg-red-600 p-2.5 text-lg font-bold text-gray-100 underline decoration-red-300 underline-offset-4 transition-colors duration-100 hover:bg-red-700 md:p-3 md:text-xl lg:text-2xl"
+          target="_blank"
+        >
+          {translation.submitButton}
+        </Link>
+        {/* <Hero translation={translation} /> */}
         <Homepage translation={translation} />
       </MaxwidthWrapper>
       <Footer translation={translation} />

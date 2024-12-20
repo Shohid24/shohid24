@@ -1,7 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
-import { buttonVariants } from "../ui/button";
+import { Button } from "../ui/button";
 
 const Anchor = ({
   children,
@@ -20,33 +20,32 @@ const Anchor = ({
 }) => {
   if (raw) {
     return (
-      <a
+      <Button asChild variant="link">
+        <a
+          href={href}
+          target={target}
+          title={title}
+          className={cn("mx-1 px-0", className)}
+        >
+          {children}
+        </a>
+      </Button>
+    );
+  }
+  return (
+    <Button asChild variant="link">
+      <Link
         href={href}
         target={target}
         title={title}
         className={cn(
-          buttonVariants({ variant: "link" }),
-          "mx-1 px-1 lg:mx-2",
+          "mx-1 px-0 underline decoration-primary underline-offset-2 transition-all duration-100 hover:decoration-blue-500 focus:text-blue-500 dark:focus:text-blue-300 lg:px-1",
           className,
         )}
       >
         {children}
-      </a>
-    );
-  }
-  return (
-    <Link
-      href={href}
-      target={target}
-      title={title}
-      className={cn(
-        buttonVariants({ variant: "link" }),
-        "mx-1 px-0 focus:text-blue-500 dark:focus:text-blue-300 lg:mx-1 lg:px-1",
-        className,
-      )}
-    >
-      {children}
-    </Link>
+      </Link>
+    </Button>
   );
 };
 

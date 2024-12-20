@@ -15,8 +15,7 @@ const fuzzySearch = createFuzzySearch(searchableData, {
 
 export function SearchPerson(query: string) {
   const result = fuzzySearch(query);
-  // console.log(result);
-  return result.slice(0, 50);
+  return result
 }
 
 export const totalMartyrs = searchableData.length;
