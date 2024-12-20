@@ -84,7 +84,7 @@ const Homepage_Sus = ({ translation }: { translation: Translation }) => {
         )}
       </p>
       <p
-        className={`-mt-9 mb-2.5 font-bold tracking-wide transition-all duration-100 md:text-lg ${query.length === 0 ? "" : "scale-0"}`}
+        className={`-mt-8 mb-2.5 font-bold tracking-wide transition-all duration-100 md:text-lg ${query.length === 0 ? "" : "scale-0"}`}
       >
         {translation.lang == "en" ? (
           <>
