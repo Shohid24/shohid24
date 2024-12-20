@@ -2,7 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-
 @keyframes move-1 {
   0% {
     transform: translateX(-5%) translateY(3%);
@@ -41,13 +40,13 @@
 
 @keyframes move-4 {
   0% {
-    transform: translateX(88%) translateY(5%);
+    transform: translateX(75%) translateY(-11%);
   }
   50% {
-    transform: translateX(90%) translateY(10%);
+    transform: translateX(81%) translateY(-5%);
   }
   100% {
-    transform: translateX(88%) translateY(5%);
+    transform: translateX(75%) translateY(-11%);
   }
 }
 

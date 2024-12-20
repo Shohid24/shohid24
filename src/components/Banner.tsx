@@ -64,7 +64,7 @@ const Banner = () => {
           alt="Martyr Farhan Faiyaz"
           width={1}
           height={1}
-          className="animate-image-move-4 absolute h-36 w-36 rounded-full"
+          className="animate-image-move-4 absolute z-50 h-[160px] w-[160px] rounded-full"
         />
         <Image
           src="/photos/aaf.jpg"
