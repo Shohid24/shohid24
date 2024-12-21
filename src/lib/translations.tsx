@@ -18,7 +18,7 @@ export const ENGLISH = {
   ),
   searchPlaceholder: "Search by name, institution or profession (ctrl+k)",
   footerText: (
-    <>&copy; {new Date().getFullYear()} Shohid24. All rights reserved.</>
+    <>&copy; {new Date().getFullYear()} Shohid24</>
   ),
   maintainerText: (
     <>
@@ -74,8 +74,7 @@ export const BANGLA = {
   searchPlaceholder: "নাম, প্রতিষ্ঠান বা পেশা সার্চ করুন (ctrl+k)",
   footerText: (
     <span className="tracking-wide">
-      &copy; {DateConverter.toBengali(new Date().getFullYear())} শহীদ২৪ ।
-      সর্বস্বত্ব সংরক্ষিত।
+      &copy; {DateConverter.toBengali(new Date().getFullYear())} শহীদ২৪
     </span>
   ),
   maintainerText: (
