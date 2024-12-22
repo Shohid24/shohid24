@@ -61,7 +61,7 @@ const ProfilePage = ({
           imageUrl={hasImage ? `/photos/${id}.jpg` : "/default.jpg"}
           lang={lang}
           showIndex={false}
-          className="flex-row border-none md:-mt-2 md:flex-col"
+          className="border-none md:-mt-2 grid-cols-[2fr_3fr] w-full md:grid-cols-1 max-h-52"
         />
         <div className="h-auto w-full flex-1 rounded-md border p-2 text-start text-lg font-bold md:text-xl">
           <section className="grid grid-cols-1 gap-2 md:grid-cols-[auto_auto] lg:grid-cols-[1fr_2fr_3fr]">

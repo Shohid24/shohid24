@@ -5,7 +5,6 @@ import { Calendar } from "lucide-react";
 import { ProfileType } from "@/lib/types";
 import { getTranslation } from "@/lib/translations";
 import { cn } from "@/lib/utils";
-import { toBengali } from "@/lib/helpers/date";
 
 interface ProfileWithClassName extends ProfileType {
   className?: string;
@@ -29,9 +28,9 @@ const Profile = ({
 
   const content = (
     <>
-      <div className="relative h-24 w-24 md:h-auto md:w-full">
+      <div className="relative w-fit">
         {showIndex && (
-          <span className="absolute left-0 top-0 h-6 min-w-6 rounded-md bg-red-500 px-1 text-lg font-black text-gray-100 md:h-7 md:min-w-8 md:text-xl">
+          <span className="absolute left-0 top-0 h-7 min-w-8 rounded-md bg-red-500 px-1 text-xl font-black text-gray-100">
             {index + 1}
           </span>
         )}
@@ -43,7 +42,7 @@ const Profile = ({
           width={208}
           height={208}
           className={cn(
-            "aspect-square w-full rounded-md object-cover",
+            "mt-2 aspect-square max-h-52 rounded-md object-cover",
             !noLink && "hover:cursor-pointer",
           )}
         />
@@ -51,7 +50,7 @@ const Profile = ({
           <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 opacity-0 transition-opacity duration-150 group-hover:opacity-100">
             <span
               className={cn(
-                "text-base font-semibold text-white md:text-xl",
+                "text-xl font-semibold text-white",
                 getFontClass(lang),
               )}
             >
@@ -61,7 +60,7 @@ const Profile = ({
         )}
       </div>
 
-      <div className="flex h-full w-full flex-col gap-1 px-2 text-start md:px-0">
+      <div className="flex h-full w-full flex-col gap-1 text-start">
         <p className="text-lg font-bold md:text-2xl">{name}</p>
         <p className="text-sm text-muted-foreground md:text-base">
           {profession || translation.unavailable}
@@ -71,18 +70,14 @@ const Profile = ({
         </p>
         <p className="mt-auto flex items-center justify-start gap-1 text-nowrap">
           <Calendar size={20} />
-          {lang == "en" ? martyrDate : toBengali(martyrDate)}
+          {martyrDate}
         </p>
       </div>
     </>
   );
 
   const sharedClassName = cn(
-    "grid h-full rounded-md border p-1 md:p-2",
-    // Base styles that work for both layouts
-    "w-full grid-cols-[auto_1fr] grid-rows-1 gap-2",
-    // Default column layout styles
-    "md:w-52 md:grid-cols-1 md:grid-rows-[auto_1fr]",
+    "grid h-full w-40 grid-cols-1 grid-rows-[auto_1fr] rounded-md border p-1 gap-2 mb-3 md:w-52 md:p-2",
     !noLink && "group",
     className,
   );
