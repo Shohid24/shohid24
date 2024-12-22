@@ -3,7 +3,7 @@
 - [ ] Use Transition for mobile pages for better search performance
 - [ ] Logo for website
 - [ ] Add the /about page
-- [ ] Add each profile page
+- [x] Add each profile page
 - [ ] compress the images for better performance
 - [ ] Add the /contact page
 - [ ] Add the "Other Martyrs" page

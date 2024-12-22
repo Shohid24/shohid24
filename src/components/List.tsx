@@ -58,7 +58,7 @@ const List = ({
                   imageUrl={
                     item.hasImage ? `/photos/${item.id}.jpg` : "/default.jpg"
                   }
-                  lang={lang as "bn"|"en"}
+                  lang={lang as "bn" | "en"}
                 />
               );
             })}
@@ -75,7 +75,7 @@ const List = ({
 
   return (
     <>
-      <div className="grid grid-cols-[repeat(auto-fit,minmax(10rem,1fr))] place-items-center gap-y-2 md:grid-cols-[repeat(auto-fit,minmax(13rem,1fr))]">
+      <div className="grid grid-cols-[repeat(auto-fit,minmax(150px,1fr))] place-items-center gap-y-2 md:grid-cols-[repeat(auto-fit,minmax(13rem,1fr))]">
         {MartyrList.slice(
           (currentPage - 1) * perPage,
           currentPage * perPage,
@@ -89,7 +89,7 @@ const List = ({
             info={item.info[lang as "bn" | "en"]}
             martyrDate={item.date}
             imageUrl={item.hasImage ? `/photos/${item.id}.jpg` : "/default.jpg"}
-            lang={lang as "bn"|"en"}
+            lang={lang as "bn" | "en"}
           />
         ))}
       </div>

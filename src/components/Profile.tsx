@@ -28,7 +28,7 @@ const Profile = ({
 
   const content = (
     <>
-      <div className="relative w-fit">
+      <div className="relative w-fit max-w-[150px] md:max-w-[190px]">
         {showIndex && (
           <span className="absolute left-0 top-0 h-7 min-w-8 rounded-md bg-red-500 px-1 text-xl font-black text-gray-100">
             {index + 1}
@@ -42,8 +42,8 @@ const Profile = ({
           width={208}
           height={208}
           className={cn(
-            "mt-2 aspect-square max-h-52 rounded-md object-cover",
-            !noLink && "hover:cursor-pointer",
+            "block aspect-square rounded-md object-cover max-w-[min(150px,100%)] md:max-w-[min(190px,100%)]",
+            noLink ? "hover:cursor-pointer" : "mt-0",
           )}
         />
         {!noLink && (
@@ -77,10 +77,12 @@ const Profile = ({
   );
 
   const sharedClassName = cn(
-    "grid h-full w-40 grid-cols-1 grid-rows-[auto_1fr] rounded-md border p-1 gap-2 mb-3 md:w-52 md:p-2",
+    "grid h-full grid-cols-1 grid-rows-[auto_1fr] w-[150px] rounded-md border p-1 gap-2 mb-3 md:w-52 md:p-2 mx-0",
     !noLink && "group",
     className,
   );
+
+  <span className="w-40"></span>;
 
   if (noLink) {
     return <div className={sharedClassName}>{content}</div>;

@@ -72,10 +72,13 @@ export const ENGLISH = {
   giveUsInfo: (
     <>
       It is difficult for us to collect all the information alone. If you have
-      any more information about this martyr, please provide it to us.{" "}
-      <span className="text-red-600 dark:text-red-500">
-        Give more information
-      </span>
+      any more information about this martyr, please provide it to us.
+      <Button
+        variant="outline"
+        className="font-semibold text-red-600 dark:text-red-500"
+      >
+        Give us information
+      </Button>
     </>
   ),
 };
@@ -142,12 +145,12 @@ export const BANGLA = {
   giveUsInfo: (
     <>
       আমাদের একার পক্ষে সকল তথ্য সংগ্রহ করা কষ্টসাধ্য। এই শহীদের ব্যাপারে আর
-      কোনো তথ্য জানা থাকলে অনুগ্রহ করে আমাদের{" "}
+      কোনো তথ্য জানা থাকলে অনুগ্রহ করে আমাদের তথ্য দিয়ে সহায়তা করুন।
       <Button
         variant="outline"
         className="font-semibold text-red-600 dark:text-red-500"
       >
-        আরো তথ্য দিন
+        আমাদের তথ্য দিন
       </Button>
     </>
   ),

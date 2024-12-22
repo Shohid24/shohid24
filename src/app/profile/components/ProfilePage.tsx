@@ -1,3 +1,5 @@
+import Balancer from "react-wrap-balancer";
+
 import Profile from "@/components/Profile";
 import { Skeleton } from "@/components/ui/skeleton";
 import { toBengali } from "@/lib/helpers/date";
@@ -61,10 +63,10 @@ const ProfilePage = ({
           imageUrl={hasImage ? `/photos/${id}.jpg` : "/default.jpg"}
           lang={lang}
           showIndex={false}
-          className="border-none md:-mt-2 grid-cols-[2fr_3fr] w-full md:grid-cols-1 max-h-52"
+          className="max-h-52 w-full grid-cols-[auto_2fr] border-none md:-mt-2 md:grid-cols-1"
         />
         <div className="h-auto w-full flex-1 rounded-md border p-2 text-start text-lg font-bold md:text-xl">
-          <section className="grid grid-cols-1 gap-2 md:grid-cols-[auto_auto] lg:grid-cols-[1fr_2fr_3fr]">
+          <section className="grid grid-cols-1 gap-2 md:grid-cols-[1fr_2fr] lg:grid-cols-[1fr_2fr_3fr]">
             <InfoBox
               label={translation.age}
               content={
@@ -79,6 +81,7 @@ const ProfilePage = ({
             />
 
             <InfoBox
+              className="md:col-span-2 lg:col-span-1"
               skeletons={<Skeleton className="h-6 w-36" />}
               label={translation.birthPlace}
               content={
@@ -117,7 +120,7 @@ const ProfilePage = ({
           </section>
         </div>
       </div>
-      <section className="my-2 flex flex-col items-center justify-center gap-2 text-sm md:text-base lg:text-lg">
+      <section className="mx-auto text-balance my-2 flex max-w-screen-md flex-col items-center justify-center gap-2 text-sm md:text-base lg:text-lg">
         {translation.giveUsInfo}
       </section>
     </>
@@ -142,12 +145,12 @@ const InfoBox = ({
         className,
       )}
     >
-      <span className="text-nowrap text-base md:text-lg lg:text-xl">
+      <span className="text-nowrap text-base md:text-lg lg:text-xl tracking-wide">
         {label}
       </span>
-      <span className="ml-1 text-sm font-normal md:text-base lg:text-lg">
+      <Balancer className="ml-1 text-sm font-normal md:text-base lg:text-lg">
         {content || skeletons}
-      </span>
+      </Balancer>
     </div>
   );
 };
