@@ -5,6 +5,7 @@ import { Calendar } from "lucide-react";
 import { ProfileType } from "@/lib/types";
 import { getTranslation } from "@/lib/translations";
 import { cn } from "@/lib/utils";
+import { toBengali } from "@/lib/helpers/date";
 
 interface ProfileWithClassName extends ProfileType {
   className?: string;
@@ -34,18 +35,29 @@ const Profile = ({
             {index + 1}
           </span>
         )}
-        <Image
-          priority
-          src={imageUrl || ""}
-          alt={name || "Unknown"}
-          key={imageUrl + id}
-          width={208}
-          height={208}
-          className={cn(
-            "block aspect-square rounded-md object-cover max-w-[min(150px,100%)] md:max-w-[min(190px,100%)]",
-            noLink ? "hover:cursor-pointer" : "mt-0",
-          )}
-        />
+        {!noLink ? (
+          <Image
+            priority
+            src={imageUrl || ""}
+            alt={name || "Unknown"}
+            key={imageUrl + id}
+            width={208}
+            height={208}
+            className="block aspect-square max-w-[min(150px,100%)] rounded-md object-cover hover:cursor-pointer md:max-w-[min(190px,100%)]"
+          />
+        ) : (
+          <Link href={imageUrl}>
+            <Image
+              priority
+              src={imageUrl || ""}
+              alt={name || "Unknown"}
+              key={imageUrl + id}
+              width={208}
+              height={208}
+              className="block aspect-square max-w-[min(150px,100%)] rounded-md object-cover hover:cursor-pointer md:max-w-[min(190px,100%)]"
+            />
+          </Link>
+        )}
         {!noLink && (
           <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 opacity-0 transition-opacity duration-150 group-hover:opacity-100">
             <span
@@ -70,7 +82,7 @@ const Profile = ({
         </p>
         <p className="mt-auto flex items-center justify-start gap-1 text-nowrap">
           <Calendar size={20} />
-          {martyrDate}
+          {lang == "bn" ? toBengali(martyrDate) : martyrDate}
         </p>
       </div>
     </>

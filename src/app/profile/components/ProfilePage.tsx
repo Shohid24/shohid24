@@ -70,7 +70,9 @@ const ProfilePage = ({
             <InfoBox
               label={translation.age}
               content={
-                profile && (toBengali(profile.age) || translation.unavailable)
+                (profile &&
+                  (lang == "bn" ? toBengali(profile.age) : profile.age)) ||
+                translation.unavailable
               }
             />
             <InfoBox
@@ -120,7 +122,7 @@ const ProfilePage = ({
           </section>
         </div>
       </div>
-      <section className="mx-auto text-balance my-2 flex max-w-screen-md flex-col items-center justify-center gap-2 text-sm md:text-base lg:text-lg">
+      <section className="mx-auto my-2 flex max-w-screen-md flex-col items-center justify-center gap-2 text-balance text-sm md:text-base lg:text-lg">
         {translation.giveUsInfo}
       </section>
     </>
@@ -145,7 +147,7 @@ const InfoBox = ({
         className,
       )}
     >
-      <span className="text-nowrap text-base md:text-lg lg:text-xl tracking-wide">
+      <span className="text-nowrap text-base tracking-wide md:text-lg lg:text-xl">
         {label}
       </span>
       <Balancer className="ml-1 text-sm font-normal md:text-base lg:text-lg">

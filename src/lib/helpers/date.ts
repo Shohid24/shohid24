@@ -1,8 +1,13 @@
-// Define types for clarity
+// Types for better code organization and type safety
 type NumericMapping = { [key: string]: string };
 type MonthNameMappings = {
   en: { [key: string]: string };
   bn: { [key: string]: string };
+};
+
+type BengaliOrdinalIndicator = {
+  default: string;
+  special: { [key: string]: string };
 };
 
 // Numeric mappings
@@ -23,7 +28,7 @@ const englishToBengaliNumerals: NumericMapping = Object.fromEntries(
   Object.entries(bengaliToEnglishNumerals).map(([k, v]) => [v, k]),
 );
 
-// Mapping of month names
+// Month name mappings
 const monthNamesMappings: MonthNameMappings = {
   en: {
     জানুয়ারি: "January",
@@ -55,63 +60,102 @@ const monthNamesMappings: MonthNameMappings = {
   },
 };
 
-// Replace ordinal suffixes (st, nd, rd, th)
-const replaceOrdinalSuffix = (dateString: string): string => {
-  return dateString.replace(/\b(\d+)(st|nd|rd|th)\b/g, "$1");
+// Bengali ordinal indicators
+const bengaliOrdinalIndicators: BengaliOrdinalIndicator = {
+  default: "ই",
+  special: {
+    "1": "লা",
+    "2": "রা",
+    "3": "রা",
+    "4": "ঠা",
+    "5": "ই",
+    "6": "ই",
+    "7": "ই",
+    "8": "ই",
+    "9": "ই",
+    "0": "ই",
+  },
+};
+
+/**
+ * Gets the appropriate Bengali ordinal indicator for a number
+ */
+const getBengaliOrdinalIndicator = (num: string): string => {
+  const lastDigit = num.slice(-1);
+  return (
+    bengaliOrdinalIndicators.special[lastDigit] ||
+    bengaliOrdinalIndicators.default
+  );
+};
+
+/**
+ * Converts English numbers to Bengali numbers
+ */
+const convertToBengaliNumerals = (str: string): string => {
+  return str.replace(
+    /\d/g,
+    (match) => englishToBengaliNumerals[match] || match,
+  );
+};
+
+/**
+ * Formats the date part with appropriate Bengali ordinal indicator
+ */
+const formatBengaliDate = (date: string): string => {
+  const bengaliNum = convertToBengaliNumerals(date);
+  const ordinalIndicator = getBengaliOrdinalIndicator(date);
+  return `${bengaliNum}${ordinalIndicator}`;
+};
+
+/**
+ * Removes English ordinal suffixes (st, nd, rd, th)
+ */
+const removeOrdinalSuffix = (dateString: string): string => {
+  return dateString.replace(/(\d+)(st|nd|rd|th)/gi, "$1");
 };
 
 /**
  * Converts a Bengali date to an English date
- * @param bengaliDate - Date string in Bengali
- * @returns Date string in English
  */
 const toEnglish = (bengaliDate: string): string => {
-  // Replace Bengali numerals with English numerals
-  const englishNumerals = bengaliDate
+  // Remove Bengali ordinal indicators
+  let englishDate = bengaliDate.replace(/[লাইরাঠা]/g, "");
+
+  // Convert Bengali numerals to English
+  englishDate = englishDate
     .split("")
     .map((char) => bengaliToEnglishNumerals[char] || char)
     .join("");
 
-  // Replace Bengali month names with English month names
-  let englishDate = englishNumerals;
-  Object.keys(monthNamesMappings.en).forEach((bnMonth) => {
-    englishDate = englishDate.replace(
-      new RegExp(bnMonth, "g"),
-      monthNamesMappings.en[bnMonth],
-    );
+  // Convert month names
+  Object.entries(monthNamesMappings.en).forEach(([bnMonth, enMonth]) => {
+    englishDate = englishDate.replace(new RegExp(bnMonth, "g"), enMonth);
   });
-
-  // Replace ordinal suffixes
-  englishDate = replaceOrdinalSuffix(englishDate);
 
   return englishDate.trim();
 };
 
 /**
  * Converts an English date to a Bengali date
- * @param englishDate - Date string in English
- * @returns Date string in Bengali
  */
 const toBengali = (englishDate: string | number): string => {
-  // Replace English numerals with Bengali numerals
-  const bengaliNumerals = String(englishDate)
-    .split("")
-    .map((char) => englishToBengaliNumerals[char] || char)
-    .join("");
+  let dateStr = String(englishDate);
 
-  // Replace English month names with Bengali month names
-  let bengaliDate = bengaliNumerals;
-  Object.keys(monthNamesMappings.bn).forEach((enMonth) => {
-    bengaliDate = bengaliDate.replace(
-      new RegExp(enMonth, "g"),
-      monthNamesMappings.bn[enMonth],
-    );
-  });
+  // Remove existing ordinal suffixes
+  dateStr = removeOrdinalSuffix(dateStr);
 
-  // Replace ordinal suffixes (st, nd, rd, th)
-  bengaliDate = replaceOrdinalSuffix(bengaliDate);
+  // Extract date components
+  const dateMatch = dateStr.match(/(\d+)\s*([A-Za-z]+),?\s*(\d+)/);
+  if (!dateMatch) return convertToBengaliNumerals(dateStr);
 
-  return bengaliDate.trim();
+  const [_, day, month, year] = dateMatch;
+
+  // Format date parts
+  const bengaliDay = formatBengaliDate(day);
+  const bengaliMonth = monthNamesMappings.bn[month] || month;
+  const bengaliYear = convertToBengaliNumerals(year);
+
+  return `${bengaliDay} ${bengaliMonth}, ${bengaliYear}`;
 };
 
 export { toEnglish, toBengali };
