@@ -1,4 +1,4 @@
-import { useState, useRef, useEffect, Suspense } from "react";
+import { useState, useRef, useEffect, Suspense, useTransition } from "react";
 import { useHotkeys } from "react-hotkeys-hook";
 import { SearchPerson, SearchResults } from "@/lib/helpers/search";
 import List from "./List";
@@ -8,6 +8,7 @@ import type { Translation } from "@/lib/translations";
 import { toBengali } from "@/lib/helpers/date";
 
 const Homepage_Sus = ({ translation }: { translation: Translation }) => {
+  const [isSearching, startTransition] = useTransition();
   const [query, setQuery] = useQueryState(
     "query",
     parseAsString.withDefault(""),
@@ -18,9 +19,12 @@ const Homepage_Sus = ({ translation }: { translation: Translation }) => {
     SearchPerson(""),
   );
   useEffect(() => {
-    const res = SearchPerson(query);
-    setSearchResult(res);
+    startTransition(() => {
+      const res = SearchPerson(query);
+      setSearchResult(res);
+    });
   }, [query]);
+
   useHotkeys(
     "mod+k",
     (event) => {
@@ -67,20 +71,26 @@ const Homepage_Sus = ({ translation }: { translation: Translation }) => {
         className={`-mt-1 mb-2 tracking-wide transition-all duration-100 md:text-lg ${query.length === 0 ? "scale-0" : ""}`}
       >
         {translation.lang === "en" ? (
-          <>
-            Found{" "}
-            <span className="inline-block w-8 font-bold text-red-700 dark:text-red-500">
-              {searchResult.length}
-            </span>{" "}
-            matching person
-          </>
-        ) : (
+          !isSearching ? (
+            <>
+              Found{" "}
+              <span className="inline-block w-8 font-bold text-red-700 dark:text-red-500">
+                {searchResult.length}
+              </span>{" "}
+              matching person
+            </>
+          ) : (
+            "Searching..."
+          )
+        ) : !isSearching ? (
           <>
             <span className="inline-block w-8 font-bold text-red-700 dark:text-red-500">
               {toBengali(searchResult.length)}
             </span>{" "}
             জন এর রেজাল্ট দেখানো হচ্ছে
           </>
+        ) : (
+          "খোঁজা হচ্ছে..."
         )}
       </p>
       <p
