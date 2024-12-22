@@ -11,6 +11,7 @@ const fuzzySearch = createFuzzySearch(searchableData, {
     item.info.en,
     item.date,
   ],
+  strategy: "smart",
 });
 
 export function SearchPerson(query: string) {

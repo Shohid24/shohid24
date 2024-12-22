@@ -126,6 +126,8 @@ def dumpSearchableJson():
     with open("searchableData.json", "w", encoding="utf-8") as f:
         json.dump(finalData, f, ensure_ascii=False, indent=None)
 
+    os.remove("shortData_bn.json")
+    os.remove("shortData_en.json")
     return finalData
 
 
@@ -133,3 +135,4 @@ if __name__ == "__main__":
     makeShortData(newBn, "bn")
     makeShortData(newEn, "en")
     dumpSearchableJson()
+    

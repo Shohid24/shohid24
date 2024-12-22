@@ -13,7 +13,7 @@ const Footer = ({ translation }: { translation: Translation }) => {
       </p>
       <p
         className={cn(
-          "font-semibold tracking-wider text-primary/70",
+          "font-semibold tracking-wider text-primary/70 mt-3 text-xs md:text-sm",
           translation.lang == "en" && "font-mono tracking-tighter",
         )}
       >

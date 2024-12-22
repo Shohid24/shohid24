@@ -22,7 +22,7 @@ const Navbar = ({
     >
       <div>
         <Link
-          href="/"
+          href={`/?lang=${lang}`}
           className={cn(
             "text-3xl font-bold tracking-tight text-red-600/90 dark:text-red-500/90",
             translation.lang === "en" && "text-2xl",

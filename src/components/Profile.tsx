@@ -1,7 +1,17 @@
 import Image from "next/image";
 import Link from "next/link";
+import { getFontClass } from "@/lib/fontLoader";
 import { Calendar } from "lucide-react";
-import type { Profile } from "@/lib/types";
+import { ProfileType } from "@/lib/types";
+import { getTranslation } from "@/lib/translations";
+import { cn } from "@/lib/utils";
+import { toBengali } from "@/lib/helpers/date";
+
+interface ProfileWithClassName extends ProfileType {
+  className?: string;
+  noLink?: boolean;
+}
+
 const Profile = ({
   id,
   name,
@@ -10,35 +20,81 @@ const Profile = ({
   martyrDate,
   imageUrl = "",
   index = 0,
-}: Profile) => {
-  return (
-    <div className="flex h-full w-40 flex-col items-center rounded-md border p-1 md:w-52 md:p-2">
-      <div className="relative">
-        <span className="absolute left-0 top-0 h-7 min-w-8 rounded-md bg-red-500 px-1 text-xl font-black text-gray-100">
-          {index + 1}
-        </span>
+  lang = "bn",
+  showIndex = true,
+  className,
+  noLink,
+}: ProfileWithClassName) => {
+  const translation = getTranslation(lang);
+
+  const content = (
+    <>
+      <div className="relative h-24 w-24 md:h-auto md:w-full">
+        {showIndex && (
+          <span className="absolute left-0 top-0 h-6 min-w-6 rounded-md bg-red-500 px-1 text-lg font-black text-gray-100 md:h-7 md:min-w-8 md:text-xl">
+            {index + 1}
+          </span>
+        )}
         <Image
           priority
           src={imageUrl || ""}
           alt={name || "Unknown"}
-          key={imageUrl + id} // unique key to instantly change the image when the src changes
-          width={1} // not needed
-          height={1} // not needed
-          className={`aspect-square w-52 rounded-md object-cover hover:cursor-pointer`}
+          key={imageUrl + id}
+          width={208}
+          height={208}
+          className={cn(
+            "aspect-square w-full rounded-md object-cover",
+            !noLink && "hover:cursor-pointer",
+          )}
         />
+        {!noLink && (
+          <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 opacity-0 transition-opacity duration-150 group-hover:opacity-100">
+            <span
+              className={cn(
+                "text-base font-semibold text-white md:text-xl",
+                getFontClass(lang),
+              )}
+            >
+              {lang === "en" ? "Details" : "বিস্তারিত"}
+            </span>
+          </div>
+        )}
       </div>
-      <div className="my-2 flex h-full w-full flex-col text-start">
-        <p className="text-xl font-bold md:text-2xl">{name}</p>
-        <p className="text-muted-foreground">
-          {profession || "তথ্য অনুপস্থিত"}
+
+      <div className="flex h-full w-full flex-col gap-1 px-2 text-start md:px-0">
+        <p className="text-lg font-bold md:text-2xl">{name}</p>
+        <p className="text-sm text-muted-foreground md:text-base">
+          {profession || translation.unavailable}
         </p>
-        <p className="text-sm md:text-base">{info || "তথ্য অনুপস্থিত"}</p>
-        <p className="mt-auto flex items-center justify-start gap-1">
+        <p className="text-sm md:text-base">
+          {info || translation.unavailable}
+        </p>
+        <p className="mt-auto flex items-center justify-start gap-1 text-nowrap">
           <Calendar size={20} />
-          {martyrDate}
+          {lang == "en" ? martyrDate : toBengali(martyrDate)}
         </p>
       </div>
-    </div>
+    </>
+  );
+
+  const sharedClassName = cn(
+    "grid h-full rounded-md border p-1 md:p-2",
+    // Base styles that work for both layouts
+    "w-full grid-cols-[auto_1fr] grid-rows-1 gap-2",
+    // Default column layout styles
+    "md:w-52 md:grid-cols-1 md:grid-rows-[auto_1fr]",
+    !noLink && "group",
+    className,
+  );
+
+  if (noLink) {
+    return <div className={sharedClassName}>{content}</div>;
+  }
+
+  return (
+    <Link href={`/profile/${id}?lang=${lang}`} className={sharedClassName}>
+      {content}
+    </Link>
   );
 };
 

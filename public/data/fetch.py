@@ -43,9 +43,10 @@ def generateJsonFile(content, lang="bn"):
         image = images[index]
         src = image["src"]
         fileName = f"{id}.jpg"
+        slug = src.split("/")[-1]
+        url = f"https://shohid.online/shohid/{slug}"
 
-        url = f"https://shohid.online/shohid/{src.split('/')[-1]}"
-        if url.endswith("unknown-dead-body.jpg"):
+        if slug == "unknown-dead-body.jpg":
             url = None
 
         folder = "./../photos"

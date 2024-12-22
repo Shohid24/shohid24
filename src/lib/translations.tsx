@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { totalMartyrs } from "./helpers/search";
-import { DateConverter } from "./helpers/date";
+import { toBengali } from "./helpers/date";
+import { Button } from "@/components/ui/button";
 
 export const ENGLISH = {
   lang: "en",
@@ -13,12 +14,19 @@ export const ENGLISH = {
   martyrCount: String(totalMartyrs),
   header: (
     <>
-      List of <span className="text-red-600 dark:text-red-500">martyrs</span> in the movement:
+      List of <span className="text-red-600 dark:text-red-500">martyrs</span> in
+      the movement:
     </>
   ),
   searchPlaceholder: "Search by name, institution or profession (ctrl+k)",
   footerText: (
-    <>&copy; {new Date().getFullYear()} Shohid24</>
+    <>
+      &copy; {new Date().getFullYear()} Shohid24
+      <br />
+      <span className="text-base">
+        This is our effort to honor the martyrs of &apos;24.
+      </span>
+    </>
   ),
   maintainerText: (
     <>
@@ -54,6 +62,22 @@ export const ENGLISH = {
         shoulder.
       </>
     )),
+  unavailable: "No information",
+  age: "Age:",
+  born: "Birth Date:",
+  birthPlace: "Date of Birth:",
+  howHeDied: "How he became a martyr:",
+  biography: "Biography:",
+  otherInfo: "Other Information:",
+  giveUsInfo: (
+    <>
+      It is difficult for us to collect all the information alone. If you have
+      any more information about this martyr, please provide it to us.{" "}
+      <span className="text-red-600 dark:text-red-500">
+        Give more information
+      </span>
+    </>
+  ),
 };
 
 export const BANGLA = {
@@ -64,7 +88,7 @@ export const BANGLA = {
     "স্বৈরাচারী শাসক শেখ হাসিনার আমলে জুলাই গণঅভ্যুত্থানে শহীদ হওয়া ব্যক্তিদের তালিকা",
   aboutName: "আমাদের সম্পর্কে",
   submitButton: "শহীদের তথ্য যোগ করুন",
-  martyrCount: DateConverter.toBengali(totalMartyrs),
+  martyrCount: toBengali(totalMartyrs),
   header: (
     <>
       আন্দোলনে <span className="text-red-600 dark:text-red-500">শহীদদের</span>{" "}
@@ -72,9 +96,14 @@ export const BANGLA = {
     </>
   ),
   searchPlaceholder: "নাম, প্রতিষ্ঠান বা পেশা সার্চ করুন (ctrl+k)",
+  // {toBengali(new Date().getFullYear())}
   footerText: (
     <span className="tracking-wide">
-      &copy; {DateConverter.toBengali(new Date().getFullYear())} শহীদ২৪
+      &copy; শহীদ২৪
+      <br />
+      <span className="text-base">
+        ২৪ এর শহীদদের স্মরণে রাখতে আমাদের এই প্রচেষ্টা
+      </span>
     </span>
   ),
   maintainerText: (
@@ -101,6 +130,25 @@ export const BANGLA = {
       সে মায়ে রাখবো মনে
       <br />
       যে ছুঁইছে পোলার <span className="text-red-500">লাশ</span>।
+    </>
+  ),
+  unavailable: "তথ্য অনুপস্থিত",
+  age: "বয়সঃ",
+  born: "জন্ম তারিখঃ",
+  birthPlace: "জন্মস্থানঃ",
+  howHeDied: "যেভাবে শহীদ হয়েছেনঃ",
+  biography: "জীবনীঃ",
+  otherInfo: "অন্যান্য তথ্যঃ",
+  giveUsInfo: (
+    <>
+      আমাদের একার পক্ষে সকল তথ্য সংগ্রহ করা কষ্টসাধ্য। এই শহীদের ব্যাপারে আর
+      কোনো তথ্য জানা থাকলে অনুগ্রহ করে আমাদের{" "}
+      <Button
+        variant="outline"
+        className="font-semibold text-red-600 dark:text-red-500"
+      >
+        আরো তথ্য দিন
+      </Button>
     </>
   ),
 };

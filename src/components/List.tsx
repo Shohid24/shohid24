@@ -32,7 +32,6 @@ const List = ({
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [searchResult]);
 
-  // const actualData = lang === "en" ? DATA_EN : DATA_BN;
   if (query.trim().length > 0) {
     if (searchResult.length == 0) {
       return (
@@ -59,6 +58,7 @@ const List = ({
                   imageUrl={
                     item.hasImage ? `/photos/${item.id}.jpg` : "/default.jpg"
                   }
+                  lang={lang as "bn"|"en"}
                 />
               );
             })}
@@ -89,6 +89,7 @@ const List = ({
             info={item.info[lang as "bn" | "en"]}
             martyrDate={item.date}
             imageUrl={item.hasImage ? `/photos/${item.id}.jpg` : "/default.jpg"}
+            lang={lang as "bn"|"en"}
           />
         ))}
       </div>

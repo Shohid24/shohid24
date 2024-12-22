@@ -5,7 +5,7 @@ import List from "./List";
 import { Input } from "./ui/input";
 import { parseAsString, useQueryState } from "nuqs";
 import type { Translation } from "@/lib/translations";
-import { DateConverter } from "@/lib/helpers/date";
+import { toBengali } from "@/lib/helpers/date";
 
 const Homepage_Sus = ({ translation }: { translation: Translation }) => {
   const [query, setQuery] = useQueryState(
@@ -77,7 +77,7 @@ const Homepage_Sus = ({ translation }: { translation: Translation }) => {
         ) : (
           <>
             <span className="inline-block w-8 font-bold text-red-700 dark:text-red-500">
-              {DateConverter.toBengali(searchResult.length)}
+              {toBengali(searchResult.length)}
             </span>{" "}
             জন এর রেজাল্ট দেখানো হচ্ছে
           </>
