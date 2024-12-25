@@ -3,9 +3,9 @@ import Balancer from "react-wrap-balancer";
 import Profile from "@/components/Profile";
 import { Skeleton } from "@/components/ui/skeleton";
 import { toBengali } from "@/lib/helpers/date";
-import { getTranslation } from "@/lib/translations";
+import { getTranslation } from "./translations";
 import { Martyr, MartyrInfo } from "@/lib/types";
-import { cn, fetchJson } from "@/lib/utils";
+import { cn, fetchJson, guid } from "@/lib/utils";
 import { ReactNode, useEffect, useState } from "react";
 
 const ProfilePage = ({
@@ -52,6 +52,7 @@ const ProfilePage = ({
 
   return (
     <>
+      <title>{translation.generateTitle(name)}</title>
       <div className="my-5 flex flex-col items-center justify-between gap-2 md:flex-row md:items-stretch">
         <Profile
           noLink
@@ -150,7 +151,10 @@ const InfoBox = ({
       <span className="text-nowrap text-base tracking-wide md:text-lg lg:text-xl">
         {label}
       </span>
-      <Balancer className="ml-1 text-sm font-normal md:text-base lg:text-lg">
+      <Balancer
+        key={guid()} // for some reason, crypto.randomUUID() doesn't work
+        className="ml-1 text-sm font-normal animate-in fade-in-50 md:text-base lg:text-lg"
+      >
         {content || skeletons}
       </Balancer>
     </div>

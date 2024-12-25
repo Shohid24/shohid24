@@ -3,7 +3,7 @@ import Link from "next/link";
 import { getFontClass } from "@/lib/fontLoader";
 import { Calendar } from "lucide-react";
 import { ProfileType } from "@/lib/types";
-import { getTranslation } from "@/lib/translations";
+import { getTranslation } from "@/components/translations";
 import { cn } from "@/lib/utils";
 import { toBengali } from "@/lib/helpers/date";
 

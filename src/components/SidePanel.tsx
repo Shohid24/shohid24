@@ -8,7 +8,7 @@ import {
 } from "@/components/ui/sheet";
 import { Menu } from "lucide-react";
 import { Button } from "./ui/button";
-import { Translation } from "@/lib/translations";
+import { Translation } from "@/components/translations";
 import Link from "next/link";
 import { GITHUB_LINK } from "@/lib/constants";
 import Anchor from "./ui/Anchor";
@@ -34,7 +34,7 @@ const SidePanel = ({
           <Separator />
         </SheetHeader>
         <div className="flex flex-col items-center justify-center gap-2 md:gap-5">
-          <Anchor href="/about">{translation.aboutName}</Anchor>
+          <Anchor href={`/about?lang=${translation.lang}`}>{translation.aboutName}</Anchor>
           <Link
             href={GITHUB_LINK}
             target="_blank"

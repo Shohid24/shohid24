@@ -1,8 +1,9 @@
+import { Provider } from "react-wrap-balancer";
 import { NuqsAdapter } from "nuqs/adapters/next/app";
 import ThemeProvider from "@/components/ui/ThemeProvider";
 import type { Metadata } from "next";
 import "./globals.css";
-import { BANGLA } from "@/lib/translations";
+import { BANGLA } from "@/components/translations";
 import { getFontClass } from "@/lib/fontLoader";
 
 export const metadata: Metadata = {
@@ -27,7 +28,9 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <NuqsAdapter>{children}</NuqsAdapter>
+          <NuqsAdapter>
+            <Provider>{children}</Provider>
+          </NuqsAdapter>
         </ThemeProvider>
       </body>
     </html>

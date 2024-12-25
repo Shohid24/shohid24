@@ -3,14 +3,16 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev --turbopack",
+    "dev": "NODE_OPTIONS='--inspect' next dev --turbopack",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "shadcn": "bunx --bun shadcn@latest"
+    "shadcn": "bunx --bun shadcn@latest",
+    "clean": "rm -rf .next && rm -rf out"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.9.1",
+    "@midudev/tailwind-animations": "^0.1.0",
     "@nozbe/microfuzz": "^1.0.0",
     "@radix-ui/react-accordion": "^1.2.2",
     "@radix-ui/react-alert-dialog": "^1.1.4",

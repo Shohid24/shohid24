@@ -4,7 +4,7 @@ import { SearchPerson, SearchResults } from "@/lib/helpers/search";
 import List from "./List";
 import { Input } from "./ui/input";
 import { parseAsString, useQueryState } from "nuqs";
-import type { Translation } from "@/lib/translations";
+import type { Translation } from "@/components/translations";
 import { toBengali } from "@/lib/helpers/date";
 
 const Homepage_Sus = ({ translation }: { translation: Translation }) => {

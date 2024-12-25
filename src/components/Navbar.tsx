@@ -4,9 +4,10 @@ import MaxWidthWrapper from "./ui/MaxwidthWrapper";
 import SidePanel from "./SidePanel";
 import ModeToggle from "./ui/ModeToggle";
 import ToggleLanguage from "./sub/ToggleLanguage";
-import { getTranslation } from "@/lib/translations";
+import { getTranslation } from "@/components/translations";
 import { cn } from "@/lib/utils";
 import { GITHUB_LINK } from "@/lib/constants";
+import { getFontClass } from "@/lib/fontLoader";
 
 const Navbar = ({
   lang,
@@ -18,7 +19,10 @@ const Navbar = ({
   const translation = getTranslation(lang);
   return (
     <MaxWidthWrapper
-      className={`flex items-center justify-between border-b py-2`}
+      className={cn(
+        "flex items-center justify-between border-b py-2",
+        getFontClass(translation.lang),
+      )}
     >
       <div>
         <Link
@@ -33,7 +37,7 @@ const Navbar = ({
       </div>
       <div className="flex items-center justify-center gap-2">
         <div className="flex items-center justify-center gap-2 md:gap-5">
-          <Anchor href="/about" className="hidden md:block">
+          <Anchor href={`/about?lang=${lang}`} className="hidden md:block">
             {translation.aboutName}
           </Anchor>
           <ToggleLanguage lang={lang} setLang={setLang} />

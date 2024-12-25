@@ -3,7 +3,7 @@ import { Inter } from "next/font/google";
 import { Gabarito } from "next/font/google";
 
 const myFont = localFont({
-  src: "./../../public/fonts/Li Ador Noirrit Regular.ttf",
+  src: "./../../public/fonts/LiAdorNoirrit.woff", // compressed
 });
 
 const interFont = Inter({

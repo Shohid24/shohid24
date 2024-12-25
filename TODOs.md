@@ -2,9 +2,9 @@
 - [x] Change the title according to the selected language
 - [x] Use Transition for better search performance
 - [ ] Logo for website
-- [ ] Add the /about page
+- [x] Add the /about page
 - [x] Add each profile page
-- [ ] compress the images for better performance
 - [ ] Add the /contact page
 - [ ] Add the "Other Martyrs" page
 - [ ] Add last updated info
+- [ ] Create a new website for taking the submissions of martyrs in vercel 

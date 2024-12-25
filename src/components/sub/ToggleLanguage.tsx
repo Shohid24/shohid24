@@ -1,3 +1,4 @@
+import { useHotkeys } from "react-hotkeys-hook";
 import { getFontClass } from "@/lib/fontLoader";
 import { cn } from "@/lib/utils";
 
@@ -9,6 +10,10 @@ const ToggleLanguage = ({
   setLang: React.Dispatch<React.SetStateAction<string>>;
 }) => {
   const bnFont = getFontClass("bn");
+
+  useHotkeys("mod+.", () => {
+    setLang(lang == "en" ? "bn" : "en");
+  });
 
   return (
     <div className={`relative h-9 min-w-fit rounded-md border p-1 ${bnFont}`}>

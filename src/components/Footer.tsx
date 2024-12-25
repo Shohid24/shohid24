@@ -1,9 +1,10 @@
 import MaxWidthWrapper from "./ui/MaxwidthWrapper";
-import type { Translation } from "@/lib/translations";
+import { getTranslation, type Translation } from "@/components/translations";
 import { getFontClass } from "@/lib/fontLoader";
 import { cn } from "@/lib/utils";
 
-const Footer = ({ translation }: { translation: Translation }) => {
+const Footer = ({ lang }: { lang: "bn" | "en" }) => {
+  const translation = getTranslation(lang);
   return (
     <MaxWidthWrapper
       className={`my-10 border-t ${getFontClass(translation.lang)}`}
@@ -13,7 +14,7 @@ const Footer = ({ translation }: { translation: Translation }) => {
       </p>
       <p
         className={cn(
-          "font-semibold tracking-wider text-primary/70 mt-3 text-xs md:text-sm",
+          "mt-3 text-xs font-semibold tracking-wider text-primary/70 md:text-sm",
           translation.lang == "en" && "font-mono tracking-tighter",
         )}
       >
