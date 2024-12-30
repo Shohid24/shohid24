@@ -1,3 +1,7 @@
+<p align="center">
+  <img height="300px" src="public/images/logo_landscape.png" alt="Contest Hive Logo">
+</p>
+
 # Shohid24
 
 An open-source website listing the martyrs of the July Student Movement 2024 in Bangladesh.
