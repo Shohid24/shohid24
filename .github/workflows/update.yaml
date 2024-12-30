@@ -35,12 +35,24 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
 
+      - name: Check for changes
+        id: check_changes
+        run: |
+          git status --porcelain
+          if [ -n "$(git status --porcelain)" ]; then
+            echo "changes=true" >> $GITHUB_OUTPUT
+          else
+            echo "changes=false" >> $GITHUB_OUTPUT
+          fi
+
       - name: Commit and push changes
+        if: steps.check_changes.outputs.changes == 'true'
         run: |
           git add .
           git commit -m "Automated update and deployment"
           git push
-      
+
       - name: Trigger Cloudflare deploy hook
+        if: steps.check_changes.outputs.changes == 'true'
         run: |
           curl -s -o /dev/null -w "" -X POST "${{ secrets.CF_TRIGGER }}"
