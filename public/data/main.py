@@ -1,3 +1,5 @@
+raise Exception("Don't run this either")
+
 import os, json
 
 with open("searchableData.json", "rb") as f:

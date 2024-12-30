@@ -1,8 +1,10 @@
 {
   "age": "",
   "dob": "",
+  "date":"",
   "bn": {
     "name": "",
+    "info":"",
     "birthPlace": "",
     "profession": "",
     "bio": "",
@@ -10,9 +12,9 @@
   },
   "en": {
     "name": "",
+    "info":"",
     "birthPlace": "",
     "profession": "",
-    "bio": "",
-    "cause": ""
+    "bio": ""
   }
 }
