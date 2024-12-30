@@ -9,6 +9,7 @@ import { getFontClass } from "@/lib/fontLoader";
 export const metadata: Metadata = {
   title: BANGLA.title,
   description: BANGLA.description,
+  metadataBase: new URL("https://shohid24.pages.dev"),
 };
 
 export default function RootLayout({
