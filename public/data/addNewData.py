@@ -10,8 +10,6 @@ files = os.listdir("new")
 currentLength = len(os.listdir("profiles"))
 persons = []
 
-index = -1
-
 for index, file in enumerate(files):
     with open(f"new/{file}", "rb") as f:
         data = json.load(f)
@@ -49,9 +47,6 @@ for index, file in enumerate(files):
         print(f"Failed to remove new/{file}: {e}")
 
 
-print(f"Current Profiles:", currentLength + index + 1)
-
-
 def getClearDate(date: str):
     d, m, y = date.split()
     d = d.replace("th", "").replace("st", "").replace("nd", "").replace("rd", "")
@@ -69,5 +64,8 @@ data = sorted(
     key=lambda x: datetime.datetime.strptime(getClearDate(x["date"]), "%d %B, %Y"),
 )
 
-with open("searchableData.json", "w", encoding="utf8") as f:
+
+with open("1searchableData.json", "w", encoding="utf8") as f:
     json.dump(data, f, ensure_ascii=False)
+
+print(f"Current Profiles:", len(data))
