@@ -156,8 +156,8 @@ const InfoBox = ({
         {label}
       </span>
       <Balancer
-        key={guid()} // for some reason, crypto.randomUUID() doesn't work
-        className="ml-1 text-sm font-normal animate-in fade-in-50 md:text-base"
+        key={guid()} // fsr, crypto.randomUUID() doesn't work in mobile
+        className="ml-1 whitespace-pre-line text-sm font-normal animate-in fade-in-50 md:text-base"
       >
         {content || skeletons}
       </Balancer>
