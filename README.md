@@ -4,18 +4,19 @@
 
 # Shohid24
 
-An open-source website listing the martyrs of the July Student Movement 2024 in Bangladesh.
+[A website](https://shohid24.pages.dev/) listing the martyrs of the July Student Movement 2024 in Bangladesh.
 
 After the July Student Movement, numerous attempts were made to compile a list of students who were martyred during the protests. However, these lists were often closed-source, and the associated websites frequently became inaccessible.
 
-## About This Repository
-
 To solve this issue, I created **Shohid24**. Built as a static Next.js site, it ensures high availability and minimal chances of downtime. In the unlikely event that the website becomes unreachable, this repository will remain accessible.
 
+**My brothers died in the protest, for me. This is the least I could do.**
+
 ### Key Features
+
 - **Open Source**: Anyone can contribute to or verify the content of the repository.
-- **Static Site**: Built using Next.js, ensuring minimal downtime and high availability.
-- **Updatable Data**: Data is gathered from reliable sources, with the option for users to submit information about additional martyrs.
+- **Static Site**: Cloudflare pages gives unlimited static bandwidth. Therefore, no downtime.
+- **Updatable Data**: Data is updated regularly.
 - **Collaborative**: Contributions from the community help keep the repository current and comprehensive.
 
 ## Why This Project?
@@ -24,9 +25,9 @@ The July Student Movement of 2024 was a significant moment in Bangladesh’s his
 
 ## How to Contribute
 
-1. **Submit a New Martyr**: If you have verified information about a martyr not listed on the website, you can contribute by submitting their details. [Learn how to submit a martyr](./CONTRIBUTING.md).
+1. **Submit a New Martyr**: If you have verified information about a martyr not listed on the website, you can contribute by submitting their details. [Submit a martyr](https://forms.gle/efEVqZEHHR4fZuyG7).
 
-2. **Update Data**: Found incorrect information? Open an issue or submit a pull request with the correction.
+2. **Update Data**: Found incorrect information? Open an issue. Or message us directly in [Telegram](https://t.me/Shohid24Discussion/)
 
 3. **Spread the Word**: Share this repository to ensure that the sacrifices of these heroes are not forgotten.
 
