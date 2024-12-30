@@ -77,7 +77,7 @@ export const BANGLA = {
       </Button>
     </>
   ),
-  findHeader: "আইডি দিয়ে শহীদ খুঁজুন",
+  findHeader: "শহীদের আইডি দিয়ে খুঁজুন",
   findDescription: (
     <>
       বর্তমানে আমাদের তালিকায়

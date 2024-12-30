@@ -25,10 +25,15 @@ jobs:
         with:
           python-version: "3.12"
 
-      - name: Run addNewData.py
+      - name: Adding new Data
         working-directory: public/data
         run: |
           python3 addNewData.py
+
+      - name: Generate Sitemap
+        working-directory: public
+        run: |
+          python3 generateSitemap.py
 
       - name: Configure Git
         run: |
