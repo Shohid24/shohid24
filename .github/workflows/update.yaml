@@ -4,11 +4,11 @@ on:
   # schedule:
   #   - cron: "*/33 * * * *" # Runs every 33 minutes
   workflow_dispatch:
-    inputs:
-      ForceDeploy:
-        description: "Force deployment regardless of changes"
-        required: false
-        default: "false"
+    # inputs:
+    #   ForceDeploy:
+    #     description: "Force deployment regardless of changes"
+    #     required: false
+    #     default: "false"
 
 jobs:
   update-and-deploy:
