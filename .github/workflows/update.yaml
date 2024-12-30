@@ -1,9 +1,14 @@
-name: Update Data
+name: Scheduled and Manual Workflow
 
 on:
   schedule:
     - cron: "*/9 * * * *" # Runs every 9 minutes
-  workflow_dispatch: # Enables manual trigger
+  workflow_dispatch:
+    inputs:
+      ForceDeploy:
+        description: "Force deployment regardless of changes"
+        required: false
+        default: "false"
 
 jobs:
   update-and-deploy:
@@ -16,22 +21,31 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v4
         with:
-          python-version: "3.12"
+          python-version: "3.x"
 
       - name: Run addNewData.py
         working-directory: public/data
-        run: python3 addNewData.py
+        run: |
+          python3 addNewData.py
+
+      - name: Check for changes
+        run: |
+          git diff --quiet || echo "Changes detected"
+        id: check_changes
 
       - name: Trigger Cloudflare deploy hook
+        if: steps.check_changes.outputs.result != '' || github.event.inputs.ForceDeploy == 'true'
         run: |
           curl -X POST "${{ secrets.CF_TRIGGER }}"
 
       - name: Configure Git
+        if: steps.check_changes.outputs.result != ''
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
 
       - name: Commit and push changes
+        if: steps.check_changes.outputs.result != ''
         run: |
           git add .
           git commit -m "Automated update and deployment"
