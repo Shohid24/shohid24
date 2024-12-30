@@ -1,8 +1,8 @@
 name: Update Martyr Data
 
 on:
-  schedule:
-    - cron: "*/33 * * * *" # Runs every 33 minutes
+  # schedule:
+  #   - cron: "*/33 * * * *" # Runs every 33 minutes
   workflow_dispatch:
     inputs:
       ForceDeploy:
@@ -28,24 +28,16 @@ jobs:
         run: |
           python3 addNewData.py
 
-      - name: Check for changes
-        run: |
-          git diff --quiet || echo "Changes detected"
-        id: check_changes
-
       - name: Trigger Cloudflare deploy hook
-        if: steps.check_changes.outputs.result != '' || github.event.inputs.ForceDeploy == 'true'
         run: |
           curl -s -o /dev/null -w "" -X POST "${{ secrets.CF_TRIGGER }}"
 
       - name: Configure Git
-        if: steps.check_changes.outputs.result != ''
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
 
       - name: Commit and push changes
-        if: steps.check_changes.outputs.result != ''
         run: |
           git add .
           git commit -m "Automated update and deployment"
