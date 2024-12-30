@@ -1,5 +1,3 @@
-raise Exception("Don't run this either")
-
 import os, json
 
 with open("searchableData.json", "rb") as f:
@@ -36,7 +34,7 @@ def cleanup(data, lang="en"):
         "birthPlace": sanitizeText(birthPlace, lang),
         "profession": sanitizeText(profession, lang),
         "bio": sanitizeText(bio, lang),
-        "cause": sanitizeText(shortCause, lang) + "\n" + sanitizeText(longCause, lang),
+        "cause": (sanitizeText(shortCause, lang) + "\n" + sanitizeText(longCause, lang)).strip(),
     }
 
 
@@ -49,6 +47,7 @@ for i in range(len(rawData)):
     dob = raw.get("bornDate", "").strip()
     bn = cleanup(rawData[i]["bn"], "bn")
     en = cleanup(rawData[i]["en"], "en")
+
     newData = {
         "id": id,
         "age": age,

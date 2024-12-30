@@ -707,7 +707,10 @@
       "educationOrWork": "ইন্ডিপেন্ডেন্ট বিশ্ববিদ্যালয় বাংলাদেশ, ঢাকা",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "তিনি মিরপুর-১০ এর ফলপট্টি এলাকায় পুলিশের গুলিতে নিহত হন।", "long": "" }
+      "howToDeath": {
+        "short": "তিনি মিরপুর-১০ এর ফলপট্টি এলাকায় পুলিশের গুলিতে নিহত হন।",
+        "long": ""
+      }
     },
     "en": {
       "name": "Asif Iqbal Rabbi",
@@ -716,7 +719,10 @@
       "educationOrWork": "Independent University Bangladesh, Dhaka",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "He was shot and killed by the police in the Falpatti area of Mirpur-10.", "long": "" }
+      "howToDeath": {
+        "short": "He was shot and killed by the police in the Falpatti area of Mirpur-10.",
+        "long": ""
+      }
     }
   },
   {
@@ -9706,7 +9712,7 @@
       "biography": "",
       "fallbackInfo": "",
       "howToDeath": {
-        "short": "99% of his brain was damaged by hitting his head with a hook stick and died while undergoing treatment at Felsilo, Chittagong Medical Hospital.",
+        "short": "99% of his brain was damaged by hitting his head with a hook stick and died while undergoing treatment at Chittagong Medical Hospital.",
         "long": ""
       }
     }
@@ -11035,38 +11041,6 @@
       "howToDeath": {
         "short": "Shot dead",
         "long": "While crossing the road, he was shot in the chest"
-      }
-    }
-  },
-  {
-    "slug": "md-sajjad-hossain",
-    "age": "",
-    "diedDate": "19/07/2024",
-    "profession": "",
-    "isPictureNotFound": false,
-    "isInfoMissing": false,
-    "bn": {
-      "name": "মো: সাজ্জাদ হোসেন",
-      "bornDate": "",
-      "bornAddress": "শিক্ষা অঙ্গন স্কুল রোড, উত্তর কামাল কাছনা, রংপুর",
-      "educationOrWork": "",
-      "biography": "",
-      "fallbackInfo": "",
-      "howToDeath": {
-        "short": "গুলিবিদ্ধ হয়ে",
-        "long": "রংপুর সিটি বাজার গিয়েছিলো, সেখানেই গুলি বিদ্ধ হয়ে ঘটনা স্থলে মারা যান আনুমানিক ৪ টার দিকে"
-      }
-    },
-    "en": {
-      "name": "Md. Sajjad Hossain",
-      "bornDate": "",
-      "bornAddress": "Shiksha Angan School Road, North Kamal Kachna, Rangpur",
-      "educationOrWork": "",
-      "biography": "",
-      "fallbackInfo": "",
-      "howToDeath": {
-        "short": "Shot dead",
-        "long": "Went to Rangpur City Bazar, got shot there and died on the spot around 4:00 p.m."
       }
     }
   },

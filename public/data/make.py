@@ -50,15 +50,19 @@ def bengaliToEnglishDate(date: str):
         date = date.replace(b, e)
     return getClearDate(date)
 
+# sort later
 
-newEn = sorted(
-    en,
-    key=lambda x: datetime.datetime.strptime(getClearDate(x["date"]), "%d %B, %Y"),
-)
-newBn = sorted(
-    bn,
-    key=lambda x: datetime.datetime.strptime(bengaliToEnglishDate(x["date"]), "%d %B, %Y"),
-)
+# newEn = sorted(
+#     en,
+#     key=lambda x: datetime.datetime.strptime(getClearDate(x["date"]), "%d %B, %Y"),
+# )
+# newBn = sorted(
+#     bn,
+#     key=lambda x: datetime.datetime.strptime(bengaliToEnglishDate(x["date"]), "%d %B, %Y"),
+# )
+
+newEn = en.copy()
+newBn = bn.copy()
 
 def writeJsonFile(path: str, data: dict, **kw):
     with open(path, "w", encoding="utf-8") as f:
@@ -132,7 +136,6 @@ def dumpSearchableJson():
 
 
 if __name__ == "__main__":
-    raise Exception("Do not run this script now. It is to be run only once!")
     makeShortData(newBn, "bn")
     makeShortData(newEn, "en")
     dumpSearchableJson()

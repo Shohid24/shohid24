@@ -78,5 +78,16 @@ def generateJsonFile(content, lang="bn"):
 
 
 if __name__ == "__main__":
+    raise Exception("Do not run this script now")
     generateJsonFile(doc, "bn")
     generateJsonFile(enDoc, "en")
+
+
+"""
+NOTE: 
+
+There are several duplicates.
+
+Remove `and`, `aow`
+
+"""
