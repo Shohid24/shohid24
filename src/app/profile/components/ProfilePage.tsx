@@ -79,7 +79,11 @@ const ProfilePage = ({
             <InfoBox
               label={translation.born}
               content={
-                profile && (profile[lang].born || translation.unavailable)
+                profile &&
+                ((translation.lang == "en"
+                  ? profile.dob
+                  : toBengali(profile.dob)) ||
+                  translation.unavailable)
               }
             />
 

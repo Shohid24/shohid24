@@ -696,27 +696,27 @@
   {
     "slug": "asif-iqbal",
     "age": "31",
-    "diedDate": "18/07/2024",
+    "diedDate": "19/07/2024",
     "profession": "STUDENT",
     "isPictureNotFound": false,
     "isInfoMissing": false,
     "bn": {
-      "name": "আসিফ ইকবাল",
+      "name": "আসিফ ইকবাল রাব্বি",
       "bornDate": "",
       "bornAddress": "মাগুরা, খুলনা",
       "educationOrWork": "ইন্ডিপেন্ডেন্ট বিশ্ববিদ্যালয় বাংলাদেশ, ঢাকা",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "" }
+      "howToDeath": { "short": "তিনি মিরপুর-১০ এর ফলপট্টি এলাকায় পুলিশের গুলিতে নিহত হন।", "long": "" }
     },
     "en": {
-      "name": "Asif Iqbal",
+      "name": "Asif Iqbal Rabbi",
       "bornDate": "",
       "bornAddress": "Magura, Khulna",
       "educationOrWork": "Independent University Bangladesh, Dhaka",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "" }
+      "howToDeath": { "short": "He was shot and killed by the police in the Falpatti area of Mirpur-10.", "long": "" }
     }
   },
   {

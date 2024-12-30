@@ -132,6 +132,7 @@ def dumpSearchableJson():
 
 
 if __name__ == "__main__":
+    raise Exception("Do not run this script now. It is to be run only once!")
     makeShortData(newBn, "bn")
     makeShortData(newEn, "en")
     dumpSearchableJson()

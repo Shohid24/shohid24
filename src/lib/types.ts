@@ -29,8 +29,6 @@ export type Martyr = {
 
 type X = {
   name: string;
-  age: string;
-  born: string;
   birthPlace: string;
   profession: string;
   bio: string;
@@ -40,6 +38,7 @@ type X = {
 export type MartyrInfo = {
   id: string;
   age: string;
+  dob: string;
   bn: X;
   en: X;
 };

@@ -4,7 +4,7 @@
 - [ ] Logo for website
 - [x] Add the /about page
 - [x] Add each profile page
-- [ ] Add the /contact page
+- [x] Add the /contact page
 - [ ] Add the "Other Martyrs" page
 - [ ] Add last updated info
 - [ ] Create a new website for taking the submissions of martyrs in vercel 
