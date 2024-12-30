@@ -17,7 +17,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en,bn" suppressHydrationWarning>
+    <html lang="bn" suppressHydrationWarning>
       <link rel="preload" as="image" href="/default.jpg" />
       <body
         className={`${getFontClass("bn")} antialiased selection:bg-indigo-400 selection:text-gray-950 dark:selection:bg-indigo-800 dark:selection:text-gray-200`}

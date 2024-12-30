@@ -37,7 +37,7 @@ const Profile = ({
         )}
         {!noLink ? (
           <Image
-            priority
+            priority={Number(id) < 11}
             src={imageUrl || ""}
             alt={name || "Unknown"}
             key={imageUrl + id}

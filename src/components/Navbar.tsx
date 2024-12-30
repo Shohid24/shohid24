@@ -8,6 +8,7 @@ import { getTranslation } from "@/components/translations";
 import { cn } from "@/lib/utils";
 import { GITHUB_LINK } from "@/lib/constants";
 import { getFontClass } from "@/lib/fontLoader";
+import { useEffect } from "react";
 
 const Navbar = ({
   lang,
@@ -17,6 +18,12 @@ const Navbar = ({
   setLang: React.Dispatch<React.SetStateAction<string>>;
 }) => {
   const translation = getTranslation(lang);
+
+  useEffect(() => {
+    document
+      .querySelector(`html[lang="bn"`)
+      ?.setAttribute("lang", translation.lang);
+  }, [translation]);
   return (
     <MaxWidthWrapper
       className={cn(
@@ -48,7 +55,7 @@ const Navbar = ({
           </Anchor>
           <ToggleLanguage lang={lang} setLang={setLang} />
           <ModeToggle />
-          <Link href={GITHUB_LINK} target="_blank" className="hidden md:block">
+          <Link href={GITHUB_LINK} target="_blank" className="hidden md:block" title="Github Repository Link of Shohid24">
             <svg
               className="h-8 w-8 fill-[#181717] dark:fill-white"
               viewBox="0 0 24 24"
@@ -58,7 +65,7 @@ const Navbar = ({
             </svg>
           </Link>
         </div>
-        <SidePanel className="block md:hidden" translation={translation} />
+        <SidePanel className="block md:hidden" translation={translation}/>
       </div>
     </MaxWidthWrapper>
   );

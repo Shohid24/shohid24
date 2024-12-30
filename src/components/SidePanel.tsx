@@ -22,7 +22,7 @@ const SidePanel = ({
 }) => {
   return (
     <Sheet>
-      <SheetTrigger className={className}>
+      <SheetTrigger className={className} title="Open Menu">
         <Button variant="outline" size="icon" className="p-2" asChild>
           <Menu size={24} />
         </Button>

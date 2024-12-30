@@ -39,6 +39,7 @@ const Banner = () => {
 
       <div className="z-10 hidden h-full w-96 scale-50 md:block md:scale-95 lg:scale-100">
         <Image
+          priority
           src="/photos/aaa.jpg"
           alt="Martyr Abu Said"
           width={1}
@@ -46,6 +47,7 @@ const Banner = () => {
           className="animate-image-move-1 absolute -left-5 -top-9 h-32 w-32 rounded-full"
         />
         <Image
+          priority
           src="/photos/aaj.jpg"
           alt="Martyr Mir Mugdha"
           width={1}
@@ -53,6 +55,7 @@ const Banner = () => {
           className="animate-image-move-2 absolute -bottom-3 -right-3 h-24 w-24 rounded-full"
         />
         <Image
+          priority
           src="/photos/aac.jpg"
           alt="Martyr Wasim Akram"
           width={1}
@@ -60,6 +63,7 @@ const Banner = () => {
           className="animate-image-move-3 absolute -bottom-7 -left-10 h-28 w-28 rounded-full"
         />
         <Image
+          priority
           src="/photos/aai.jpg"
           alt="Martyr Farhan Faiyaz"
           width={1}
@@ -67,6 +71,7 @@ const Banner = () => {
           className="animate-image-move-4 absolute z-50 h-[160px] w-[160px] rounded-full"
         />
         <Image
+          priority
           src="/photos/aaf.jpg"
           alt="Martyr Tahmid Tamim"
           width={1}
