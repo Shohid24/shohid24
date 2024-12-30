@@ -36,7 +36,7 @@ jobs:
       - name: Trigger Cloudflare deploy hook
         if: steps.check_changes.outputs.result != '' || github.event.inputs.ForceDeploy == 'true'
         run: |
-          curl -s -X POST "${{ secrets.CF_TRIGGER }}"
+          curl -s -o /dev/null -w "" -X POST "${{ secrets.CF_TRIGGER }}"
 
       - name: Configure Git
         if: steps.check_changes.outputs.result != ''
