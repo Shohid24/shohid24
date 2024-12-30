@@ -1,3 +1,4 @@
+import datetime
 import os, json
 
 from getID import getNthCombination
@@ -50,10 +51,23 @@ for index, file in enumerate(files):
 
 print(f"Current Profiles:", currentLength + index + 1)
 
+
+def getClearDate(date: str):
+    d, m, y = date.split()
+    d = d.replace("th", "").replace("st", "").replace("nd", "").replace("rd", "")
+
+    return f"{d} {m} {y}"
+
+
 with open("searchableData.json", "rb") as f:
     data = json.load(f)
 
 data.extend(persons)
+
+data = sorted(
+    data,
+    key=lambda x: datetime.datetime.strptime(getClearDate(x["date"]), "%d %B, %Y"),
+)
 
 with open("searchableData.json", "w", encoding="utf8") as f:
     json.dump(data, f, ensure_ascii=False)
