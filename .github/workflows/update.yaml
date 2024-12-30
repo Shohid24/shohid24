@@ -46,13 +46,13 @@ jobs:
           fi
 
       - name: Commit and push changes
-        if: steps.check_changes.outputs.changes == 'true' || inputs.ForceDeploy == 'true'
+        if: steps.check_changes.outputs.changes == 'true'
         run: |
           git add .
           git commit -m "Automated update and deployment"
           git push
 
       - name: Trigger Cloudflare deploy hook
-        if: steps.check_changes.outputs.changes == 'true'
+        if: steps.check_changes.outputs.changes == 'true' || inputs.ForceDeploy == 'true'
         run: |
           curl -s -o /dev/null -w "" -X POST "${{ secrets.CF_TRIGGER }}"
