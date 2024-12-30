@@ -1,7 +1,7 @@
 - [x] Add language toggle
 - [x] Change the title according to the selected language
 - [x] Use Transition for better search performance
-- [ ] Logo for website
+- [x] Logo for website
 - [x] Add the /about page
 - [x] Add each profile page
 - [x] Add the /contact page

@@ -4,6 +4,7 @@ import MaxWidthWrapper from "./ui/MaxwidthWrapper";
 import SidePanel from "./SidePanel";
 import ModeToggle from "./ui/ModeToggle";
 import ToggleLanguage from "./sub/ToggleLanguage";
+import Logo from "./sub/Logo";
 import { getTranslation } from "@/components/translations";
 import { cn } from "@/lib/utils";
 import { GITHUB_LINK } from "@/lib/constants";
@@ -39,7 +40,7 @@ const Navbar = ({
             translation.lang === "en" && "text-2xl",
           )}
         >
-          {translation.logoName}
+          <Logo />
         </Link>
       </div>
       <div className="flex items-center justify-center gap-2">
@@ -55,7 +56,12 @@ const Navbar = ({
           </Anchor>
           <ToggleLanguage lang={lang} setLang={setLang} />
           <ModeToggle />
-          <Link href={GITHUB_LINK} target="_blank" className="hidden md:block" title="Github Repository Link of Shohid24">
+          <Link
+            href={GITHUB_LINK}
+            target="_blank"
+            className="hidden md:block"
+            title="Github Repository Link of Shohid24"
+          >
             <svg
               className="h-8 w-8 fill-[#181717] dark:fill-white"
               viewBox="0 0 24 24"
@@ -65,7 +71,7 @@ const Navbar = ({
             </svg>
           </Link>
         </div>
-        <SidePanel className="block md:hidden" translation={translation}/>
+        <SidePanel className="block md:hidden" translation={translation} />
       </div>
     </MaxWidthWrapper>
   );
