@@ -2,7 +2,7 @@ name: Update Martyr Data
 
 on:
   schedule:
-    - cron: "*/9 * * * *" # Runs every 9 minutes
+    - cron: "*/33 * * * *" # Runs every 33 minutes
   workflow_dispatch:
     inputs:
       ForceDeploy:
@@ -21,7 +21,7 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v4
         with:
-          python-version: "3.x"
+          python-version: "3.12"
 
       - name: Run addNewData.py
         working-directory: public/data
@@ -36,7 +36,7 @@ jobs:
       - name: Trigger Cloudflare deploy hook
         if: steps.check_changes.outputs.result != '' || github.event.inputs.ForceDeploy == 'true'
         run: |
-          curl -X POST "${{ secrets.CF_TRIGGER }}"
+          curl -s -X POST "${{ secrets.CF_TRIGGER }}"
 
       - name: Configure Git
         if: steps.check_changes.outputs.result != ''
