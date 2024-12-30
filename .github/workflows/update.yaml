@@ -1,0 +1,41 @@
+name: Update Data
+
+on:
+  schedule:
+    - cron: "*/9 * * * *" # Runs every 9 minutes
+  workflow_dispatch: # Enables manual trigger
+
+jobs:
+  update-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.12"
+
+      - name: Run addNewData.py
+        working-directory: public/data
+        run: python3 addNewData.py
+
+      - name: Trigger Cloudflare deploy hook
+        run: |
+          curl -X POST "${{ secrets.CF_TRIGGER }}"
+
+      - name: Configure Git
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+      - name: Commit and push changes
+        run: |
+          git add .
+          git commit -m "Automated update and deployment"
+          git push
+        env:
+          # Needed for pushing changes
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
