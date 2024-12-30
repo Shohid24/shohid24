@@ -16,7 +16,9 @@ jobs:
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.PAT }}
 
       - name: Set up Python
         uses: actions/setup-python@v4
@@ -42,6 +44,3 @@ jobs:
           git add .
           git commit -m "Automated update and deployment"
           git push
-        env:
-          # Needed for pushing changes
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
