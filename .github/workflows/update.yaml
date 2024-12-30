@@ -30,10 +30,6 @@ jobs:
         run: |
           python3 addNewData.py
 
-      - name: Trigger Cloudflare deploy hook
-        run: |
-          curl -s -o /dev/null -w "" -X POST "${{ secrets.CF_TRIGGER }}"
-
       - name: Configure Git
         run: |
           git config user.name "github-actions[bot]"
@@ -44,3 +40,7 @@ jobs:
           git add .
           git commit -m "Automated update and deployment"
           git push
+      
+      - name: Trigger Cloudflare deploy hook
+        run: |
+          curl -s -o /dev/null -w "" -X POST "${{ secrets.CF_TRIGGER }}"
