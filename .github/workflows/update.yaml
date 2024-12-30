@@ -1,4 +1,4 @@
-name: Scheduled and Manual Workflow
+name: Update Martyr Data
 
 on:
   schedule:

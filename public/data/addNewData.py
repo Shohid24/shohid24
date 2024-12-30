@@ -5,6 +5,7 @@ from getID import getNthCombination
 
 
 # add the new datas
+os.makedirs("new", exist_ok=True)
 files = os.listdir("new")
 currentLength = len(os.listdir("profiles"))
 
