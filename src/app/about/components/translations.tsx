@@ -4,6 +4,8 @@ import { Button } from "@/components/ui/button";
 export const ENGLISH = {
   lang: "en",
   title: "About Shohid24 - Listing all the martyrs of July Movement",
+  description:
+    "Shohid24 is a website that lists the martyrs of the July Student Movement in Bangladesh. It provides an insight into how the autocratic Sheikh Hasina took thousands of innocent lives.",
   giveUsInfo: (
     <>
       It is difficult for us to collect all the information alone. If you have
@@ -63,7 +65,8 @@ export const ENGLISH = {
 export const BANGLA = {
   lang: "bn",
   logoName: "শহীদ২৪",
-  title:
+  title: "শহীদ২৪ সম্পর্কে - জুলাই আন্দোলনে শহীদদের তালিকা",
+  description:
     "শহীদ২৪ ওয়েবসাইটটি বাংলাদেশের জুলাই ছাত্র আন্দোলনে শহীদদের একটি তালিকা করেছে। এর মাধ্যমে স্বৈরাচারী শেখ হাসিনা কীভাবে হাজার-হাজার নিস্পাপ প্রাণ কেড়ে নিয়েছে সেটার একটি ধারণা পাওয়া যায়।",
   giveUsInfo: (
     <>

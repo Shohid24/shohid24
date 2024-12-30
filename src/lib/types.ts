@@ -34,10 +34,7 @@ type X = {
   birthPlace: string;
   profession: string;
   bio: string;
-  cause: {
-    short: string;
-    long: string;
-  };
+  cause: string;
 };
 
 export type MartyrInfo = {

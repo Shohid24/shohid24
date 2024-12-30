@@ -4,7 +4,7 @@ import Navbar from "@/components/Navbar";
 import Main from "./components/Main";
 import { getTranslation } from "./components/translations";
 import { parseAsString, useQueryState } from "nuqs";
-import React, { Suspense } from "react";
+import React, { Suspense, useEffect } from "react";
 
 const SuspendedAbout = () => {
   const [lang, setLang] = useQueryState(
@@ -12,6 +12,12 @@ const SuspendedAbout = () => {
     parseAsString.withDefault("bn"),
   );
   const translation = getTranslation(lang);
+  useEffect(() => {
+    document.title = translation.title;
+    document
+      .querySelector('meta[name="description"]')
+      ?.setAttribute("content", translation.description);
+  }, [translation]);
   return (
     <>
       <title>{translation.title}</title>

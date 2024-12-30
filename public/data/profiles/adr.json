@@ -1,1 +1,1 @@
-{"id": "adr", "age": "60", "bn": {"name": "মহাম্মাদ নুরু হুসেন।", "born": "", "birthPlace": "", "profession": "ঢাকা।", "bio": "", "cause": {"short": "", "long": ""}}, "en": {"name": "Mohammad Nuru Hussain.", "born": "", "birthPlace": "", "profession": "Dhaka.", "bio": "", "cause": {"short": "", "long": ""}}}
+{"id": "adr", "age": "60", "bn": {"name": "মহাম্মাদ নুরু হুসেন।", "born": "", "birthPlace": "", "profession": "ঢাকা।", "bio": "", "cause": "\n"}, "en": {"name": "Mohammad Nuru Hussain.", "born": "", "birthPlace": "", "profession": "Dhaka.", "bio": "", "cause": "\n"}}

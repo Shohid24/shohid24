@@ -39,7 +39,7 @@ const Anchor = ({
         target={target}
         title={title}
         className={cn(
-          "mx-1 px-0 underline decoration-primary underline-offset-2 transition-all duration-100 hover:decoration-blue-500 focus:text-blue-500 dark:focus:text-blue-300 lg:px-1",
+          "mx-1 px-0 underline decoration-primary underline-offset-2 transition-all duration-100 hover:decoration-blue-500 focus:text-blue-500 dark:focus:text-blue-300 text-base",
           className,
         )}
       >

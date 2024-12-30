@@ -10,6 +10,7 @@ export const ENGLISH = {
   description:
     "A list of students killed under the regime of Bangladesh's Prime Minister, Sheikh Hasina, accused of fascist practices.",
   aboutName: "About Us",
+  contactName: "Contact Us",
   submitButton: "Submit a Martyr",
   martyrCount: String(totalMartyrs),
   header: (
@@ -78,6 +79,7 @@ export const BANGLA = {
   description:
     "স্বৈরাচারী শাসক শেখ হাসিনার আমলে জুলাই গণঅভ্যুত্থানে শহীদ হওয়া ব্যক্তিদের তালিকা",
   aboutName: "আমাদের সম্পর্কে",
+  contactName: "যোগাযোগ",
   submitButton: "শহীদের তথ্য যোগ করুন",
   martyrCount: toBengali(totalMartyrs),
   header: (

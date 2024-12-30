@@ -1,7 +1,6 @@
 import {
   Sheet,
   SheetContent,
-  SheetDescription,
   SheetHeader,
   SheetTitle,
   SheetTrigger,
@@ -30,11 +29,18 @@ const SidePanel = ({
       </SheetTrigger>
       <SheetContent className="w-[80vw] max-w-[256px]">
         <SheetHeader>
-          <SheetTitle className="text-2xl -mt-3.5">{translation.logoName}</SheetTitle>
+          <SheetTitle className="-mt-3.5 text-2xl">
+            {translation.logoName}
+          </SheetTitle>
           <Separator />
         </SheetHeader>
         <div className="flex flex-col items-center justify-center gap-2 md:gap-5">
-          <Anchor href={`/about?lang=${translation.lang}`}>{translation.aboutName}</Anchor>
+          <Anchor href={`/about?lang=${translation.lang}`}>
+            {translation.aboutName}
+          </Anchor>
+          <Anchor href={`/contact?lang=${translation.lang}`}>
+            {translation.contactName}
+          </Anchor>
           <Link
             href={GITHUB_LINK}
             target="_blank"

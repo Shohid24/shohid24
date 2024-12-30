@@ -14,7 +14,7 @@ def sanitizeText(text, lang="en"):
 
     if text and not text.endswith((".", "।")):
         text += "." if lang == "en" else "।"
-    
+
     return (text[0] + text[1:]) if text else text
 
 
@@ -37,10 +37,7 @@ def cleanup(data, lang="en"):
         "birthPlace": sanitizeText(birthPlace, lang),
         "profession": sanitizeText(profession, lang),
         "bio": sanitizeText(bio, lang),
-        "cause": {
-            "short": sanitizeText(shortCause, lang),
-            "long": sanitizeText(longCause, lang),
-        },
+        "cause": sanitizeText(shortCause, lang) + "\n" + sanitizeText(longCause, lang),
     }
 
 

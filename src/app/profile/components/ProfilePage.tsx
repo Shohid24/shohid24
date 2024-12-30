@@ -97,7 +97,7 @@ const ProfilePage = ({
               className="w-full flex-col items-start"
               label={translation.howHeDied}
               content={
-                profile && (profile[lang].cause.long || translation.unavailable)
+                profile && (profile[lang].cause || translation.unavailable)
               }
               skeletons={
                 <>

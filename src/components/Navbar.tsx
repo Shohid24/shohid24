@@ -37,8 +37,14 @@ const Navbar = ({
       </div>
       <div className="flex items-center justify-center gap-2">
         <div className="flex items-center justify-center gap-2 md:gap-5">
-          <Anchor href={`/about?lang=${lang}`} className="hidden md:block">
+          <Anchor
+            href={`/about?lang=${lang}`}
+            className="-mr-8 hidden md:block"
+          >
             {translation.aboutName}
+          </Anchor>
+          <Anchor href={`/contact?lang=${lang}`} className="hidden md:block">
+            {translation.contactName}
           </Anchor>
           <ToggleLanguage lang={lang} setLang={setLang} />
           <ModeToggle />
