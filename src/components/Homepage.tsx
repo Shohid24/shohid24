@@ -3,7 +3,7 @@ import { useHotkeys } from "react-hotkeys-hook";
 import { SearchPerson, SearchResults } from "@/lib/helpers/search";
 import List from "./List";
 import { Input } from "./ui/input";
-import { parseAsString, useQueryState } from "nuqs";
+import { parseAsInteger, parseAsString, useQueryState } from "nuqs";
 import type { Translation } from "@/components/translations";
 import { toBengali } from "@/lib/helpers/date";
 
@@ -12,6 +12,10 @@ const Homepage_Sus = ({ translation }: { translation: Translation }) => {
   const [query, setQuery] = useQueryState(
     "query",
     parseAsString.withDefault(""),
+  );
+  const [currentPage, setCurrentPage] = useQueryState(
+    "page",
+    parseAsInteger.withDefault(1),
   );
   const queryRef = useRef<HTMLInputElement | null>(null);
 
@@ -23,6 +27,8 @@ const Homepage_Sus = ({ translation }: { translation: Translation }) => {
       const res = SearchPerson(query);
       setSearchResult(res);
     });
+    setCurrentPage(1);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [query]);
 
   useHotkeys(
@@ -114,12 +120,19 @@ const Homepage_Sus = ({ translation }: { translation: Translation }) => {
           </>
         )}
       </p>
-      <List searchResult={searchResult} lang={translation.lang} query={query} />
+      <List
+        searchResult={searchResult}
+        lang={translation.lang}
+        query={query}
+        currentPage={currentPage}
+        setCurrentPage={setCurrentPage}
+      />
     </main>
   );
 };
 
 const Homepage = ({ translation }: { translation: Translation }) => {
+  const [currentPage, setCurrentPage] = useState(1);
   return (
     <Suspense
       fallback={
@@ -134,7 +147,12 @@ const Homepage = ({ translation }: { translation: Translation }) => {
             />
           </div>
 
-          <List searchResult={[]} lang={translation.lang} />
+          <List
+            searchResult={[]}
+            lang={translation.lang}
+            currentPage={currentPage}
+            setCurrentPage={setCurrentPage}
+          />
         </main>
       }
     >

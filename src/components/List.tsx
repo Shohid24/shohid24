@@ -10,19 +10,19 @@ const List = ({
   searchResult,
   lang,
   query,
+  currentPage,
+  setCurrentPage,
 }: {
   searchResult: SearchResults;
   lang: string;
   query: string;
+  currentPage: number;
+  setCurrentPage: (value: number) => void;
 }) => {
   const [wasFirstNill, setWasFirstNill] = useState(searchResult.length === 0);
   const [perPage, setPerPage] = useQueryState(
     "per",
     parseAsInteger.withDefault(24),
-  );
-  const [currentPage, setCurrentPage] = useQueryState(
-    "page",
-    parseAsInteger.withDefault(1),
   );
   useEffect(() => {
     if (!wasFirstNill && searchResult.length > 0) {
@@ -107,10 +107,14 @@ const SuspendedList = ({
   searchResult,
   lang,
   query = "",
+  currentPage,
+  setCurrentPage,
 }: {
   searchResult: SearchResults;
   lang: string;
   query?: string;
+  currentPage: number;
+  setCurrentPage: (value: number) => void;
 }) => (
   <Suspense
     fallback={
@@ -121,7 +125,13 @@ const SuspendedList = ({
       </div>
     }
   >
-    <List searchResult={searchResult} lang={lang} query={query} />
+    <List
+      searchResult={searchResult}
+      lang={lang}
+      query={query}
+      currentPage={currentPage}
+      setCurrentPage={setCurrentPage}
+    />
   </Suspense>
 );
 
