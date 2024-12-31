@@ -20,6 +20,7 @@ export default function RootLayout({
   return (
     <html lang="bn" suppressHydrationWarning>
       <head>
+        <link rel="icon" href="/favicon.svg" />
         <link rel="preload" as="image" href="/default.jpg" />
         <meta
           name="google-site-verification"
