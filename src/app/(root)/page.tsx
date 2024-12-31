@@ -1,5 +1,5 @@
 "use client";
-import { Suspense } from "react";
+import { Suspense, useEffect } from "react";
 import Head from "next/head";
 
 import MaxwidthWrapper from "@/components/ui/MaxwidthWrapper";
@@ -12,7 +12,6 @@ import { parseAsString, useQueryState } from "nuqs";
 import { getTranslation } from "@/components/translations";
 import { getFontClass } from "@/lib/fontLoader";
 import Link from "next/link";
-import { Button } from "@/components/ui/button";
 
 const GetComponent = ({
   lang,
@@ -22,6 +21,12 @@ const GetComponent = ({
   setLang: React.Dispatch<React.SetStateAction<string>>;
 }) => {
   const translation = getTranslation(lang);
+  useEffect(() => {
+    document.title = translation.title;
+    document
+      .querySelector('meta[name="description"]')
+      ?.setAttribute("content", translation.description);
+  }, [translation]);
   return (
     <div className={getFontClass(lang)}>
       <Head>

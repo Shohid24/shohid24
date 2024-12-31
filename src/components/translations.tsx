@@ -1,7 +1,6 @@
 import Link from "next/link";
 import { totalMartyrs } from "../lib/helpers/search";
 import { toBengali } from "../lib/helpers/date";
-import { Button } from "@/components/ui/button";
 
 export const ENGLISH = {
   lang: "en",
