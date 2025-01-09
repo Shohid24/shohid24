@@ -1,7 +1,31 @@
 import datetime
 import os, json
+import requests
 
-from getID import getNthCombination
+from helper import getNthCombination
+
+
+def getClearDate(date: str):
+    d, m, y = date.split()
+    d = d.replace("th", "").replace("st", "").replace("nd", "").replace("rd", "")
+
+    return f"{d} {m} {y}"
+
+
+def download_image(image):
+    if not image or not image.startswith("http"):
+        print("Image url invalid!\n")
+        return 0
+
+    try:
+        r = requests.get(image)
+        if r.status_code != 200:
+            print(f"Failed to download image from {image}!\n")
+            return 0
+        return r.content
+    except:
+        print(f"Failed to download image from {image}!\n")
+        return 0
 
 
 # add the new datas
@@ -15,11 +39,37 @@ for index, file in enumerate(files):
         data = json.load(f)
 
     id = getNthCombination(currentLength + index)
+    image = data["image"]
+    ext = "jpg"
+    if image:
+        supported = ("png", "jpeg")
+        ext = (
+            image.split("/")[-1].split(".")[-1] if image.endswith(supported) else "jpg"
+        )
+
+    if image != 0:
+        path = f"../photos/{id}.{ext}"
+        if os.path.exists(path):
+            print(f"---> {path.split('/')[-1]} already exists")
+            raise Exception(f"`{path.split('/')[-1]}` already exists")
+        else:
+            image = download_image(image)
+            with open(path, "wb") as f:
+                f.write(image)
+
     age = data["age"]
     dob = data["dob"]
     bn = data["bn"]
     en = data["en"]
     date = data["date"]
+
+    try:
+        getClearDate(date)
+    except Exception as e:
+        print(f"---> Invalid Date: {date}")
+        print(f"---> Format should be like: 18 July, 2024")
+        raise e
+
     newData = {
         "id": id,
         "age": age,
@@ -27,6 +77,7 @@ for index, file in enumerate(files):
         "bn": bn,
         "en": en,
     }
+
     searchable = {
         "id": id,
         "name": {"bn": bn["name"], "en": en["name"]},
@@ -45,13 +96,6 @@ for index, file in enumerate(files):
         print(f"Removed new/{file}")
     except Exception as e:
         print(f"Failed to remove new/{file}: {e}")
-
-
-def getClearDate(date: str):
-    d, m, y = date.split()
-    d = d.replace("th", "").replace("st", "").replace("nd", "").replace("rd", "")
-
-    return f"{d} {m} {y}"
 
 
 with open("searchableData.json", "rb") as f:

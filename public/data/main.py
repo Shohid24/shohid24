@@ -40,14 +40,15 @@ for i in range(len(rawData)):
     id = data[i]["id"]
     raw: dict = rawData[i]
     age = raw.get("age", "").strip()
-    dob = raw.get("bornDate", "").strip()
+    dobBN = raw["bn"].get("bornDate", "").strip()
+    dobEN = raw["en"].get("bornDate", "").strip()
     bn = cleanup(rawData[i]["bn"], "bn")
     en = cleanup(rawData[i]["en"], "en")
 
     newData = {
         "id": id,
         "age": age,
-        "dob": dob,
+        "dob": dobEN,
         "bn": bn,
         "en": en,
     }
@@ -55,3 +56,4 @@ for i in range(len(rawData)):
         json.dump(newData, f, ensure_ascii=False)
 
     print(f"{i:03}. {id}")
+        

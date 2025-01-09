@@ -45,7 +45,10 @@
       "educationOrWork": "ওমরগণি এম.ই.এস. কলেজ, চট্টগ্রাম",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "" }
+      "howToDeath": {
+        "short": "",
+        "long": ""
+      }
     },
     "en": {
       "name": "Faisal Ahmed Shanto",
@@ -54,7 +57,10 @@
       "educationOrWork": "Omargani M.E.S. College, Chittagong",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "" }
+      "howToDeath": {
+        "short": "",
+        "long": ""
+      }
     }
   },
   {
@@ -71,7 +77,10 @@
       "educationOrWork": "চট্টগ্রাম কলেজ, চট্টগ্রাম",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "" }
+      "howToDeath": {
+        "short": "",
+        "long": ""
+      }
     },
     "en": {
       "name": "Md. Wasim Akrum",
@@ -80,7 +89,10 @@
       "educationOrWork": "Chittagong College, Chittagong",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "" }
+      "howToDeath": {
+        "short": "",
+        "long": ""
+      }
     }
   },
   {
@@ -129,7 +141,10 @@
       "educationOrWork": "আর,কে চোধূরী স্কুল এন্ড কলেজ, সায়েদাবাদ, যাত্রাবাড়ী, ঢাকা",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "আর কে চৌধুরী কলেজ" }
+      "howToDeath": {
+        "short": "",
+        "long": "আর কে চৌধুরী কলেজ"
+      }
     },
     "en": {
       "name": "Sakib Hasan",
@@ -138,7 +153,10 @@
       "educationOrWork": "R.K.Chowdhury School & College, Sayedabad, Jatrabari, Dhaka ",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "R K CHOWDHURY COLLEGE" }
+      "howToDeath": {
+        "short": "",
+        "long": "R K CHOWDHURY COLLEGE"
+      }
     }
   },
   {
@@ -155,7 +173,10 @@
       "educationOrWork": "কাদির মোল্লা হাই স্কুল, নরসিংদী",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "" }
+      "howToDeath": {
+        "short": "",
+        "long": ""
+      }
     },
     "en": {
       "name": "Tahmid Tamim",
@@ -164,7 +185,10 @@
       "educationOrWork": "Qadir Mollah High School, Narsingdi",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "" }
+      "howToDeath": {
+        "short": "",
+        "long": ""
+      }
     }
   },
   {
@@ -213,7 +237,10 @@
       "educationOrWork": "ইসলামিক ইউনিভার্সিটি অফ টেকনোলজি, গাজীপুর",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "" }
+      "howToDeath": {
+        "short": "",
+        "long": ""
+      }
     },
     "en": {
       "name": "Jahiduzzaman Tanvin",
@@ -222,7 +249,10 @@
       "educationOrWork": "Islamic University of Technology, Gazipur.",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "" }
+      "howToDeath": {
+        "short": "",
+        "long": ""
+      }
     }
   },
   {
@@ -239,7 +269,10 @@
       "educationOrWork": "ঢাকা রেসিডেনসিয়াল মডেল কলেজ, মোহাম্মদপুর",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "" }
+      "howToDeath": {
+        "short": "",
+        "long": ""
+      }
     },
     "en": {
       "name": "Farhan Faiyaaz",
@@ -248,7 +281,10 @@
       "educationOrWork": "Dhaka Residential Model College, Mohammadpur",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "" }
+      "howToDeath": {
+        "short": "",
+        "long": ""
+      }
     }
   },
   {
@@ -265,7 +301,10 @@
       "educationOrWork": "বাংলাদেশ ইউনিভার্সিটি অফ প্রফেশনালস",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "" }
+      "howToDeath": {
+        "short": "",
+        "long": ""
+      }
     },
     "en": {
       "name": "Mir Mugdho",
@@ -274,7 +313,10 @@
       "educationOrWork": "Bangladesh University of professionals",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "" }
+      "howToDeath": {
+        "short": "",
+        "long": ""
+      }
     }
   },
   {
@@ -291,7 +333,10 @@
       "educationOrWork": "ইস্ট ওয়েস্ট ইউনিভার্সিটি, ঢাকা",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "" }
+      "howToDeath": {
+        "short": "",
+        "long": ""
+      }
     },
     "en": {
       "name": "Shah Newaz Fahad",
@@ -300,7 +345,10 @@
       "educationOrWork": "East West University",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "" }
+      "howToDeath": {
+        "short": "",
+        "long": ""
+      }
     }
   },
   {
@@ -317,7 +365,10 @@
       "educationOrWork": "মানারাত ইন্টারন্যাশনাল ইউনিভার্সিটি",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "" }
+      "howToDeath": {
+        "short": "",
+        "long": ""
+      }
     },
     "en": {
       "name": "Shakil Parvej",
@@ -326,7 +377,10 @@
       "educationOrWork": "Manarat International University",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "" }
+      "howToDeath": {
+        "short": "",
+        "long": ""
+      }
     }
   },
   {
@@ -343,7 +397,10 @@
       "educationOrWork": "টংগী সরকারি কলেজ",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "" }
+      "howToDeath": {
+        "short": "",
+        "long": ""
+      }
     },
     "en": {
       "name": "Sheikh Fahmin Zafor",
@@ -352,7 +409,10 @@
       "educationOrWork": "Tongi Govt. College",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "" }
+      "howToDeath": {
+        "short": "",
+        "long": ""
+      }
     }
   },
   {
@@ -369,7 +429,10 @@
       "educationOrWork": "ইম্পেরিয়াল কলেজ, ঢাকা",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "" }
+      "howToDeath": {
+        "short": "",
+        "long": ""
+      }
     },
     "en": {
       "name": "Zillur Sheikh",
@@ -378,7 +441,10 @@
       "educationOrWork": "Imperial College, Dhaka",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "" }
+      "howToDeath": {
+        "short": "",
+        "long": ""
+      }
     }
   },
   {
@@ -395,7 +461,10 @@
       "educationOrWork": "মাদারীপুর সরকারি কলেজ",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "" }
+      "howToDeath": {
+        "short": "",
+        "long": ""
+      }
     },
     "en": {
       "name": "Dipto Dey",
@@ -404,7 +473,10 @@
       "educationOrWork": "Madaripur Government College",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "" }
+      "howToDeath": {
+        "short": "",
+        "long": ""
+      }
     }
   },
   {
@@ -421,7 +493,10 @@
       "educationOrWork": "শাহজালাল বিজ্ঞান ও প্রযুক্তি বিশ্ববিদ্যালয়, সিলেট",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "" }
+      "howToDeath": {
+        "short": "",
+        "long": ""
+      }
     },
     "en": {
       "name": "Rudro Sen",
@@ -430,7 +505,10 @@
       "educationOrWork": "Shahjalal University of Science and Technology, Sylhet",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "" }
+      "howToDeath": {
+        "short": "",
+        "long": ""
+      }
     }
   },
   {
@@ -447,7 +525,10 @@
       "educationOrWork": "ঢাকা টাইমস",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "" }
+      "howToDeath": {
+        "short": "",
+        "long": ""
+      }
     },
     "en": {
       "name": "Mehedi Hasan",
@@ -456,7 +537,10 @@
       "educationOrWork": "Dhaka Times",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "" }
+      "howToDeath": {
+        "short": "",
+        "long": ""
+      }
     }
   },
   {
@@ -473,7 +557,10 @@
       "educationOrWork": "ইউনিভার্সিটি অফ ক্রিয়েটিভ টেকনোলজি, চট্টগ্রাম",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "" }
+      "howToDeath": {
+        "short": "",
+        "long": ""
+      }
     },
     "en": {
       "name": "Emon Ahmed",
@@ -482,7 +569,10 @@
       "educationOrWork": "University of Creative Technology, Chittgong",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "" }
+      "howToDeath": {
+        "short": "",
+        "long": ""
+      }
     }
   },
   {
@@ -499,7 +589,10 @@
       "educationOrWork": "মোবাইল ব্যাটারির দোকান, ঢাকা",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "" }
+      "howToDeath": {
+        "short": "",
+        "long": ""
+      }
     },
     "en": {
       "name": "Siam",
@@ -508,7 +601,10 @@
       "educationOrWork": "A mobile battery shop, Gulistan, Dhaka",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "" }
+      "howToDeath": {
+        "short": "",
+        "long": ""
+      }
     }
   },
   {
@@ -525,7 +621,10 @@
       "educationOrWork": "ঢাকা",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "" }
+      "howToDeath": {
+        "short": "",
+        "long": ""
+      }
     },
     "en": {
       "name": "Dulal Matbor",
@@ -534,7 +633,10 @@
       "educationOrWork": "Dhaka",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "" }
+      "howToDeath": {
+        "short": "",
+        "long": ""
+      }
     }
   },
   {
@@ -551,7 +653,10 @@
       "educationOrWork": "",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "" }
+      "howToDeath": {
+        "short": "",
+        "long": ""
+      }
     },
     "en": {
       "name": "Muhammad",
@@ -560,7 +665,10 @@
       "educationOrWork": "",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "" }
+      "howToDeath": {
+        "short": "",
+        "long": ""
+      }
     }
   },
   {
@@ -577,7 +685,10 @@
       "educationOrWork": "ইম্পেরিয়াল কলেজ, ঢাকা",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "" }
+      "howToDeath": {
+        "short": "",
+        "long": ""
+      }
     },
     "en": {
       "name": "Sharif Hasan",
@@ -586,7 +697,10 @@
       "educationOrWork": "Imperial College, Dhaka",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "" }
+      "howToDeath": {
+        "short": "",
+        "long": ""
+      }
     }
   },
   {
@@ -603,7 +717,10 @@
       "educationOrWork": "সরকারি শহীদ আসাদ কলেজ, নরসিংদী",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "" }
+      "howToDeath": {
+        "short": "",
+        "long": ""
+      }
     },
     "en": {
       "name": "Imon Miah",
@@ -612,7 +729,10 @@
       "educationOrWork": "Govt. Shahid Asad College, Shibpur, Narsingdi",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "" }
+      "howToDeath": {
+        "short": "",
+        "long": ""
+      }
     }
   },
   {
@@ -629,7 +749,10 @@
       "educationOrWork": "দৈনিক ভোরের আওয়াজ",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "" }
+      "howToDeath": {
+        "short": "",
+        "long": ""
+      }
     },
     "en": {
       "name": "Shakil Hasan",
@@ -638,7 +761,10 @@
       "educationOrWork": "Daily Vorer Awaz",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "" }
+      "howToDeath": {
+        "short": "",
+        "long": ""
+      }
     }
   },
   {
@@ -655,7 +781,10 @@
       "educationOrWork": "ইম্পেরিয়াল কলেজ, ঢাকা",
       "biography": " হাফেজ আব্দুর রাজ্জাক মাদ্রাসার শিক্ষক কামরুল হাসানের সন্তান। ",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "" }
+      "howToDeath": {
+        "short": "",
+        "long": ""
+      }
     },
     "en": {
       "name": "Khalid Hasan Saifullah",
@@ -664,7 +793,10 @@
       "educationOrWork": "Imperial College, Dhaka",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "" }
+      "howToDeath": {
+        "short": "",
+        "long": ""
+      }
     }
   },
   {
@@ -681,7 +813,10 @@
       "educationOrWork": "পটিয়া সরকারি কলেজ, চট্টগ্রাম",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "" }
+      "howToDeath": {
+        "short": "",
+        "long": ""
+      }
     },
     "en": {
       "name": "Mohammad Imad",
@@ -690,7 +825,10 @@
       "educationOrWork": "Patiya Government College, Chittagong",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "" }
+      "howToDeath": {
+        "short": "",
+        "long": ""
+      }
     }
   },
   {
@@ -739,7 +877,10 @@
       "educationOrWork": "চট্টগ্রাম বিশ্ববিদ্যালয়",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "" }
+      "howToDeath": {
+        "short": "",
+        "long": ""
+      }
     },
     "en": {
       "name": "Hridoy Chandra Tarua ",
@@ -748,7 +889,10 @@
       "educationOrWork": "University of Chittagong",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "" }
+      "howToDeath": {
+        "short": "",
+        "long": ""
+      }
     }
   },
   {
@@ -765,7 +909,10 @@
       "educationOrWork": "নওয়াব হাবিবুল্লাহ্ মডেল স্কুল এন্ড কলেজের, ঢাকা",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "" }
+      "howToDeath": {
+        "short": "",
+        "long": ""
+      }
     },
     "en": {
       "name": "Rahat Hossain",
@@ -774,7 +921,10 @@
       "educationOrWork": "Nawab Habibullah Model School & College, Dhaka",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "" }
+      "howToDeath": {
+        "short": "",
+        "long": ""
+      }
     }
   },
   {
@@ -823,7 +973,10 @@
       "educationOrWork": "তায়রুননেছা মেমোরিয়াল মেডিকেল কলেজ, টঙ্গী",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "" }
+      "howToDeath": {
+        "short": "",
+        "long": ""
+      }
     },
     "en": {
       "name": "Dr. Sajib Sarker",
@@ -832,7 +985,10 @@
       "educationOrWork": "Tairunnessa Memorial Medical College & Hospital, Tongi",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "" }
+      "howToDeath": {
+        "short": "",
+        "long": ""
+      }
     }
   },
   {
@@ -881,7 +1037,10 @@
       "educationOrWork": "",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "" }
+      "howToDeath": {
+        "short": "",
+        "long": ""
+      }
     },
     "en": {
       "name": "Manik Mia",
@@ -890,7 +1049,10 @@
       "educationOrWork": "",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "" }
+      "howToDeath": {
+        "short": "",
+        "long": ""
+      }
     }
   },
   {
@@ -939,7 +1101,10 @@
       "educationOrWork": "ইউনাইটেড ইন্টারন্যাশনাল ইউনিভার্সিটি",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "" }
+      "howToDeath": {
+        "short": "",
+        "long": ""
+      }
     },
     "en": {
       "name": "Md. Shakline",
@@ -948,7 +1113,10 @@
       "educationOrWork": "United International University",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "" }
+      "howToDeath": {
+        "short": "",
+        "long": ""
+      }
     }
   },
   {
@@ -1125,7 +1293,10 @@
       "educationOrWork": " যাত্রাবাড়ী, ঢাকা",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "- সূত্র: প্রথম আলো" }
+      "howToDeath": {
+        "short": "",
+        "long": "- সূত্র: প্রথম আলো"
+      }
     },
     "en": {
       "name": "Md. Abdul Kaium Ahad",
@@ -1134,7 +1305,10 @@
       "educationOrWork": "Jatrabari, Dhaka",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "- Source: Prothom Alo" }
+      "howToDeath": {
+        "short": "",
+        "long": "- Source: Prothom Alo"
+      }
     }
   },
   {
@@ -1151,7 +1325,10 @@
       "educationOrWork": "",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "" }
+      "howToDeath": {
+        "short": "",
+        "long": ""
+      }
     },
     "en": {
       "name": "Mohammad Imran",
@@ -1160,7 +1337,10 @@
       "educationOrWork": "",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "" }
+      "howToDeath": {
+        "short": "",
+        "long": ""
+      }
     }
   },
   {
@@ -1177,7 +1357,10 @@
       "educationOrWork": "",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": " - সূত্র: মানবজমিন" }
+      "howToDeath": {
+        "short": "",
+        "long": " - সূত্র: মানবজমিন"
+      }
     },
     "en": {
       "name": "Md. Hosen",
@@ -1186,7 +1369,10 @@
       "educationOrWork": "",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "- Source: Manab Zamin" }
+      "howToDeath": {
+        "short": "",
+        "long": "- Source: Manab Zamin"
+      }
     }
   },
   {
@@ -1203,7 +1389,10 @@
       "educationOrWork": "আজমপুর, উত্তরা, ঢাকা",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "- সূত্র: bdnews24.com" }
+      "howToDeath": {
+        "short": "",
+        "long": "- সূত্র: bdnews24.com"
+      }
     },
     "en": {
       "name": "Tajul Islam",
@@ -1212,7 +1401,10 @@
       "educationOrWork": "Azampur, Uttara, Dhaka",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "- Source: bdnews24.com" }
+      "howToDeath": {
+        "short": "",
+        "long": "- Source: bdnews24.com"
+      }
     }
   },
   {
@@ -1229,7 +1421,10 @@
       "educationOrWork": "শ্যামলী পরিবহন",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "- সূত্র: প্রথম আলো" }
+      "howToDeath": {
+        "short": "",
+        "long": "- সূত্র: প্রথম আলো"
+      }
     },
     "en": {
       "name": "Abu Jafor",
@@ -1238,7 +1433,10 @@
       "educationOrWork": "Shyamoli Paribahan",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "- Source: Prothom Alo" }
+      "howToDeath": {
+        "short": "",
+        "long": "- Source: Prothom Alo"
+      }
     }
   },
   {
@@ -1255,7 +1453,10 @@
       "educationOrWork": "",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "" }
+      "howToDeath": {
+        "short": "",
+        "long": ""
+      }
     },
     "en": {
       "name": "Meherima Rahman ",
@@ -1264,7 +1465,10 @@
       "educationOrWork": "",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "" }
+      "howToDeath": {
+        "short": "",
+        "long": ""
+      }
     }
   },
   {
@@ -1377,7 +1581,10 @@
       "educationOrWork": "ডেভেলপার কোম্পানিত উত্তরা",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "" }
+      "howToDeath": {
+        "short": "",
+        "long": ""
+      }
     },
     "en": {
       "name": "Md. Mokhlesur rahman",
@@ -1386,7 +1593,10 @@
       "educationOrWork": "Developer company Uttara",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "" }
+      "howToDeath": {
+        "short": "",
+        "long": ""
+      }
     }
   },
   {
@@ -1403,7 +1613,10 @@
       "educationOrWork": "",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "ছাত্রলীগের সন্ত্রাসীদের গুলিতে।", "long": "" }
+      "howToDeath": {
+        "short": "ছাত্রলীগের সন্ত্রাসীদের গুলিতে।",
+        "long": ""
+      }
     },
     "en": {
       "name": "Md. Masud Miah",
@@ -1412,7 +1625,10 @@
       "educationOrWork": "",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "Shot dead by BSL terrorists.", "long": "" }
+      "howToDeath": {
+        "short": "Shot dead by BSL terrorists.",
+        "long": ""
+      }
     }
   },
   {
@@ -1429,7 +1645,10 @@
       "educationOrWork": "ইউনাইটেড ইন্টারন্যাশনাল ইউনিভার্সিটি, ঢাকা",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "" }
+      "howToDeath": {
+        "short": "",
+        "long": ""
+      }
     },
     "en": {
       "name": "Irfan Bhuiyan",
@@ -1438,7 +1657,10 @@
       "educationOrWork": "United International University",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "" }
+      "howToDeath": {
+        "short": "",
+        "long": ""
+      }
     }
   },
   {
@@ -1455,7 +1677,10 @@
       "educationOrWork": "ঢাকার একটি বেসরকারি প্রতিষ্ঠান",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "" }
+      "howToDeath": {
+        "short": "",
+        "long": ""
+      }
     },
     "en": {
       "name": "Hasib Iqbal",
@@ -1464,7 +1689,10 @@
       "educationOrWork": "A private institution in Dhaka",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "" }
+      "howToDeath": {
+        "short": "",
+        "long": ""
+      }
     }
   },
   {
@@ -1513,7 +1741,10 @@
       "educationOrWork": "দৈনিক জালালাবাদ",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "" }
+      "howToDeath": {
+        "short": "",
+        "long": ""
+      }
     },
     "en": {
       "name": "A.T.M. Turab",
@@ -1522,7 +1753,10 @@
       "educationOrWork": "Daily Jalalabad",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "" }
+      "howToDeath": {
+        "short": "",
+        "long": ""
+      }
     }
   },
   {
@@ -1571,7 +1805,10 @@
       "educationOrWork": "",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "" }
+      "howToDeath": {
+        "short": "",
+        "long": ""
+      }
     },
     "en": {
       "name": "Abdul Goni",
@@ -1580,7 +1817,10 @@
       "educationOrWork": "",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "" }
+      "howToDeath": {
+        "short": "",
+        "long": ""
+      }
     }
   },
   {
@@ -1597,7 +1837,10 @@
       "educationOrWork": "",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "" }
+      "howToDeath": {
+        "short": "",
+        "long": ""
+      }
     },
     "en": {
       "name": "Rakib",
@@ -1606,7 +1849,10 @@
       "educationOrWork": "",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "" }
+      "howToDeath": {
+        "short": "",
+        "long": ""
+      }
     }
   },
   {
@@ -1623,7 +1869,10 @@
       "educationOrWork": "",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "" }
+      "howToDeath": {
+        "short": "",
+        "long": ""
+      }
     },
     "en": {
       "name": "Rasel",
@@ -1632,7 +1881,10 @@
       "educationOrWork": "",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "" }
+      "howToDeath": {
+        "short": "",
+        "long": ""
+      }
     }
   },
   {
@@ -1649,7 +1901,10 @@
       "educationOrWork": "",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "" }
+      "howToDeath": {
+        "short": "",
+        "long": ""
+      }
     },
     "en": {
       "name": "Jubaer Bepari",
@@ -1658,7 +1913,10 @@
       "educationOrWork": "",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "" }
+      "howToDeath": {
+        "short": "",
+        "long": ""
+      }
     }
   },
   {
@@ -1675,7 +1933,10 @@
       "educationOrWork": "টংগী সরকারি কলেজ",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "" }
+      "howToDeath": {
+        "short": "",
+        "long": ""
+      }
     },
     "en": {
       "name": "Ridowan Sharif Riyad",
@@ -1684,7 +1945,10 @@
       "educationOrWork": "Tongi Govt. College",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "" }
+      "howToDeath": {
+        "short": "",
+        "long": ""
+      }
     }
   },
   {
@@ -1701,7 +1965,10 @@
       "educationOrWork": "",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "" }
+      "howToDeath": {
+        "short": "",
+        "long": ""
+      }
     },
     "en": {
       "name": "Monirul Islam",
@@ -1710,7 +1977,10 @@
       "educationOrWork": "",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "" }
+      "howToDeath": {
+        "short": "",
+        "long": ""
+      }
     }
   },
   {
@@ -1727,7 +1997,10 @@
       "educationOrWork": "কবি নজরুল সরকারি কলেজ, ঢাকা",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "" }
+      "howToDeath": {
+        "short": "",
+        "long": ""
+      }
     },
     "en": {
       "name": "Ikram Hosen Kawsar",
@@ -1736,7 +2009,10 @@
       "educationOrWork": "Kabi Nazrul Govt. College, Dhaka",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "" }
+      "howToDeath": {
+        "short": "",
+        "long": ""
+      }
     }
   },
   {
@@ -1753,7 +2029,10 @@
       "educationOrWork": "কুষ্টিয়া পলিটেকনিক ইনস্টিটিউট",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "" }
+      "howToDeath": {
+        "short": "",
+        "long": ""
+      }
     },
     "en": {
       "name": "Maruf Hosen",
@@ -1762,7 +2041,10 @@
       "educationOrWork": "Kushtia Polytechnic Institute",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "" }
+      "howToDeath": {
+        "short": "",
+        "long": ""
+      }
     }
   },
   {
@@ -1779,7 +2061,10 @@
       "educationOrWork": "একতা ডিগ্রী কলেজ, বরিশাল",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "" }
+      "howToDeath": {
+        "short": "",
+        "long": ""
+      }
     },
     "en": {
       "name": "Maruf Hossain",
@@ -1788,7 +2073,10 @@
       "educationOrWork": "Akota Degree College, Barisal",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "" }
+      "howToDeath": {
+        "short": "",
+        "long": ""
+      }
     }
   },
   {
@@ -1805,7 +2093,10 @@
       "educationOrWork": "লক্ষীপুর পলিটেকনিক ইনস্টিটিউট",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "" }
+      "howToDeath": {
+        "short": "",
+        "long": ""
+      }
     },
     "en": {
       "name": "Mahmudul Hasan Rizvi",
@@ -1814,7 +2105,10 @@
       "educationOrWork": "Lakshmipur Polytechnic Institute",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "" }
+      "howToDeath": {
+        "short": "",
+        "long": ""
+      }
     }
   },
   {
@@ -1959,7 +2253,10 @@
       "educationOrWork": "শহীদ জররেজ মার্কেট রংপুর",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "" }
+      "howToDeath": {
+        "short": "",
+        "long": ""
+      }
     },
     "en": {
       "name": "Merajul Islam Meraj",
@@ -1968,7 +2265,10 @@
       "educationOrWork": "Shaheed Jorrez Market, Rangpur",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "" }
+      "howToDeath": {
+        "short": "",
+        "long": ""
+      }
     }
   },
   {
@@ -1985,7 +2285,10 @@
       "educationOrWork": "ময়মনসিংহ কমার্স কলেজ",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "" }
+      "howToDeath": {
+        "short": "",
+        "long": ""
+      }
     },
     "en": {
       "name": "Ridone Sagar",
@@ -1994,7 +2297,10 @@
       "educationOrWork": "Mymensingh commerce college",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "" }
+      "howToDeath": {
+        "short": "",
+        "long": ""
+      }
     }
   },
   {
@@ -2011,7 +2317,10 @@
       "educationOrWork": "",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "" }
+      "howToDeath": {
+        "short": "",
+        "long": ""
+      }
     },
     "en": {
       "name": "Mahfuzur Rahmann Muhin",
@@ -2020,7 +2329,10 @@
       "educationOrWork": "",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "" }
+      "howToDeath": {
+        "short": "",
+        "long": ""
+      }
     }
   },
   {
@@ -2101,7 +2413,10 @@
       "educationOrWork": "কবি নজরুল সরকারি কলেজ",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "" }
+      "howToDeath": {
+        "short": "",
+        "long": ""
+      }
     },
     "en": {
       "name": "Md. Jihad Hosen",
@@ -2110,7 +2425,10 @@
       "educationOrWork": "Kabi Nazrul Govt. College",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "" }
+      "howToDeath": {
+        "short": "",
+        "long": ""
+      }
     }
   },
   {
@@ -2127,7 +2445,10 @@
       "educationOrWork": "নর্দান ইউনিভার্সিটি",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "" }
+      "howToDeath": {
+        "short": "",
+        "long": ""
+      }
     },
     "en": {
       "name": "Obaidullah",
@@ -2136,7 +2457,10 @@
       "educationOrWork": "Northern University ",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "" }
+      "howToDeath": {
+        "short": "",
+        "long": ""
+      }
     }
   },
   {
@@ -2153,7 +2477,10 @@
       "educationOrWork": "সরকারি বাংলা কলেজ, মিরপুর ",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "" }
+      "howToDeath": {
+        "short": "",
+        "long": ""
+      }
     },
     "en": {
       "name": "MD. Sagor Ahommed",
@@ -2162,7 +2489,10 @@
       "educationOrWork": "Government Bangla College, Mirpur",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "" }
+      "howToDeath": {
+        "short": "",
+        "long": ""
+      }
     }
   },
   {
@@ -2179,7 +2509,10 @@
       "educationOrWork": "ঢাকা",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "" }
+      "howToDeath": {
+        "short": "",
+        "long": ""
+      }
     },
     "en": {
       "name": "Ubaydul Haque",
@@ -2188,7 +2521,10 @@
       "educationOrWork": "Dhaka",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "" }
+      "howToDeath": {
+        "short": "",
+        "long": ""
+      }
     }
   },
   {
@@ -2205,7 +2541,10 @@
       "educationOrWork": "দনিয়া কলেজ",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "" }
+      "howToDeath": {
+        "short": "",
+        "long": ""
+      }
     },
     "en": {
       "name": "Safwan Rohan",
@@ -2214,7 +2553,10 @@
       "educationOrWork": "Dania College",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "" }
+      "howToDeath": {
+        "short": "",
+        "long": ""
+      }
     }
   },
   {
@@ -2231,7 +2573,10 @@
       "educationOrWork": "উত্তরা ব্যাংক ",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "" }
+      "howToDeath": {
+        "short": "",
+        "long": ""
+      }
     },
     "en": {
       "name": "Farid",
@@ -2240,7 +2585,10 @@
       "educationOrWork": "Uttara Bank",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "" }
+      "howToDeath": {
+        "short": "",
+        "long": ""
+      }
     }
   },
   {
@@ -2257,7 +2605,10 @@
       "educationOrWork": "ইস্পাহানি কলেজ, রামেরকান্দা।",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "" }
+      "howToDeath": {
+        "short": "",
+        "long": ""
+      }
     },
     "en": {
       "name": "Riyaz Hosen",
@@ -2266,7 +2617,10 @@
       "educationOrWork": "Ispahani College, Ramerkanda.",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "" }
+      "howToDeath": {
+        "short": "",
+        "long": ""
+      }
     }
   },
   {
@@ -2315,7 +2669,10 @@
       "educationOrWork": "মিরপুর ১৩",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "" }
+      "howToDeath": {
+        "short": "",
+        "long": ""
+      }
     },
     "en": {
       "name": "Said",
@@ -2324,7 +2681,10 @@
       "educationOrWork": "Mirpur 13",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "" }
+      "howToDeath": {
+        "short": "",
+        "long": ""
+      }
     }
   },
   {
@@ -2341,7 +2701,10 @@
       "educationOrWork": "সরকারি তিতুমীর কলেজ",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "" }
+      "howToDeath": {
+        "short": "",
+        "long": ""
+      }
     },
     "en": {
       "name": "MD Mamun Miah",
@@ -2350,7 +2713,10 @@
       "educationOrWork": "Govt. Titumir College",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "" }
+      "howToDeath": {
+        "short": "",
+        "long": ""
+      }
     }
   },
   {
@@ -2367,7 +2733,10 @@
       "educationOrWork": "সুবাস্তু নজর ভ্যালী শপিং কমপ্লেক্স, ঢাকা",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "" }
+      "howToDeath": {
+        "short": "",
+        "long": ""
+      }
     },
     "en": {
       "name": "Emran Khalifa ",
@@ -2376,7 +2745,10 @@
       "educationOrWork": "Suvastu Nazar Valley Shopping Mall, Dhaka",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "" }
+      "howToDeath": {
+        "short": "",
+        "long": ""
+      }
     }
   },
   {
@@ -2393,7 +2765,10 @@
       "educationOrWork": "মহাখালীর চায়ের দোকানে।",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "" }
+      "howToDeath": {
+        "short": "",
+        "long": ""
+      }
     },
     "en": {
       "name": "MD. Al-amin Hosen",
@@ -2402,7 +2777,10 @@
       "educationOrWork": "A tea-stall in Mohakhali.",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "" }
+      "howToDeath": {
+        "short": "",
+        "long": ""
+      }
     }
   },
   {
@@ -2515,7 +2893,10 @@
       "educationOrWork": "আদর্শ কলেজ, মাগুরা",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "ঢাকা মোহাম্মদপুরে পুলিশের গুলিতে " }
+      "howToDeath": {
+        "short": "",
+        "long": "ঢাকা মোহাম্মদপুরে পুলিশের গুলিতে "
+      }
     },
     "en": {
       "name": "MD. Raju Ahmed",
@@ -2524,7 +2905,10 @@
       "educationOrWork": "Adarsha College, Magura",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "Police fire in Mohammadpur, Dhaka" }
+      "howToDeath": {
+        "short": "",
+        "long": "Police fire in Mohammadpur, Dhaka"
+      }
     }
   },
   {
@@ -2637,7 +3021,10 @@
       "educationOrWork": "জামেউল উলুম মাদ্রাসা, মিরপুর",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "" }
+      "howToDeath": {
+        "short": "",
+        "long": ""
+      }
     },
     "en": {
       "name": "Ahmed Sunny",
@@ -2646,7 +3033,10 @@
       "educationOrWork": "Jameul Uloom Madrasa, Mirpur",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "" }
+      "howToDeath": {
+        "short": "",
+        "long": ""
+      }
     }
   },
   {
@@ -2663,7 +3053,10 @@
       "educationOrWork": "",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "" }
+      "howToDeath": {
+        "short": "",
+        "long": ""
+      }
     },
     "en": {
       "name": "Nabin Talukdar",
@@ -2672,7 +3065,10 @@
       "educationOrWork": "",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "" }
+      "howToDeath": {
+        "short": "",
+        "long": ""
+      }
     }
   },
   {
@@ -2689,7 +3085,10 @@
       "educationOrWork": "মিরপুর ১২ রূপনগর আবাসিক এর একটা ফ্যাক্টরিতে",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "মিরপুর ১০ এ গুলিতে মারা গেছেন" }
+      "howToDeath": {
+        "short": "",
+        "long": "মিরপুর ১০ এ গুলিতে মারা গেছেন"
+      }
     },
     "en": {
       "name": "Biplob Seikh",
@@ -2698,7 +3097,10 @@
       "educationOrWork": "A factory in Mirpur 12 Rupnagar residential area",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "Was shot dead in Mirpur 10." }
+      "howToDeath": {
+        "short": "",
+        "long": "Was shot dead in Mirpur 10."
+      }
     }
   },
   {
@@ -2727,7 +3129,10 @@
       "educationOrWork": "Blue Bird School and College",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "Firing by the police" }
+      "howToDeath": {
+        "short": "",
+        "long": "Firing by the police"
+      }
     }
   },
   {
@@ -2744,7 +3149,10 @@
       "educationOrWork": "ঢাকা",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "" }
+      "howToDeath": {
+        "short": "",
+        "long": ""
+      }
     },
     "en": {
       "name": "Mohammad Nuru Hussain",
@@ -2753,7 +3161,10 @@
       "educationOrWork": "Dhaka",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "" }
+      "howToDeath": {
+        "short": "",
+        "long": ""
+      }
     }
   },
   {
@@ -2770,7 +3181,10 @@
       "educationOrWork": "নর্দার্ন ইউনিভার্সিটি ",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "" }
+      "howToDeath": {
+        "short": "",
+        "long": ""
+      }
     },
     "en": {
       "name": "Wadud",
@@ -2779,7 +3193,10 @@
       "educationOrWork": "Northern University",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "" }
+      "howToDeath": {
+        "short": "",
+        "long": ""
+      }
     }
   },
   {
@@ -2828,7 +3245,10 @@
       "educationOrWork": "পলমল গ্রুপ অব ইন্ডাস্ট্রিজ",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "মাথায় গুলি লেগে। " }
+      "howToDeath": {
+        "short": "",
+        "long": "মাথায় গুলি লেগে। "
+      }
     },
     "en": {
       "name": "Md. Sumon",
@@ -2837,7 +3257,10 @@
       "educationOrWork": "Palmal Group of Industries Ltd.",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "Shot in the head." }
+      "howToDeath": {
+        "short": "",
+        "long": "Shot in the head."
+      }
     }
   },
   {
@@ -2854,7 +3277,10 @@
       "educationOrWork": "শেরেবাংলা কলেজ",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "" }
+      "howToDeath": {
+        "short": "",
+        "long": ""
+      }
     },
     "en": {
       "name": "Sabbir Mallik",
@@ -2863,7 +3289,10 @@
       "educationOrWork": "Sherbangla College",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "" }
+      "howToDeath": {
+        "short": "",
+        "long": ""
+      }
     }
   },
   {
@@ -2912,7 +3341,10 @@
       "educationOrWork": "ঢাকার একটি বেসরকারি প্রতিষ্ঠান ",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "" }
+      "howToDeath": {
+        "short": "",
+        "long": ""
+      }
     },
     "en": {
       "name": "Naim",
@@ -2921,7 +3353,10 @@
       "educationOrWork": "A private institution in Dhaka",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "" }
+      "howToDeath": {
+        "short": "",
+        "long": ""
+      }
     }
   },
   {
@@ -2938,7 +3373,10 @@
       "educationOrWork": "ঢাকা মডেল (ডিগ্রী) কলেজ, মিরপুর",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "মিরপুর ১০ এ গুলিতে মারা গেছেন." }
+      "howToDeath": {
+        "short": "",
+        "long": "মিরপুর ১০ এ গুলিতে মারা গেছেন."
+      }
     },
     "en": {
       "name": "Rajon Shikdar",
@@ -2947,7 +3385,10 @@
       "educationOrWork": "Dhaka Model (Degree) College, Mirpur",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "Was shot dead in Mirpur 10." }
+      "howToDeath": {
+        "short": "",
+        "long": "Was shot dead in Mirpur 10."
+      }
     }
   },
   {
@@ -2996,7 +3437,10 @@
       "educationOrWork": "টাইলস মিস্ত্রি, ঢাকা",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "" }
+      "howToDeath": {
+        "short": "",
+        "long": ""
+      }
     },
     "en": {
       "name": "Shawn Shikder",
@@ -3005,7 +3449,10 @@
       "educationOrWork": "Tiles repairer, Dhaka",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "" }
+      "howToDeath": {
+        "short": "",
+        "long": ""
+      }
     }
   },
   {
@@ -3086,7 +3533,10 @@
       "educationOrWork": "প্রিয়াঙ্গন শপিং সেন্টার, ঢাকা",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "নীলক্ষেত এলাকায় পুলিশের গুলিতে" }
+      "howToDeath": {
+        "short": "",
+        "long": "নীলক্ষেত এলাকায় পুলিশের গুলিতে"
+      }
     },
     "en": {
       "name": "Md. Abdul Wadud",
@@ -3095,7 +3545,10 @@
       "educationOrWork": "Priangon Shopping Center, Dhaka",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "Police firing in Nilkhet area" }
+      "howToDeath": {
+        "short": "",
+        "long": "Police firing in Nilkhet area"
+      }
     }
   },
   {
@@ -3124,7 +3577,10 @@
       "educationOrWork": "",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "Shot by Police in Mohakhali" }
+      "howToDeath": {
+        "short": "",
+        "long": "Shot by Police in Mohakhali"
+      }
     }
   },
   {
@@ -3141,7 +3597,10 @@
       "educationOrWork": "",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "- সূত্র: প্রথম আলো" }
+      "howToDeath": {
+        "short": "",
+        "long": "- সূত্র: প্রথম আলো"
+      }
     },
     "en": {
       "name": "Md. Sakib Rayhan",
@@ -3150,7 +3609,10 @@
       "educationOrWork": "",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "- Source: Prothom Alo" }
+      "howToDeath": {
+        "short": "",
+        "long": "- Source: Prothom Alo"
+      }
     }
   },
   {
@@ -3167,7 +3629,10 @@
       "educationOrWork": "ঢাকা ইমপিরিয়াল কলেজ",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "- সূত্র: প্রথম আলো" }
+      "howToDeath": {
+        "short": "",
+        "long": "- সূত্র: প্রথম আলো"
+      }
     },
     "en": {
       "name": "Nazmul Hasan",
@@ -3176,7 +3641,10 @@
       "educationOrWork": "Dhaka Imperial college",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "- Source: Prothom Alo" }
+      "howToDeath": {
+        "short": "",
+        "long": "- Source: Prothom Alo"
+      }
     }
   },
   {
@@ -3205,7 +3673,10 @@
       "educationOrWork": "Shaikh Burhanuddin Post Graduate College",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "" }
+      "howToDeath": {
+        "short": "",
+        "long": ""
+      }
     }
   },
   {
@@ -3234,7 +3705,10 @@
       "educationOrWork": "Jahanjhar Di-mukhi Dakhil Madrasa",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "" }
+      "howToDeath": {
+        "short": "",
+        "long": ""
+      }
     }
   },
   {
@@ -3263,7 +3737,10 @@
       "educationOrWork": "Worked in a restaurant in Rampura, Dhaka",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "" }
+      "howToDeath": {
+        "short": "",
+        "long": ""
+      }
     }
   },
   {
@@ -3324,7 +3801,10 @@
       "educationOrWork": "Buying House",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "" }
+      "howToDeath": {
+        "short": "",
+        "long": ""
+      }
     }
   },
   {
@@ -3469,7 +3949,10 @@
       "educationOrWork": "আইটিজেড স্কুল অ্যান্ড কলেজে",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "" }
+      "howToDeath": {
+        "short": "",
+        "long": ""
+      }
     },
     "en": {
       "name": "Rakib Hasan",
@@ -3478,7 +3961,10 @@
       "educationOrWork": "ITZ School & College",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "" }
+      "howToDeath": {
+        "short": "",
+        "long": ""
+      }
     }
   },
   {
@@ -3495,7 +3981,10 @@
       "educationOrWork": "",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "" }
+      "howToDeath": {
+        "short": "",
+        "long": ""
+      }
     },
     "en": {
       "name": "Sojib",
@@ -3504,7 +3993,10 @@
       "educationOrWork": "",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "" }
+      "howToDeath": {
+        "short": "",
+        "long": ""
+      }
     }
   },
   {
@@ -3521,7 +4013,10 @@
       "educationOrWork": "রামপুরা, বনশ্রী, ব্লক: এফ, রোড নং 06",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "" }
+      "howToDeath": {
+        "short": "",
+        "long": ""
+      }
     },
     "en": {
       "name": "Md. Mizanur Rahaman",
@@ -3530,7 +4025,10 @@
       "educationOrWork": "Rampura,Banasree,Block:F,Road No:06",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "" }
+      "howToDeath": {
+        "short": "",
+        "long": ""
+      }
     }
   },
   {
@@ -3547,7 +4045,10 @@
       "educationOrWork": "মেসার্স শতরুপা ট্রেডার্স, দিপা ইলেকট্রিক মার্কেট, ১৫৯ নবাবপুর রোড, ঢাকা",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "পুলিশের গুলিতে", "long": "" }
+      "howToDeath": {
+        "short": "পুলিশের গুলিতে",
+        "long": ""
+      }
     },
     "en": {
       "name": "Mobarak Hossain",
@@ -3556,7 +4057,10 @@
       "educationOrWork": "M/s Satarupa Traders, Dipa Electric Market, 159 Nawabpur Road, Dhaka",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "Shot dead by police", "long": "" }
+      "howToDeath": {
+        "short": "Shot dead by police",
+        "long": ""
+      }
     }
   },
   {
@@ -3605,7 +4109,10 @@
       "educationOrWork": "এস,এম, মোজাম্মেল হক টেকনিক্যাল এন্ড বিজনেস ম্যানেজমেন্ট কলেজ / শ্যামলী পরিবহন",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "পুলিশের গুলিতে,মাথায় গুলিবিদ্ধ", "long": "" }
+      "howToDeath": {
+        "short": "পুলিশের গুলিতে,মাথায় গুলিবিদ্ধ",
+        "long": ""
+      }
     },
     "en": {
       "name": "Md. Faisal Sarker",
@@ -3614,7 +4121,10 @@
       "educationOrWork": "SM Mozammel Haque Technical and Business Management College / Shyamoli Transport",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "Shot dead by police.", "long": "" }
+      "howToDeath": {
+        "short": "Shot dead by police.",
+        "long": ""
+      }
     }
   },
   {
@@ -3631,7 +4141,10 @@
       "educationOrWork": "সফেজ ইলেকট্রনিক্স",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "গুলিবিদ্ধ", "long": "" }
+      "howToDeath": {
+        "short": "গুলিবিদ্ধ",
+        "long": ""
+      }
     },
     "en": {
       "name": "Md. Rabiul Islam",
@@ -3640,7 +4153,10 @@
       "educationOrWork": "Sofaze Electronics",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "Shot dead.", "long": "" }
+      "howToDeath": {
+        "short": "Shot dead.",
+        "long": ""
+      }
     }
   },
   {
@@ -3689,7 +4205,10 @@
       "educationOrWork": "বুড়িগঙ্গা সিএনজি পাম্প",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "পুলিশের গুলিতে", "long": "" }
+      "howToDeath": {
+        "short": "পুলিশের গুলিতে",
+        "long": ""
+      }
     },
     "en": {
       "name": "Md. Mansur Mia",
@@ -3698,7 +4217,10 @@
       "educationOrWork": "Buriganga CNG Pump",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "Shot dead by police", "long": "" }
+      "howToDeath": {
+        "short": "Shot dead by police",
+        "long": ""
+      }
     }
   },
   {
@@ -3715,7 +4237,10 @@
       "educationOrWork": "বসুন্ধরা এলাকা, ঢাকা",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": " - সূত্র: মানবজমিন" }
+      "howToDeath": {
+        "short": "",
+        "long": " - সূত্র: মানবজমিন"
+      }
     },
     "en": {
       "name": "Md. Sohag",
@@ -3724,7 +4249,10 @@
       "educationOrWork": "Bashundhara Area, Dhaka",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "- Source: Manab Zamin" }
+      "howToDeath": {
+        "short": "",
+        "long": "- Source: Manab Zamin"
+      }
     }
   },
   {
@@ -3741,7 +4269,10 @@
       "educationOrWork": "রায়েরবাগ, ঢাকা",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "পুলিশের গুলিতে", "long": "" }
+      "howToDeath": {
+        "short": "পুলিশের গুলিতে",
+        "long": ""
+      }
     },
     "en": {
       "name": "Md. Emon",
@@ -3750,7 +4281,10 @@
       "educationOrWork": "Rayerbagh, Dhaka",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "Shot dead by police.", "long": "" }
+      "howToDeath": {
+        "short": "Shot dead by police.",
+        "long": ""
+      }
     }
   },
   {
@@ -3767,7 +4301,10 @@
       "educationOrWork": "রামপুরা উলন এলাকা",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "বিজিবি/পুলিশের বুলেটের আঘাতে", "long": "" }
+      "howToDeath": {
+        "short": "বিজিবি/পুলিশের বুলেটের আঘাতে",
+        "long": ""
+      }
     },
     "en": {
       "name": "Md. Amir Hossain",
@@ -3776,7 +4313,10 @@
       "educationOrWork": "Rampura Ulan Area",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "Shot dead by Police/BGB.", "long": "" }
+      "howToDeath": {
+        "short": "Shot dead by Police/BGB.",
+        "long": ""
+      }
     }
   },
   {
@@ -3953,7 +4493,10 @@
       "educationOrWork": "তা'মীরুল মিল্লাত কামিল মাদ্রাসা",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "" }
+      "howToDeath": {
+        "short": "",
+        "long": ""
+      }
     },
     "en": {
       "name": "Md. Nasir Islam",
@@ -3962,7 +4505,10 @@
       "educationOrWork": "Ta'mirul Millat Kamil Madrasa",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "" }
+      "howToDeath": {
+        "short": "",
+        "long": ""
+      }
     }
   },
   {
@@ -3979,7 +4525,10 @@
       "educationOrWork": "এম.সি কলেজ, সিলেট ",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "" }
+      "howToDeath": {
+        "short": "",
+        "long": ""
+      }
     },
     "en": {
       "name": "Muhammad Sami",
@@ -3988,7 +4537,10 @@
       "educationOrWork": "Murari Chand College, Sylhet",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "" }
+      "howToDeath": {
+        "short": "",
+        "long": ""
+      }
     }
   },
   {
@@ -4005,7 +4557,10 @@
       "educationOrWork": "বোর্ড বাজার, গাজীপুর",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "" }
+      "howToDeath": {
+        "short": "",
+        "long": ""
+      }
     },
     "en": {
       "name": "Mosharraf Howlader",
@@ -4014,7 +4569,10 @@
       "educationOrWork": "বোর্ড বাজার, গাজীপুর",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "" }
+      "howToDeath": {
+        "short": "",
+        "long": ""
+      }
     }
   },
   {
@@ -4031,7 +4589,10 @@
       "educationOrWork": "Streets of Dhaka",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "" }
+      "howToDeath": {
+        "short": "",
+        "long": ""
+      }
     },
     "en": {
       "name": "Tahir Zaman Priyo",
@@ -4040,7 +4601,10 @@
       "educationOrWork": "Streets of Dhaka",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "" }
+      "howToDeath": {
+        "short": "",
+        "long": ""
+      }
     }
   },
   {
@@ -4057,7 +4621,10 @@
       "educationOrWork": "মিলিটারি ইনস্টিটিউট অব সায়েন্স অ্যান্ড টেকনোলজি",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "" }
+      "howToDeath": {
+        "short": "",
+        "long": ""
+      }
     },
     "en": {
       "name": "Rakib Hasan",
@@ -4066,7 +4633,10 @@
       "educationOrWork": "Military Institute of Science and Technology",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "" }
+      "howToDeath": {
+        "short": "",
+        "long": ""
+      }
     }
   },
   {
@@ -4115,7 +4685,10 @@
       "educationOrWork": "ইনোভা ডায়াগনোস্টিক সেন্টার",
       "biography": "তিনি 2023 সালে SAIC ইনস্টিটিউট অফ মেডিকেল টেকনোলজি, মিরপুর থেকে প্যাথলজিতে ডিপ্লোমা শেষ করেন। তারপর তিনি শহীদ সোহরাওয়ার্দী মেডিকেল কলেজ ও হাসপাতালে ইন্টার্নশিপ করেন। তিনি মৃত্যুদিন পর্যন্ত ল্যাব টেকনোলজিস্ট হিসেবে এনোভা ডায়াগনস্টিক সেন্টারে চাকরি করেন।",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "" }
+      "howToDeath": {
+        "short": "",
+        "long": ""
+      }
     },
     "en": {
       "name": "Mukttakin billah",
@@ -4124,7 +4697,10 @@
       "educationOrWork": "Enova diagnostic centre ",
       "biography": "He finished his diploma in pathology from SAIC Institute of Medical technology Mirpur, Dhaka in 2023. Then he did an internship with  Shohid Sohrawardi Medical College & Hospital. He started his employment with Enova Diagnostic Center as a Lab Technologist till his dying day. ",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "" }
+      "howToDeath": {
+        "short": "",
+        "long": ""
+      }
     }
   },
   {
@@ -4141,7 +4717,10 @@
       "educationOrWork": "",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "" }
+      "howToDeath": {
+        "short": "",
+        "long": ""
+      }
     },
     "en": {
       "name": "Amdadul Hossain",
@@ -4150,7 +4729,10 @@
       "educationOrWork": "",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "" }
+      "howToDeath": {
+        "short": "",
+        "long": ""
+      }
     }
   },
   {
@@ -4167,7 +4749,10 @@
       "educationOrWork": "মোহাম্মদপুর, ঢাকা ",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "" }
+      "howToDeath": {
+        "short": "",
+        "long": ""
+      }
     },
     "en": {
       "name": "Shameem",
@@ -4176,7 +4761,10 @@
       "educationOrWork": "Mohammadpur, Dhaka",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "" }
+      "howToDeath": {
+        "short": "",
+        "long": ""
+      }
     }
   },
   {
@@ -4193,7 +4781,10 @@
       "educationOrWork": "",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "" }
+      "howToDeath": {
+        "short": "",
+        "long": ""
+      }
     },
     "en": {
       "name": "Tamim",
@@ -4202,7 +4793,10 @@
       "educationOrWork": "",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "" }
+      "howToDeath": {
+        "short": "",
+        "long": ""
+      }
     }
   },
   {
@@ -4251,7 +4845,10 @@
       "educationOrWork": "সাভার কাঁচা বাজার ",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "" }
+      "howToDeath": {
+        "short": "",
+        "long": ""
+      }
     },
     "en": {
       "name": "Korban Ali",
@@ -4260,7 +4857,10 @@
       "educationOrWork": "Savar Kacha Bazar",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "" }
+      "howToDeath": {
+        "short": "",
+        "long": ""
+      }
     }
   },
   {
@@ -4437,7 +5037,10 @@
       "educationOrWork": "রাস্তায় ফেরি করে পপকর্ন, আইসক্রিম ও চকলেট  বিক্রি করতেন",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "- সূত্র: প্রথম আলো" }
+      "howToDeath": {
+        "short": "",
+        "long": "- সূত্র: প্রথম আলো"
+      }
     },
     "en": {
       "name": "Hosen Miah",
@@ -4446,7 +5049,10 @@
       "educationOrWork": "Sell popcorn, ice cream and chocolate on the streets",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "- Source: Prothom Alo" }
+      "howToDeath": {
+        "short": "",
+        "long": "- Source: Prothom Alo"
+      }
     }
   },
   {
@@ -4463,7 +5069,10 @@
       "educationOrWork": "",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "" }
+      "howToDeath": {
+        "short": "",
+        "long": ""
+      }
     },
     "en": {
       "name": "Al Amin",
@@ -4472,7 +5081,10 @@
       "educationOrWork": "",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "" }
+      "howToDeath": {
+        "short": "",
+        "long": ""
+      }
     }
   },
   {
@@ -4489,7 +5101,10 @@
       "educationOrWork": "ঢাকা",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "১৯ জুলাই পুলিশের গুলিতে আহত হয়" }
+      "howToDeath": {
+        "short": "",
+        "long": "১৯ জুলাই পুলিশের গুলিতে আহত হয়"
+      }
     },
     "en": {
       "name": "Golam Rabbani",
@@ -4582,7 +5197,10 @@
       "educationOrWork": "মোজাফফর আলী ফকির উচ্চ বিদ্যালয়",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "- সূত্র: dhakapost.com" }
+      "howToDeath": {
+        "short": "",
+        "long": "- সূত্র: dhakapost.com"
+      }
     },
     "en": {
       "name": "Biplob Hasan",
@@ -4591,7 +5209,10 @@
       "educationOrWork": "Mojaffor Ali Faquir High School",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "- Source: dhakapost.com" }
+      "howToDeath": {
+        "short": "",
+        "long": "- Source: dhakapost.com"
+      }
     }
   },
   {
@@ -4608,7 +5229,10 @@
       "educationOrWork": "নর্দান ইউনিভার্সিটি বাংলাদেশ",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "" }
+      "howToDeath": {
+        "short": "",
+        "long": ""
+      }
     },
     "en": {
       "name": "Md Hasib",
@@ -4617,7 +5241,10 @@
       "educationOrWork": "Northern University Bangladesh ",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "" }
+      "howToDeath": {
+        "short": "",
+        "long": ""
+      }
     }
   },
   {
@@ -4634,7 +5261,10 @@
       "educationOrWork": "তা’লিমুল কোরআন মহিলা মাদ্রাসা",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "- সূত্র: প্রথম আলো" }
+      "howToDeath": {
+        "short": "",
+        "long": "- সূত্র: প্রথম আলো"
+      }
     },
     "en": {
       "name": "Nure Alam Siddiqui Rakib",
@@ -4643,7 +5273,10 @@
       "educationOrWork": "Ta'limul Quran Mohila Madrasah",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "- Source: Prothom Alo" }
+      "howToDeath": {
+        "short": "",
+        "long": "- Source: Prothom Alo"
+      }
     }
   },
   {
@@ -4660,7 +5293,10 @@
       "educationOrWork": "গাড়িচালক, ঢাকা ",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "- সূত্র: প্রথম আলো" }
+      "howToDeath": {
+        "short": "",
+        "long": "- সূত্র: প্রথম আলো"
+      }
     },
     "en": {
       "name": "Mamun Hosen",
@@ -4669,7 +5305,10 @@
       "educationOrWork": "Driver, Dhaka",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "- Source: Prothom Alo" }
+      "howToDeath": {
+        "short": "",
+        "long": "- Source: Prothom Alo"
+      }
     }
   },
   {
@@ -4686,7 +5325,10 @@
       "educationOrWork": "নিউ কমেন্স ফ্যাশন লিঃ",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "" }
+      "howToDeath": {
+        "short": "",
+        "long": ""
+      }
     },
     "en": {
       "name": "Minhajul Islam",
@@ -4695,7 +5337,10 @@
       "educationOrWork": "New Commence Fashion Ltd.",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "" }
+      "howToDeath": {
+        "short": "",
+        "long": ""
+      }
     }
   },
   {
@@ -4712,7 +5357,10 @@
       "educationOrWork": "মানিকনগর, মুগদা, ঢাকা",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "" }
+      "howToDeath": {
+        "short": "",
+        "long": ""
+      }
     },
     "en": {
       "name": "Mizan Howladar",
@@ -4721,7 +5369,10 @@
       "educationOrWork": "Maniknagar,Mugda, Dhaka",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "" }
+      "howToDeath": {
+        "short": "",
+        "long": ""
+      }
     }
   },
   {
@@ -4770,7 +5421,10 @@
       "educationOrWork": "জাবালে নূর দাখিল মাদ্রাসায়",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "- সূত্র: দ্য ডেইলি স্টার" }
+      "howToDeath": {
+        "short": "",
+        "long": "- সূত্র: দ্য ডেইলি স্টার"
+      }
     },
     "en": {
       "name": "Saad Mahmud",
@@ -4779,7 +5433,10 @@
       "educationOrWork": "Jabale Nur Dakhil Madrasa",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "- Source: The Daily Star" }
+      "howToDeath": {
+        "short": "",
+        "long": "- Source: The Daily Star"
+      }
     }
   },
   {
@@ -4796,7 +5453,10 @@
       "educationOrWork": "",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "- সূত্র: প্রথম আলো" }
+      "howToDeath": {
+        "short": "",
+        "long": "- সূত্র: প্রথম আলো"
+      }
     },
     "en": {
       "name": "Jamal Shikder",
@@ -4805,7 +5465,10 @@
       "educationOrWork": "",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "- Source: Prothom Alo" }
+      "howToDeath": {
+        "short": "",
+        "long": "- Source: Prothom Alo"
+      }
     }
   },
   {
@@ -4834,7 +5497,10 @@
       "educationOrWork": "",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "" }
+      "howToDeath": {
+        "short": "",
+        "long": ""
+      }
     }
   },
   {
@@ -4851,7 +5517,10 @@
       "educationOrWork": "",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "গুলিবিদ্ধ", "long": "" }
+      "howToDeath": {
+        "short": "গুলিবিদ্ধ",
+        "long": ""
+      }
     },
     "en": {
       "name": "Md. Humayun Kabir",
@@ -4860,7 +5529,10 @@
       "educationOrWork": "",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "Shot Dead", "long": "" }
+      "howToDeath": {
+        "short": "Shot Dead",
+        "long": ""
+      }
     }
   },
   {
@@ -4877,7 +5549,10 @@
       "educationOrWork": "রাজধানীর যাত্রাবাড়ীতে একটি মুদিদোকানে চাকরি করত",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "" }
+      "howToDeath": {
+        "short": "",
+        "long": ""
+      }
     },
     "en": {
       "name": "Zubaid Hossain",
@@ -4886,7 +5561,10 @@
       "educationOrWork": "Jatrabari ",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "" }
+      "howToDeath": {
+        "short": "",
+        "long": ""
+      }
     }
   },
   {
@@ -4903,7 +5581,10 @@
       "educationOrWork": "",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "" }
+      "howToDeath": {
+        "short": "",
+        "long": ""
+      }
     },
     "en": {
       "name": "Nasima Akhter",
@@ -4912,7 +5593,10 @@
       "educationOrWork": "",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "" }
+      "howToDeath": {
+        "short": "",
+        "long": ""
+      }
     }
   },
   {
@@ -4961,7 +5645,10 @@
       "educationOrWork": "অভিনেত্রী তানজিন তিশার সহকারী",
       "biography": "কিভাবে শুরু করব জানিনা আপনারা হয়তো সবাই ওকে আমার অ্যাসিস্ট্যান্ট হিসেবে চিনেন, কিন্তু ও কিন্তু আমার অ্যাসিস্ট্যান্ট না ও আমার ছোট ভাই। গত চার বছর ধরে ও আমার সাথেই থাকে আমার ফ্যামিলিতেই থাকে ফ্যামিলি হয়ে। আপু কি লাগবে ,আপু কি খাবে, আপু কখন ঘুমাবে ,আবার কখন মনটা খারাপ , মনটা ভালো সব কিছু এই ছেলেটাই জানতো আর দেখত ।  আলামিন - সারাটা দিন আমার বড় একটা ছায়ার মত আমার পাশে বসে থাকতো । আমার কত প্ল্যান ওকে নিয়ে। ওকে ড্রাইভিং শেখাবো , জোর করে বলতাম পড়াশোনাটা কন্টিনিউ করতে ,  পরীক্ষাটা দিতে।অনেকে অনেক কিছু বলতো কিন্তু দুনিয়ার সাথে যুদ্ধ করে ও আপুর কাছে এসে বসে থাকতো। ঈদের দিন গুলোও আগে আমার সাথে থাকত, তারপর ওর ফ্যামিলির সাথে ।  কত বকা দিছি, আবার একটু পর ঠিকই বুঝাতাম , আবার মন খারাপও করে থাকতো ,আর ছেলেটা একটা না দুই দুইটা গুলি কি করে নিয়েছে এই বাচ্চা ছেলেটা??? আলামিন কোন দল অথবা কোনকিছুর সাথে জড়িত ছিলো না। ওর বিগত ৪ বছর জীবনটা আমার সাথে, আমার কাজের এবং আমার পরিবারের সাথেই কেটেছে সবটা সময়।  ওর জীবনে কোন পাপ নাই খুব ছোট একটা মানুষ এই চার বছর আমার কাছে বড় হতে দেখলাম। দোয়া করবেন সবাই আল্লাহর কাছে যেন সুন্দর জীবনে থাকে । সোর্স - তানজিন তিশার ফেসবুক পোস্ট",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "" }
+      "howToDeath": {
+        "short": "",
+        "long": ""
+      }
     },
     "en": {
       "name": "Al Amin",
@@ -4970,7 +5657,10 @@
       "educationOrWork": "Assistant, Tanjin Tisha (actress)",
       "biography": "I don't know how to start. You all might know him as my assistant, but he's not just my assistant; he's my younger brother. For the past four years, he has been living with me, becoming a part of my family. He knew everything about me—what I needed, what I wanted to eat, when I would sleep, when I was happy, and when I was sad. This boy, Alamin, would sit beside me like a big shadow all day long. I had so many plans for him. I wanted to teach him how to drive and insisted he continue his studies and take exams. Many people said many things, but he would fight the world and come sit beside his sister. On Eid, he would spend time with me first and then with his family. I scolded him a lot, but soon after, I would make him understand. Sometimes, he would be sad. How did this young boy take not one but two bullets? Alamin was not involved with any group or anything. For the past four years, his life revolved around me, my work, and my family. He was a pure soul, and I watched him grow up during these years. Please pray for him so that he may have a beautiful life ahead. Source: Tanzin Tisha's Facebook post",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "" }
+      "howToDeath": {
+        "short": "",
+        "long": ""
+      }
     }
   },
   {
@@ -5019,7 +5709,10 @@
       "educationOrWork": "ঢাকার একটি দোকান",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "" }
+      "howToDeath": {
+        "short": "",
+        "long": ""
+      }
     },
     "en": {
       "name": "Mohammad Mahin",
@@ -5028,7 +5721,10 @@
       "educationOrWork": "A shop in Dhaka",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "" }
+      "howToDeath": {
+        "short": "",
+        "long": ""
+      }
     }
   },
   {
@@ -5045,7 +5741,10 @@
       "educationOrWork": "",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "" }
+      "howToDeath": {
+        "short": "",
+        "long": ""
+      }
     },
     "en": {
       "name": "Ajijul",
@@ -5054,7 +5753,10 @@
       "educationOrWork": "",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "" }
+      "howToDeath": {
+        "short": "",
+        "long": ""
+      }
     }
   },
   {
@@ -5103,7 +5805,10 @@
       "educationOrWork": "ওয়ালটন প্লাজা",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "" }
+      "howToDeath": {
+        "short": "",
+        "long": ""
+      }
     },
     "en": {
       "name": "Kamrul Hasan Rabbi",
@@ -5112,7 +5817,10 @@
       "educationOrWork": "Walton Plaza",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "" }
+      "howToDeath": {
+        "short": "",
+        "long": ""
+      }
     }
   },
   {
@@ -5129,7 +5837,10 @@
       "educationOrWork": "",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "" }
+      "howToDeath": {
+        "short": "",
+        "long": ""
+      }
     },
     "en": {
       "name": "Md Akash",
@@ -5138,7 +5849,10 @@
       "educationOrWork": "",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "" }
+      "howToDeath": {
+        "short": "",
+        "long": ""
+      }
     }
   },
   {
@@ -5155,7 +5869,10 @@
       "educationOrWork": "কবি নজরুল সরকারি কলেজ, ঢাকা",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "" }
+      "howToDeath": {
+        "short": "",
+        "long": ""
+      }
     },
     "en": {
       "name": "Omor Faruk",
@@ -5164,7 +5881,10 @@
       "educationOrWork": "Kabi Nazrul Govt. College, Dhaka",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "" }
+      "howToDeath": {
+        "short": "",
+        "long": ""
+      }
     }
   },
   {
@@ -5181,7 +5901,10 @@
       "educationOrWork": " যাত্রাবাড়ী, ঢাকা",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "- সূত্র: প্রথম আলো" }
+      "howToDeath": {
+        "short": "",
+        "long": "- সূত্র: প্রথম আলো"
+      }
     },
     "en": {
       "name": "Md. Foyez",
@@ -5190,7 +5913,10 @@
       "educationOrWork": "Jatrabari, Dhaka",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "- Source: Prothom Alo" }
+      "howToDeath": {
+        "short": "",
+        "long": "- Source: Prothom Alo"
+      }
     }
   },
   {
@@ -5271,7 +5997,10 @@
       "educationOrWork": "নর্দা এলকার একটি বিউটি পার্লারে কর্মরত ছিলেন",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "- সূত্র: প্রথম আলো" }
+      "howToDeath": {
+        "short": "",
+        "long": "- সূত্র: প্রথম আলো"
+      }
     },
     "en": {
       "name": "Mizanur Rahman",
@@ -5280,7 +6009,10 @@
       "educationOrWork": "A beauty parlour in Norda Area",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "- Source: Prothom Alo" }
+      "howToDeath": {
+        "short": "",
+        "long": "- Source: Prothom Alo"
+      }
     }
   },
   {
@@ -5297,7 +6029,10 @@
       "educationOrWork": "বাবুরহাট, নরসিংদী সদর, নরসিংদী",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "" }
+      "howToDeath": {
+        "short": "",
+        "long": ""
+      }
     },
     "en": {
       "name": "Mohammad Ali",
@@ -5306,7 +6041,10 @@
       "educationOrWork": "Baburhat, Narsingdi Sadar, Narsingdi",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "" }
+      "howToDeath": {
+        "short": "",
+        "long": ""
+      }
     }
   },
   {
@@ -5323,7 +6061,10 @@
       "educationOrWork": "জিরুন্ডা মানপুর তোফাইলিয়া সিনিয়র মাদ্রাসা",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "- সূত্র: প্রথম আলো" }
+      "howToDeath": {
+        "short": "",
+        "long": "- সূত্র: প্রথম আলো"
+      }
     },
     "en": {
       "name": "Monayel Ahmed Imran Asad",
@@ -5332,7 +6073,10 @@
       "educationOrWork": "",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "- Source: Prothom Alo" }
+      "howToDeath": {
+        "short": "",
+        "long": "- Source: Prothom Alo"
+      }
     }
   },
   {
@@ -5445,7 +6189,10 @@
       "educationOrWork": "রাজ্জাক কাঁচাবাজার, সাভার, ঢাকা ",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "" }
+      "howToDeath": {
+        "short": "",
+        "long": ""
+      }
     },
     "en": {
       "name": "Md. Omar Farooq",
@@ -5454,7 +6201,10 @@
       "educationOrWork": "Razzak Khachabazar, Savar, Dhaka",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "" }
+      "howToDeath": {
+        "short": "",
+        "long": ""
+      }
     }
   },
   {
@@ -5567,7 +6317,10 @@
       "educationOrWork": "রং এর দোকান",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "রাস্তা পার হওয়ার সময় বিজিবির গুলি" }
+      "howToDeath": {
+        "short": "",
+        "long": "রাস্তা পার হওয়ার সময় বিজিবির গুলি"
+      }
     },
     "en": {
       "name": "Md. Sajib",
@@ -5596,7 +6349,10 @@
       "educationOrWork": "নর্দার্ন ইউনিভার্সিটি ",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "" }
+      "howToDeath": {
+        "short": "",
+        "long": ""
+      }
     },
     "en": {
       "name": "Fuad Mahamud Fahim",
@@ -5605,7 +6361,10 @@
       "educationOrWork": "Northern University",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "" }
+      "howToDeath": {
+        "short": "",
+        "long": ""
+      }
     }
   },
   {
@@ -5654,7 +6413,10 @@
       "educationOrWork": "সরকারি তোলারাম কলেজ, নারায়ণগঞ্জ",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "" }
+      "howToDeath": {
+        "short": "",
+        "long": ""
+      }
     },
     "en": {
       "name": "Mahadi Hasan Pantho",
@@ -5663,7 +6425,10 @@
       "educationOrWork": "Govt. Tolaram College, Narayanganj",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "" }
+      "howToDeath": {
+        "short": "",
+        "long": ""
+      }
     }
   },
   {
@@ -5712,7 +6477,10 @@
       "educationOrWork": "নারায়ণগঞ্জ",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "" }
+      "howToDeath": {
+        "short": "",
+        "long": ""
+      }
     },
     "en": {
       "name": "Md. Tuhin Ahamed ",
@@ -5721,7 +6489,10 @@
       "educationOrWork": " Narayanganj",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "" }
+      "howToDeath": {
+        "short": "",
+        "long": ""
+      }
     }
   },
   {
@@ -5962,7 +6733,10 @@
       "educationOrWork": "টাইলস মিস্ত্রি",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "বাড্ডায় নিহত হন পুলিশের গুলিতে।" }
+      "howToDeath": {
+        "short": "",
+        "long": "বাড্ডায় নিহত হন পুলিশের গুলিতে।"
+      }
     },
     "en": {
       "name": "Md. Liton Matubbor",
@@ -6119,7 +6893,10 @@
       "educationOrWork": "সাউথইস্ট ইউনির্ভাসিটি, ঢাকা",
       "biography": "বাবা নওশের আলী (কৃষক), মা শিরিনা বেগম । একমাত্র ছোট বোন জেরিন (ইন্টার ১ম বর্ষে পড়ে)। জন্ম যশোরের ঝিকরগাছা উপজেলার হাজিরবাগ ইউনিয়নের ৯ নম্বর ওয়ার্ডের দেউলী গ্রামে । জাবিরের পড়াশোনা, ২০১৮ সালে বাগআঁচড়া হাই স্কুল থেকে এসএসসি, ২০২১ সালে নাভারণ আকিজ কলিজিয়েটস্কুল এন্ড কলেজে আইএ (মানবিক বিভাগ) এইচএসসি । তারপর ২০২১-২২ শিক্ষা বর্ষে ঢাকার সাউথইস্ট ইউনির্ভাসিটিতে বিবিএ কোর্সে ভর্তি হন। জাবির কিংবা তার পরিবার কোন দিন কোন রাজনীতির সাথে জড়িত নয় । বৈষম্য বিরোধী ছাত্র আন্দোলনের সময় ১৭ জুলাই ভার্সিটির ক্যাম্পাসের সামনের রাস্তায় পুলিশের গুলিতে আহত হন। কিন্তু মেডিকেলে তার বাবা আর বোনকে তাঁর কাছে যেতে বাঁধা দিয়েছেন পুলিশ ও বিজিবির সদস্যরা । তারপর শুক্রবার ২৬ জুলাই সকালে জাবিরের মৃত্যু হয় ।",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "" }
+      "howToDeath": {
+        "short": "",
+        "long": ""
+      }
     },
     "en": {
       "name": "Imtiaz Ahmed Zabir",
@@ -6128,7 +6905,10 @@
       "educationOrWork": "Southeast University, Dhaka",
       "biography": "Father Nowsher Ali (farmer), mother Shirina Begum. Only younger sister Jerin (studying in HSC 1st year). Born in Deuli village of Ward No. 9 of Hazir Bagh Union of Jhikargacha Upazila of Jessore. Jabir's education, SSC from Baganchra High School in 2018, HSC in IA (Humanities Department) from Navaran Akiz Collegiate School and College in 2021. Then in the academic year 2021-22, he enrolled in the BBA course at the Southeast University, Dhaka. Neither Jabir nor his family is involved in any politics. He was injured by police firing on the street in front of the university campus on July 17 during the anti-discrimination student movement. But the police and BGB members prevented his father and sister from going to him at the medical center. Then Jabir died on the morning of Friday 26th July.",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "" }
+      "howToDeath": {
+        "short": "",
+        "long": ""
+      }
     }
   },
   {
@@ -6189,7 +6969,10 @@
       "educationOrWork": "Metro Knitting and Dyeing Mills LTD (former BUFT student)",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "Shot dead by police.", "long": "" }
+      "howToDeath": {
+        "short": "Shot dead by police.",
+        "long": ""
+      }
     }
   },
   {
@@ -6206,7 +6989,10 @@
       "educationOrWork": "পল্লী বিদ্যুৎ সমিতি, হবিগঞ্জ",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "- সূত্র: প্রথম আলো" }
+      "howToDeath": {
+        "short": "",
+        "long": "- সূত্র: প্রথম আলো"
+      }
     },
     "en": {
       "name": "Mostak Mia",
@@ -6215,7 +7001,10 @@
       "educationOrWork": "Bangladesh Rural Electrification, Habiganj",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "- Source: Prothom Alo" }
+      "howToDeath": {
+        "short": "",
+        "long": "- Source: Prothom Alo"
+      }
     }
   },
   {
@@ -6232,7 +7021,10 @@
       "educationOrWork": "সিদ্ধেশ্বরী কলেজ",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "- সূত্র: প্রথম আলো" }
+      "howToDeath": {
+        "short": "",
+        "long": "- সূত্র: প্রথম আলো"
+      }
     },
     "en": {
       "name": "Md. Emon",
@@ -6241,7 +7033,10 @@
       "educationOrWork": "Siddheswari College",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "- Source: Prothom Alo" }
+      "howToDeath": {
+        "short": "",
+        "long": "- Source: Prothom Alo"
+      }
     }
   },
   {
@@ -6258,7 +7053,10 @@
       "educationOrWork": "বালিদিয়া মাধ্যমিক বিদ্যালয়, মহম্মদপুর,মাগুরা",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "" }
+      "howToDeath": {
+        "short": "",
+        "long": ""
+      }
     },
     "en": {
       "name": "Md Sumon Ahmed",
@@ -6267,7 +7065,10 @@
       "educationOrWork": "Balidia Secondary School",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "" }
+      "howToDeath": {
+        "short": "",
+        "long": ""
+      }
     }
   },
   {
@@ -6284,7 +7085,10 @@
       "educationOrWork": "সিদ্দিক মেমোরিয়াল",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "" }
+      "howToDeath": {
+        "short": "",
+        "long": ""
+      }
     },
     "en": {
       "name": "Mahabub Hasan Niloy",
@@ -6293,7 +7097,10 @@
       "educationOrWork": "Siddiq Memorial",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "" }
+      "howToDeath": {
+        "short": "",
+        "long": ""
+      }
     }
   },
   {
@@ -6310,7 +7117,10 @@
       "educationOrWork": "ফেনী সরকারি কলেজ",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "" }
+      "howToDeath": {
+        "short": "",
+        "long": ""
+      }
     },
     "en": {
       "name": "Sarwar Jahan Masud",
@@ -6319,7 +7129,10 @@
       "educationOrWork": "Feni Government College",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "" }
+      "howToDeath": {
+        "short": "",
+        "long": ""
+      }
     }
   },
   {
@@ -6368,7 +7181,10 @@
       "educationOrWork": "ফেনী সরকারি কলেজ",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "ছাত্র আন্দোলনে ছাত্রলীগের গুলিতে" }
+      "howToDeath": {
+        "short": "",
+        "long": "ছাত্র আন্দোলনে ছাত্রলীগের গুলিতে"
+      }
     },
     "en": {
       "name": "Wakil Ahmed Shihab",
@@ -6397,7 +7213,10 @@
       "educationOrWork": "লক্ষ্মীপুর ভিক্টোরি কলেজ",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "- সূত্র: প্রথম আলো" }
+      "howToDeath": {
+        "short": "",
+        "long": "- সূত্র: প্রথম আলো"
+      }
     },
     "en": {
       "name": "Saad Al Afnan",
@@ -6406,7 +7225,10 @@
       "educationOrWork": "Lakshmipur Victory College",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "- Source: Prothom Alo" }
+      "howToDeath": {
+        "short": "",
+        "long": "- Source: Prothom Alo"
+      }
     }
   },
   {
@@ -6423,7 +7245,10 @@
       "educationOrWork": "বঙ্গবন্ধু সরকারি কলেজ",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "" }
+      "howToDeath": {
+        "short": "",
+        "long": ""
+      }
     },
     "en": {
       "name": "Mohammad Monir",
@@ -6432,7 +7257,10 @@
       "educationOrWork": "Bangabandhu Government College",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "" }
+      "howToDeath": {
+        "short": "",
+        "long": ""
+      }
     }
   },
   {
@@ -6449,7 +7277,10 @@
       "educationOrWork": "",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "" }
+      "howToDeath": {
+        "short": "",
+        "long": ""
+      }
     },
     "en": {
       "name": "Md. Farhad Hossain",
@@ -6458,7 +7289,10 @@
       "educationOrWork": "",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "" }
+      "howToDeath": {
+        "short": "",
+        "long": ""
+      }
     }
   },
   {
@@ -6475,7 +7309,10 @@
       "educationOrWork": "জাতীয় বিশ্ববিদ্যালয়",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "" }
+      "howToDeath": {
+        "short": "",
+        "long": ""
+      }
     },
     "en": {
       "name": " Kamrul Tarak",
@@ -6484,7 +7321,10 @@
       "educationOrWork": "National University",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "" }
+      "howToDeath": {
+        "short": "",
+        "long": ""
+      }
     }
   },
   {
@@ -6501,7 +7341,10 @@
       "educationOrWork": "বারইয়ারহাট ডিগ্রি কলেজ",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "" }
+      "howToDeath": {
+        "short": "",
+        "long": ""
+      }
     },
     "en": {
       "name": "Saidul Islam Shahi",
@@ -6510,7 +7353,10 @@
       "educationOrWork": "Baraiyahat Degree College",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "Shooted by Chatra League", "long": "" }
+      "howToDeath": {
+        "short": "Shooted by Chatra League",
+        "long": ""
+      }
     }
   },
   {
@@ -6527,7 +7373,10 @@
       "educationOrWork": "তা'মীরুল মিল্লাত কামিল মাদ্রাসা",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "" }
+      "howToDeath": {
+        "short": "",
+        "long": ""
+      }
     },
     "en": {
       "name": "Md. Osman Patwary",
@@ -6536,7 +7385,10 @@
       "educationOrWork": "Tamirul Millat Kamil Madrasah",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "" }
+      "howToDeath": {
+        "short": "",
+        "long": ""
+      }
     }
   },
   {
@@ -6553,7 +7405,10 @@
       "educationOrWork": "পাবনা পলিটেকনিক ইন্সটিটিউট",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "" }
+      "howToDeath": {
+        "short": "",
+        "long": ""
+      }
     },
     "en": {
       "name": "Md. Zahidul Islam",
@@ -6562,7 +7417,10 @@
       "educationOrWork": "Pabna Polytechnic Institute",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "" }
+      "howToDeath": {
+        "short": "",
+        "long": ""
+      }
     }
   },
   {
@@ -6643,7 +7501,10 @@
       "educationOrWork": "বঙ্গবন্ধু সরকারি কলেজ, বদলগাছী, নওগাঁ",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "" }
+      "howToDeath": {
+        "short": "",
+        "long": ""
+      }
     },
     "en": {
       "name": "Monirul Islam",
@@ -6652,7 +7513,10 @@
       "educationOrWork": "Bangabandhu Government College, Badalgachhi, Naogaon",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "" }
+      "howToDeath": {
+        "short": "",
+        "long": ""
+      }
     }
   },
   {
@@ -6669,7 +7533,10 @@
       "educationOrWork": "দৈনিক খবরপত্র–এর রায়গঞ্জ প্রতিনিধি",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "" }
+      "howToDeath": {
+        "short": "",
+        "long": ""
+      }
     },
     "en": {
       "name": "Pradip Kumar Bhowmik",
@@ -6678,7 +7545,10 @@
       "educationOrWork": "Rayganj correspondent of Daily Khoborpatra",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "" }
+      "howToDeath": {
+        "short": "",
+        "long": ""
+      }
     }
   },
   {
@@ -6695,7 +7565,10 @@
       "educationOrWork": "ওয়ার্কশপ",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "" }
+      "howToDeath": {
+        "short": "",
+        "long": ""
+      }
     },
     "en": {
       "name": "Minhaz Ahmed",
@@ -6704,7 +7577,10 @@
       "educationOrWork": "Workshop ",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "" }
+      "howToDeath": {
+        "short": "",
+        "long": ""
+      }
     }
   },
   {
@@ -6721,7 +7597,10 @@
       "educationOrWork": "জুতার দোকান, ঢাকা দক্ষিণ বাজার, গোলাপগঞ্জ, সিলেট",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "" }
+      "howToDeath": {
+        "short": "",
+        "long": ""
+      }
     },
     "en": {
       "name": "Nazmul Islam",
@@ -6730,7 +7609,10 @@
       "educationOrWork": "Shoe Store, Dhaka South Bazar, Golapganj, Sylhet",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "" }
+      "howToDeath": {
+        "short": "",
+        "long": ""
+      }
     }
   },
   {
@@ -6747,7 +7629,10 @@
       "educationOrWork": "কবি নজরুল সরকারি কলেজ",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "" }
+      "howToDeath": {
+        "short": "",
+        "long": ""
+      }
     },
     "en": {
       "name": "Tahidul Islam ",
@@ -6756,7 +7641,10 @@
       "educationOrWork": "Kabi Nazrul Government College",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "" }
+      "howToDeath": {
+        "short": "",
+        "long": ""
+      }
     }
   },
   {
@@ -6773,7 +7661,10 @@
       "educationOrWork": "নির্মাণ শ্রমিক",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "" }
+      "howToDeath": {
+        "short": "",
+        "long": ""
+      }
     },
     "en": {
       "name": "Md. Tofazzal Hossain",
@@ -6782,7 +7673,10 @@
       "educationOrWork": "Construction Worker",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "" }
+      "howToDeath": {
+        "short": "",
+        "long": ""
+      }
     }
   },
   {
@@ -6799,7 +7693,10 @@
       "educationOrWork": "সপ্তম শ্রেণীর শিক্ষার্থী",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "" }
+      "howToDeath": {
+        "short": "",
+        "long": ""
+      }
     },
     "en": {
       "name": "Rezaul Karim ",
@@ -6808,7 +7705,10 @@
       "educationOrWork": "",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "" }
+      "howToDeath": {
+        "short": "",
+        "long": ""
+      }
     }
   },
   {
@@ -6825,7 +7725,10 @@
       "educationOrWork": "ড্যাফোডিল বিশ্ববিদ্যালয়",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "কারওয়ানবাজার এলাকায় গুলিবিদ্ধ ", "long": "" }
+      "howToDeath": {
+        "short": "কারওয়ানবাজার এলাকায় গুলিবিদ্ধ ",
+        "long": ""
+      }
     },
     "en": {
       "name": "Romiz Uddin Rup",
@@ -6834,7 +7737,10 @@
       "educationOrWork": "Daffodil International University (DIU)",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "" }
+      "howToDeath": {
+        "short": "",
+        "long": ""
+      }
     }
   },
   {
@@ -6883,7 +7789,10 @@
       "educationOrWork": "লক্ষ্মীপুর সরকারি কলেজ, (পদার্থবিজ্ঞান বিভাগ ৩য় বর্ষ)",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "গুলিবিদ্ধ হয়ে।", "long": "" }
+      "howToDeath": {
+        "short": "গুলিবিদ্ধ হয়ে।",
+        "long": ""
+      }
     },
     "en": {
       "name": "Kawser Woahid Bijoy",
@@ -6892,7 +7801,10 @@
       "educationOrWork": "Lakshmipur Government College",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "By being shot.", "long": "" }
+      "howToDeath": {
+        "short": "By being shot.",
+        "long": ""
+      }
     }
   },
   {
@@ -6941,7 +7853,10 @@
       "educationOrWork": "",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "গুলিবিদ্ধ", "long": "" }
+      "howToDeath": {
+        "short": "গুলিবিদ্ধ",
+        "long": ""
+      }
     },
     "en": {
       "name": "Sunny Ahmad",
@@ -6950,7 +7865,10 @@
       "educationOrWork": "",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "Shot Dead", "long": "" }
+      "howToDeath": {
+        "short": "Shot Dead",
+        "long": ""
+      }
     }
   },
   {
@@ -6999,7 +7917,10 @@
       "educationOrWork": "সি.এন.জি চালক",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "গুলিবিদ্ধ", "long": "" }
+      "howToDeath": {
+        "short": "গুলিবিদ্ধ",
+        "long": ""
+      }
     },
     "en": {
       "name": "Gaus Uddin",
@@ -7008,7 +7929,10 @@
       "educationOrWork": "CNG Driver",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "Shot Dead", "long": "" }
+      "howToDeath": {
+        "short": "Shot Dead",
+        "long": ""
+      }
     }
   },
   {
@@ -7057,7 +7981,10 @@
       "educationOrWork": "হাসপাতালের খাবারসামগ্রী ঠিকাদার",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "গুলিবিদ্ধ", "long": "" }
+      "howToDeath": {
+        "short": "গুলিবিদ্ধ",
+        "long": ""
+      }
     },
     "en": {
       "name": "Taj Uddin",
@@ -7066,7 +7993,10 @@
       "educationOrWork": "Hospital Food Contractor",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "Shot Dead", "long": "" }
+      "howToDeath": {
+        "short": "Shot Dead",
+        "long": ""
+      }
     }
   },
   {
@@ -7095,7 +8025,10 @@
       "educationOrWork": "Marketing Business",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "He was shot dead in mirpur 10." }
+      "howToDeath": {
+        "short": "",
+        "long": "He was shot dead in mirpur 10."
+      }
     }
   },
   {
@@ -7144,7 +8077,10 @@
       "educationOrWork": "",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "" }
+      "howToDeath": {
+        "short": "",
+        "long": ""
+      }
     },
     "en": {
       "name": "Tonima",
@@ -7153,7 +8089,10 @@
       "educationOrWork": "",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "" }
+      "howToDeath": {
+        "short": "",
+        "long": ""
+      }
     }
   },
   {
@@ -7170,7 +8109,10 @@
       "educationOrWork": "মাগুরা অনলাইন আইএসপি",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "" }
+      "howToDeath": {
+        "short": "",
+        "long": ""
+      }
     },
     "en": {
       "name": "Mehedi Hasan Rabbi",
@@ -7179,7 +8121,10 @@
       "educationOrWork": "Magura Online ISP",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "" }
+      "howToDeath": {
+        "short": "",
+        "long": ""
+      }
     }
   },
   {
@@ -7260,7 +8205,10 @@
       "educationOrWork": "বিএএফ শাহীন কলেজ ঢাকা",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "পেটে গুলিবিদ্ধ হয়ে।", "long": "" }
+      "howToDeath": {
+        "short": "পেটে গুলিবিদ্ধ হয়ে।",
+        "long": ""
+      }
     },
     "en": {
       "name": "Shafiq Uddin Ahmed Ahnaf",
@@ -7269,7 +8217,10 @@
       "educationOrWork": "BAF Shaheen College Dhaka",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "Gun shot around belly.", "long": "" }
+      "howToDeath": {
+        "short": "Gun shot around belly.",
+        "long": ""
+      }
     }
   },
   {
@@ -7286,7 +8237,10 @@
       "educationOrWork": "বিএন কলেজ, ঢাকা",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "" }
+      "howToDeath": {
+        "short": "",
+        "long": ""
+      }
     },
     "en": {
       "name": "Mohammad Niyaz",
@@ -7295,7 +8249,10 @@
       "educationOrWork": "BN College, Dhaka",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "" }
+      "howToDeath": {
+        "short": "",
+        "long": ""
+      }
     }
   },
   {
@@ -7312,7 +8269,10 @@
       "educationOrWork": "জয়পুরহাট বিজনেস ম্যানেজমেন্ট ",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "জয়পুরহাট এ পুলিশের গুলিতে ", "long": "" }
+      "howToDeath": {
+        "short": "জয়পুরহাট এ পুলিশের গুলিতে ",
+        "long": ""
+      }
     },
     "en": {
       "name": "Mehedi Hasan (Bishal)",
@@ -7321,7 +8281,10 @@
       "educationOrWork": "Joypurhat Business Management",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "Shot Dead By Police", "long": "" }
+      "howToDeath": {
+        "short": "Shot Dead By Police",
+        "long": ""
+      }
     }
   },
   {
@@ -7338,7 +8301,10 @@
       "educationOrWork": "সাংগঠনিক সম্পাদক, ইসলামি আন্দোলন বাংলাদেশ, ৬নং পাটারি হাট ইউনিয়ন শাখা",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "ঢাকায় গুলিবিদ্ধ হয়ে।", "long": "" }
+      "howToDeath": {
+        "short": "ঢাকায় গুলিবিদ্ধ হয়ে।",
+        "long": ""
+      }
     },
     "en": {
       "name": "Mohammad Ali Asgor Mashrur",
@@ -7347,7 +8313,10 @@
       "educationOrWork": "Organizing Secretary, Islami Andolon Bangladesh, No. 6 Patarir Hat Union Branch",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "He was shot by the police", "long": "" }
+      "howToDeath": {
+        "short": "He was shot by the police",
+        "long": ""
+      }
     }
   },
   {
@@ -7396,7 +8365,10 @@
       "educationOrWork": "সাউথইস্ট ইউনিভার্সিটি",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "" }
+      "howToDeath": {
+        "short": "",
+        "long": ""
+      }
     },
     "en": {
       "name": "Rakib Hossain",
@@ -7405,7 +8377,10 @@
       "educationOrWork": "Southeast University",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "" }
+      "howToDeath": {
+        "short": "",
+        "long": ""
+      }
     }
   },
   {
@@ -7486,7 +8461,10 @@
       "educationOrWork": "",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "" }
+      "howToDeath": {
+        "short": "",
+        "long": ""
+      }
     },
     "en": {
       "name": "Mohammad Billal Hossain",
@@ -7495,7 +8473,10 @@
       "educationOrWork": "",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "" }
+      "howToDeath": {
+        "short": "",
+        "long": ""
+      }
     }
   },
   {
@@ -7512,7 +8493,10 @@
       "educationOrWork": "",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "" }
+      "howToDeath": {
+        "short": "",
+        "long": ""
+      }
     },
     "en": {
       "name": "Rashedul Islam",
@@ -7521,7 +8505,10 @@
       "educationOrWork": "",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "" }
+      "howToDeath": {
+        "short": "",
+        "long": ""
+      }
     }
   },
   {
@@ -7538,7 +8525,10 @@
       "educationOrWork": "গুলশান কমার্স কলেজ",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "পুলিশের গুলিতে, বাড্ডা, ঢাকায়" }
+      "howToDeath": {
+        "short": "",
+        "long": "পুলিশের গুলিতে, বাড্ডা, ঢাকায়"
+      }
     },
     "en": {
       "name": "Md. Raihan ",
@@ -7547,7 +8537,10 @@
       "educationOrWork": "Gulshan Commerce College",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "Shot by police in Badda, Dhaka." }
+      "howToDeath": {
+        "short": "",
+        "long": "Shot by police in Badda, Dhaka."
+      }
     }
   },
   {
@@ -7596,7 +8589,10 @@
       "educationOrWork": "কুমিল্লা বিশ্ববিদ্যালয়",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "" }
+      "howToDeath": {
+        "short": "",
+        "long": ""
+      }
     },
     "en": {
       "name": "Md. Abdul Kaium",
@@ -7605,7 +8601,10 @@
       "educationOrWork": "Comilla University",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "" }
+      "howToDeath": {
+        "short": "",
+        "long": ""
+      }
     }
   },
   {
@@ -7622,7 +8621,10 @@
       "educationOrWork": "এ সি আই কোম্পানির ডিলারের অধীনে নিয়োজিত।",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "পুলিশের গুলিতে", "long": "" }
+      "howToDeath": {
+        "short": "পুলিশের গুলিতে",
+        "long": ""
+      }
     },
     "en": {
       "name": "Abdul Jabbar",
@@ -7631,7 +8633,10 @@
       "educationOrWork": "Was employed as a dealer under ACI company",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "Shot dead by police", "long": "" }
+      "howToDeath": {
+        "short": "Shot dead by police",
+        "long": ""
+      }
     }
   },
   {
@@ -7680,7 +8685,10 @@
       "educationOrWork": "সৌদি আরব",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "" }
+      "howToDeath": {
+        "short": "",
+        "long": ""
+      }
     },
     "en": {
       "name": "Abu Ishak",
@@ -7689,7 +8697,10 @@
       "educationOrWork": "Saudi Arabia",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "" }
+      "howToDeath": {
+        "short": "",
+        "long": ""
+      }
     }
   },
   {
@@ -7706,7 +8717,10 @@
       "educationOrWork": "খয়রাবাদ আর্দশ উচ্চ বিদ্যালয়",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "পুলিশের গুলিতে", "long": "" }
+      "howToDeath": {
+        "short": "পুলিশের গুলিতে",
+        "long": ""
+      }
     },
     "en": {
       "name": "Md. Jahid Hossain Rabbi",
@@ -7715,7 +8729,10 @@
       "educationOrWork": "Khairabad Adarsha High School",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "Shot dead by police", "long": "" }
+      "howToDeath": {
+        "short": "Shot dead by police",
+        "long": ""
+      }
     }
   },
   {
@@ -7732,7 +8749,10 @@
       "educationOrWork": "সাভার ক্যান্টনমেন্ট পাবলিক স্কুল এন্ড কলেজ",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "" }
+      "howToDeath": {
+        "short": "",
+        "long": ""
+      }
     },
     "en": {
       "name": "Safwan Akter Sadya ",
@@ -7741,7 +8761,10 @@
       "educationOrWork": "\nSavar Cantonment Public School and College",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "" }
+      "howToDeath": {
+        "short": "",
+        "long": ""
+      }
     }
   },
   {
@@ -7790,7 +8813,10 @@
       "educationOrWork": "সাহাজউদ্দিন সরকার স্কুল এন্ড কলেজ টঙ্গী, গাজীপুর",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "সাভারে পুলিশের গুলিতে", "long": "" }
+      "howToDeath": {
+        "short": "সাভারে পুলিশের গুলিতে",
+        "long": ""
+      }
     },
     "en": {
       "name": "Nafisa Hossain Marwa",
@@ -7799,7 +8825,10 @@
       "educationOrWork": "Shahajuddin Sarker School and College,Tongi",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "Shot dead by police at Savar", "long": "" }
+      "howToDeath": {
+        "short": "Shot dead by police at Savar",
+        "long": ""
+      }
     }
   },
   {
@@ -7816,7 +8845,10 @@
       "educationOrWork": "",
       "biography": "০৫ আগষ্ট দুপুরের পর পুলিশ উত্তরায় জনতার উপর গুলি চালায়। এতে পুলিশের গুলিতে শহিদ হন “আব্দুল কাদির (মানিক)”। আব্দুল কাদিরের বাড়ি চাঁদপুর জেলার ফরিদগঞ্জ উপজেলার মানিকরাজ গ্রামে। তার বাবা জনাব নুর মোহাম্মদ ও মা ফাতেমা বেগম। শহিদ আব্দুল কাদের (মানিক) এর বয়স ৪১ । পরিবারে তার স্ত্রী ও ৩ সন্তান আছে। শহিদ আব্দুল কাদের (মানিক) উত্তরায় একটি রড সিমেন্টের দোকানে কর্মরত ছিলেন।",
       "fallbackInfo": "",
-      "howToDeath": { "short": "পুলিশের গুলিতে", "long": "" }
+      "howToDeath": {
+        "short": "পুলিশের গুলিতে",
+        "long": ""
+      }
     },
     "en": {
       "name": "Abdul Kadir (Manik)",
@@ -7825,7 +8857,10 @@
       "educationOrWork": "",
       "biography": "After noon on August 5, police opened fire on the crowd in Uttara. Abdul Kadir (Manik) was martyred in police firing. Abdul Kadir's house is in Manikraj village of Faridganj upazila of Chandpur district. His father was Mr. Nur Mohammad and mother Fatema Begum. Shaheed Abdul Kadir (Manik) was 41 years old. He is died leaving his wife and three children. Shaheed Abdul Kadir (Manik) was working in a rod-cement shop in Uttara.",
       "fallbackInfo": "",
-      "howToDeath": { "short": "Shot dead by police", "long": "" }
+      "howToDeath": {
+        "short": "Shot dead by police",
+        "long": ""
+      }
     }
   },
   {
@@ -7842,7 +8877,10 @@
       "educationOrWork": "সরকারি তোলারাম কলেজ",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "পুলিশের গুলিতে", "long": "" }
+      "howToDeath": {
+        "short": "পুলিশের গুলিতে",
+        "long": ""
+      }
     },
     "en": {
       "name": "Abdur Rahman Gazi",
@@ -7851,7 +8889,10 @@
       "educationOrWork": "Government Tolaram College",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "Shot by police", "long": "" }
+      "howToDeath": {
+        "short": "Shot by police",
+        "long": ""
+      }
     }
   },
   {
@@ -7868,7 +8909,10 @@
       "educationOrWork": "দ্য বিজনেস পোস্ট",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "পুলিশের গুলিবিদ্ধ হয়ে", "long": "" }
+      "howToDeath": {
+        "short": "পুলিশের গুলিবিদ্ধ হয়ে",
+        "long": ""
+      }
     },
     "en": {
       "name": "Md. Atiqur Rahman",
@@ -7877,7 +8921,10 @@
       "educationOrWork": "The Business Post",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "Shot dead by police.", "long": "" }
+      "howToDeath": {
+        "short": "Shot dead by police.",
+        "long": ""
+      }
     }
   },
   {
@@ -7926,7 +8973,10 @@
       "educationOrWork": "",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "গুলিবিদ্ধ হয়ে", "long": "" }
+      "howToDeath": {
+        "short": "গুলিবিদ্ধ হয়ে",
+        "long": ""
+      }
     },
     "en": {
       "name": "Hafez Sulaiman Hasan",
@@ -7935,7 +8985,10 @@
       "educationOrWork": "",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "Shot dead.", "long": "" }
+      "howToDeath": {
+        "short": "Shot dead.",
+        "long": ""
+      }
     }
   },
   {
@@ -7952,7 +9005,10 @@
       "educationOrWork": "হারুন মোল্লা ডিগ্রি কলেজ",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "পুলিশের গুলিতে ", "long": "" }
+      "howToDeath": {
+        "short": "পুলিশের গুলিতে ",
+        "long": ""
+      }
     },
     "en": {
       "name": "Sabbir Hossain Rony",
@@ -7961,7 +9017,10 @@
       "educationOrWork": "Harun Mollah Degree College",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "Shot dead by police.", "long": "" }
+      "howToDeath": {
+        "short": "Shot dead by police.",
+        "long": ""
+      }
     }
   },
   {
@@ -7978,7 +9037,10 @@
       "educationOrWork": "ভাওয়াল গাজীপুর কেন্দ্রীয় জামে মসজিদ/শাইখ যাকারিয়া ইসলামিক রিসার্চ সেন্টার",
       "biography": "যাত্রাবাড়ি বড় মাদরাসার শরহে বেকায়ার শিক্ষার্থী ফজরের জামাতের ইমাম হিসেবে পরিচিত মাহমুদুল হাসান মাহদী ",
       "fallbackInfo": "",
-      "howToDeath": { "short": "পুলিশের গুলিতে", "long": "" }
+      "howToDeath": {
+        "short": "পুলিশের গুলিতে",
+        "long": ""
+      }
     },
     "en": {
       "name": "Mahmudul Hasan Mahdi ",
@@ -7987,7 +9049,10 @@
       "educationOrWork": "Bhawal Gazipur Central Jame Masjid/Shaikh Jakaria Islamic Research Center",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "Shot dead by police.", "long": "" }
+      "howToDeath": {
+        "short": "Shot dead by police.",
+        "long": ""
+      }
     }
   },
   {
@@ -8036,7 +9101,10 @@
       "educationOrWork": "রামপুরা",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "পুলিশের গুলিতে ", "long": "" }
+      "howToDeath": {
+        "short": "পুলিশের গুলিতে ",
+        "long": ""
+      }
     },
     "en": {
       "name": "Md Al Amin",
@@ -8045,7 +9113,10 @@
       "educationOrWork": "Rampura",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "Shot dead by police.", "long": "" }
+      "howToDeath": {
+        "short": "Shot dead by police.",
+        "long": ""
+      }
     }
   },
   {
@@ -8062,7 +9133,10 @@
       "educationOrWork": "মাস্টার্স র‍্যাক ও ফার্নিচার",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "পুলিশের গুলিতে।", "long": "" }
+      "howToDeath": {
+        "short": "পুলিশের গুলিতে।",
+        "long": ""
+      }
     },
     "en": {
       "name": "A K M Shahidul Islam",
@@ -8071,7 +9145,10 @@
       "educationOrWork": "Masters Rack & Furniture",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "Shot dead by police.", "long": "" }
+      "howToDeath": {
+        "short": "Shot dead by police.",
+        "long": ""
+      }
     }
   },
   {
@@ -8088,7 +9165,10 @@
       "educationOrWork": "মানারাত ইন্টারন্যাশনাল ইউনিভার্সিটি",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "পুলিশের গুলিতে ", "long": "" }
+      "howToDeath": {
+        "short": "পুলিশের গুলিতে ",
+        "long": ""
+      }
     },
     "en": {
       "name": "Md. Ahnaf Abir Ashrafullah",
@@ -8097,7 +9177,10 @@
       "educationOrWork": "Manarat International Unversity ",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "Shot dead by police.", "long": "" }
+      "howToDeath": {
+        "short": "Shot dead by police.",
+        "long": ""
+      }
     }
   },
   {
@@ -8146,7 +9229,10 @@
       "educationOrWork": "কিশোরগঞ্জ পলিটেকনিক ইনস্টিটিউট ",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "পুলিশের গুলিতে ", "long": "" }
+      "howToDeath": {
+        "short": "পুলিশের গুলিতে ",
+        "long": ""
+      }
     },
     "en": {
       "name": "Samid Hossain",
@@ -8155,7 +9241,10 @@
       "educationOrWork": "Kishoreganj Polytechnic Institute ",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "Shot dead by police.", "long": "" }
+      "howToDeath": {
+        "short": "Shot dead by police.",
+        "long": ""
+      }
     }
   },
   {
@@ -8172,7 +9261,10 @@
       "educationOrWork": "চন্নাপাড়া এমদাদুল উলুম কওমী মাদরাসা, শ্রীপুর, গাজীপুর",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": " বিজিবির গুলিতে শাহাদাত বরণ করেন।", "long": "" }
+      "howToDeath": {
+        "short": " বিজিবির গুলিতে শাহাদাত বরণ করেন।",
+        "long": ""
+      }
     },
     "en": {
       "name": "Hafez Muhammad Sifatullah   ",
@@ -8181,7 +9273,10 @@
       "educationOrWork": "Channapara Emdadul Ulum Qawmi Madrasa, Sreepur, Gazipur",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "Shot dead by BGB.", "long": "" }
+      "howToDeath": {
+        "short": "Shot dead by BGB.",
+        "long": ""
+      }
     }
   },
   {
@@ -8198,7 +9293,10 @@
       "educationOrWork": "দারুল আমান দাখিল মাদ্রাসা",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "" }
+      "howToDeath": {
+        "short": "",
+        "long": ""
+      }
     },
     "en": {
       "name": "Md. Hasib Dhali",
@@ -8207,7 +9305,10 @@
       "educationOrWork": "Darul Aman Dakhil Madrasa",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "" }
+      "howToDeath": {
+        "short": "",
+        "long": ""
+      }
     }
   },
   {
@@ -8224,7 +9325,10 @@
       "educationOrWork": "",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "পুলিশের গুলিতে ", "long": "" }
+      "howToDeath": {
+        "short": "পুলিশের গুলিতে ",
+        "long": ""
+      }
     },
     "en": {
       "name": "Yasin Ahmed Raj",
@@ -8233,7 +9337,10 @@
       "educationOrWork": "",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "Shot dead by police.", "long": "" }
+      "howToDeath": {
+        "short": "Shot dead by police.",
+        "long": ""
+      }
     }
   },
   {
@@ -8408,23 +9515,23 @@
       "bornDate": "",
       "bornAddress": "",
       "educationOrWork": "ডেইরি ফার্ম হাই স্কুল, সাভার",
-      "biography": "",
+      "biography": "মানবিক গুণাবলী সম্পূর্ণ একজন কিশোর। পরিবারে বাবা-মায়ের খেয়াল এমনভাবে রাখতেন যেন তিনি তাদের বাবা-মা তাদের সন্তান নন। শখ ছিল পাইলট হওয়ার। নিজে বিমান চালিয়ে বাবা মাকে হজ্ব করতে নিয়ে যাওয়া ছিল তার অন্যতম স্বপ্ন। শুরু থেকে আন্দোলনে সক্রিয় ছিলেন।",
       "fallbackInfo": "",
       "howToDeath": {
         "short": "",
-        "long": "৫ আগস্ট, লং মার্চ টু ঢাকা তে অংশ নিতে গিয়ে মাথায় গুলিবিদ্ধ হয়"
+        "long": "৫ ই আগস্ট লং মার্চ টু ঢাকা তে অংশ নিতে গিয়ে মাথায় গুলিবিদ্ধ হন। দুইদিন যাবত হসপিটালে মৃত্যুর সাথে পাঞ্জা লড়ে অবশেষে সাতই আগস্ট তিনি শাহাদাত বরণ করেন।"
       }
     },
     "en": {
       "name": "Alif Ahmed",
       "bornDate": "",
-      "bornAddress": "",
+      "bornAddress": "August 31, 2009",
       "educationOrWork": "Dairy Farm High School",
-      "biography": "",
+      "biography": "A teenager with complete humanitarian qualities. He took care of his parents as if he were their parent, not their child. He had a dream of becoming a pilot. One of his biggest dreams was to fly a plane and take his parents to Hajj. He was actively involved in the movement from the beginning.",
       "fallbackInfo": "",
       "howToDeath": {
         "short": "",
-        "long": "On August 5, he was shot in the head while participating in the Long March to Dhaka."
+        "long": "On August 5th, he was shot in the head while participating in the Long March to Dhaka. After battling for his life in the hospital for two days, he finally embraced martyrdom on August 7th."
       }
     }
   },
@@ -8474,7 +9581,10 @@
       "educationOrWork": "শ্রীবরদী সরকারি কলেজ, শ্রীবরদী শেরপুর",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "গুলিবিদ্ধ হয়ে শহীদ হয়েছেন" }
+      "howToDeath": {
+        "short": "",
+        "long": "গুলিবিদ্ধ হয়ে শহীদ হয়েছেন"
+      }
     },
     "en": {
       "name": "Md. Sabuj Hasan",
@@ -8483,7 +9593,10 @@
       "educationOrWork": "Srivardi Government College, Srivardi Sherpur",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "He was shot." }
+      "howToDeath": {
+        "short": "",
+        "long": "He was shot."
+      }
     }
   },
   {
@@ -8756,7 +9869,10 @@
       "educationOrWork": "আদর্শ একাডেমী গেন্ডারিয়া, ঢাকা",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "পুলিশ এর গুলিতে", "long": "" }
+      "howToDeath": {
+        "short": "পুলিশ এর গুলিতে",
+        "long": ""
+      }
     },
     "en": {
       "name": "Shahariar Khan Aanas",
@@ -8765,7 +9881,10 @@
       "educationOrWork": "Adarsha Academy Gandaria, Dhaka",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "Shot dead by police", "long": "" }
+      "howToDeath": {
+        "short": "Shot dead by police",
+        "long": ""
+      }
     }
   },
   {
@@ -9006,7 +10125,10 @@
       "educationOrWork": "বাংলামোটর ",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "পেটে গুলি লেগে", "long": "" }
+      "howToDeath": {
+        "short": "পেটে গুলি লেগে",
+        "long": ""
+      }
     },
     "en": {
       "name": "Md Saiful Islam",
@@ -9015,7 +10137,10 @@
       "educationOrWork": "Banglamotor",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "Shot in stomach", "long": "" }
+      "howToDeath": {
+        "short": "Shot in stomach",
+        "long": ""
+      }
     }
   },
   {
@@ -9160,7 +10285,10 @@
       "educationOrWork": "বারহাট্রা সরকারি কলেজ",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "পুলিশের গুলিতে শহীদ হন", "long": "" }
+      "howToDeath": {
+        "short": "পুলিশের গুলিতে শহীদ হন",
+        "long": ""
+      }
     },
     "en": {
       "name": "Nazim Ahmed",
@@ -9169,7 +10297,10 @@
       "educationOrWork": "",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "Martyred in police firing", "long": "" }
+      "howToDeath": {
+        "short": "Martyred in police firing",
+        "long": ""
+      }
     }
   },
   {
@@ -9186,7 +10317,10 @@
       "educationOrWork": "",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "পুলিশের গুলিতে শহীদ", "long": "" }
+      "howToDeath": {
+        "short": "পুলিশের গুলিতে শহীদ",
+        "long": ""
+      }
     },
     "en": {
       "name": "Md. Rasel",
@@ -9195,7 +10329,10 @@
       "educationOrWork": "",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "Shot by the police", "long": "" }
+      "howToDeath": {
+        "short": "Shot by the police",
+        "long": ""
+      }
     }
   },
   {
@@ -9212,7 +10349,10 @@
       "educationOrWork": "",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "আন্দলনে গুলিবিদ্ধ হয়ে", "long": "" }
+      "howToDeath": {
+        "short": "আন্দলনে গুলিবিদ্ধ হয়ে",
+        "long": ""
+      }
     },
     "en": {
       "name": "Md Parvez Mia",
@@ -9221,7 +10361,10 @@
       "educationOrWork": "",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "Shot in the movement", "long": "" }
+      "howToDeath": {
+        "short": "Shot in the movement",
+        "long": ""
+      }
     }
   },
   {
@@ -9238,7 +10381,10 @@
       "educationOrWork": "কাচিয়া সাহামাদার হাইস্কুল /  দোকান: কাপ্তান বাজার এরশাদ মার্কেট ২ তলা ইসমাইল  ইলেকট্রনিক্স কো: ",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": " যাত্রাবাড়ীতে আন্দোলনে গিয়ে", "long": "" }
+      "howToDeath": {
+        "short": " যাত্রাবাড়ীতে আন্দোলনে গিয়ে",
+        "long": ""
+      }
     },
     "en": {
       "name": "Md Hasan",
@@ -9247,7 +10393,10 @@
       "educationOrWork": "Kachia Sahamadar High School / Shop: Kaptan Bazar Ershad Market 2nd Floor Ismail Electronics Co:",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "While Protesting", "long": "" }
+      "howToDeath": {
+        "short": "While Protesting",
+        "long": ""
+      }
     }
   },
   {
@@ -9264,7 +10413,10 @@
       "educationOrWork": "নরসিংদী আইডিয়েল কলেজ ",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "" }
+      "howToDeath": {
+        "short": "",
+        "long": ""
+      }
     },
     "en": {
       "name": "Emon",
@@ -9273,7 +10425,10 @@
       "educationOrWork": "Narsingdi Ideal College",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "" }
+      "howToDeath": {
+        "short": "",
+        "long": ""
+      }
     }
   },
   {
@@ -9290,7 +10445,10 @@
       "educationOrWork": "",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "পুলিশের গুলিতে", "long": "" }
+      "howToDeath": {
+        "short": "পুলিশের গুলিতে",
+        "long": ""
+      }
     },
     "en": {
       "name": "MD.Robiul Islam",
@@ -9299,7 +10457,10 @@
       "educationOrWork": "",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "Shooted by police", "long": "" }
+      "howToDeath": {
+        "short": "Shooted by police",
+        "long": ""
+      }
     }
   },
   {
@@ -9316,7 +10477,10 @@
       "educationOrWork": "",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "পুলিশের গুলিতে", "long": "" }
+      "howToDeath": {
+        "short": "পুলিশের গুলিতে",
+        "long": ""
+      }
     },
     "en": {
       "name": "Md. Assadullah",
@@ -9325,7 +10489,10 @@
       "educationOrWork": "",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "Shoot by police", "long": "" }
+      "howToDeath": {
+        "short": "Shoot by police",
+        "long": ""
+      }
     }
   },
   {
@@ -9342,7 +10509,10 @@
       "educationOrWork": "সরকারি বঙ্গবন্ধু কলেজ,পল্লবী,ঢাকা",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "পিঠে গুলিবিদ্ধ হয়ে শহীদ হয়েছে", "long": "" }
+      "howToDeath": {
+        "short": "পিঠে গুলিবিদ্ধ হয়ে শহীদ হয়েছে",
+        "long": ""
+      }
     },
     "en": {
       "name": "Md.Mominul Islam Hridoy",
@@ -9435,7 +10605,10 @@
       "educationOrWork": "প্রিমিয়ার ইউনিভার্সিটি,চট্টগ্রাম",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "পুলিশের গুলিতে", "long": "" }
+      "howToDeath": {
+        "short": "পুলিশের গুলিতে",
+        "long": ""
+      }
     },
     "en": {
       "name": "Md Ziaul Hossain ( Zia )",
@@ -9444,7 +10617,10 @@
       "educationOrWork": "Premier University Chittagong ",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "Shooted by police", "long": "" }
+      "howToDeath": {
+        "short": "Shooted by police",
+        "long": ""
+      }
     }
   },
   {
@@ -9461,7 +10637,10 @@
       "educationOrWork": "প্রিমিয়ার ইউনিভার্সিটি,চট্টগ্রাম",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "" }
+      "howToDeath": {
+        "short": "",
+        "long": ""
+      }
     },
     "en": {
       "name": "Oshin Shahriar Mirza",
@@ -9470,7 +10649,10 @@
       "educationOrWork": "Premier University Chittagong.",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "" }
+      "howToDeath": {
+        "short": "",
+        "long": ""
+      }
     }
   },
   {
@@ -9531,7 +10713,10 @@
       "educationOrWork": "Makhyanul Uloom Madrasah, Khilgaon, Dhaka.",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "" }
+      "howToDeath": {
+        "short": "",
+        "long": ""
+      }
     }
   },
   {
@@ -9560,7 +10745,10 @@
       "educationOrWork": "Dhanmondi Government Boys High School, Dhaka",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "" }
+      "howToDeath": {
+        "short": "",
+        "long": ""
+      }
     }
   },
   {
@@ -9577,7 +10765,10 @@
       "educationOrWork": "ঢাকা কমার্স কলেজ",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "পুলিশের গুলিতে", "long": "" }
+      "howToDeath": {
+        "short": "পুলিশের গুলিতে",
+        "long": ""
+      }
     },
     "en": {
       "name": "Abdul Ahad Soikot",
@@ -9586,7 +10777,10 @@
       "educationOrWork": "Dhaka Commerce College ",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "Shot by police.", "long": "" }
+      "howToDeath": {
+        "short": "Shot by police.",
+        "long": ""
+      }
     }
   },
   {
@@ -9731,7 +10925,10 @@
       "educationOrWork": "",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "বুকে গুলি ", "long": "" }
+      "howToDeath": {
+        "short": "বুকে গুলি ",
+        "long": ""
+      }
     },
     "en": {
       "name": "Abdullah Al Mamun",
@@ -9740,7 +10937,10 @@
       "educationOrWork": "",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "Shot in the chest ", "long": "" }
+      "howToDeath": {
+        "short": "Shot in the chest ",
+        "long": ""
+      }
     }
   },
   {
@@ -9821,7 +11021,10 @@
       "educationOrWork": "",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "পুলিশের গুলিতে", "long": "" }
+      "howToDeath": {
+        "short": "পুলিশের গুলিতে",
+        "long": ""
+      }
     },
     "en": {
       "name": "Zakaria Hossain Jewell",
@@ -9830,7 +11033,10 @@
       "educationOrWork": "",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "Shot by the police", "long": "" }
+      "howToDeath": {
+        "short": "Shot by the police",
+        "long": ""
+      }
     }
   },
   {
@@ -9879,7 +11085,10 @@
       "educationOrWork": "সন্ধানী লাইফ ইনস্যুরেন্স, বাংলামোটর শাখা",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "" }
+      "howToDeath": {
+        "short": "",
+        "long": ""
+      }
     },
     "en": {
       "name": "Abdul Goni Borhan",
@@ -9888,7 +11097,10 @@
       "educationOrWork": "Sandhani Life Insurance, Banglamotor Branch",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "" }
+      "howToDeath": {
+        "short": "",
+        "long": ""
+      }
     }
   },
   {
@@ -9937,7 +11149,10 @@
       "educationOrWork": "ঢাকা বিশ্ববিদ্যালয়",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "" }
+      "howToDeath": {
+        "short": "",
+        "long": ""
+      }
     },
     "en": {
       "name": "Rakibul Hasan Shishir",
@@ -9946,7 +11161,10 @@
       "educationOrWork": "Dhaka University",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "" }
+      "howToDeath": {
+        "short": "",
+        "long": ""
+      }
     }
   },
   {
@@ -9963,7 +11181,10 @@
       "educationOrWork": "সিসিএন বিজ্ঞান ও প্রযুক্তি বিশ্ববিদ্যালয়",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "ঢাকায় বংশাল থানার পুলিশের গুলিতে ", "long": "" }
+      "howToDeath": {
+        "short": "ঢাকায় বংশাল থানার পুলিশের গুলিতে ",
+        "long": ""
+      }
     },
     "en": {
       "name": "Hamidur Rahman Shadman",
@@ -10024,7 +11245,10 @@
       "educationOrWork": "উওর বাড্ডা, ঢাকা",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "পুলিশের গুলিতে", "long": "পুলিশের গুলিতে" }
+      "howToDeath": {
+        "short": "পুলিশের গুলিতে",
+        "long": "পুলিশের গুলিতে"
+      }
     },
     "en": {
       "name": "Md Shah Alam",
@@ -10053,7 +11277,10 @@
       "educationOrWork": "সোনারগাঁও বিশ্ববিদ্যালয়,  ধানমন্ডি,  ঢাকা",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "মাথা পুলিশের গুলি লেগে শহীদ হয়েছে", "long": "" }
+      "howToDeath": {
+        "short": "মাথা পুলিশের গুলি লেগে শহীদ হয়েছে",
+        "long": ""
+      }
     },
     "en": {
       "name": "Rasel Mahmud",
@@ -10062,7 +11289,10 @@
       "educationOrWork": "Sonargaon University, Dhanmondi, Dhaka",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "He was shot in the head by police", "long": "" }
+      "howToDeath": {
+        "short": "He was shot in the head by police",
+        "long": ""
+      }
     }
   },
   {
@@ -10091,7 +11321,10 @@
       "educationOrWork": "Rampura",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "" }
+      "howToDeath": {
+        "short": "",
+        "long": ""
+      }
     }
   },
   {
@@ -10120,7 +11353,10 @@
       "educationOrWork": "",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "" }
+      "howToDeath": {
+        "short": "",
+        "long": ""
+      }
     }
   },
   {
@@ -10297,7 +11533,10 @@
       "educationOrWork": "ডিস্ট্রিবিউটর বাটা সু কোঃলিঃ মাদারীপুর",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "পুলিসের আক্রমন ও গুলি", "long": "" }
+      "howToDeath": {
+        "short": "পুলিসের আক্রমন ও গুলি",
+        "long": ""
+      }
     },
     "en": {
       "name": "Md. Moniruzzaman Molla",
@@ -10306,7 +11545,10 @@
       "educationOrWork": "Distributor Bata Shoe Co. Ltd.: Madaripur",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "Police attacks and shootings", "long": "" }
+      "howToDeath": {
+        "short": "Police attacks and shootings",
+        "long": ""
+      }
     }
   },
   {
@@ -10419,7 +11661,10 @@
       "educationOrWork": "ঢাকা",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "পুলিশের গুলিতে", "long": "" }
+      "howToDeath": {
+        "short": "পুলিশের গুলিতে",
+        "long": ""
+      }
     },
     "en": {
       "name": "Nurul Amin Sardar",
@@ -10428,7 +11673,10 @@
       "educationOrWork": "Dhaka",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "Shot by the police", "long": "" }
+      "howToDeath": {
+        "short": "Shot by the police",
+        "long": ""
+      }
     }
   },
   {
@@ -10445,7 +11693,10 @@
       "educationOrWork": "",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "" }
+      "howToDeath": {
+        "short": "",
+        "long": ""
+      }
     },
     "en": {
       "name": "Md Raihan Ghazi ",
@@ -10454,7 +11705,10 @@
       "educationOrWork": "",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "" }
+      "howToDeath": {
+        "short": "",
+        "long": ""
+      }
     }
   },
   {
@@ -10631,7 +11885,10 @@
       "educationOrWork": "ড. মাহবুবুর রহমান মোল্লাহ কলেজ",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "" }
+      "howToDeath": {
+        "short": "",
+        "long": ""
+      }
     },
     "en": {
       "name": "Md Jihad Hasan",
@@ -10640,7 +11897,10 @@
       "educationOrWork": "Dr. Mahbubur Rahman Mollah College",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "" }
+      "howToDeath": {
+        "short": "",
+        "long": ""
+      }
     }
   },
   {
@@ -10785,7 +12045,10 @@
       "educationOrWork": "ইয়ুথ ফাউন্ডেশন বাংলাদেশ",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "আহত ছাত্রদের সাহায্য করতে গিয়ে ", "long": "" }
+      "howToDeath": {
+        "short": "আহত ছাত্রদের সাহায্য করতে গিয়ে ",
+        "long": ""
+      }
     },
     "en": {
       "name": "Md. Abdullah Kabir",
@@ -10794,7 +12057,10 @@
       "educationOrWork": "Youth Foundation Bangladesh ",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "While helping injured students", "long": "" }
+      "howToDeath": {
+        "short": "While helping injured students",
+        "long": ""
+      }
     }
   },
   {
@@ -10951,7 +12217,10 @@
       "educationOrWork": "DEBIDWAR ISLAMIA FAZIL MADRASAH",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "Shot dead", "long": "Shot dead" }
+      "howToDeath": {
+        "short": "Shot dead",
+        "long": "Shot dead"
+      }
     }
   },
   {
@@ -10968,7 +12237,10 @@
       "educationOrWork": "সিরাজ উদ্দিন সরকার বিদ্যা নিকেতন স্কুল এন্ড কলেজ ",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "গুলিবিদ্ধ হয়ে", "long": "গুলিবিদ্ধ হয়ে" }
+      "howToDeath": {
+        "short": "গুলিবিদ্ধ হয়ে",
+        "long": "গুলিবিদ্ধ হয়ে"
+      }
     },
     "en": {
       "name": "Samio Aman Nur",
@@ -10977,7 +12249,10 @@
       "educationOrWork": "Siraj Uddin Sarker Vidyaniketan & College",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "Shot dead", "long": "Shot dead" }
+      "howToDeath": {
+        "short": "Shot dead",
+        "long": "Shot dead"
+      }
     }
   },
   {
@@ -11090,7 +12365,10 @@
       "educationOrWork": "মিরপুর ",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "গুলিবিদ্ধ হয়ে", "long": "" }
+      "howToDeath": {
+        "short": "গুলিবিদ্ধ হয়ে",
+        "long": ""
+      }
     },
     "en": {
       "name": "Md Miraz Hossain",
@@ -11099,7 +12377,10 @@
       "educationOrWork": "Mirpur",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "Shot dead", "long": "" }
+      "howToDeath": {
+        "short": "Shot dead",
+        "long": ""
+      }
     }
   },
   {
@@ -11116,7 +12397,10 @@
       "educationOrWork": "সিরাজগঞ্জ সরকারি কলেজ ",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "পুলিশের গুলিতে ", "long": "" }
+      "howToDeath": {
+        "short": "পুলিশের গুলিতে ",
+        "long": ""
+      }
     },
     "en": {
       "name": "Shihab Ahmed",
@@ -11125,7 +12409,10 @@
       "educationOrWork": "Sirajganj Government College",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "Shot by the police", "long": "" }
+      "howToDeath": {
+        "short": "Shot by the police",
+        "long": ""
+      }
     }
   },
   {
@@ -11142,7 +12429,10 @@
       "educationOrWork": "এনায়েতপুর ইসলামিয়া ফাজিল ডিগ্রি মাদ্রাসা",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "পুলিশের গুলিতে ", "long": "" }
+      "howToDeath": {
+        "short": "পুলিশের গুলিতে ",
+        "long": ""
+      }
     },
     "en": {
       "name": "Hafez Siyam Hosen",
@@ -11151,7 +12441,10 @@
       "educationOrWork": "Enayatpur Islamia Fazil Degree Madrasa",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "Shot by the police", "long": "" }
+      "howToDeath": {
+        "short": "Shot by the police",
+        "long": ""
+      }
     }
   },
   {
@@ -11232,7 +12525,10 @@
       "educationOrWork": "শাশা ডেনিম",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "" }
+      "howToDeath": {
+        "short": "",
+        "long": ""
+      }
     },
     "en": {
       "name": "Md. Ashraful Islam ",
@@ -11241,7 +12537,10 @@
       "educationOrWork": "Sasha Denim",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "", "long": "" }
+      "howToDeath": {
+        "short": "",
+        "long": ""
+      }
     }
   },
   {
@@ -11386,7 +12685,10 @@
       "educationOrWork": "সাউথইস্ট বিশ্ববিদ্যালয়",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "গুলিবিদ্ধ হয়ে", "long": "" }
+      "howToDeath": {
+        "short": "গুলিবিদ্ধ হয়ে",
+        "long": ""
+      }
     },
     "en": {
       "name": "Rakib Hasan",
@@ -11395,7 +12697,10 @@
       "educationOrWork": "Southeast university",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "Shot dead", "long": "" }
+      "howToDeath": {
+        "short": "Shot dead",
+        "long": ""
+      }
     }
   },
   {
@@ -11412,7 +12717,10 @@
       "educationOrWork": "বিএটিসি",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "পুলিশের গুলিতে", "long": "" }
+      "howToDeath": {
+        "short": "পুলিশের গুলিতে",
+        "long": ""
+      }
     },
     "en": {
       "name": "Omar Nurul Absar",
@@ -11421,7 +12729,10 @@
       "educationOrWork": "BATC",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "Shot by the police", "long": "" }
+      "howToDeath": {
+        "short": "Shot by the police",
+        "long": ""
+      }
     }
   },
   {
@@ -11470,7 +12781,10 @@
       "educationOrWork": "বাড্ডা  ",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "পুলিশের গুলিতে", "long": "" }
+      "howToDeath": {
+        "short": "পুলিশের গুলিতে",
+        "long": ""
+      }
     },
     "en": {
       "name": "Hafez Masudur Rahman",
@@ -11479,7 +12793,10 @@
       "educationOrWork": "Badda",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "Shot dead by police", "long": "" }
+      "howToDeath": {
+        "short": "Shot dead by police",
+        "long": ""
+      }
     }
   },
   {
@@ -11496,7 +12813,10 @@
       "educationOrWork": "হাসানপুর ডিগ্রি কলেজ ",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "পুলিশের গুলিতে ", "long": "" }
+      "howToDeath": {
+        "short": "পুলিশের গুলিতে ",
+        "long": ""
+      }
     },
     "en": {
       "name": "Md Rifat",
@@ -11505,7 +12825,10 @@
       "educationOrWork": "Hasanpur Degree College",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "Shot by the police", "long": "" }
+      "howToDeath": {
+        "short": "Shot by the police",
+        "long": ""
+      }
     }
   },
   {
@@ -11522,7 +12845,10 @@
       "educationOrWork": "পদক্ষেপ(এনজিও)",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "গুলিবিদ্ধ হয়ে", "long": "" }
+      "howToDeath": {
+        "short": "গুলিবিদ্ধ হয়ে",
+        "long": ""
+      }
     },
     "en": {
       "name": "Md Josim uddin",
@@ -11531,7 +12857,10 @@
       "educationOrWork": "Padahep(NGO)",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "Was shot.", "long": "" }
+      "howToDeath": {
+        "short": "Was shot.",
+        "long": ""
+      }
     }
   },
   {
@@ -11580,7 +12909,10 @@
       "educationOrWork": "মাতুয়াল মদিনা চত্বর ,ডেমরা",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "গুলিবিদ্ধ হয়ে", "long": "" }
+      "howToDeath": {
+        "short": "গুলিবিদ্ধ হয়ে",
+        "long": ""
+      }
     },
     "en": {
       "name": "Riaz",
@@ -11589,7 +12921,10 @@
       "educationOrWork": "Matual Medina Square, Demra",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "Was shot.", "long": "" }
+      "howToDeath": {
+        "short": "Was shot.",
+        "long": ""
+      }
     }
   },
   {
@@ -11606,7 +12941,10 @@
       "educationOrWork": "হেমনগর ডিগ্রী কলেজ",
       "biography": "পড়ালেখার পাশাপাশি ও হচ্ছে গিয়া সখীপুরে কোনাবাড়ী ওই অটো রিক্সা চালাইতো প্লাস পড়ালেখা করত | আমার বন্ধুর ফ্যামিলির অবস্থা খুবই খারাপ |",
       "fallbackInfo": "",
-      "howToDeath": { "short": "পুলিশের গুলিতে মারা যায়", "long": "" }
+      "howToDeath": {
+        "short": "পুলিশের গুলিতে মারা যায়",
+        "long": ""
+      }
     },
     "en": {
       "name": "Md. Hriday Hossain",
@@ -11615,7 +12953,10 @@
       "educationOrWork": "Hemnagar Degree College",
       "biography": "Besides studying, he went to Konabari in Sakhipur and used to drive an auto rickshaw plus study. My friend's family condition is very bad",
       "fallbackInfo": "",
-      "howToDeath": { "short": "Killed in police firing", "long": "" }
+      "howToDeath": {
+        "short": "Killed in police firing",
+        "long": ""
+      }
     }
   },
   {
@@ -11632,7 +12973,10 @@
       "educationOrWork": "রাকিন ডেভেলপমেন্ট ক্যাম্পানি (বিডি) লি:",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "পুলিশের গুলিতে মারা যায়", "long": "" }
+      "howToDeath": {
+        "short": "পুলিশের গুলিতে মারা যায়",
+        "long": ""
+      }
     },
     "en": {
       "name": "Md. Tariqul Islam Rubel",
@@ -11641,7 +12985,10 @@
       "educationOrWork": "Rakeen Development Campany (BD) Ltd",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "Killed in police firing", "long": "" }
+      "howToDeath": {
+        "short": "Killed in police firing",
+        "long": ""
+      }
     }
   },
   {
@@ -11658,7 +13005,10 @@
       "educationOrWork": "",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "গুলিবিদ্ধ হয়ে", "long": "" }
+      "howToDeath": {
+        "short": "গুলিবিদ্ধ হয়ে",
+        "long": ""
+      }
     },
     "en": {
       "name": "Md. Siam Sheikh",
@@ -11667,7 +13017,10 @@
       "educationOrWork": "",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "Was shot.", "long": "" }
+      "howToDeath": {
+        "short": "Was shot.",
+        "long": ""
+      }
     }
   },
   {
@@ -11684,7 +13037,10 @@
       "educationOrWork": "বনশ্রী ই ব্লক ৮ নম্বর রোডে",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "গুলিবিদ্ধ হয়ে", "long": "" }
+      "howToDeath": {
+        "short": "গুলিবিদ্ধ হয়ে",
+        "long": ""
+      }
     },
     "en": {
       "name": "Muhammad Jan Sharif Mithu",
@@ -11693,7 +13049,10 @@
       "educationOrWork": "Bansree E Block 8 Road",
       "biography": "",
       "fallbackInfo": "",
-      "howToDeath": { "short": "Was shot.", "long": "" }
+      "howToDeath": {
+        "short": "Was shot.",
+        "long": ""
+      }
     }
   },
   {
@@ -11710,7 +13069,10 @@
       "educationOrWork": "আশুলিয়া সিটি ইউনিভার্সিটি",
       "biography": "সাজ্জাদ হোসেন ( সজল ) পিতা: মোঃ খলিলুর রহমান, মাতা: মোছাঃ শাহিনা বেগম, এর একমাত্র পুত্র সন্তান বি সি আই স্কুল এন্ড কলেজের সাইন্স বিভাগ থেকে ২০২২ সম্মান এর সাথে উত্তির্ণ হয়ে আশুলিয়া সিটি ইউনিভার্সিটি তে ৫৫তম টেক্সটাইল ডিপার্টমেন্ট এর ছাত্র ছিলেন ।",
       "fallbackInfo": "",
-      "howToDeath": { "short": "আগুনে পুড়ে", "long": "" }
+      "howToDeath": {
+        "short": "আগুনে পুড়ে",
+        "long": ""
+      }
     },
     "en": {
       "name": "Sajjad Hossain (Sajal)\n",
@@ -11719,7 +13081,10 @@
       "educationOrWork": "Ashulia City University",
       "biography": "Sajjad Hossain (Sajal) Father: Md. Khalilur Rahman, Mother: Mosa: Shahina Begum, the only son of BCI School and College Science Department passed out with 2022 honors and was a student of 55th Textile Department in Ashulia City University.",
       "fallbackInfo": "",
-      "howToDeath": { "short": "burned by fire", "long": "" }
+      "howToDeath": {
+        "short": "burned by fire",
+        "long": ""
+      }
     }
   }
 ]
