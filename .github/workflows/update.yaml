@@ -24,6 +24,10 @@ jobs:
         uses: actions/setup-python@v4
         with:
           python-version: "3.12"
+      
+      - name: Instal Dependencies
+        run: |
+          pip install requests httpx bs4 lxml
 
       - name: Adding new Data
         working-directory: public/data
