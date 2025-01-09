@@ -1,4 +1,6 @@
-import json, os, datetime
+import os
+import json
+from helper import writeJsonFile, readJsonFile
 
 with open("data_bn.json", "rb") as f, open("data_en.json", "rb") as g:
     bn = json.load(f)
@@ -6,72 +8,8 @@ with open("data_bn.json", "rb") as f, open("data_en.json", "rb") as g:
 
 folder = "./../photos"
 
-
-# sort `en` by the date property. date is like: 16th July, 2024
-def getClearDate(date: str):
-    d, m, y = date.split()
-    d = d.replace("th", "").replace("st", "").replace("nd", "").replace("rd", "")
-
-    return f"{d} {m} {y}"
-
-def bengaliToEnglishDate(date: str):
-    months = {
-        "জানুয়ারি": "January",
-        "ফেব্রুয়ারি": "February",
-        "মার্চ": "March",
-        "এপ্রিল": "April",
-        "মে": "May",
-        "জুন": "June",
-        "জুলাই": "July",
-        "আগস্ট": "August",
-        "সেপ্টেম্বর": "September",
-        "অক্টোবর": "October",
-        "নভেম্বর": "November",
-        "ডিসেম্বর": "December",
-    }
-
-    numbers = {
-        "০": "0",
-        "১": "1",
-        "২": "2",
-        "৩": "3",
-        "৪": "4",
-        "৫": "5",
-        "৬": "6",
-        "৭": "7",
-        "৮": "8",
-        "৯": "9",
-    }
-
-    for b, e in months.items():
-        date = date.replace(b, e)
-
-    for b, e in numbers.items():
-        date = date.replace(b, e)
-    return getClearDate(date)
-
-# sort later
-
-# newEn = sorted(
-#     en,
-#     key=lambda x: datetime.datetime.strptime(getClearDate(x["date"]), "%d %B, %Y"),
-# )
-# newBn = sorted(
-#     bn,
-#     key=lambda x: datetime.datetime.strptime(bengaliToEnglishDate(x["date"]), "%d %B, %Y"),
-# )
-
 newEn = en.copy()
 newBn = bn.copy()
-
-def writeJsonFile(path: str, data: dict, **kw):
-    with open(path, "w", encoding="utf-8") as f:
-        return json.dump(data, f, ensure_ascii=False, **kw)
-
-
-def readJsonFile(path: str):
-    with open(path, "rb") as f:
-        return json.load(f)
 
 
 def makeShortData(data, lang):
@@ -139,4 +77,3 @@ if __name__ == "__main__":
     makeShortData(newBn, "bn")
     makeShortData(newEn, "en")
     dumpSearchableJson()
-    
