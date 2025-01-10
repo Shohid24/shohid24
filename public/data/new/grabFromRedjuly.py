@@ -28,6 +28,8 @@ def writeJsonFile(path: str, data: dict, **kw):
 
 
 def formatDate(input_date: str) -> str:
+    if input_date == "None":
+        return ''
     # from chatgpt
     def ordinal(n):
         return f"{n}{'th' if 11 <= n % 100 <= 13 else {1: 'st', 2: 'nd', 3: 'rd'}.get(n % 10, 'th')}"
@@ -44,6 +46,10 @@ def formatDate(input_date: str) -> str:
 
 
 def getData(id: str):
+    filename = f"shohid_{id}.json"
+    if os.path.exists(filename):
+        print(f"{filename} already exists")
+        return 
     r = ses.get(f"https://redjuly.live/shohid/shohid_profile/{id}/")
     doc = BeautifulSoup(r.content, "lxml")
 
@@ -95,7 +101,7 @@ def getData(id: str):
     }
 
     print(f"Done for {engName}")
-    writeJsonFile(f"shohid_{id}.json", data, indent=2)
+    writeJsonFile(filename, data, indent=2)
     return data
 
 

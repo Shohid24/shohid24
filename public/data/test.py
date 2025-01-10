@@ -1,21 +1,14 @@
-from helper import readJsonFile
+from helper import readJsonFile, writeJsonFile
 
 searchable = readJsonFile("searchableData.json")
 
-def findCount(name:str, date:str):
-    count = 0
-    for i in searchable:
-        if i["name"]["en"].lower() == name.lower() and i["date"] == date:
-            count += 1
-    
-    return count
+ids = "aqa aqb aqc aqd aqe aqf aqg aqh aqi".split()
 
-# check duplicates for all names
+for id in ids:
+    for index, person in enumerate(searchable):
+        if person["id"] == id:
+            print(f"ID: {person['id']}")
+            searchable[index]["hasImage"] = 1
 
-for i in searchable:
-    name = i["name"]["en"].lower()
-    date = i["date"]
-    count = findCount(name, date)
-    if count > 1:
-        print(f"Duplicate found for name '{name}': {count} occurrences")
-    
+
+# writeJsonFile("searchableData.json", searchable)

@@ -56,8 +56,17 @@ export const ENGLISH = {
       <br />
       The initial information was collected from their website. After refining
       and making some corrections, it was given here. <br />
-      If we remain alive, we will regularly update this information. Your
-      cooperation is greatly needed. <br />
+      We also took 10 martyrs&apos; from{" "}
+      <Link
+        href="https://redjuly.live"
+        target="_blank"
+        className="italic text-blue-700 underline-offset-2 hover:underline dark:text-blue-400"
+      >
+        redjuly.live
+      </Link>
+      <br />
+      We will try to regularly update this information. Your cooperation is
+      greatly needed. <br />
     </>
   ),
 };
@@ -116,8 +125,18 @@ export const BANGLA = {
       সিদ্ধান্ত। <br />
       প্রাথমিক তথ্যগুলো তাদের ওয়েবসাইট থেকেই সংগ্রহ করা। এরপর সেই তথ্য
       পরিমার্জন ও কিছু সংশোধন করে এখানে দেওয়া হয়েছে। <br />
-      বেঁচে থাকলে নিয়মিত এসকল তথ্য আপডেট করা হবে। এজন্য আপনাদের সহায়তা একান্ত
-      কাম্য। <br />
+      আমরা আরও ১০ জন শহীদের তথ্য নিয়েছি{" "}
+      <Link
+        href="https://redjuly.live"
+        target="_blank"
+        className="italic text-blue-700 underline-offset-2 hover:underline dark:text-blue-400"
+      >
+        redjuly.live
+      </Link>
+      থেকে।
+      <br />
+      আমরা নিয়মিতভাবে এই তথ্যগুলি আপডেট করার চেষ্টা করব। এজন্য আপনাদের সহায়তা
+      একান্ত কাম্য। <br />
     </>
   ),
 };

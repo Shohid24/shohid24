@@ -88,7 +88,7 @@ for index, file in enumerate(files):
         "profession": {"bn": bn["profession"], "en": en["profession"]},
         "info": {"bn": bn["info"], "en": en["info"]},
         "date": date,
-        "hasImage": 0,
+        "hasImage": 1 if image else 0,
     }
     persons.append(searchable)
 
