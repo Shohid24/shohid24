@@ -99,5 +99,5 @@ for i in range(len(rawData)):
     with open(f"profiles/{id}.json", "w", encoding="utf8") as f:
         json.dump(newData, f, ensure_ascii=False)
 
-    print(f"{i:03}. {id}")
+    # print(f"{i:03}. {id}")
         

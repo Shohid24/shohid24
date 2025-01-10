@@ -12,18 +12,13 @@ SH734
 SH474
 SH740
 SH733
-SH734
 SH6
 SH3
 SH651
-
-
-
-
-
-
-
-
+SH652
+SH727
+SH728
+SH741
 """.split()
 
 
@@ -66,6 +61,7 @@ def getData(id: str):
     injuryReason = getText("আহত হওয়ার ধরন:")
     martyrDate = formatDate(getText("শাহাদাত বরণ করেন:"))
     age = getText("শাহাদাতের সময় বয়স ছিল:").split()[0]
+    age = age if age.isdigit() else ""
     bio = getText("সংক্ষিপ্ত জীবনী:")
     birthPlace = getProperAddress(getText("স্থায়ী ঠিকানা:"))
     img = doc.find(
