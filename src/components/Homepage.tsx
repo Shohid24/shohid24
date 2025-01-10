@@ -8,6 +8,7 @@ import type { Translation } from "@/components/translations";
 import { toBengali } from "@/lib/helpers/date";
 
 const Homepage_Sus = ({ translation }: { translation: Translation }) => {
+  const [firstLoad, setFirstLoad] = useState(true);
   const [isSearching, startTransition] = useTransition();
   const [query, setQuery] = useQueryState(
     "query",
@@ -27,8 +28,11 @@ const Homepage_Sus = ({ translation }: { translation: Translation }) => {
       const res = SearchPerson(query);
       setSearchResult(res);
     });
+    if (firstLoad) {
+      return setFirstLoad(false);
+    }
     setCurrentPage(1);
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [query]);
 
   useHotkeys(
