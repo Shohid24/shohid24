@@ -209,7 +209,7 @@
     },
     {
         "id": "aba",
-        "name": "আসিফ ইকবাল",
+        "name": "আসিফ ইকবাল রাব্বি",
         "profession": "শিক্ষার্থী",
         "info": "ইন্ডিপেন্ডেন্ট বিশ্ববিদ্যালয় বাংলাদেশ, ঢাকা",
         "date": "১৮ জুলাই, ২০২৪",
@@ -910,14 +910,6 @@
         "info": "ঢাকা ইমপিরিয়াল কলেজ",
         "date": "১৯ জুলাই, ২০২৪",
         "originalURL": "https://shohid.online/shohid/nazmul-hasan.jpg"
-    },
-    {
-        "id": "aek",
-        "name": "সাইদুল ইসলাম শোভন",
-        "profession": "শিক্ষার্থী",
-        "info": "শেখ বোরহানুদ্দীন পোস্ট গ্রাজুয়েট কলেজ",
-        "date": "১৯ জুলাই, ২০২৪",
-        "originalURL": "https://shohid.online/shohid/saidul-islam-shovon.jpg"
     },
     {
         "id": "ael",

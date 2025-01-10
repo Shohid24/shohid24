@@ -1,8 +1,6 @@
-import os
-import json
+# File to make `shared/allData.json`
 
 from helper import writeJsonFile, readJsonFile, pprint
-
 
 folder = "shared"
 

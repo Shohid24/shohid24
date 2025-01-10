@@ -832,38 +832,6 @@
     }
   },
   {
-    "slug": "asif-iqbal",
-    "age": "31",
-    "diedDate": "19/07/2024",
-    "profession": "STUDENT",
-    "isPictureNotFound": false,
-    "isInfoMissing": false,
-    "bn": {
-      "name": "আসিফ ইকবাল রাব্বি",
-      "bornDate": "",
-      "bornAddress": "মাগুরা, খুলনা",
-      "educationOrWork": "ইন্ডিপেন্ডেন্ট বিশ্ববিদ্যালয় বাংলাদেশ, ঢাকা",
-      "biography": "",
-      "fallbackInfo": "",
-      "howToDeath": {
-        "short": "তিনি মিরপুর-১০ এর ফলপট্টি এলাকায় পুলিশের গুলিতে নিহত হন।",
-        "long": ""
-      }
-    },
-    "en": {
-      "name": "Asif Iqbal Rabbi",
-      "bornDate": "",
-      "bornAddress": "Magura, Khulna",
-      "educationOrWork": "Independent University Bangladesh, Dhaka",
-      "biography": "",
-      "fallbackInfo": "",
-      "howToDeath": {
-        "short": "He was shot and killed by the police in the Falpatti area of Mirpur-10.",
-        "long": ""
-      }
-    }
-  },
-  {
     "slug": "hridoy-chandra-tarua",
     "age": "22",
     "diedDate": "18/07/2024",
@@ -3644,38 +3612,6 @@
       "howToDeath": {
         "short": "",
         "long": "- Source: Prothom Alo"
-      }
-    }
-  },
-  {
-    "slug": "saidul-islam-shovon",
-    "age": "20",
-    "diedDate": "19/07/2024",
-    "profession": "STUDENT",
-    "isPictureNotFound": false,
-    "isInfoMissing": false,
-    "bn": {
-      "name": "সাইদুল ইসলাম শোভন",
-      "bornDate": "",
-      "bornAddress": "ওসমানঘাট,ঢাকা",
-      "educationOrWork": "শেখ বোরহানুদ্দীন পোস্ট গ্রাজুয়েট কলেজ",
-      "biography": "",
-      "fallbackInfo": "",
-      "howToDeath": {
-        "short": "",
-        "long": "ঢাকার নিউমার্কেট এলাকায় আন্দোলনরত অবস্থায় পুলিশের গুলিতে শহীদ হয়।  "
-      }
-    },
-    "en": {
-      "name": "Saidul Islam Shovon",
-      "bornDate": "",
-      "bornAddress": "Osman Ghat, Dhaka",
-      "educationOrWork": "Shaikh Burhanuddin Post Graduate College",
-      "biography": "",
-      "fallbackInfo": "",
-      "howToDeath": {
-        "short": "",
-        "long": ""
       }
     }
   },
@@ -12521,9 +12457,9 @@
     "bn": {
       "name": "মোঃ আশরাফুল ইসলাম ",
       "bornDate": "",
-      "bornAddress": "পবনারটেক, আশুলিয়া, সাভার,ঢাকা",
+      "bornAddress": "ভাদাইল, গণকবাড়ি, ঢাকা",
       "educationOrWork": "শাশা ডেনিম",
-      "biography": "",
+      "biography": "জনম দুখিনী মায়ের পাঁচ সন্তানের মধ্যে অন্যতম আদরের সন্তান। তিনি মাকে নিজের মেয়ের মতোই যত্নে রাখতেন। বিবাহিত জীবনে দুই সন্তানের পিতা। খুবই সৎ জীবন যাপন করেছেন। অন্যায়কে কখনো প্রশ্রয় দেননি, সর্বদাই ন্যায়ের পথে থেকেছেন।",
       "fallbackInfo": "",
       "howToDeath": {
         "short": "",
@@ -12532,10 +12468,10 @@
     },
     "en": {
       "name": "Md. Ashraful Islam ",
-      "bornDate": "",
-      "bornAddress": "Pabnartech, Ashulia, Savar, Dhaka",
+      "bornDate": "July 6, 1994",
+      "bornAddress": "Bhadail, Gonokbari, Dhaka",
       "educationOrWork": "Sasha Denim",
-      "biography": "",
+      "biography": "One of the most beloved children among the five of a long-suffering mother. He took care of his mother as if she were his daughter. In his married life, he was the father of two children. He lived a very honest life, never tolerating injustice, and always stood on the path of righteousness.",
       "fallbackInfo": "",
       "howToDeath": {
         "short": "",

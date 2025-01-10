@@ -35,6 +35,10 @@ currentLength = len(os.listdir("profiles"))
 persons = []
 
 for index, file in enumerate(files):
+    if not file.endswith(".json"):
+        print(f"Skipping {file} as it is not a json file")
+        continue
+
     with open(f"new/{file}", "rb") as f:
         data = json.load(f)
 
@@ -108,6 +112,8 @@ data = sorted(
     key=lambda x: datetime.datetime.strptime(getClearDate(x["date"]), "%d %B, %Y"),
 )
 
+
+# TODO: Merge New and Old
 
 with open("searchableData.json", "w", encoding="utf8") as f:
     json.dump(data, f, ensure_ascii=False)
