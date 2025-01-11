@@ -16,7 +16,7 @@ X = {
     "bio": "",
     "cause": "",
 }
-dictOrder = {"id": "", "date": "", "age": "", "dob": "", "bn": X, "en": X}
+dictOrder = {"id": "", "date": "", "age": "", "dob": "", "hasImage":False, "bn": X, "en": X}
 
 
 mainData = []
@@ -31,6 +31,7 @@ for index, person in enumerate(searchable, 1):
     data["date"] = date
     data["bn"]["info"] = info["bn"]
     data["en"]["info"] = info["en"]
+    data["hasImage"] = bool(int(hasImage))
 
     newData = {}
 
