@@ -10,6 +10,7 @@ export const metadata: Metadata = {
   title: BANGLA.title,
   description: BANGLA.description,
   metadataBase: new URL("https://shohid24.pages.dev"),
+  keywords: ["shohid24", "shohid 24", "শহীদ২৪", "জুলাই আন্দোলনে শহীদ", "Martyr list of July Movement", "July Massacre", "shohid.info"]
 };
 
 export default function RootLayout({
