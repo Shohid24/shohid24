@@ -27,6 +27,7 @@ export default function RootLayout({
           name="google-site-verification"
           content="WPPXho-ehsTzL41OYAECiVP8ilWMxfxjHtHwQUsu1FU"
         />
+        <meta name="msvalidate.01" content="4BEF61FA980C565F3A8B089F8484F9F0" />
       </head>
       <body
         className={`${getFontClass("bn")} antialiased selection:bg-indigo-400 selection:text-gray-950 dark:selection:bg-indigo-800 dark:selection:text-gray-200`}
