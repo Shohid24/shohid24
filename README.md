@@ -1,5 +1,5 @@
 <p align="center">
-  <img height="300px" src="public/images/logo_landscape.png" alt="Contest Hive Logo">
+  <img width="300px" src="public/images/logo_landscape.png" alt="Contest Hive Logo">
 </p>
 
 # Shohid24
