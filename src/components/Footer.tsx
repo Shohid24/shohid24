@@ -3,6 +3,27 @@ import { getTranslation, type Translation } from "@/components/translations";
 import { getFontClass } from "@/lib/fontLoader";
 import { cn } from "@/lib/utils";
 
+const LastUpdated = () => {
+  const lastUpdatedDate =
+    new Date().toISOString().split(":")[0] + ":00:00.000Z";
+  const formattedDate = new Date(lastUpdatedDate).toLocaleDateString("en-US", {
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+    hour: "2-digit",
+    minute: "2-digit",
+  });
+
+  return (
+    <p className="text-xs font-semibold pt-8">
+      <span className="tracking-wider mr-1.5">Last updated:</span>
+      <span className="font-mono tracking-tighter">
+        <time dateTime={lastUpdatedDate}>{formattedDate}</time>
+      </span>
+    </p>
+  );
+};
+
 const Footer = ({ lang }: { lang: "bn" | "en" }) => {
   const translation = getTranslation(lang);
   return (
@@ -20,6 +41,7 @@ const Footer = ({ lang }: { lang: "bn" | "en" }) => {
       >
         {translation.maintainerText}
       </p>
+      <LastUpdated />
     </MaxWidthWrapper>
   );
 };

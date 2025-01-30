@@ -3,14 +3,22 @@ import { NuqsAdapter } from "nuqs/adapters/next/app";
 import ThemeProvider from "@/components/ui/ThemeProvider";
 import type { Metadata } from "next";
 import "./globals.css";
-import { BANGLA } from "@/components/translations";
+import { BANGLA, ENGLISH } from "@/components/translations";
 import { getFontClass } from "@/lib/fontLoader";
 
 export const metadata: Metadata = {
-  title: BANGLA.title,
-  description: BANGLA.description,
+  title: ENGLISH.title,
+  description: ENGLISH.description,
   metadataBase: new URL("https://shohid24.pages.dev"),
-  keywords: ["shohid24", "shohid 24", "শহীদ২৪", "জুলাই আন্দোলনে শহীদ", "Martyr list of July Movement", "July Massacre", "shohid.info"]
+  keywords: [
+    "shohid24",
+    "shohid 24",
+    "শহীদ২৪",
+    "জুলাই আন্দোলনে শহীদ",
+    "Martyr list of July Movement",
+    "July Massacre",
+    "shohid.info",
+  ],
 };
 
 export default function RootLayout({
@@ -19,10 +27,17 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="bn" suppressHydrationWarning>
+    <html lang="en" suppressHydrationWarning>
       <head>
         <link rel="icon" href="/favicon.svg" />
         <link rel="preload" as="image" href="/default.jpg" />
+
+        <meta charSet="utf-8" />
+        <meta
+          httpEquiv="last-modified"
+          content={new Date().toISOString().split(":")[0] + ":00:00.000Z"}
+        />
+
         <meta
           name="google-site-verification"
           content="WPPXho-ehsTzL41OYAECiVP8ilWMxfxjHtHwQUsu1FU"
