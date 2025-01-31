@@ -40,7 +40,7 @@ const Banner = () => {
       <div className="z-10 hidden h-full w-96 scale-50 md:block md:scale-95 lg:scale-100">
         <Image
           priority
-          src="/photos/aaa.jpg"
+          src="/compressed/aaa.jpg"
           alt="Martyr Abu Said"
           width={1}
           height={1}
@@ -48,7 +48,7 @@ const Banner = () => {
         />
         <Image
           priority
-          src="/photos/aaj.jpg"
+          src="/compressed/aaj.jpg"
           alt="Martyr Mir Mugdha"
           width={1}
           height={1}
@@ -56,7 +56,7 @@ const Banner = () => {
         />
         <Image
           priority
-          src="/photos/aac.jpg"
+          src="/compressed/aac.jpg"
           alt="Martyr Wasim Akram"
           width={1}
           height={1}
@@ -64,7 +64,7 @@ const Banner = () => {
         />
         <Image
           priority
-          src="/photos/aai.jpg"
+          src="/compressed/aai.jpg"
           alt="Martyr Farhan Faiyaz"
           width={1}
           height={1}
@@ -72,7 +72,7 @@ const Banner = () => {
         />
         <Image
           priority
-          src="/photos/aaf.jpg"
+          src="/compressed/aaf.jpg"
           alt="Martyr Tahmid Tamim"
           width={1}
           height={1}
