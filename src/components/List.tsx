@@ -82,7 +82,7 @@ const List = ({
         ).map((item: MartyrType, index: number) => (
           <Profile
             key={item.id}
-            index={MartyrList.findIndex((i:any) => i.id === item.id)}
+            index={MartyrList.findIndex((i) => i.id === item.id)}
             id={item.id}
             name={item.name[lang as "bn" | "en"]}
             profession={item.profession[lang as "bn" | "en"]}

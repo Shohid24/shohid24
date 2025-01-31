@@ -2,7 +2,7 @@
 "use client";
 
 import { usePathname, useSearchParams } from "next/navigation";
-import { useEffect } from "react";
+import { Suspense, useEffect } from "react";
 import NProgress from "nprogress";
 import "nprogress/nprogress.css";
 
@@ -14,11 +14,11 @@ const ProgressBar = () => {
 
   useEffect(() => {
     NProgress.start();
-    
+
     // Delay stopping to ensure smooth animation
     const timer = setTimeout(() => {
       NProgress.done();
-    }, 100); 
+    }, 100);
 
     return () => {
       clearTimeout(timer); // Prevent memory leaks
@@ -28,4 +28,12 @@ const ProgressBar = () => {
   return null;
 };
 
-export default ProgressBar;
+const ProgressSus = () => {
+  return (
+    <Suspense>
+      <ProgressBar />
+    </Suspense>
+  );
+};
+
+export default ProgressSus;
