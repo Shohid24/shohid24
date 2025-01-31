@@ -3,8 +3,8 @@ import { Calendar } from "lucide-react";
 
 const ProfileSkeleton = () => {
   return (
-    <div className="flex h-full w-40 flex-col items-center rounded-md border p-2.5 md:w-52">
-      <Skeleton className="h-[150px] w-[150px] rounded-md hover:cursor-pointer md:h-[190px] md:w-[190px]" />
+    <div className="relative w-fit max-w-[150px] md:max-w-[190px] rounded-md border md:p-2.5 p-1.5 md:w-52">
+      <Skeleton className="block aspect-square w-[min(150px,100%)] rounded-md object-cover hover:cursor-pointer md:w-[min(190px,100%)]" />
       <div className="my-2 flex w-full flex-col gap-2">
         <Skeleton className="h-6 w-32 rounded-sm" />
         <Skeleton className="h-4 w-16 rounded-sm" />
