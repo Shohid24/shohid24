@@ -1,5 +1,4 @@
 import ThemeProvider from "@/components/ui/ThemeProvider";
-import ProgressBar from "@/components/ProgressBar";
 import { Provider } from "react-wrap-balancer";
 import { NuqsAdapter } from "nuqs/adapters/next/app";
 import { ENGLISH } from "@/components/translations";
@@ -48,7 +47,6 @@ export default function RootLayout({
       <body
         className={`${getFontClass("bn")} antialiased selection:bg-indigo-400 selection:text-gray-950 dark:selection:bg-indigo-800 dark:selection:text-gray-200`}
       >
-        <ProgressBar />
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
