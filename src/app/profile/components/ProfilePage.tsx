@@ -4,51 +4,26 @@ import Profile from "@/components/Profile";
 import { Skeleton } from "@/components/ui/skeleton";
 import { toBengali } from "@/lib/helpers/date";
 import { getTranslation } from "./translations";
-import { Martyr, MartyrInfo } from "@/lib/types";
+import { MartyrInfo } from "@/lib/types";
 import { cn, fetchJson, guid } from "@/lib/utils";
 import { ReactNode, useEffect, useState } from "react";
+import { IUser } from "@/server/schema/user";
 
 const ProfilePage = ({
   martyr,
   lang,
 }: {
-  martyr: Martyr;
+  martyr: IUser;
   lang: "bn" | "en";
 }) => {
   const id = martyr?.id;
-  const [profile, setProfile] = useState<MartyrInfo>();
-  const [error, setError] = useState<string | null>(null);
-  const [retry, setRetry] = useState<number>(0);
-
-  useEffect(() => {
-    if (!id) return;
-
-    async function getData() {
-      const result = await fetchJson(String(id));
-      console.log(result.data);
-      if (result.ok) {
-        setProfile(result.data);
-      } else {
-        setError(result.error || "Failed to fetch profile data.");
-      }
-    }
-
-    getData();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [retry]);
 
   const translation = getTranslation(lang);
-  const name = martyr.name[lang as "bn" | "en"];
-  const profession = martyr.profession[lang as "bn" | "en"];
-  const info = martyr.info[lang as "bn" | "en"];
+  const name = martyr[lang].name;
+  const profession = martyr[lang].profession;
+  const info = martyr[lang].info;
   const date = martyr.date;
   const hasImage = martyr.hasImage;
-
-  if (error) {
-    // show alert message
-    alert(error);
-    setRetry(retry + 1);
-  }
 
   return (
     <>
@@ -69,60 +44,37 @@ const ProfilePage = ({
         <div className="h-auto w-full flex-1 rounded-md border p-2 text-start text-lg font-bold md:text-xl">
           <section className="grid grid-cols-1 gap-2 md:grid-cols-[1fr_2fr] lg:grid-cols-[1fr_2fr_3fr]">
             <InfoBox
+              lang={lang}
               label={translation.age}
-              content={
-                (profile &&
-                  (lang == "bn" ? toBengali(profile.age) : profile.age)) ||
-                translation.unavailable
-              }
+              content={lang == "bn" ? toBengali(martyr.age) : martyr.age}
             />
             <InfoBox
+              lang={lang}
               label={translation.born}
               content={
-                profile &&
-                ((translation.lang == "en"
-                  ? profile.dob
-                  : toBengali(profile.dob)) ||
-                  translation.unavailable)
+                translation.lang == "en" ? martyr.dob : toBengali(martyr.dob)
               }
             />
 
             <InfoBox
+              lang={lang}
               className="md:col-span-2 lg:col-span-1"
-              skeletons={<Skeleton className="h-6 w-36" />}
               label={translation.birthPlace}
-              content={
-                profile && (profile[lang].birthPlace || translation.unavailable)
-              }
+              content={martyr[lang].birthPlace}
             />
           </section>
           <section className="my-2 flex flex-col items-center justify-center gap-2">
             <InfoBox
+              lang={lang}
               className="w-full flex-col items-start"
               label={translation.howHeDied}
-              content={
-                profile && (profile[lang].cause || translation.unavailable)
-              }
-              skeletons={
-                <>
-                  <Skeleton className="mt-2 h-6 w-[56vw]" />
-                  <Skeleton className="mt-2 h-6 w-[50vw]" />
-                </>
-              }
+              content={martyr[lang].cause}
             />
             <InfoBox
+              lang={lang}
               className="w-full flex-col items-start"
               label={translation.biography}
-              content={
-                profile && (profile[lang].bio || translation.unavailable)
-              }
-              skeletons={
-                <>
-                  <Skeleton className="mt-2 h-6 w-[59vw]" />
-                  <Skeleton className="mt-2 h-6 w-[50vw]" />
-                  <Skeleton className="mt-2 h-6 w-[33vw]" />
-                </>
-              }
+              content={martyr[lang].bio}
             />
           </section>
         </div>
@@ -138,13 +90,14 @@ const InfoBox = ({
   label,
   content,
   className,
-  skeletons = <Skeleton className="h-6 w-20 md:w-28" />,
+  lang = "en",
 }: {
   label: string;
   content: ReactNode | string;
   className?: string;
-  skeletons?: ReactNode | string;
+  lang?: "en" | "bn";
 }) => {
+  console.log(content);
   return (
     <div
       className={cn(
@@ -159,7 +112,7 @@ const InfoBox = ({
         key={guid()} // fsr, crypto.randomUUID() doesn't work in mobile
         className="ml-1 whitespace-pre-line text-sm font-normal animate-in fade-in-50 md:text-base"
       >
-        {content || skeletons}
+        {content || getTranslation(lang).unavailable}
       </Balancer>
     </div>
   );
