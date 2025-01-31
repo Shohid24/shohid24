@@ -24,7 +24,7 @@ export type Martyr = {
     en: string;
   };
   date: string;
-  hasImage: number;
+  hasImage: boolean | number;
 };
 
 type X = {

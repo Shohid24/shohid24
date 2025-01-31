@@ -37,7 +37,7 @@ export type SearchResults = FuzzyResult<{
     en: string;
   };
   date: string;
-  hasImage: number;
+  hasImage: boolean | number;
 }>[];
 
 export type MartyrType = {
@@ -55,5 +55,5 @@ export type MartyrType = {
     en: string;
   };
   date: string;
-  hasImage: number;
+  hasImage: boolean | number;
 };

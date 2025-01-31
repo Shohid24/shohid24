@@ -14,7 +14,7 @@ export interface IUser extends Document {
   date: string;
   age: string;
   dob: string;
-  hasImage: boolean;
+  hasImage: boolean | number;
   bn: LanguageInfo;
   en: LanguageInfo;
   gender: string;

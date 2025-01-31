@@ -97,7 +97,6 @@ const InfoBox = ({
   className?: string;
   lang?: "en" | "bn";
 }) => {
-  console.log(content);
   return (
     <div
       className={cn(
