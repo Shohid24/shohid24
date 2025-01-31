@@ -7,6 +7,8 @@ from pprint import pprint
 
 data = readJsonFile("searchableData.json")
 rawData = readJsonFile("rawData.json")
+print(len(data))
+print(len(rawData))
 
 
 bengaliProfs = {
@@ -110,7 +112,7 @@ def cleanup(data, lang="en"):
     return {
         "name": sanitizeText(name, lang, addDot=False),
         "birthPlace": sanitizeText(birthPlace, lang),
-        "profession": "Will be set later",
+        "profession": "",
         "bio": sanitizeText(bio, lang),
         "cause": (
             sanitizeText(shortCause, lang) + "\n" + sanitizeText(longCause, lang)
@@ -142,10 +144,8 @@ os.makedirs("profiles", exist_ok=True)
 
 def findIndex(name, date):
     for index, i in enumerate(data):
-        if (
-            i["name"]["en"].lower().strip() == name.lower().strip()
-            and i["date"] == date
-        ):
+        xName = i["name"]["en"].lower().strip()
+        if xName == name.lower().strip() and i["date"] == date:
             return index
 
     return -1
@@ -160,11 +160,11 @@ for i in range(len(rawData)):
     dobEN = formatDate(raw["en"].get("bornDate", "").strip())
     bn = cleanup(rawData[i]["bn"], "bn")
     en = cleanup(rawData[i]["en"], "en")
-    
+
     if not prof:
-        pass # do nothing for empty
+        pass  # do nothing for empty
     elif prof[0] in string.ascii_uppercase:
-        prof = " ".join(prof.title().split('_'))
+        prof = " ".join(prof.title().split("_"))
         en["profession"] = prof
     else:
         prof = bengaliProfs[prof]

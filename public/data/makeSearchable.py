@@ -145,3 +145,4 @@ if __name__ == "__main__":
     makeShortData(newEn, "en")
     dumpSearchableJson()
     print("Made Searchable Json")
+

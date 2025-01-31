@@ -1,14 +1,18 @@
-from helper import readJsonFile, writeJsonFile
+def getNthCombination(n: int) -> str:
+    max_combinations = 26**3
+    if n < 0 or n >= max_combinations:
+        raise ValueError(f"Index must be between 0 and {max_combinations - 1}")
 
-searchable = readJsonFile("searchableData.json")
+    letters = "abcdefghijklmnopqrstuvwxyz"
+    result = []
 
-ids = "aqa aqb aqc aqd aqe aqf aqg aqh aqi".split()
+    # Convert to base 26 for 3 letters
+    for _ in range(3):
+        n, remainder = divmod(n, 26)
+        result.append(letters[remainder])
 
-for id in ids:
-    for index, person in enumerate(searchable):
-        if person["id"] == id:
-            print(f"ID: {person['id']}")
-            searchable[index]["hasImage"] = 1
+    # Reverse and join the result
+    return "".join(reversed(result))
 
 
-# writeJsonFile("searchableData.json", searchable)
+print(getNthCombination(424))
