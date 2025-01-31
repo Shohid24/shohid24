@@ -23,6 +23,7 @@ To solve this issue, I created **Shohid24**. Built as a static Next.js site, it 
 
 The July Student Movement of 2024 was a significant moment in Bangladesh’s history. Students stood against systemic inequalities and sacrificed their lives for justice and equal opportunities. This repository aims to honor their memory and ensure that future generations remember their sacrifices.
 
+
 ## How to Contribute
 
 1. **Submit a New Martyr**: If you have verified information about a martyr not listed on the website, you can contribute by submitting their details. [Submit a martyr](https://forms.gle/efEVqZEHHR4fZuyG7).
@@ -30,6 +31,13 @@ The July Student Movement of 2024 was a significant moment in Bangladesh’s his
 2. **Update Data**: Found incorrect information? Open an issue. Or message us directly in [Telegram](https://t.me/Shohid24Discussion/)
 
 3. **Spread the Word**: Share this repository to ensure that the sacrifices of these heroes are not forgotten.
+
+### Getting the code that was used to fetch the data
+
+The old code that was used to primarily fetch the data was removed from this branch. You can find them in the [with-json](https://github.com/Shohid24/shohid24/tree/with-json/public/data) branch.
+This repo now uses **MongoDB** to store and update data. 
+
+But the `.json` files are still available in the [`public/data`](/public/data) directory.
 
 ## The July Student Movement 2024
 

@@ -1,0 +1,18 @@
+name: Trigger Build
+
+on:
+  workflow_dispatch:
+
+jobs:
+  trigger-build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.PAT }}
+
+      - name: Trigger Cloudflare deploy hook
+        run: |
+          curl -s -o /dev/null -w "" -X POST "${{ secrets.CF_TRIGGER }}"
