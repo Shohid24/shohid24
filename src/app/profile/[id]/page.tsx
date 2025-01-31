@@ -1,10 +1,14 @@
-import { MartyrList } from "@/lib/helpers/search";
 import MainSection from "../components/Main";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
+import MongoConnection from "@/server/db";
+import User, { IUser } from "@/server/schema/user";
 
-export function generateStaticParams() {
-  return MartyrList.map((item) => ({ id: item.id }));
+await MongoConnection();
+
+export async function generateStaticParams() {
+  const users = await User.find({}, "id").lean();
+  return users.map((user) => ({ id: user.id.toString() }));
 }
 
 export async function generateMetadata({
@@ -13,9 +17,9 @@ export async function generateMetadata({
   params: Promise<{ id: string }>;
 }) {
   const { id } = await params;
-  const martyr = MartyrList.find((m) => m.id === id);
+  const user = (await User.findOne({ id: id }).lean()) as IUser | null;
 
-  if (!martyr) {
+  if (!user) {
     return {
       title: "404 Profile Not Found - Martyr Records",
       description:
@@ -24,8 +28,8 @@ export async function generateMetadata({
   }
 
   return {
-    title: `${martyr.name.en}'s Profile - July Martyr`,
-    description: `${martyr.name.en}, a selfless martyr from the July Revolution in Bangladesh. Known for contributions as a ${martyr.profession.en}, martyred on ${martyr.date}, ${martyr.info.en}. View full details on Shohid24.`,
+    title: `${user.en.name}'s Profile - July Martyr`,
+    description: `${user.en.name}, a selfless martyr from the July Revolution in Bangladesh. Known for contributions as a ${user.en.profession}, martyred on ${user.date}, ${user.en.info}. View full details on Shohid24.`,
     metadataBase: new URL("https://shohid24.pages.dev"),
   };
 }
@@ -36,9 +40,9 @@ export default async function Page({
   params: Promise<{ id: string }>;
 }) {
   const { id } = await params;
-  const martyr = MartyrList.find((martyr) => martyr.id === id);
+  const user = (await User.findOne({ id: id }).lean()) as IUser | null;
 
-  if (!martyr) {
+  if (!user) {
     return (
       <div className="flex flex-col items-center justify-center gap-5 py-5">
         <h2 className="my-5 text-2xl font-semibold md:text-4xl">
@@ -47,7 +51,7 @@ export default async function Page({
         <p>
           No profile with id=
           <code className="mx-1 rounded-md bg-primary/80 p-1 text-primary-foreground/80">
-            {String(id)}
+            {id}
           </code>{" "}
           found.
         </p>
@@ -57,5 +61,9 @@ export default async function Page({
       </div>
     );
   }
-  return <MainSection martyr={martyr} />;
+
+  // ✅ Convert Mongoose document to a plain JSON object
+  const jsonUser: IUser = JSON.parse(JSON.stringify(user));
+
+  return <MainSection martyr={jsonUser} />;
 }

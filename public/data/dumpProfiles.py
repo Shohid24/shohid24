@@ -53,13 +53,13 @@ bengaliProfs = {
     "EXPATRIATE": "প্রবাসী",
     "DAY_LABORER": "দৈনিক মজুর",
     "FARMER": "কৃষক",
-    "STUDENT": "ছাত্র",
+    "STUDENT": "শিক্ষার্থী",
     "DRIVER": "চালক",
     "FACTORY_EMPLOYEE": "কারখানার কর্মচারী",
     "GARMENTS_EXPORT_BUSINESS": "গার্মেন্ট রপ্তানি ব্যবসা",
     "SALOON_EMPLOYEE": "সেলুন কর্মচারী",
     "LINE_WORKER": "লাইন কর্মী",
-    "MADRASA_STUDENT": "মাদ্রাসার ছাত্র",
+    "MADRASA_STUDENT": "মাদ্রাসার শিক্ষার্থী",
     "INSURANCE_OFFICER": "বীমা কর্মকর্তা",
     "SHOPKEEPER": "দোকানদার",
     "WORKER": "শ্রমিক",
@@ -102,7 +102,6 @@ def sanitizeText(text, lang="en", addDot=True) -> str:
 def cleanup(data, lang="en"):
     name = data["name"]
     birthPlace = data["bornAddress"]
-    profession = data["educationOrWork"]
     bio = data["biography"]
     cause = data["howToDeath"]
     shortCause = cause["short"]
@@ -110,7 +109,7 @@ def cleanup(data, lang="en"):
     return {
         "name": sanitizeText(name, lang, addDot=False),
         "birthPlace": sanitizeText(birthPlace, lang),
-        "profession": "Will be set later",
+        "profession": "",
         "bio": sanitizeText(bio, lang),
         "cause": (
             sanitizeText(shortCause, lang) + "\n" + sanitizeText(longCause, lang)
@@ -160,15 +159,10 @@ for i in range(len(rawData)):
     dobEN = formatDate(raw["en"].get("bornDate", "").strip())
     bn = cleanup(rawData[i]["bn"], "bn")
     en = cleanup(rawData[i]["en"], "en")
-    
-    if not prof:
-        pass # do nothing for empty
-    elif prof[0] in string.ascii_uppercase:
-        prof = " ".join(prof.title().split('_'))
-        en["profession"] = prof
-    else:
-        prof = bengaliProfs[prof]
-        bn["profession"] = prof
+
+    if prof:
+        en["profession"] = " ".join(prof.title().split("_"))
+        bn["profession"] = bengaliProfs[prof]
 
     dataIndex = findIndex(en["name"].strip(), martyrDate)
     if dataIndex == -1:

@@ -82,7 +82,7 @@ const List = ({
         ).map((item: MartyrType, index: number) => (
           <Profile
             key={item.id}
-            index={MartyrList.findIndex((i) => i.id === item.id)}
+            index={MartyrList.findIndex((i:any) => i.id === item.id)}
             id={item.id}
             name={item.name[lang as "bn" | "en"]}
             profession={item.profession[lang as "bn" | "en"]}
@@ -115,24 +115,26 @@ const SuspendedList = ({
   query?: string;
   currentPage: number;
   setCurrentPage: (value: number) => void;
-}) => (
-  <Suspense
-    fallback={
-      <div className="grid grid-cols-[repeat(auto-fit,minmax(10rem,1fr))] place-items-center gap-y-2 md:grid-cols-[repeat(auto-fit,minmax(13rem,1fr))]">
-        {Array.from({ length: 24 }).map((_, index: number) => (
-          <ProfileSkeleton key={index} />
-        ))}
-      </div>
-    }
-  >
-    <List
-      searchResult={searchResult}
-      lang={lang}
-      query={query}
-      currentPage={currentPage}
-      setCurrentPage={setCurrentPage}
-    />
-  </Suspense>
-);
+}) => {
+  return (
+    <Suspense
+      fallback={
+        <div className="grid grid-cols-[repeat(auto-fit,minmax(10rem,1fr))] place-items-center gap-y-2 md:grid-cols-[repeat(auto-fit,minmax(13rem,1fr))]">
+          {Array.from({ length: 24 }).map((_, index: number) => (
+            <ProfileSkeleton key={index} />
+          ))}
+        </div>
+      }
+    >
+      <List
+        searchResult={searchResult}
+        lang={lang}
+        query={query}
+        currentPage={currentPage}
+        setCurrentPage={setCurrentPage}
+      />
+    </Suspense>
+  );
+};
 
 export default SuspendedList;

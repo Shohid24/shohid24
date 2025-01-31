@@ -4,11 +4,10 @@ import MaxWidthWrapper from "@/components/ui/MaxwidthWrapper";
 import Footer from "@/components/Footer";
 import { Suspense } from "react";
 import { parseAsString, useQueryState } from "nuqs";
-import { getTranslation } from "@/components/translations";
 import ProfilePage from "./ProfilePage";
-import { Martyr } from "@/lib/types";
+import { IUser } from "@/server/schema/user";
 
-const SuspendMain = ({ martyr }: { martyr: Martyr }) => {
+const SuspendMain = ({ martyr }: { martyr: IUser }) => {
   const [lang, setLang] = useQueryState(
     "lang",
     parseAsString.withDefault("bn"),
@@ -17,22 +16,23 @@ const SuspendMain = ({ martyr }: { martyr: Martyr }) => {
     <>
       <Navbar lang={lang} setLang={setLang} />
       <MaxWidthWrapper>
-        <ProfilePage martyr={martyr} lang={lang as "bn"|"en"}/>
+        <ProfilePage martyr={martyr} lang={lang as "bn" | "en"} />
       </MaxWidthWrapper>
-      <Footer lang={lang as "bn"|"en"} />
+      <Footer lang={lang as "bn" | "en"} />
     </>
   );
 };
 
-const MainSection = ({ martyr }: { martyr: Martyr }) => {
-  const lang = "bn"
+const MainSection = ({ martyr }: { martyr: IUser }) => {
+  const lang = "bn";
+  
   return (
     <Suspense
       fallback={
         <>
           <Navbar lang={lang} setLang={() => {}} />
           <MaxWidthWrapper>
-            <ProfilePage martyr={martyr} lang={lang}/>
+            <ProfilePage martyr={martyr} lang={lang} />
           </MaxWidthWrapper>
           <Footer lang={lang} />
         </>
