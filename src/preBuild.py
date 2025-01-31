@@ -1,6 +1,6 @@
 import os
 
-os.system("python -m pip install pymongo python-dotenv")
+os.system("python -m pip install pymongo python-dotenv pillow")
 import json
 from pymongo import MongoClient
 from dotenv import load_dotenv
