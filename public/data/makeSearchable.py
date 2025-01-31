@@ -95,6 +95,7 @@ def dumpSearchableJson():
         nameEn = enData[i][1]
         professionBn = bnData[i][2]
         professionEn = enData[i][2]
+        print(professionBn, professionEn)
         infoBn = bnData[i][3]
         infoEn = enData[i][3]
         date = formatDate(fixDate(enData[i][4]))

@@ -7,8 +7,6 @@ from pprint import pprint
 
 data = readJsonFile("searchableData.json")
 rawData = readJsonFile("rawData.json")
-print(len(data))
-print(len(rawData))
 
 
 bengaliProfs = {
@@ -55,13 +53,13 @@ bengaliProfs = {
     "EXPATRIATE": "প্রবাসী",
     "DAY_LABORER": "দৈনিক মজুর",
     "FARMER": "কৃষক",
-    "STUDENT": "ছাত্র",
+    "STUDENT": "শিক্ষার্থী",
     "DRIVER": "চালক",
     "FACTORY_EMPLOYEE": "কারখানার কর্মচারী",
     "GARMENTS_EXPORT_BUSINESS": "গার্মেন্ট রপ্তানি ব্যবসা",
     "SALOON_EMPLOYEE": "সেলুন কর্মচারী",
     "LINE_WORKER": "লাইন কর্মী",
-    "MADRASA_STUDENT": "মাদ্রাসার ছাত্র",
+    "MADRASA_STUDENT": "মাদ্রাসার শিক্ষার্থী",
     "INSURANCE_OFFICER": "বীমা কর্মকর্তা",
     "SHOPKEEPER": "দোকানদার",
     "WORKER": "শ্রমিক",
@@ -104,7 +102,6 @@ def sanitizeText(text, lang="en", addDot=True) -> str:
 def cleanup(data, lang="en"):
     name = data["name"]
     birthPlace = data["bornAddress"]
-    profession = data["educationOrWork"]
     bio = data["biography"]
     cause = data["howToDeath"]
     shortCause = cause["short"]
@@ -144,8 +141,10 @@ os.makedirs("profiles", exist_ok=True)
 
 def findIndex(name, date):
     for index, i in enumerate(data):
-        xName = i["name"]["en"].lower().strip()
-        if xName == name.lower().strip() and i["date"] == date:
+        if (
+            i["name"]["en"].lower().strip() == name.lower().strip()
+            and i["date"] == date
+        ):
             return index
 
     return -1
@@ -161,14 +160,9 @@ for i in range(len(rawData)):
     bn = cleanup(rawData[i]["bn"], "bn")
     en = cleanup(rawData[i]["en"], "en")
 
-    if not prof:
-        pass  # do nothing for empty
-    elif prof[0] in string.ascii_uppercase:
-        prof = " ".join(prof.title().split("_"))
-        en["profession"] = prof
-    else:
-        prof = bengaliProfs[prof]
-        bn["profession"] = prof
+    if prof:
+        en["profession"] = " ".join(prof.title().split("_"))
+        bn["profession"] = bengaliProfs[prof]
 
     dataIndex = findIndex(en["name"].strip(), martyrDate)
     if dataIndex == -1:
