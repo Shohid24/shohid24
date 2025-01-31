@@ -32,7 +32,6 @@ const fetchData = async () => {
 
 fetchData().catch((err) => {
   console.error("❌ Error fetching data:", err);
-  process.exit(1);
 });
 
 export async function register() {
