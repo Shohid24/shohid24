@@ -26,6 +26,7 @@ const Profile = ({
   noLink,
 }: ProfileWithClassName) => {
   const translation = getTranslation(lang);
+  const compressedUrl = imageUrl.replace("/photos", "/compressed");
 
   const content = (
     <>
@@ -38,7 +39,7 @@ const Profile = ({
         {!noLink ? (
           <Image
             priority={Number(id) < 11}
-            src={imageUrl || ""}
+            src={compressedUrl || ""}
             alt={name || "Unknown"}
             key={imageUrl + id}
             width={208}
@@ -49,7 +50,7 @@ const Profile = ({
           <Link href={imageUrl}>
             <Image
               priority
-              src={imageUrl || ""}
+              src={compressedUrl || ""}
               alt={name || "Unknown"}
               key={imageUrl + id}
               width={208}

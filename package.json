@@ -4,7 +4,8 @@
   "private": true,
   "scripts": {
     "dev": "next dev --turbopack",
-    "build": "next build",
+    "prebuild": "python src/preBuild.py",
+    "build": "python public/compressImages.py && next build",
     "run": "next build && serve out",
     "start": "next start",
     "lint": "next lint",
@@ -71,6 +72,6 @@
     "prettier": "^3.4.2",
     "prettier-plugin-tailwindcss": "^0.6.9",
     "tailwindcss": "^3.4.1",
-    "typescript": "^5"
+    "typescript": "^5.7.3"
   }
 }
