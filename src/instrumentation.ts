@@ -2,6 +2,13 @@ import MongoConnection from "./server/db";
 import fs from "fs";
 import User from "./server/schema/user";
 
+export async function getStaticProps() {
+  await fetchData();
+  return {
+    props: {},
+  };
+}
+
 const fetchData = async () => {
   const users = await User.find({}).lean();
   const searchableData = users.map((user) => ({
@@ -36,7 +43,6 @@ fetchData().catch((err) => {
 
 export async function register() {
   await MongoConnection();
-  await fetchData();
 }
 
 export default register;
