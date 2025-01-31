@@ -1,6 +1,6 @@
 "use client";
 
-import React, { Suspense, useState } from "react";
+import React, { Suspense, useEffect, useState } from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { useRouter } from "next/navigation";
@@ -44,6 +44,7 @@ const FindProfile = ({ translation }: { translation: Translation }) => {
         <form onSubmit={handleSubmit}>
           <CardContent>
             <Input
+              id="find-profile"
               type="text"
               placeholder={translation.findPlaceholder}
               value={userID}
@@ -80,6 +81,10 @@ function Wrapper() {
 
 function AllProfiles() {
   const lang = "bn";
+  useEffect(() => {
+    // focus on "find-profile" input
+    document.getElementById("find-profile")?.focus();
+  }, []);
   return (
     <Suspense
       fallback={
