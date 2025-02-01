@@ -45,7 +45,6 @@ const List = ({
           {searchResult
             .slice((currentPage - 1) * perPage, currentPage * perPage)
             .map(({ item }, index) => {
-              console.log("Hello world", item.id)
               return (
                 <Profile
                   key={item.id}
