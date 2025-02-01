@@ -17,7 +17,7 @@ def fetch_data():
     users = list(users_collection.find({}))
     searchable_data = [
         {
-            "id": str(user["_id"]),
+            "id": str(user["id"]),
             "name": {
                 "bn": user["bn"]["name"],
                 "en": user["en"]["name"],
