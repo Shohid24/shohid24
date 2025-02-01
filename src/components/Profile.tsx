@@ -25,6 +25,7 @@ const Profile = ({
   className,
   noLink,
 }: ProfileWithClassName) => {
+  console.log(id)
   const translation = getTranslation(lang);
   const compressedUrl = imageUrl.replace("/photos", "/compressed");
 

@@ -23,6 +23,7 @@ const Homepage_Sus = ({ translation }: { translation: Translation }) => {
   const [searchResult, setSearchResult] = useState<SearchResults>(
     SearchPerson(""),
   );
+  
   useEffect(() => {
     startTransition(() => {
       const res = SearchPerson(query);
@@ -35,6 +36,7 @@ const Homepage_Sus = ({ translation }: { translation: Translation }) => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [query]);
 
+  
   useHotkeys(
     "mod+k",
     (event) => {

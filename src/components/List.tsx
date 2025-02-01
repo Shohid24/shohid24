@@ -3,7 +3,6 @@ import { parseAsInteger, useQueryState } from "nuqs";
 import Profile from "./Profile";
 import ProfileSkeleton from "./ProfileSkeleton";
 import Pagination from "./sub/Pagination";
-// import { DateConverter } from "@/lib/helpers/date";
 import { SearchResults, MartyrList, MartyrType } from "@/lib/helpers/search";
 
 const List = ({
@@ -46,6 +45,7 @@ const List = ({
           {searchResult
             .slice((currentPage - 1) * perPage, currentPage * perPage)
             .map(({ item }, index) => {
+              console.log("Hello world", item.id)
               return (
                 <Profile
                   key={item.id}
