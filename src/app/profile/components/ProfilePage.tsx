@@ -2,7 +2,7 @@ import Balancer from "react-wrap-balancer";
 
 import Profile from "@/components/Profile";
 import { Skeleton } from "@/components/ui/skeleton";
-import { toBengali } from "@/lib/helpers/date";
+import { formatDate, toBengali } from "@/lib/helpers/date";
 import { getTranslation } from "./translations";
 import { MartyrInfo } from "@/lib/types";
 import { cn, fetchJson, guid } from "@/lib/utils";
@@ -35,7 +35,7 @@ const ProfilePage = ({
           name={name}
           profession={profession}
           info={info}
-          martyrDate={date}
+          martyrDate={formatDate(date)}
           imageUrl={hasImage ? `/photos/${id}.jpg` : "/default.jpg"}
           lang={lang}
           showIndex={false}

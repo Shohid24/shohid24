@@ -159,3 +159,44 @@ const toBengali = (englishDate: string | number): string => {
 };
 
 export { toEnglish, toBengali };
+
+export function formatDate(dateStr: string): string {
+  const [day, month, year] = dateStr.split("/");
+
+  const getOrdinal = (n: number): string => {
+    const lastDigit = n % 10;
+    const lastTwoDigits = n % 100;
+
+    if (lastTwoDigits >= 11 && lastTwoDigits <= 13) {
+      return "th";
+    }
+
+    switch (lastDigit) {
+      case 1:
+        return "st";
+      case 2:
+        return "nd";
+      case 3:
+        return "rd";
+      default:
+        return "th";
+    }
+  };
+
+  const months = [
+    "January",
+    "February",
+    "March",
+    "April",
+    "May",
+    "June",
+    "July",
+    "August",
+    "September",
+    "October",
+    "November",
+    "December",
+  ];
+
+  return `${parseInt(day)}${getOrdinal(parseInt(day))} ${months[parseInt(month) - 1]}, ${year}`;
+}

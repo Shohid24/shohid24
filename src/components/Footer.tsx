@@ -3,9 +3,9 @@ import { getTranslation, type Translation } from "@/components/translations";
 import { getFontClass } from "@/lib/fontLoader";
 import { cn } from "@/lib/utils";
 
+const lastUpdatedDate = new Date().toISOString().split(":")[0] + ":00:00.000Z";
+
 const LastUpdated = () => {
-  const lastUpdatedDate =
-    new Date().toISOString().split(":")[0] + ":00:00.000Z";
   const formattedDate = new Date(lastUpdatedDate).toLocaleDateString("en-US", {
     year: "numeric",
     month: "long",
@@ -15,8 +15,8 @@ const LastUpdated = () => {
   });
 
   return (
-    <p className="text-xs font-semibold pt-8">
-      <span className="tracking-wider mr-1.5">Last updated:</span>
+    <p className="pt-8 text-xs font-semibold">
+      <span className="mr-1.5 tracking-wider">Last updated:</span>
       <span className="font-mono tracking-tighter">
         <time dateTime={lastUpdatedDate}>{formattedDate}</time>
       </span>
