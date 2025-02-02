@@ -4,6 +4,8 @@ import Profile from "./Profile";
 import ProfileSkeleton from "./ProfileSkeleton";
 import Pagination from "./sub/Pagination";
 import { SearchResults, MartyrList, MartyrType } from "@/lib/helpers/search";
+import { formatDate } from "@/lib/helpers/date";
+
 
 const List = ({
   searchResult,
@@ -53,7 +55,7 @@ const List = ({
                   name={item.name[lang as "bn" | "en"]}
                   profession={item.profession[lang as "bn" | "en"]}
                   info={item.info[lang as "bn" | "en"]}
-                  martyrDate={item.date}
+                  martyrDate={formatDate(item.date)}
                   imageUrl={
                     item.hasImage ? `/photos/${item.id}.jpg` : "/default.jpg"
                   }
