@@ -88,7 +88,7 @@ const List = ({
             name={item.name[lang as "bn" | "en"]}
             profession={item.profession[lang as "bn" | "en"]}
             info={item.info[lang as "bn" | "en"]}
-            martyrDate={item.date}
+            martyrDate={formatDate(item.date)}
             imageUrl={item.hasImage ? `/photos/${item.id}.jpg` : "/default.jpg"}
             lang={lang as "bn" | "en"}
           />
