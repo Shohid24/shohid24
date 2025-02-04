@@ -1,7 +1,7 @@
 import os
 from datetime import datetime
 
-os.system("python -m pip install pymongo python-dotenv pillow")
+os.system("python -m pip install requests pymongo python-dotenv pillow")
 import json
 from pymongo import MongoClient
 from dotenv import load_dotenv
