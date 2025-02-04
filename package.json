@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "next dev --turbopack",
     "prebuild": "python src/preBuild.py",
-    "build": "python public/compressImages.py && next build",
+    "build": "python public/compressImages.py && python public/downloadImages.py && next build",
     "run": "next build && serve out",
     "start": "next start",
     "lint": "next lint",
