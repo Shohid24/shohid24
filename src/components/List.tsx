@@ -57,7 +57,7 @@ const List = ({
                   info={item.info[lang as "bn" | "en"]}
                   martyrDate={formatDate(item.date)}
                   imageUrl={
-                    item.hasImage ? `/photos/${item.id}` : "/default.jpg"
+                    item.hasImage ? `/photos/${item.id}.jpg` : "/default.jpg"
                   }
                   lang={lang as "bn" | "en"}
                 />

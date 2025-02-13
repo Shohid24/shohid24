@@ -1,4 +1,4 @@
-import createFuzzySearch, { FuzzyResult } from "@nozbe/microfuzz";
+import createFuzzySearch from "@nozbe/microfuzz";
 import searchableData from "./../../../public/data/searchableData.json"; // Preloaded data
 
 const fuzzySearch = createFuzzySearch(searchableData, {
