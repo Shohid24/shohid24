@@ -1,3 +1,4 @@
 User-agent: *
+Allow: /
 
 Sitemap: https://shohid24.pages.dev/sitemap.xml

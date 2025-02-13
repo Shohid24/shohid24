@@ -16,7 +16,7 @@ const RelativeTime: React.FC<RelativeTimeProps> = ({ utcTime, lang }) => {
     today.setHours(0, 0, 0, 0);
 
     const diffTime = Math.abs(today.getTime() - utcDate.getTime());
-    const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+    const diffDays = Math.min(0, Math.floor(diffTime / (1000 * 60 * 60 * 24)));
 
     if (language === "bn") {
       if (diffDays === 0) return "আজ";
@@ -68,13 +68,21 @@ const RelativeTime: React.FC<RelativeTimeProps> = ({ utcTime, lang }) => {
       .join("");
   };
 
+  // Format date for SEO-friendly datetime attribute
+  const formatDateForSEO = (utcDateString: string): string => {
+    const date = new Date(utcDateString);
+    return date.toISOString().split("T")[0]; // Returns YYYY-MM-DD format
+  };
+
   return (
-    <div className="flex items-center gap-2 text-sm text-primary/70 tracking-wide">
+    <div className="flex items-center gap-2 text-sm tracking-wide text-primary/70">
       <Clock className="text-emerald-500" strokeWidth={2} size={18} />
       <span className="font-normal">
         {lang === "bn" ? "সর্বশেষ পরিবর্তন:" : "Last Modified:"}
       </span>
-      {getRelativeTime(utcTime, lang)}
+      <time dateTime={formatDateForSEO(utcTime)}>
+        {getRelativeTime(utcTime, lang)}
+      </time>
     </div>
   );
 };
