@@ -1,6 +1,7 @@
 import { useState, useRef, useEffect, Suspense, useTransition } from "react";
 import { useHotkeys } from "react-hotkeys-hook";
-import { SearchPerson, SearchResults } from "@/lib/helpers/search";
+import { SearchPerson } from "@/lib/helpers/search";
+import type { SearchResults } from "@/lib/types";
 import List from "./List";
 import { Input } from "./ui/input";
 import { parseAsInteger, parseAsString, useQueryState } from "nuqs";
@@ -23,7 +24,7 @@ const Homepage_Sus = ({ translation }: { translation: Translation }) => {
   const [searchResult, setSearchResult] = useState<SearchResults>(
     SearchPerson(""),
   );
-  
+
   useEffect(() => {
     startTransition(() => {
       const res = SearchPerson(query);
@@ -36,7 +37,6 @@ const Homepage_Sus = ({ translation }: { translation: Translation }) => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [query]);
 
-  
   useHotkeys(
     "mod+k",
     (event) => {

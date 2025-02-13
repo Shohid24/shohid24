@@ -1,13 +1,14 @@
 import Balancer from "react-wrap-balancer";
 
 import Profile from "@/components/Profile";
-import { Skeleton } from "@/components/ui/skeleton";
 import { formatDate, toBengali } from "@/lib/helpers/date";
 import { getTranslation } from "./translations";
-import { MartyrInfo } from "@/lib/types";
-import { cn, fetchJson, guid } from "@/lib/utils";
-import { ReactNode, useEffect, useState } from "react";
+import { cn, guid } from "@/lib/utils";
+import { ReactNode } from "react";
 import { IUser } from "@/server/schema/user";
+import { Button } from "@/components/ui/button";
+import { BadgeCheck, BadgeX, EyeOff } from "lucide-react";
+import { Separator } from "@/components/ui/separator";
 
 const ProfilePage = ({
   martyr,
@@ -17,31 +18,57 @@ const ProfilePage = ({
   lang: "bn" | "en";
 }) => {
   const id = martyr?.id;
-
+  const verified = martyr.verified;
+  const show = martyr.show;
   const translation = getTranslation(lang);
   const name = martyr[lang].name;
   const profession = martyr[lang].profession;
   const info = martyr[lang].info;
   const date = martyr.date;
-  const hasImage = martyr.hasImage;
+  const imageUrl = martyr.image;
 
   return (
     <>
       <title>{translation.generateTitle(name)}</title>
+      {!show && (
+        <div className="animate-drop-in mt-2 flex w-full items-center gap-4 rounded-lg border-l-4 border-red-500 bg-gradient-to-r from-red-950/5 to-red-900/10 px-4 py-2 shadow-lg backdrop-blur-sm transition-all duration-300 hover:shadow-red-500/10">
+          <div className="rounded-full bg-red-500/10 p-2">
+            <EyeOff className="h-5 w-5 text-red-500" />
+          </div>
+          <span className="font-medium tracking-wide text-red-900">
+            {translation.hidden}
+          </span>
+        </div>
+      )}
       <div className="my-5 flex flex-col items-center justify-between gap-2 md:flex-row md:items-stretch">
         <Profile
           noLink
+          header
           id={String(id)}
           name={name}
           profession={profession}
           info={info}
           martyrDate={formatDate(date)}
-          imageUrl={hasImage ? `/photos/${id}.jpg` : "/default.jpg"}
+          imageUrl={imageUrl}
           lang={lang}
           showIndex={false}
           className="max-h-52 w-full grid-cols-[auto_2fr] border-none md:-mt-2 md:grid-cols-1"
         />
         <div className="h-auto w-full flex-1 rounded-md border p-2 text-start text-lg font-bold md:text-xl">
+          <div className="mb-1.5 flex items-center justify-center gap-2 text-center text-sm tracking-wider text-primary/80">
+            {verified ? (
+              <>
+                {translation.verified}
+                <BadgeCheck size={16} className="text-blue-500" />
+              </>
+            ) : (
+              <>
+                {translation.notVerified}
+                <BadgeX size={16} className="text-red-500" />
+              </>
+            )}
+          </div>
+          <Separator className="mb-2" />
           <section className="grid grid-cols-1 gap-2 md:grid-cols-[1fr_2fr] lg:grid-cols-[1fr_2fr_3fr]">
             <InfoBox
               lang={lang}
@@ -100,7 +127,7 @@ const InfoBox = ({
   return (
     <div
       className={cn(
-        "flex items-center justify-start rounded-md bg-muted p-3",
+        "flex items-center justify-start rounded-md bg-muted/70 p-3",
         className,
       )}
     >
@@ -108,7 +135,7 @@ const InfoBox = ({
         {label}
       </span>
       <Balancer
-        key={guid()} // fsr, crypto.randomUUID() doesn't work in mobile
+        key={guid()} // for some reason, crypto.randomUUID() doesn't work in mobile
         className="ml-1 whitespace-pre-line text-sm font-normal animate-in fade-in-50 md:text-base"
       >
         {content || getTranslation(lang).unavailable}

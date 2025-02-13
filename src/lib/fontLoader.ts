@@ -1,15 +1,10 @@
 import localFont from "next/font/local";
-import { Inter } from "next/font/google";
 import { Gabarito } from "next/font/google";
 
 const myFont = localFont({
   src: "./../../public/fonts/LiAdorNoirrit.woff", // compressed
 });
 
-const interFont = Inter({
-  subsets: ["latin"],
-  variable: "--font-sans",
-});
 
 const GabaritoFont = Gabarito({
   subsets: ["latin"],

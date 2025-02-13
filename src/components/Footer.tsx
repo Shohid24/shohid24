@@ -41,7 +41,7 @@ const Footer = ({ lang }: { lang: "bn" | "en" }) => {
       >
         {translation.maintainerText}
       </p>
-      <LastUpdated />
+      {/* <LastUpdated /> */}
     </MaxWidthWrapper>
   );
 };

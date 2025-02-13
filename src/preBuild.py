@@ -1,14 +1,14 @@
 import os, datetime
 
+os.system("python public/downloadImages.py")
+os.system("python public/compressImages.py")
 
-os.system("python -m pip install requests pymongo python-dotenv pillow")
 
 import json
 from pymongo import MongoClient
 from dotenv import load_dotenv
 
 load_dotenv()  # Load environment variables from.env file
-
 
 
 MONGO_URI = os.getenv("MONGO_URI")
@@ -35,7 +35,7 @@ def fetch_data():
                 "en": user["en"]["info"],
             },
             "date": user.get("date"),
-            "hasImage": user.get("hasImage", False),
+            "hasImage": "default.jpg" not in user.get("image", ""),
         }
         for user in users
     ]
@@ -44,10 +44,9 @@ def fetch_data():
     os.makedirs(os.path.dirname(file_path), exist_ok=True)
 
     data = sorted(
-    searchable_data,
-    key=lambda x:datetime.datetime.strptime(x["date"], "%d/%m/%Y")
+        searchable_data, key=lambda x: datetime.datetime.strptime(x["date"], "%d/%m/%Y")
     )
-   
+
     with open(file_path, "w", encoding="utf-8") as f:
         json.dump(data, f, indent=2, ensure_ascii=False)
 

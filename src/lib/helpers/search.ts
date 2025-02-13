@@ -21,39 +21,3 @@ export function SearchPerson(query: string) {
 
 export const MartyrList = searchableData;
 export const totalMartyrs = searchableData.length;
-
-export type SearchResults = FuzzyResult<{
-  id: string;
-  name: {
-    bn: string;
-    en: string;
-  };
-  profession: {
-    bn: string;
-    en: string;
-  };
-  info: {
-    bn: string;
-    en: string;
-  };
-  date: string;
-  hasImage: boolean | number;
-}>[];
-
-export type MartyrType = {
-  id: string;
-  name: {
-    bn: string;
-    en: string;
-  };
-  profession: {
-    bn: string;
-    en: string;
-  };
-  info: {
-    bn: string;
-    en: string;
-  };
-  date: string;
-  hasImage: boolean | number;
-};

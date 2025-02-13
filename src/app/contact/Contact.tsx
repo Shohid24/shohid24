@@ -6,7 +6,6 @@ import { parseAsString, useQueryState } from "nuqs";
 import React, { Suspense, useEffect } from "react";
 import MaxWidthWrapper from "@/components/ui/MaxwidthWrapper";
 import { Separator } from "@/components/ui/separator";
-import Link from "next/link";
 import Anchor from "@/components/ui/Anchor";
 
 const SuspendedContact = () => {

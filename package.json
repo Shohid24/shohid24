@@ -4,8 +4,8 @@
   "private": true,
   "scripts": {
     "dev": "next dev --turbopack",
-    "prebuild": "python src/preBuild.py",
-    "build": "python public/downloadImages.py && python public/compressImages.py && next build",
+    "prebuild": "python -m pip install -r requirements.txt && python src/preBuild.py",
+    "build": "next build",
     "run": "next build && serve out",
     "start": "next start",
     "lint": "next lint",

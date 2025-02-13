@@ -31,13 +31,11 @@ export default function RootLayout({
       <head>
         <link rel="icon" href="/favicon.svg" />
         <link rel="preload" as="image" href="/default.jpg" />
-
         <meta charSet="utf-8" />
         <meta
           httpEquiv="last-modified"
           content={new Date().toISOString().split(":")[0] + ":00:00.000Z"}
         />
-
         <meta
           name="google-site-verification"
           content="WPPXho-ehsTzL41OYAECiVP8ilWMxfxjHtHwQUsu1FU"

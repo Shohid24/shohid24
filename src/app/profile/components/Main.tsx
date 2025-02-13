@@ -25,7 +25,6 @@ const SuspendMain = ({ martyr }: { martyr: IUser }) => {
 
 const MainSection = ({ martyr }: { martyr: IUser }) => {
   const lang = "bn";
-  
   return (
     <Suspense
       fallback={

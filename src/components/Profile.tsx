@@ -10,6 +10,7 @@ import { toBengali } from "@/lib/helpers/date";
 interface ProfileWithClassName extends ProfileType {
   className?: string;
   noLink?: boolean;
+  header?: boolean;
 }
 
 const Profile = ({
@@ -24,9 +25,10 @@ const Profile = ({
   showIndex = true,
   className,
   noLink,
+  header,
 }: ProfileWithClassName) => {
   const translation = getTranslation(lang);
-  const compressedUrl = imageUrl.replace("/photos", "/compressed");
+  const compressedUrl = imageUrl.replace("/photos/", "/compressed/");
 
   const content = (
     <>
@@ -73,16 +75,38 @@ const Profile = ({
         )}
       </div>
 
-      <div className="flex h-full w-full flex-col gap-1 text-start">
-        <p className="text-lg font-bold md:text-2xl">{name}</p>
-        <p className="text-sm text-muted-foreground md:text-base">
+      <div
+        className="flex h-full w-full flex-col gap-1 text-start"
+        itemScope
+        itemType="https://schema.org/Person"
+      >
+        {header ? (
+          // make it a header if it's their profile page
+          <h1 className="text-lg font-bold md:text-2xl" itemProp="Name">
+            {name}
+          </h1>
+        ) : (
+          <p className="text-lg font-bold md:text-2xl" itemProp="Name">
+            {name}
+          </p>
+        )}
+        <p
+          className="text-sm text-muted-foreground md:text-base"
+          itemProp="Profession"
+        >
           {profession || translation.unavailable}
         </p>
-        <p className="text-sm md:text-base">
-          {info || translation.unavailable}
+        <p className="text-sm md:text-base" itemProp="Institution">
+          {info || ""}
+          {
+            // Keep the info empty if nothing is there
+          }
         </p>
-        <p className="mt-auto flex items-center justify-start gap-1 text-nowrap">
-          <Calendar size={20} />
+        <p
+          className="mt-auto flex items-center justify-start gap-1 text-nowrap"
+          itemProp="MartyrDate"
+        >
+          <Calendar size={18} />
           {lang == "bn" ? toBengali(martyrDate) : martyrDate}
         </p>
       </div>

@@ -6,7 +6,7 @@ if os.path.exists("public/photos"):
 
 
 files = os.listdir("photos")
-maxWidth = 720
+maxWidth = 512
 
 os.makedirs("compressed", exist_ok=True)
 

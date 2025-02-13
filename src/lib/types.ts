@@ -1,3 +1,5 @@
+import { FuzzyResult } from "@nozbe/microfuzz";
+
 export type ProfileType = {
   id: string;
   name: string;
@@ -42,3 +44,21 @@ export type MartyrInfo = {
   bn: X;
   en: X;
 };
+
+export type SearchResults = FuzzyResult<{
+  id: string;
+  name: {
+    bn: string;
+    en: string;
+  };
+  profession: {
+    bn: string;
+    en: string;
+  };
+  info: {
+    bn: string;
+    en: string;
+  };
+  date: string;
+  hasImage: boolean | number;
+}>[];

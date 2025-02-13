@@ -1,10 +1,10 @@
-- [x] Add language toggle
-- [x] Change the title according to the selected language
-- [x] Use Transition for better search performance
-- [x] Logo for website
-- [x] Add the /about page
-- [x] Add each profile page
-- [x] Add the /contact page
-- [ ] Add the "Other Martyrs" page
 - [ ] Add last updated info
-- [ ] Create a new website for taking the submissions of martyrs in vercel 
+- [x] Show Verification status
+- [x] Show banner if `show=false`
+- [ ] Previous / Next navigation
+- [ ] The home page will get data directly from mongodb
+- [ ] `/profile/id.json` path for json data
+- [ ] News sources at each profile
+- [ ] News of Different Martyrs
+- [ ] Continuous View
+- [ ] Filter by Date

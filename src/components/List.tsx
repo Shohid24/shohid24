@@ -3,9 +3,9 @@ import { parseAsInteger, useQueryState } from "nuqs";
 import Profile from "./Profile";
 import ProfileSkeleton from "./ProfileSkeleton";
 import Pagination from "./sub/Pagination";
-import { SearchResults, MartyrList, MartyrType } from "@/lib/helpers/search";
+import { MartyrList } from "@/lib/helpers/search";
+import type { SearchResults } from "@/lib/types";
 import { formatDate } from "@/lib/helpers/date";
-
 
 const List = ({
   searchResult,
@@ -57,7 +57,7 @@ const List = ({
                   info={item.info[lang as "bn" | "en"]}
                   martyrDate={formatDate(item.date)}
                   imageUrl={
-                    item.hasImage ? `/photos/${item.id}.jpg` : "/default.jpg"
+                    item.hasImage ? `/photos/${item.id}` : "/default.jpg"
                   }
                   lang={lang as "bn" | "en"}
                 />
@@ -80,7 +80,7 @@ const List = ({
         {MartyrList.slice(
           (currentPage - 1) * perPage,
           currentPage * perPage,
-        ).map((item: MartyrType, index: number) => (
+        ).map((item, index) => (
           <Profile
             key={item.id}
             index={MartyrList.findIndex((i) => i.id === item.id)}
@@ -94,6 +94,7 @@ const List = ({
           />
         ))}
       </div>
+
       <Pagination
         currentPage={currentPage}
         perPage={perPage}

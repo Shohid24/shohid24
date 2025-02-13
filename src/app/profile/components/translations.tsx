@@ -11,7 +11,11 @@ export const ENGLISH = {
   description:
     "The profile of a martyr in the July Student Movement that happened in Bangladesh in 2024",
   unavailable: "No information",
+  verified: "Data has been verified",
+  notVerified: "Data has not been verified",
+  hidden: "This profile was marked to be hidden from the list",
   age: "Age:",
+  gender: "Gender:",
   born: "Birth Date:",
   birthPlace: "Date of Birth:",
   howHeDied: "How he became a martyr:",
@@ -56,7 +60,11 @@ export const BANGLA = {
     "স্বৈরাচারী শাসক শেখ হাসিনার আমলে জুলাই গণঅভ্যুত্থানে শহীদ হওয়া ব্যক্তিদের তালিকা",
 
   unavailable: "তথ্য অনুপস্থিত",
+  verified: "ডেটা যাচাই করা হয়েছে",
+  notVerified: "ডেটা যাচাই করা হয়নি",
+  hidden: "এই প্রোফাইলটি তালিকা থেকে আড়াল করার জন্য চিহ্নিত করা হয়েছে",
   age: "বয়সঃ",
+  gender: "লিঙ্গঃ",
   born: "জন্ম তারিখঃ",
   birthPlace: "জন্মস্থানঃ",
   howHeDied: "যেভাবে শহীদ হয়েছেনঃ",

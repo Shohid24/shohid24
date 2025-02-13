@@ -1,0 +1,4 @@
+requests
+pymongo
+python-dotenv
+pillow
