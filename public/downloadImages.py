@@ -7,6 +7,7 @@ from pathlib import Path
 # Load environment variables
 load_dotenv()
 
+LOCAL = os.environ.get("LOCAL")
 MONGO_URI = os.getenv("MONGO_URI")
 client = MongoClient(MONGO_URI)
 db = client.prod
@@ -33,7 +34,7 @@ def download_missing_images():
         image_path = photos_dir / f"{user_id}.jpg"
 
         # Skip if image already exists
-        if image_path.exists():
+        if image_path.exists() and LOCAL:
             skipped_count += 1
             continue
 

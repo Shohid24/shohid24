@@ -3729,7 +3729,7 @@
       "en": "Md. Foyez"
     },
     "profession": {
-      "bn": "পাইপ ফিটার",
+      "bn": "নলকর্মী",
       "en": "Plumber"
     },
     "info": {
@@ -5287,6 +5287,40 @@
     "hasImage": true
   },
   {
+    "id": "aqy",
+    "name": {
+      "bn": "মো. শাহরিয়ার হাসান আলভী",
+      "en": "Mohammad Shahriar Hassan Alvi"
+    },
+    "profession": {
+      "bn": "শিক্ষার্থী",
+      "en": "Student"
+    },
+    "info": {
+      "bn": "মিরপুর ১০ নম্বরে",
+      "en": "At Mirpur 10 number"
+    },
+    "date": "04/08/2024",
+    "hasImage": true
+  },
+  {
+    "id": "ara",
+    "name": {
+      "bn": "জুনায়েদ ভূঁইয়া",
+      "en": "Junayed Bhuiyan"
+    },
+    "profession": {
+      "bn": "রিকশাচালক",
+      "en": "Rickshaw puller"
+    },
+    "info": {
+      "bn": "মিরপুর-১০ নম্বর গোলচত্বর",
+      "en": "Mirpur-10 Number Golchattar"
+    },
+    "date": "04/08/2024",
+    "hasImage": true
+  },
+  {
     "id": "aha",
     "name": {
       "bn": "আকাশ বেপারি",
@@ -5552,8 +5586,8 @@
       "en": "Student"
     },
     "info": {
-      "bn": "কাচিয়া সাহামাদার হাইস্কুল / দোকান: কাপ্তান বাজার এরশাদ মার্কেট ২ তলা ইসমাইল ইলেকট্রনিক্স কো:",
-      "en": "Kachia Sahamadar High School / Shop: Kaptan Bazar Ershad Market 2nd Floor Ismail Electronics Co:"
+      "bn": "কাচিয়া সাহামাদার হাইস্কুল",
+      "en": "Kachia Sahamadar High School"
     },
     "date": "05/08/2024",
     "hasImage": true
@@ -6800,6 +6834,40 @@
     "hasImage": true
   },
   {
+    "id": "aqz",
+    "name": {
+      "bn": "আবুল বাসার আদম",
+      "en": "Abul Basher Adam"
+    },
+    "profession": {
+      "bn": "শিক্ষার্থী",
+      "en": "Student"
+    },
+    "info": {
+      "bn": "এপিএস ডিগ্রি কলেজ",
+      "en": "APS Degree College"
+    },
+    "date": "05/08/2024",
+    "hasImage": true
+  },
+  {
+    "id": "arb",
+    "name": {
+      "bn": "আল আমিন",
+      "en": "Al Amin"
+    },
+    "profession": {
+      "bn": "চাকুরিজীবী",
+      "en": "চাকুরিজীবী"
+    },
+    "info": {
+      "bn": "ব্যাঙ্গো ইকো এ্যাপারেলস লি. ",
+      "en": "Bongo Eco Apparels Ltd."
+    },
+    "date": "05/08/2024",
+    "hasImage": true
+  },
+  {
     "id": "anc",
     "name": {
       "bn": "বাধন",
@@ -7101,6 +7169,23 @@
     "info": {
       "bn": "সাভার ক্যান্টনমেন্ট পাবলিক স্কুল এন্ড কলেজ",
       "en": "Savar Cantonment School and College"
+    },
+    "date": "08/08/2024",
+    "hasImage": true
+  },
+  {
+    "id": "arc",
+    "name": {
+      "bn": "মো. মহিউদ্দিন মহিন",
+      "en": "Md. Mahiuddin Mahin"
+    },
+    "profession": {
+      "bn": "সহায়ক, গ্রোসারি স্টোর",
+      "en": "Assistant, Grocery store"
+    },
+    "info": {
+      "bn": "",
+      "en": ""
     },
     "date": "08/08/2024",
     "hasImage": true

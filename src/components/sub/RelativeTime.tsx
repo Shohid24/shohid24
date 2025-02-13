@@ -80,7 +80,7 @@ const RelativeTime: React.FC<RelativeTimeProps> = ({ utcTime, lang }) => {
       <span className="font-normal">
         {lang === "bn" ? "সর্বশেষ পরিবর্তন:" : "Last Modified:"}
       </span>
-      <time dateTime={formatDateForSEO(utcTime)}>
+      <time dateTime={formatDateForSEO(utcTime)} className="font-semibold">
         {getRelativeTime(utcTime, lang)}
       </time>
     </div>
