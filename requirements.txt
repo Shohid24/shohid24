@@ -2,3 +2,5 @@ requests
 pymongo
 python-dotenv
 pillow
+aiohttp
+httpx
