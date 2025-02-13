@@ -1,4 +1,4 @@
-- [ ] Add last updated info
+- [x] Add last updated info
 - [x] Show Verification status
 - [x] Show banner if `show=false`
 - [ ] Previous / Next navigation

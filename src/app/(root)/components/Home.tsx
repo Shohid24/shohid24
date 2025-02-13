@@ -1,5 +1,6 @@
 "use client";
 import { Suspense, useEffect } from "react";
+import Link from "next/link";
 import Head from "next/head";
 
 import MaxwidthWrapper from "@/components/ui/MaxwidthWrapper";
@@ -11,7 +12,8 @@ import Footer from "@/components/Footer";
 import { parseAsString, useQueryState } from "nuqs";
 import { getTranslation } from "@/components/translations";
 import { getFontClass } from "@/lib/fontLoader";
-import Link from "next/link";
+import LastUpdatedJson from "./../../../../public/lastUpdated.json";
+import RelativeTime from "@/components/sub/RelativeTime";
 
 const GetComponent = ({
   lang,
@@ -44,6 +46,10 @@ const GetComponent = ({
         </Link>
         {/* <Hero translation={translation} /> */}
         <Homepage translation={translation} />
+        <RelativeTime
+          utcTime={LastUpdatedJson.lastUpdated}
+          lang={lang as "bn" | "en"}
+        />
       </MaxwidthWrapper>
       <Footer lang={lang as "bn" | "en"} />
     </div>

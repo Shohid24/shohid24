@@ -1,14 +1,14 @@
-import Balancer from "react-wrap-balancer";
-
-import Profile from "@/components/Profile";
-import { formatDate, toBengali } from "@/lib/helpers/date";
-import { getTranslation } from "./translations";
-import { cn, guid } from "@/lib/utils";
 import { ReactNode } from "react";
-import { IUser } from "@/server/schema/user";
-import { Button } from "@/components/ui/button";
-import { BadgeCheck, BadgeX, EyeOff } from "lucide-react";
+import Balancer from "react-wrap-balancer";
+import Profile from "@/components/Profile";
+
 import { Separator } from "@/components/ui/separator";
+import { BadgeCheck, BadgeX, Clock, EyeOff } from "lucide-react";
+import { IUser } from "@/server/schema/user";
+import { getTranslation } from "./translations";
+import { formatDate, toBengali } from "@/lib/helpers/date";
+import { cn, guid } from "@/lib/utils";
+import RelativeTime from "@/components/sub/RelativeTime";
 
 const ProfilePage = ({
   martyr,
@@ -25,7 +25,10 @@ const ProfilePage = ({
   const profession = martyr[lang].profession;
   const info = martyr[lang].info;
   const date = martyr.date;
-  const imageUrl = martyr.image;
+  const lastUpdatedString = String(martyr.lastUpdated);
+  const imageUrl = martyr.image.includes("default.jpg")
+    ? "/default.jpg"
+    : `/photos/${id}.jpg`;
 
   return (
     <>
@@ -104,6 +107,7 @@ const ProfilePage = ({
               content={martyr[lang].bio}
             />
           </section>
+          <RelativeTime utcTime={lastUpdatedString} lang={lang} />
         </div>
       </div>
       <section className="mx-auto my-2 flex max-w-screen-md flex-col items-center justify-center gap-2 text-balance text-sm md:text-base lg:text-lg">
