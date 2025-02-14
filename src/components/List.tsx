@@ -91,28 +91,57 @@ const List = ({
     };
   }, [handleObserver]);
 
-  const renderProfiles = (
+  const RenderProfiles = (
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    data: any[],
-    startIndex: number,
-    endIndex: number | null = null,
+    {
+      data,
+      startIndex,
+      endIndex = null,
+      searchRes = false,
+    }: {
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      data: any[];
+      startIndex: number;
+      endIndex?: number | null;
+      searchRes?: boolean;
+    },
   ) => {
     const itemsToRender = endIndex
       ? data.slice(startIndex, endIndex)
       : data.slice(0, visibleItems);
-    return itemsToRender.map((item) => (
-      <Profile
-        key={item.id}
-        index={data.findIndex((i) => i.id === item.id)}
-        id={item.id}
-        name={item.name[lang as "bn" | "en"]}
-        profession={item.profession[lang as "bn" | "en"]}
-        info={item.info[lang as "bn" | "en"]}
-        martyrDate={formatDate(item.date)}
-        imageUrl={item.hasImage ? `/photos/${item.id}.jpg` : "/default.jpg"}
-        lang={lang as "bn" | "en"}
-      />
-    ));
+    if (searchRes) {
+      return itemsToRender.map(({ item }) => {
+        return (
+          <Profile
+            key={item.id}
+            index={data.findIndex((i) => i.item.id === item.id)}
+            id={item.id}
+            name={item.name[lang as "bn" | "en"]}
+            profession={item.profession[lang as "bn" | "en"]}
+            info={item.info[lang as "bn" | "en"]}
+            martyrDate={formatDate(item.date)}
+            imageUrl={item.hasImage ? `/photos/${item.id}.jpg` : "/default.jpg"}
+            lang={lang as "bn" | "en"}
+          />
+        );
+      });
+    }
+
+    return itemsToRender.map((item) => {
+      return (
+        <Profile
+          key={item.id}
+          index={data.findIndex((i) => i.id === item.id)}
+          id={item.id}
+          name={item.name[lang as "bn" | "en"]}
+          profession={item.profession[lang as "bn" | "en"]}
+          info={item.info[lang as "bn" | "en"]}
+          martyrDate={formatDate(item.date)}
+          imageUrl={item.hasImage ? `/photos/${item.id}.jpg` : "/default.jpg"}
+          lang={lang as "bn" | "en"}
+        />
+      );
+    });
   };
 
   if (query.trim().length > 0) {
@@ -126,13 +155,20 @@ const List = ({
     return (
       <>
         <div className="grid grid-cols-[repeat(auto-fit,minmax(10rem,1fr))] place-items-center gap-y-2 md:grid-cols-[repeat(auto-fit,minmax(13rem,1fr))]">
-          {viewAs === "all"
-            ? renderProfiles(searchResult, 0)
-            : renderProfiles(
-                searchResult,
-                (currentPage - 1) * perPage,
-                currentPage * perPage,
-              )}
+          {viewAs === "all" ? (
+            <RenderProfiles
+              searchRes={true}
+              data={searchResult}
+              startIndex={0}
+            />
+          ) : (
+            <RenderProfiles
+              searchRes={true}
+              data={searchResult}
+              startIndex={(currentPage - 1) * perPage}
+              endIndex={currentPage * perPage}
+            />
+          )}
         </div>
         {viewAs === "page" ? (
           <Pagination
@@ -155,13 +191,15 @@ const List = ({
   return (
     <>
       <div className="grid grid-cols-[repeat(auto-fit,minmax(150px,1fr))] place-items-center gap-y-2 md:grid-cols-[repeat(auto-fit,minmax(13rem,1fr))]">
-        {viewAs === "all"
-          ? renderProfiles(MartyrList, 0)
-          : renderProfiles(
-              MartyrList,
-              (currentPage - 1) * perPage,
-              currentPage * perPage,
-            )}
+        {viewAs === "all" ? (
+          <RenderProfiles data={MartyrList} startIndex={0} />
+        ) : (
+          <RenderProfiles
+            data={MartyrList}
+            startIndex={(currentPage - 1) * perPage}
+            endIndex={currentPage * perPage}
+          />
+        )}
       </div>
 
       {viewAs === "page" ? (
