@@ -6,5 +6,5 @@
 - [ ] `/profile/id.json` path for json data
 - [ ] News sources at each profile
 - [ ] News of Different Martyrs
-- [ ] Continuous View
+- [x] Continuous View
 - [ ] Filter by Date

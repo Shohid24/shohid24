@@ -1,4 +1,12 @@
-import React, { Suspense, useEffect, useState } from "react";
+// TODO: Simplify this file
+
+import React, {
+  Suspense,
+  useEffect,
+  useState,
+  useRef,
+  useCallback,
+} from "react";
 import { parseAsInteger, useQueryState } from "nuqs";
 import Profile from "./Profile";
 import ProfileSkeleton from "./ProfileSkeleton";
@@ -7,13 +15,19 @@ import { MartyrList } from "@/lib/helpers/search";
 import type { SearchResults } from "@/lib/types";
 import { formatDate } from "@/lib/helpers/date";
 
+const ITEMS_PER_LOAD = 24;
+
 const List = ({
+  viewAs,
+  setViewAs,
   searchResult,
   lang,
   query,
   currentPage,
   setCurrentPage,
 }: {
+  viewAs: string;
+  setViewAs: (value: string) => void;
   searchResult: SearchResults;
   lang: string;
   query: string;
@@ -25,13 +39,81 @@ const List = ({
     "per",
     parseAsInteger.withDefault(24),
   );
+  const [visibleItems, setVisibleItems] = useState(ITEMS_PER_LOAD);
+  const [isLoading, setIsLoading] = useState(false);
+  const loaderRef = useRef(null);
+
   useEffect(() => {
     if (!wasFirstNill && searchResult.length > 0) {
       setCurrentPage(1);
       setWasFirstNill(false);
     }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [searchResult]);
+    // Reset visible items when search results change
+    setVisibleItems(ITEMS_PER_LOAD);
+  }, [searchResult, setCurrentPage, wasFirstNill]);
+
+  const handleObserver = useCallback(
+    (entries: IntersectionObserverEntry[]) => {
+      const target = entries[0];
+      if (target.isIntersecting && !isLoading && viewAs === "all") {
+        setIsLoading(true);
+        setTimeout(() => {
+          const dataLength =
+            query.trim().length > 0 ? searchResult.length : MartyrList.length;
+
+          if (visibleItems < dataLength) {
+            setVisibleItems((prev) =>
+              Math.min(prev + ITEMS_PER_LOAD, dataLength),
+            );
+          }
+          setIsLoading(false);
+        }, 100); // Small delay to prevent rapid loading
+      }
+    },
+    [isLoading, viewAs, visibleItems, query, searchResult.length],
+  );
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(handleObserver, {
+      root: null,
+      rootMargin: "20px",
+      threshold: 0.1,
+    });
+
+    if (loaderRef.current) {
+      observer.observe(loaderRef.current);
+    }
+
+    return () => {
+      if (loaderRef.current) {
+        observer.unobserve(loaderRef.current);
+      }
+    };
+  }, [handleObserver]);
+
+  const renderProfiles = (
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    data: any[],
+    startIndex: number,
+    endIndex: number | null = null,
+  ) => {
+    const itemsToRender = endIndex
+      ? data.slice(startIndex, endIndex)
+      : data.slice(0, visibleItems);
+    return itemsToRender.map((item) => (
+      <Profile
+        key={item.id}
+        index={data.findIndex((i) => i.id === item.id)}
+        id={item.id}
+        name={item.name[lang as "bn" | "en"]}
+        profession={item.profession[lang as "bn" | "en"]}
+        info={item.info[lang as "bn" | "en"]}
+        martyrDate={formatDate(item.date)}
+        imageUrl={item.hasImage ? `/photos/${item.id}.jpg` : "/default.jpg"}
+        lang={lang as "bn" | "en"}
+      />
+    ));
+  };
 
   if (query.trim().length > 0) {
     if (searchResult.length == 0) {
@@ -44,32 +126,28 @@ const List = ({
     return (
       <>
         <div className="grid grid-cols-[repeat(auto-fit,minmax(10rem,1fr))] place-items-center gap-y-2 md:grid-cols-[repeat(auto-fit,minmax(13rem,1fr))]">
-          {searchResult
-            .slice((currentPage - 1) * perPage, currentPage * perPage)
-            .map(({ item }, index) => {
-              return (
-                <Profile
-                  key={item.id}
-                  index={searchResult.findIndex((i) => i.item.id === item.id)}
-                  id={item.id}
-                  name={item.name[lang as "bn" | "en"]}
-                  profession={item.profession[lang as "bn" | "en"]}
-                  info={item.info[lang as "bn" | "en"]}
-                  martyrDate={formatDate(item.date)}
-                  imageUrl={
-                    item.hasImage ? `/photos/${item.id}.jpg` : "/default.jpg"
-                  }
-                  lang={lang as "bn" | "en"}
-                />
-              );
-            })}
+          {viewAs === "all"
+            ? renderProfiles(searchResult, 0)
+            : renderProfiles(
+                searchResult,
+                (currentPage - 1) * perPage,
+                currentPage * perPage,
+              )}
         </div>
-        <Pagination
-          currentPage={currentPage}
-          perPage={perPage}
-          totalItems={searchResult.length}
-          setCurrentPage={setCurrentPage}
-        />
+        {viewAs === "page" ? (
+          <Pagination
+            currentPage={currentPage}
+            perPage={perPage}
+            totalItems={searchResult.length}
+            setCurrentPage={setCurrentPage}
+          />
+        ) : (
+          visibleItems < searchResult.length && (
+            <div ref={loaderRef} className="flex justify-center py-4">
+              <ProfileSkeleton />
+            </div>
+          )
+        )}
       </>
     );
   }
@@ -77,41 +155,44 @@ const List = ({
   return (
     <>
       <div className="grid grid-cols-[repeat(auto-fit,minmax(150px,1fr))] place-items-center gap-y-2 md:grid-cols-[repeat(auto-fit,minmax(13rem,1fr))]">
-        {MartyrList.slice(
-          (currentPage - 1) * perPage,
-          currentPage * perPage,
-        ).map((item, index) => (
-          <Profile
-            key={item.id}
-            index={MartyrList.findIndex((i) => i.id === item.id)}
-            id={item.id}
-            name={item.name[lang as "bn" | "en"]}
-            profession={item.profession[lang as "bn" | "en"]}
-            info={item.info[lang as "bn" | "en"]}
-            martyrDate={formatDate(item.date)}
-            imageUrl={item.hasImage ? `/photos/${item.id}.jpg` : "/default.jpg"}
-            lang={lang as "bn" | "en"}
-          />
-        ))}
+        {viewAs === "all"
+          ? renderProfiles(MartyrList, 0)
+          : renderProfiles(
+              MartyrList,
+              (currentPage - 1) * perPage,
+              currentPage * perPage,
+            )}
       </div>
 
-      <Pagination
-        currentPage={currentPage}
-        perPage={perPage}
-        totalItems={MartyrList.length}
-        setCurrentPage={setCurrentPage}
-      />
+      {viewAs === "page" ? (
+        <Pagination
+          currentPage={currentPage}
+          perPage={perPage}
+          totalItems={MartyrList.length}
+          setCurrentPage={setCurrentPage}
+        />
+      ) : (
+        visibleItems < MartyrList.length && (
+          <div ref={loaderRef} className="flex justify-center py-4">
+            <ProfileSkeleton />
+          </div>
+        )
+      )}
     </>
   );
 };
 
 const SuspendedList = ({
+  viewAs,
+  setViewAs,
   searchResult,
   lang,
   query = "",
   currentPage,
   setCurrentPage,
 }: {
+  viewAs: string;
+  setViewAs: (value: string) => void;
   searchResult: SearchResults;
   lang: string;
   query?: string;
@@ -129,6 +210,8 @@ const SuspendedList = ({
       }
     >
       <List
+        viewAs={viewAs}
+        setViewAs={setViewAs}
         searchResult={searchResult}
         lang={lang}
         query={query}

@@ -7,10 +7,15 @@ import { Input } from "./ui/input";
 import { parseAsInteger, parseAsString, useQueryState } from "nuqs";
 import type { Translation } from "@/components/translations";
 import { toBengali } from "@/lib/helpers/date";
+import ViewAsButton from "./sub/ViewAsButton";
 
 const Homepage_Sus = ({ translation }: { translation: Translation }) => {
   const [firstLoad, setFirstLoad] = useState(true);
   const [isSearching, startTransition] = useTransition();
+  const [viewAs, setViewAs] = useQueryState(
+    "view",
+    parseAsString.withDefault("page"),
+  );
   const [query, setQuery] = useQueryState(
     "query",
     parseAsString.withDefault(""),
@@ -71,6 +76,9 @@ const Homepage_Sus = ({ translation }: { translation: Translation }) => {
         <h1 className="text-xl font-semibold md:text-2xl lg:text-3xl">
           {translation.header}
         </h1>
+
+        <ViewAsButton viewAs={viewAs} setViewAs={setViewAs} className="" />
+
         <Input
           ref={queryRef}
           className={`w-full md:max-w-72 ${translation.lang == "en" && "tracking-tighter"}`}
@@ -126,7 +134,10 @@ const Homepage_Sus = ({ translation }: { translation: Translation }) => {
           </>
         )}
       </p>
+
       <List
+        viewAs={viewAs}
+        setViewAs={setViewAs}
         searchResult={searchResult}
         lang={translation.lang}
         query={query}
@@ -154,6 +165,8 @@ const Homepage = ({ translation }: { translation: Translation }) => {
           </div>
 
           <List
+            viewAs={"page"}
+            setViewAs={() => {}}
             searchResult={[]}
             lang={translation.lang}
             currentPage={currentPage}
