@@ -1,12 +1,18 @@
 import React from "react";
 import { Clock } from "lucide-react";
+import { cn } from "@/lib/utils";
 
 interface RelativeTimeProps {
   utcTime: string; // ISO UTC timestamp
   lang: "en" | "bn";
+  className?: string;
 }
 
-const RelativeTime: React.FC<RelativeTimeProps> = ({ utcTime, lang }) => {
+const RelativeTime: React.FC<RelativeTimeProps> = ({
+  utcTime,
+  lang,
+  className,
+}) => {
   const getRelativeTime = (utcDateString: string, language: "en" | "bn") => {
     const utcDate = new Date(utcDateString);
     const today = new Date();
@@ -16,7 +22,7 @@ const RelativeTime: React.FC<RelativeTimeProps> = ({ utcTime, lang }) => {
     today.setHours(0, 0, 0, 0);
 
     const diffTime = Math.abs(today.getTime() - utcDate.getTime());
-    const diffDays = Math.min(0, Math.floor(diffTime / (1000 * 60 * 60 * 24)));
+    const diffDays = Math.max(0, Math.floor(diffTime / (1000 * 60 * 60 * 24)));
 
     if (language === "bn") {
       if (diffDays === 0) return "আজ";
@@ -75,7 +81,12 @@ const RelativeTime: React.FC<RelativeTimeProps> = ({ utcTime, lang }) => {
   };
 
   return (
-    <div className="flex items-center gap-2 text-sm tracking-wide text-primary/70">
+    <div
+      className={cn(
+        "flex items-center gap-2 text-sm tracking-wide text-primary/70",
+        className,
+      )}
+    >
       <Clock className="text-emerald-500" strokeWidth={2} size={18} />
       <span className="font-normal">
         {lang === "bn" ? "সর্বশেষ পরিবর্তন:" : "Last Modified:"}

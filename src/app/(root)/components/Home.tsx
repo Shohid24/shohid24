@@ -47,6 +47,7 @@ const GetComponent = ({
         {/* <Hero translation={translation} /> */}
         <Homepage translation={translation} />
         <RelativeTime
+          className="mt-10"
           utcTime={LastUpdatedJson.lastUpdated}
           lang={lang as "bn" | "en"}
         />
