@@ -38,6 +38,7 @@ def fetch_data():
             "hasImage": "default.jpg" not in user.get("image", ""),
         }
         for user in users
+        if user["show"]
     ]
 
     file_path = os.path.join(os.getcwd(), "public/data/searchableData.json")

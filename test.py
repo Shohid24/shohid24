@@ -5,7 +5,8 @@ from dotenv import load_dotenv
 # Load environment variables
 load_dotenv()
 
-def clean_individual_info():
+
+def clean_individual_birthPlace():
     try:
         # Connect to MongoDB
         client = MongoClient(os.getenv("MONGO_URI"))
@@ -21,45 +22,37 @@ def clean_individual_info():
         # Process each document
         for doc in documents:
             updates = {}
-            
-            # Check and clean en.info
-            if 'en' in doc and 'info' in doc['en']:
-                original_info = doc['en']['info']
-                cleaned_info = original_info.rstrip('.').rstrip('।')
-                if original_info != cleaned_info:
-                    updates['en.info'] = cleaned_info
-            
-            # Check and clean bn.info
-            if 'bn' in doc and 'info' in doc['bn']:
-                original_info = doc['bn']['info']
-                cleaned_info = original_info.rstrip('।').rstrip('.')
-                if original_info != cleaned_info:
-                    updates['bn.info'] = cleaned_info
-            
+
+            # Check and clean en.birthPlace
+            if "en" in doc and "birthPlace" in doc["en"]:
+                original_birthPlace = doc["en"]["birthPlace"]
+                cleaned_birthPlace = original_birthPlace.rstrip(".").rstrip("।")
+                if original_birthPlace != cleaned_birthPlace:
+                    updates["en.birthPlace"] = cleaned_birthPlace
+
+            # Check and clean bn.birthPlace
+            if "bn" in doc and "birthPlace" in doc["bn"]:
+                original_birthPlace = doc["bn"]["birthPlace"]
+                cleaned_birthPlace = original_birthPlace.rstrip("।").rstrip(".")
+                if original_birthPlace != cleaned_birthPlace:
+                    updates["bn.birthPlace"] = cleaned_birthPlace
+
             # Remove __v if present
-            if '__v' in doc:
+            if "__v" in doc:
                 if not updates:
                     result = collection.update_one(
-                        {"_id": doc["_id"]},
-                        {"$unset": {"__v": ""}}
+                        {"_id": doc["_id"]}, {"$unset": {"__v": ""}}
                     )
                 else:
                     result = collection.update_one(
-                        {"_id": doc["_id"]},
-                        {
-                            "$set": updates,
-                            "$unset": {"__v": ""}
-                        }
+                        {"_id": doc["_id"]}, {"$set": updates, "$unset": {"__v": ""}}
                     )
             elif updates:
-                result = collection.update_one(
-                    {"_id": doc["_id"]},
-                    {"$set": updates}
-                )
-            
-            if updates or '__v' in doc:
+                result = collection.update_one({"_id": doc["_id"]}, {"$set": updates})
+
+            if updates or "__v" in doc:
                 update_count += 1
-                print(f"Updated document with ID: {doc.get('_id')}")
+                print(f"Updated document with ID: {doc.get('id')}")
 
         print(f"Successfully updated {update_count} documents")
 
@@ -71,5 +64,6 @@ def clean_individual_info():
         if "client" in locals():
             client.close()
 
+
 if __name__ == "__main__":
-    clean_individual_info()
+    clean_individual_birthPlace()
