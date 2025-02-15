@@ -7,7 +7,7 @@ import { Input } from "./ui/input";
 import { parseAsInteger, parseAsString, useQueryState } from "nuqs";
 import type { Translation } from "@/components/translations";
 import { toBengali } from "@/lib/helpers/date";
-import ViewAsButton from "./sub/ViewAsButton";
+// import ViewAsButton from "./sub/ViewAsButton";
 
 const Homepage_Sus = ({ translation }: { translation: Translation }) => {
   const [firstLoad, setFirstLoad] = useState(true);
@@ -76,9 +76,9 @@ const Homepage_Sus = ({ translation }: { translation: Translation }) => {
         <h1 className="text-xl font-semibold md:text-2xl lg:text-3xl">
           {translation.header}
         </h1>
-
-        <ViewAsButton viewAs={viewAs} setViewAs={setViewAs} className="" />
-
+        {
+        //<ViewAsButton viewAs={viewAs} setViewAs={setViewAs} className="" />
+        }
         <Input
           ref={queryRef}
           className={`w-full md:max-w-72 ${translation.lang == "en" && "tracking-tighter"}`}
