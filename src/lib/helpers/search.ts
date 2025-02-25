@@ -1,4 +1,4 @@
-import createFuzzySearch from "@nozbe/microfuzz";
+import createFuzzySearch, { FuzzyResult } from "@nozbe/microfuzz";
 import searchableData from "./../../../public/data/searchableData.json"; // Preloaded data
 
 const fuzzySearch = createFuzzySearch(searchableData, {
@@ -14,7 +14,7 @@ const fuzzySearch = createFuzzySearch(searchableData, {
   strategy: "smart",
 });
 
-export function SearchPerson(query: string) {
+export function SearchPerson(query: string): FuzzyResult<unknown>[] {
   const result = fuzzySearch(query);
   return result;
 }

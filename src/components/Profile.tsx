@@ -30,6 +30,18 @@ const Profile = ({
   const translation = getTranslation(lang);
   const compressedUrl = imageUrl.replace("/photos/", "/compressed/");
 
+  const imageComponent = (
+    <Image
+      priority={noLink || Number(id) < 11}
+      src={compressedUrl || ""}
+      alt={name || "Unknown"}
+      key={imageUrl + id}
+      width={208}
+      height={208}
+      className="block aspect-square max-w-[min(150px,100%)] rounded-md object-cover hover:cursor-pointer md:max-w-[min(190px,100%)]"
+    />
+  );
+
   const content = (
     <>
       <div className="relative w-fit max-w-[150px] md:max-w-[190px]">
@@ -38,40 +50,22 @@ const Profile = ({
             {index + 1}
           </span>
         )}
-        {!noLink ? (
-          <Image
-            priority={Number(id) < 11}
-            src={compressedUrl || ""}
-            alt={name || "Unknown"}
-            key={imageUrl + id}
-            width={208}
-            height={208}
-            className="block aspect-square max-w-[min(150px,100%)] rounded-md object-cover hover:cursor-pointer md:max-w-[min(190px,100%)]"
-          />
+        {noLink ? (
+          <Link href={imageUrl}>{imageComponent}</Link>
         ) : (
-          <Link href={imageUrl}>
-            <Image
-              priority
-              src={compressedUrl || ""}
-              alt={name || "Unknown"}
-              key={imageUrl + id}
-              width={208}
-              height={208}
-              className="block aspect-square max-w-[min(150px,100%)] rounded-md object-cover hover:cursor-pointer md:max-w-[min(190px,100%)]"
-            />
-          </Link>
-        )}
-        {!noLink && (
-          <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 opacity-0 transition-opacity duration-150 group-hover:opacity-100">
-            <span
-              className={cn(
-                "text-xl font-semibold text-white",
-                getFontClass(lang),
-              )}
-            >
-              {lang === "en" ? "Details" : "বিস্তারিত"}
-            </span>
-          </div>
+          <>
+            {imageComponent}
+            <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 opacity-0 transition-opacity duration-150 group-hover:opacity-100">
+              <span
+                className={cn(
+                  "text-xl font-semibold text-white",
+                  getFontClass(lang),
+                )}
+              >
+                {lang === "en" ? "Details" : "বিস্তারিত"}
+              </span>
+            </div>
+          </>
         )}
       </div>
 
@@ -81,7 +75,6 @@ const Profile = ({
         itemType="https://schema.org/Person"
       >
         {header ? (
-          // make it a header if it's their profile page
           <h1 className="text-lg font-bold md:text-2xl" itemProp="Name">
             {name}
           </h1>
@@ -98,9 +91,6 @@ const Profile = ({
         </p>
         <p className="text-sm md:text-base" itemProp="Institution">
           {info || ""}
-          {
-            // Keep the info empty if nothing is there
-          }
         </p>
         <p
           className="mt-auto flex items-center justify-start gap-1 text-nowrap"
@@ -118,8 +108,6 @@ const Profile = ({
     !noLink && "group",
     className,
   );
-
-  <span className="w-40"></span>;
 
   if (noLink) {
     return <div className={sharedClassName}>{content}</div>;

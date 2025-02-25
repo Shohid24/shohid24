@@ -1,5 +1,34 @@
 import { FuzzyResult } from "@nozbe/microfuzz";
+import { ObjectId } from "mongoose";
 
+// Common language-specific fields
+export interface LanguageContent {
+  bn: string;
+  en: string;
+}
+
+// Common bilingual fields for various user types
+export interface BilingualFields {
+  name: LanguageContent;
+  profession: LanguageContent;
+  info: LanguageContent;
+}
+
+// Language-specific content structure
+export interface LanguageSpecificContent {
+  name: string;
+  profession: string;
+  info: string;
+}
+
+// Extended language-specific content for MartyrInfo
+export interface ExtendedLanguageContent extends LanguageSpecificContent {
+  birthPlace: string;
+  bio: string;
+  cause: string;
+}
+
+// Profile with single language
 export type ProfileType = {
   id: string;
   name: string;
@@ -11,54 +40,22 @@ export type ProfileType = {
   lang: "bn" | "en";
   showIndex?: boolean;
 };
-export type Martyr = {
+
+// Basic martyr data
+export interface Martyr extends BilingualFields {
   id: string;
-  name: {
-    bn: string;
-    en: string;
-  };
-  profession: {
-    bn: string;
-    en: string;
-  };
-  info: {
-    bn: string;
-    en: string;
-  };
   date: string;
   hasImage: boolean | number;
-};
+}
 
-type X = {
-  name: string;
-  birthPlace: string;
-  profession: string;
-  bio: string;
-  cause: string;
-};
-
+// Full martyr information
 export type MartyrInfo = {
   id: string;
   age: string;
   dob: string;
-  bn: X;
-  en: X;
+  bn: ExtendedLanguageContent;
+  en: ExtendedLanguageContent;
 };
 
-export type SearchResults = FuzzyResult<{
-  id: string;
-  name: {
-    bn: string;
-    en: string;
-  };
-  profession: {
-    bn: string;
-    en: string;
-  };
-  info: {
-    bn: string;
-    en: string;
-  };
-  date: string;
-  hasImage: boolean | number;
-}>[];
+// Search results type
+export type SearchResults = FuzzyResult<Martyr>[];
