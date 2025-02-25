@@ -14,6 +14,7 @@ import { getTranslation } from "@/components/translations";
 import { getFontClass } from "@/lib/fontLoader";
 import LastUpdatedJson from "./../../../../public/lastUpdated.json";
 import RelativeTime from "@/components/sub/RelativeTime";
+import { Martyr } from "@/lib/types";
 
 const GetComponent = ({
   lang,
@@ -57,7 +58,7 @@ const GetComponent = ({
   );
 };
 
-const Home_Sus = () => {
+const Home_Sus = ({ data }: { data: Martyr }) => {
   const [lang, setLang] = useQueryState(
     "lang",
     parseAsString.withDefault("bn"),
@@ -65,10 +66,10 @@ const Home_Sus = () => {
   return <GetComponent lang={lang as "en" | "bn"} setLang={setLang} />;
 };
 
-function Home() {
+function Home({ data }: { data: Martyr }) {
   return (
     <Suspense fallback={<GetComponent lang="bn" setLang={() => {}} />}>
-      <Home_Sus />
+      <Home_Sus data={data} />
     </Suspense>
   );
 }

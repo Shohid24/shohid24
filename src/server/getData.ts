@@ -1,3 +1,4 @@
+"use server"
 import MongoConnection from "@/server/db";
 import User from "@/server/schema/user";
 

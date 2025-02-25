@@ -1,5 +1,4 @@
 import Link from "next/link";
-import { totalMartyrs } from "../lib/helpers/search";
 import { toBengali } from "../lib/helpers/date";
 
 export const ENGLISH = {
@@ -11,7 +10,6 @@ export const ENGLISH = {
   aboutName: "About Us",
   contactName: "Contact Us",
   submitButton: "Submit a Martyr",
-  martyrCount: String(totalMartyrs),
   header: (
     <>
       List of <span className="text-red-600 dark:text-red-500">martyrs</span> in
@@ -80,7 +78,6 @@ export const BANGLA = {
   aboutName: "আমাদের সম্পর্কে",
   contactName: "যোগাযোগ",
   submitButton: "শহীদের তথ্য যোগ করুন",
-  martyrCount: toBengali(totalMartyrs),
   header: (
     <>
       আন্দোলনে <span className="text-red-600 dark:text-red-500">শহীদদের</span>{" "}

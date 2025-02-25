@@ -1,21 +1,15 @@
 import { useState, useRef, useEffect, Suspense, useTransition } from "react";
 import { useHotkeys } from "react-hotkeys-hook";
 import { SearchPerson } from "@/lib/helpers/search";
-import type { SearchResults } from "@/lib/types";
-import List from "./List";
 import { Input } from "./ui/input";
-import { parseAsInteger, parseAsString, useQueryState } from "nuqs";
-import type { Translation } from "@/components/translations";
 import { toBengali } from "@/lib/helpers/date";
-// import ViewAsButton from "./sub/ViewAsButton";
+import List from "@/components/List";
+import type { Translation } from "@/components/translations";
+import { parseAsInteger, parseAsString, useQueryState } from "nuqs";
 
 const Homepage_Sus = ({ translation }: { translation: Translation }) => {
   const [firstLoad, setFirstLoad] = useState(true);
   const [isSearching, startTransition] = useTransition();
-  const [viewAs, setViewAs] = useQueryState(
-    "view",
-    parseAsString.withDefault("page"),
-  );
   const [query, setQuery] = useQueryState(
     "query",
     parseAsString.withDefault(""),
@@ -26,9 +20,8 @@ const Homepage_Sus = ({ translation }: { translation: Translation }) => {
   );
   const queryRef = useRef<HTMLInputElement | null>(null);
 
-  const [searchResult, setSearchResult] = useState<SearchResults>(
-    SearchPerson(""),
-  );
+  const [searchResult, setSearchResult] = useState(SearchPerson(""));
+  const [totalMartyr] = useState(searchResult.length);
 
   useEffect(() => {
     startTransition(() => {
@@ -76,9 +69,6 @@ const Homepage_Sus = ({ translation }: { translation: Translation }) => {
         <h1 className="text-xl font-semibold md:text-2xl lg:text-3xl">
           {translation.header}
         </h1>
-        {
-        //<ViewAsButton viewAs={viewAs} setViewAs={setViewAs} className="" />
-        }
         <Input
           ref={queryRef}
           className={`w-full md:max-w-72 ${translation.lang == "en" && "tracking-tighter"}`}
@@ -120,7 +110,7 @@ const Homepage_Sus = ({ translation }: { translation: Translation }) => {
           <>
             Out list currently has{" "}
             <span className="inline-block w-8 font-bold text-red-700 dark:text-red-500">
-              {translation.martyrCount}
+              {totalMartyr}
             </span>{" "}
             martyrs
           </>
@@ -128,7 +118,7 @@ const Homepage_Sus = ({ translation }: { translation: Translation }) => {
           <>
             আমাদের তালিকায় বর্তমানে{" "}
             <span className="inline-block w-8 font-bold text-red-700 dark:text-red-500">
-              {translation.martyrCount}
+              {toBengali(totalMartyr)}
             </span>{" "}
             জন শহীদ রয়েছেন
           </>
@@ -136,8 +126,6 @@ const Homepage_Sus = ({ translation }: { translation: Translation }) => {
       </p>
 
       <List
-        viewAs={viewAs}
-        setViewAs={setViewAs}
         searchResult={searchResult}
         lang={translation.lang}
         query={query}
@@ -165,8 +153,6 @@ const Homepage = ({ translation }: { translation: Translation }) => {
           </div>
 
           <List
-            viewAs={"page"}
-            setViewAs={() => {}}
             searchResult={[]}
             lang={translation.lang}
             currentPage={currentPage}

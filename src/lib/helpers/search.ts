@@ -1,5 +1,6 @@
-import createFuzzySearch, { FuzzyResult } from "@nozbe/microfuzz";
+import createFuzzySearch from "@nozbe/microfuzz";
 import searchableData from "./../../../public/data/searchableData.json"; // Preloaded data
+import { SearchResults } from "../types";
 
 const fuzzySearch = createFuzzySearch(searchableData, {
   getText: (item) => [
@@ -14,10 +15,9 @@ const fuzzySearch = createFuzzySearch(searchableData, {
   strategy: "smart",
 });
 
-export function SearchPerson(query: string): FuzzyResult<unknown>[] {
+export function SearchPerson(query: string): SearchResults {
   const result = fuzzySearch(query);
   return result;
 }
 
 export const MartyrList = searchableData;
-export const totalMartyrs = searchableData.length;
