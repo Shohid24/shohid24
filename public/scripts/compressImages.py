@@ -22,7 +22,9 @@ for i, file in enumerate(files, 1):
                 img = img.resize((width, height))
 
             img.save(f"compressed/{file}", quality=70, optimize=True)
-            print(f"{i:03}. Compressed {file}\r", end="")
 
     except Exception as e:
         print(f"Skipping {file}: {e}")
+    
+
+print(f"Compressed {i} images")

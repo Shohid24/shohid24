@@ -6,7 +6,6 @@ import type { Martyr } from "@/lib/types";
 
 export async function getData(): Promise<Martyr[]> {
   await MongoConnection();
-  // Fetch all users
   const users = await User.find({}).lean();
 
   const searchableData: Martyr[] = users
@@ -19,7 +18,7 @@ export async function getData(): Promise<Martyr[]> {
       hasImage: !(user.image?.includes("default.jpg") ?? false),
     }));
 
-  // Sort the data by date
+  // Sort the data by date in ascending order
   const sortedData = searchableData.sort((a, b) => {
     const dateA = new Date(a.date.split("/").reverse().join("/"));
     const dateB = new Date(b.date.split("/").reverse().join("/"));

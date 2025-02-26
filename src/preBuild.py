@@ -1,58 +1,59 @@
-import os, datetime
-
-os.system("python public/downloadImages.py")
-os.system("python public/compressImages.py")
-
-
-import json
-from pymongo import MongoClient
-from dotenv import load_dotenv
-
-load_dotenv()  # Load environment variables from.env file
+import os
+import subprocess
+import sys
 
 
-MONGO_URI = os.getenv("MONGO_URI")
-client = MongoClient(MONGO_URI)
-db = client.prod
-users_collection = db["individual"]  # Adjust collection name as needed
+class Console:
+    GREEN = "\033[92m"
+    YELLOW = "\033[93m"
+    RED = "\033[91m"
+    RESET = "\033[0m"
+
+    def error(self, message):
+        print(f"{self.RED}-> {message}{self.RESET}")
+
+    def log(self, message):
+        print(f"{self.YELLOW}-> {message}{self.RESET}")
+
+    def success(self, message):
+        print(f"{self.GREEN}-> {message}{self.RESET}")
+
+    def warn(self, message):
+        print(f"{self.YELLOW}-> {message}{self.RESET}")
 
 
-def fetch_data():
-    users = list(users_collection.find({}))
-    searchable_data = [
-        {
-            "id": str(user["id"]),
-            "name": {
-                "bn": user["bn"]["name"],
-                "en": user["en"]["name"],
-            },
-            "profession": {
-                "bn": user["bn"]["profession"],
-                "en": user["en"]["profession"],
-            },
-            "info": {
-                "bn": user["bn"]["info"],
-                "en": user["en"]["info"],
-            },
-            "date": user.get("date"),
-            "hasImage": "default.jpg" not in user.get("image", ""),
-        }
-        for user in users
-        if user["show"]
-    ]
+console = Console()
 
-    file_path = os.path.join(os.getcwd(), "public/data/searchableData.json")
-    os.makedirs(os.path.dirname(file_path), exist_ok=True)
 
-    data = sorted(
-        searchable_data, key=lambda x: datetime.datetime.strptime(x["date"], "%d/%m/%Y")
-    )
+def RunScriptWithColor(scriptPath):
+    scriptName = os.path.basename(scriptPath)
+    console.warn(f"Running `{scriptName}`")
 
-    with open(file_path, "w", encoding="utf-8") as f:
-        json.dump(data, f, indent=2, ensure_ascii=False)
-
-    print("✅ searchableData.json has been fetched!")
+    try:
+        result = subprocess.run(
+            scriptPath, capture_output=True, text=True, shell=True, check=True
+        )
+        console.success(f"`{scriptName}` completed successfully!")
+        if result.stdout and "pip" not in scriptName:
+            console.success(f"Output:\n{result.stdout}")
+    except subprocess.CalledProcessError as e:
+        console.error(f"{scriptName} failed!")
+        console.error(f"Error:\n{e.stderr or 'No error message'}")
+    except FileNotFoundError:
+        console.error(f"Error: Script '{scriptPath}' not found.")
+    except Exception as e:
+        console.error(f"An unexpected error occurred: {e}")
 
 
 if __name__ == "__main__":
-    fetch_data()
+    files = [
+        "python -m pip install -U pip",
+        "python -m pip install -r requirements.txt",
+        "python public/scripts/generateSitemap.py",
+        "python public/scripts/downloadImages.py",
+        "python public/scripts/compressImages.py",
+    ]
+    for file in files:
+        RunScriptWithColor(file)
+
+    console.success("All scripts executed successfully!")

@@ -1,10 +1,19 @@
 import os
-import json
 import datetime
+from dotenv import load_dotenv
+from pymongo import MongoClient
 
+load_dotenv()
 
-with open("data/searchableData.json", "rb") as f:
-    data = json.load(f)
+if os.path.exists("public/photos"):
+    os.chdir("public")
+
+MONGO_URI = os.getenv("MONGO_URI")
+client = MongoClient(MONGO_URI)
+db = client["prod"]
+collection = db["individuals"]
+data = list(collection.find())
+
 
 profiles = [f"profile/{i['id']}" for i in data]
 

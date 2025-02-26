@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev --turbopack",
-    "prebuild": "python -m pip install -r requirements.txt && python src/preBuild.py",
+    "prebuild": "python src/preBuild.py",
     "build": "next build",
     "run": "next build && serve out",
     "start": "next start",

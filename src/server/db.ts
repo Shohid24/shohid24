@@ -20,7 +20,7 @@ const connectDB = async () => {
 
     // If we can safely check readyState and we're connected, return early
     if (defaultConn.readyState === 1) {
-      console.log("Already connected to MongoDB");
+      // console.log("Already connected to MongoDB");
       return;
     }
 
