@@ -1,25 +1,117 @@
 import { useState, useRef, useEffect, Suspense, useTransition } from "react";
-import { useHotkeys } from "react-hotkeys-hook";
+import { parseAsInteger, parseAsString, useQueryState } from "nuqs";
 import { createPersonSearch } from "@/lib/helpers/search";
-import { Input } from "./ui/input";
 import { toBengali } from "@/lib/helpers/date";
+import { Input } from "./ui/input";
 import List from "@/components/List";
 import type { Translation } from "@/components/translations";
-import { parseAsInteger, parseAsString, useQueryState } from "nuqs";
-import { Martyr } from "@/lib/types";
+import type { Martyr, SearchResults } from "@/lib/types";
+import MountKeyboardShortcuts from "./sub/MountKeyboardShortcuts";
 
-const Homepage_Sus = ({
+function ShowMartyrCount({
+  isEnglish,
+  totalMartyrs,
+}: {
+  isEnglish: boolean;
+  totalMartyrs: number;
+}) {
+  const languageData = {
+    en: {
+      prefix: "Our list currently has ",
+      suffix: " martyrs",
+    },
+    bn: {
+      prefix: "আমাদের তালিকায় বর্তমানে ",
+      suffix: " জন শহীদ রয়েছেন",
+    },
+  };
+
+  const lang = isEnglish ? "en" : "bn";
+  const { prefix, suffix } = languageData[lang];
+  const count = isEnglish ? totalMartyrs : toBengali(totalMartyrs);
+
+  return (
+    <p className="mb-2.5 font-bold tracking-wide md:text-lg">
+      {prefix}
+      <span className="inline-block w-8 font-bold text-red-700 dark:text-red-500">
+        {count}
+      </span>
+      {suffix}
+    </p>
+  );
+}
+
+// Component to show search statistics
+const SearchStats = ({
+  translation,
+  searchResult,
+  isSearching,
+  query,
+  totalMartyrs,
+}: {
+  translation: Translation;
+  searchResult: SearchResults;
+  isSearching: boolean;
+  query: string;
+  totalMartyrs: number;
+}) => {
+  const isEnglish = translation.lang === "en";
+
+  // Show total stats when no query
+  if (query.length === 0) {
+    return (
+      <ShowMartyrCount isEnglish={isEnglish} totalMartyrs={totalMartyrs} />
+    );
+  }
+
+  // Show search status or results
+  if (isSearching) {
+    return (
+      <p className="mb-2 tracking-wide md:text-lg">
+        {isEnglish ? "Searching..." : "খোঁজা হচ্ছে..."}
+      </p>
+    );
+  }
+
+  return (
+    <p className="mb-2 tracking-wide md:text-lg">
+      {isEnglish ? (
+        <>
+          Found{" "}
+          <span className="inline-block w-8 font-bold text-red-700 dark:text-red-500">
+            {searchResult.length}
+          </span>{" "}
+          matching {searchResult.length === 1 ? "person" : "people"}
+        </>
+      ) : (
+        <>
+          <span className="inline-block w-8 font-bold text-red-700 dark:text-red-500">
+            {toBengali(searchResult.length)}
+          </span>{" "}
+          জন এর রেজাল্ট দেখানো হচ্ছে
+        </>
+      )}
+    </p>
+  );
+};
+
+// Main component with search functionality
+const HomepageContent = ({
   translation,
   data,
 }: {
   translation: Translation;
   data: Martyr[];
 }) => {
-  // Initialize the search function with the data
-  const SearchPerson = createPersonSearch(data);
+  // Create search function only once
+  const searchPerson = useRef(createPersonSearch(data)).current;
 
-  const [firstLoad, setFirstLoad] = useState(true);
+  // State for managing search and UI
   const [isSearching, startTransition] = useTransition();
+  const [searchResult, setSearchResult] = useState<SearchResults>([]);
+  const totalMartyrs = data.length;
+
+  // URL query params
   const [query, setQuery] = useQueryState(
     "query",
     parseAsString.withDefault(""),
@@ -28,53 +120,39 @@ const Homepage_Sus = ({
     "page",
     parseAsInteger.withDefault(1),
   );
+
+  // Refs
   const queryRef = useRef<HTMLInputElement | null>(null);
+  const prevQueryRef = useRef(query);
 
-  // Initialize with empty search (will show all results)
-  const [searchResult, setSearchResult] = useState(() => SearchPerson(""));
-  const [totalMartyr] = useState(data.length);
-
+  // Handle search with useTransition
   useEffect(() => {
-    startTransition(() => {
-      const res = SearchPerson(query);
-      setSearchResult(res);
-    });
-    if (firstLoad) {
-      return setFirstLoad(false);
+    // Skip search if query is empty
+    if (query === "") {
+      setSearchResult([]);
+      return;
     }
-    setCurrentPage(1);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [query]);
 
-  // Rest of your component remains the same...
+    // Use transition to keep UI responsive during search
+    startTransition(() => {
+      const results = searchPerson(query);
+      setSearchResult(results);
+    });
 
-  useHotkeys(
-    "mod+k",
-    (event) => {
-      event.preventDefault();
-      // if the input is focused, blur it
-      if (document.activeElement === queryRef.current) {
-        queryRef.current?.blur();
-        return;
-      }
-      queryRef.current?.focus();
-    },
-    {
-      enableOnFormTags: true,
-    },
-  );
-  useHotkeys(
-    "esc",
-    () => {
-      // blue the currently focused input
-      if (document.activeElement instanceof HTMLInputElement) {
-        document.activeElement.blur();
-      }
-    },
-    {
-      enableOnFormTags: true,
-    },
-  );
+    // Reset page only if query changed
+    if (prevQueryRef.current !== query) {
+      setCurrentPage(1);
+      prevQueryRef.current = query;
+    }
+  }, [query, searchPerson, setCurrentPage]);
+
+  // Handle query change
+  const handleQueryChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setQuery(e.target.value);
+  };
+
+  // Keyboard shortcuts
+  MountKeyboardShortcuts(queryRef);
 
   return (
     <main>
@@ -84,59 +162,20 @@ const Homepage_Sus = ({
         </h1>
         <Input
           ref={queryRef}
-          className={`w-full md:max-w-72 ${translation.lang == "en" && "tracking-tighter"}`}
+          className={`w-full md:max-w-72 ${translation.lang === "en" && "tracking-tighter"}`}
           placeholder={translation.searchPlaceholder}
           value={query}
-          onChange={(e) => setQuery(e.target.value)}
+          onChange={handleQueryChange}
         />
       </div>
-      <p
-        className={`-mt-1 mb-2 tracking-wide transition-all duration-100 md:text-lg ${query.length === 0 ? "scale-0" : ""}`}
-      >
-        {translation.lang === "en" ? (
-          !isSearching ? (
-            <>
-              Found{" "}
-              <span className="inline-block w-8 font-bold text-red-700 dark:text-red-500">
-                {searchResult.length}
-              </span>{" "}
-              matching person
-            </>
-          ) : (
-            "Searching..."
-          )
-        ) : !isSearching ? (
-          <>
-            <span className="inline-block w-8 font-bold text-red-700 dark:text-red-500">
-              {toBengali(searchResult.length)}
-            </span>{" "}
-            জন এর রেজাল্ট দেখানো হচ্ছে
-          </>
-        ) : (
-          "খোঁজা হচ্ছে..."
-        )}
-      </p>
-      <p
-        className={`-mt-8 mb-2.5 font-bold tracking-wide transition-all duration-100 md:text-lg ${query.length === 0 ? "" : "scale-0"}`}
-      >
-        {translation.lang == "en" ? (
-          <>
-            Out list currently has{" "}
-            <span className="inline-block w-8 font-bold text-red-700 dark:text-red-500">
-              {totalMartyr}
-            </span>{" "}
-            martyrs
-          </>
-        ) : (
-          <>
-            আমাদের তালিকায় বর্তমানে{" "}
-            <span className="inline-block w-8 font-bold text-red-700 dark:text-red-500">
-              {toBengali(totalMartyr)}
-            </span>{" "}
-            জন শহীদ রয়েছেন
-          </>
-        )}
-      </p>
+
+      <SearchStats
+        translation={translation}
+        searchResult={searchResult}
+        isSearching={isSearching}
+        query={query}
+        totalMartyrs={totalMartyrs}
+      />
 
       <List
         martyrs={data}
@@ -150,7 +189,8 @@ const Homepage_Sus = ({
   );
 };
 
-const Homepage = ({
+// Loading skeleton component
+const HomepageSkeleton = ({
   translation,
   data,
 }: {
@@ -158,31 +198,44 @@ const Homepage = ({
   data: Martyr[];
 }) => {
   const [currentPage, setCurrentPage] = useState(1);
+
+  return (
+    <main>
+      <div className="m-3 flex flex-col items-center justify-between gap-2 border-b py-2 text-start md:flex-row">
+        <h1 className="text-xl font-semibold md:text-2xl lg:text-3xl">
+          {translation.header}
+        </h1>
+        <Input
+          className="w-full md:max-w-64"
+          placeholder={translation.searchPlaceholder}
+        />
+      </div>
+
+      <List
+        martyrs={data}
+        searchResult={[]}
+        lang={translation.lang}
+        query=""
+        currentPage={currentPage}
+        setCurrentPage={setCurrentPage}
+      />
+    </main>
+  );
+};
+
+// Main homepage component with suspense
+const Homepage = ({
+  translation,
+  data,
+}: {
+  translation: Translation;
+  data: Martyr[];
+}) => {
   return (
     <Suspense
-      fallback={
-        <main>
-          <div className="m-3 flex flex-col items-center justify-between gap-2 border-b py-2 text-start md:flex-row">
-            <h1 className="text-xl font-semibold md:text-2xl lg:text-3xl">
-              {translation.header}
-            </h1>
-            <Input
-              className="w-full md:max-w-64"
-              placeholder={translation.searchPlaceholder}
-            />
-          </div>
-
-          <List
-            martyrs={data}
-            searchResult={[]}
-            lang={translation.lang}
-            currentPage={currentPage}
-            setCurrentPage={setCurrentPage}
-          />
-        </main>
-      }
+      fallback={<HomepageSkeleton translation={translation} data={data} />}
     >
-      <Homepage_Sus translation={translation} data={data} />
+      <HomepageContent translation={translation} data={data} />
     </Suspense>
   );
 };

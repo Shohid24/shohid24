@@ -1,5 +1,5 @@
 import createFuzzySearch from "@nozbe/microfuzz";
-import { Martyr, SearchResults } from "../types";
+import { Martyr, SearchResults } from "@/lib/types";
 
 export function createPersonSearch(data: Martyr[]) {
   const fuzzySearch = createFuzzySearch(data, {
@@ -12,7 +12,7 @@ export function createPersonSearch(data: Martyr[]) {
       item.en.info,
       item.date,
     ],
-    strategy: "smart",
+    strategy: "smart", // off, smart (default), aggressive
   });
 
   return (query: string): SearchResults => {
