@@ -1,23 +1,21 @@
 import createFuzzySearch from "@nozbe/microfuzz";
-import searchableData from "./../../../public/data/searchableData.json"; // Preloaded data
-import { SearchResults } from "../types";
+import { Martyr, SearchResults } from "../types";
 
-const fuzzySearch = createFuzzySearch(searchableData, {
-  getText: (item) => [
-    item.name.bn,
-    item.name.en,
-    item.profession.bn,
-    item.profession.en,
-    item.info.bn,
-    item.info.en,
-    item.date,
-  ],
-  strategy: "smart",
-});
+export function createPersonSearch(data: Martyr[]) {
+  const fuzzySearch = createFuzzySearch(data, {
+    getText: (item: Martyr) => [
+      item.bn.name,
+      item.en.name,
+      item.bn.profession,
+      item.en.profession,
+      item.bn.info,
+      item.en.info,
+      item.date,
+    ],
+    strategy: "smart",
+  });
 
-export function SearchPerson(query: string): SearchResults {
-  const result = fuzzySearch(query);
-  return result;
+  return (query: string): SearchResults => {
+    return fuzzySearch(query);
+  };
 }
-
-export const MartyrList = searchableData;

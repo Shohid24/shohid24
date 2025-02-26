@@ -1,69 +1,23 @@
-from pymongo import MongoClient
-import os
-from dotenv import load_dotenv
+import requests
 
-# Load environment variables
-load_dotenv()
+proxy_host = "192.168.199.155"
+proxy_port = 1080
 
+proxies = {
+    "http": f"socks5://{proxy_host}:{proxy_port}",
+    "https": f"socks5://{proxy_host}:{proxy_port}", #use socks5 for both http and https
+}
 
-def clean_individual_birthPlace():
-    try:
-        # Connect to MongoDB
-        client = MongoClient(os.getenv("MONGO_URI"))
-        db = client["prod"]
-        collection = db["individual"]
+try:
+    response = requests.get("http://httpbin.org/ip", proxies=proxies, timeout=10) #added timeout
+    response.raise_for_status() # Raise HTTPError for bad responses (4xx or 5xx)
+    print(response.json())
 
-        # Fetch all documents
-        documents = [*collection.find({})]
-
-        # Counter for updated documents
-        update_count = 0
-
-        # Process each document
-        for doc in documents:
-            updates = {}
-
-            # Check and clean en.birthPlace
-            if "en" in doc and "birthPlace" in doc["en"]:
-                original_birthPlace = doc["en"]["birthPlace"]
-                cleaned_birthPlace = original_birthPlace.rstrip(".").rstrip("।")
-                if original_birthPlace != cleaned_birthPlace:
-                    updates["en.birthPlace"] = cleaned_birthPlace
-
-            # Check and clean bn.birthPlace
-            if "bn" in doc and "birthPlace" in doc["bn"]:
-                original_birthPlace = doc["bn"]["birthPlace"]
-                cleaned_birthPlace = original_birthPlace.rstrip("।").rstrip(".")
-                if original_birthPlace != cleaned_birthPlace:
-                    updates["bn.birthPlace"] = cleaned_birthPlace
-
-            # Remove __v if present
-            if "__v" in doc:
-                if not updates:
-                    result = collection.update_one(
-                        {"_id": doc["_id"]}, {"$unset": {"__v": ""}}
-                    )
-                else:
-                    result = collection.update_one(
-                        {"_id": doc["_id"]}, {"$set": updates, "$unset": {"__v": ""}}
-                    )
-            elif updates:
-                result = collection.update_one({"_id": doc["_id"]}, {"$set": updates})
-
-            if updates or "__v" in doc:
-                update_count += 1
-                print(f"Updated document with ID: {doc.get('id')}")
-
-        print(f"Successfully updated {update_count} documents")
-
-    except Exception as e:
-        print(f"An error occurred: {str(e)}")
-
-    finally:
-        # Close the connection
-        if "client" in locals():
-            client.close()
-
-
-if __name__ == "__main__":
-    clean_individual_birthPlace()
+except requests.exceptions.ProxyError as e:
+    print(f"Proxy error: {e}")
+except requests.exceptions.RequestException as e:
+    print(f"Request error: {e}")
+except ValueError as e: #in case json() fails
+    print(f"JSON decoding error: {e}")
+except Exception as e: #catch all other errors
+    print(f"An unexpected error occurred: {e}")

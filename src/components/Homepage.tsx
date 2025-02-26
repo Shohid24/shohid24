@@ -1,6 +1,6 @@
 import { useState, useRef, useEffect, Suspense, useTransition } from "react";
 import { useHotkeys } from "react-hotkeys-hook";
-import { SearchPerson } from "@/lib/helpers/search";
+import { createPersonSearch } from "@/lib/helpers/search";
 import { Input } from "./ui/input";
 import { toBengali } from "@/lib/helpers/date";
 import List from "@/components/List";
@@ -8,7 +8,16 @@ import type { Translation } from "@/components/translations";
 import { parseAsInteger, parseAsString, useQueryState } from "nuqs";
 import { Martyr } from "@/lib/types";
 
-const Homepage_Sus = ({ translation }: { translation: Translation }) => {
+const Homepage_Sus = ({
+  translation,
+  data,
+}: {
+  translation: Translation;
+  data: Martyr[];
+}) => {
+  // Initialize the search function with the data
+  const SearchPerson = createPersonSearch(data);
+
   const [firstLoad, setFirstLoad] = useState(true);
   const [isSearching, startTransition] = useTransition();
   const [query, setQuery] = useQueryState(
@@ -21,8 +30,9 @@ const Homepage_Sus = ({ translation }: { translation: Translation }) => {
   );
   const queryRef = useRef<HTMLInputElement | null>(null);
 
-  const [searchResult, setSearchResult] = useState(SearchPerson(""));
-  const [totalMartyr] = useState(searchResult.length);
+  // Initialize with empty search (will show all results)
+  const [searchResult, setSearchResult] = useState(() => SearchPerson(""));
+  const [totalMartyr] = useState(data.length);
 
   useEffect(() => {
     startTransition(() => {
@@ -35,6 +45,8 @@ const Homepage_Sus = ({ translation }: { translation: Translation }) => {
     setCurrentPage(1);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [query]);
+
+  // Rest of your component remains the same...
 
   useHotkeys(
     "mod+k",
@@ -127,6 +139,7 @@ const Homepage_Sus = ({ translation }: { translation: Translation }) => {
       </p>
 
       <List
+        martyrs={data}
         searchResult={searchResult}
         lang={translation.lang}
         query={query}
@@ -160,6 +173,7 @@ const Homepage = ({
           </div>
 
           <List
+            martyrs={data}
             searchResult={[]}
             lang={translation.lang}
             currentPage={currentPage}
@@ -168,7 +182,7 @@ const Homepage = ({
         </main>
       }
     >
-      <Homepage_Sus translation={translation} />
+      <Homepage_Sus translation={translation} data={data} />
     </Suspense>
   );
 };

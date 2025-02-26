@@ -1,9 +1,6 @@
 import { getData } from "@/server/getData";
 import Home from "./components/Home";
 
-// Mark the page as statically generated
-export const dynamic = "force-static";
-
 // Generate static params (needed even if empty for static generation)
 export async function generateStaticParams() {
   return [];
@@ -20,5 +17,6 @@ export default async function Page() {
   const { data, lastUpdated } = await fetchData();
 
   console.log("Last updated:", lastUpdated);
+  // return <div>Hello {JSON.stringify(data[0])}</div>
   return <Home data={data} lastUpdated={lastUpdated} />;
 }

@@ -3,7 +3,6 @@ import { parseAsInteger, useQueryState } from "nuqs";
 import Profile from "./Profile";
 import ProfileSkeleton from "./ProfileSkeleton";
 import Pagination from "./sub/Pagination";
-import { MartyrList } from "@/lib/helpers/search";
 import type { SearchResults, Martyr, ProfileType } from "@/lib/types";
 import { formatDate } from "@/lib/helpers/date";
 
@@ -22,9 +21,9 @@ const createProfileProps = (
 ): ProfileType => ({
   index: index,
   id: item.id,
-  name: item.name[lang],
-  profession: item.profession[lang],
-  info: item.info[lang],
+  name: item[lang].name,
+  profession: item[lang].profession,
+  info: item[lang].info,
   martyrDate: formatDate(item.date),
   imageUrl: item.hasImage ? `/photos/${item.id}.jpg` : "/default.jpg",
   lang: lang,
@@ -32,12 +31,14 @@ const createProfileProps = (
 
 const List = ({
   searchResult,
+  martyrs,
   lang,
   query,
   currentPage,
   setCurrentPage,
 }: {
   searchResult: SearchResults;
+  martyrs: Martyr[]; // Add the martyrs prop to pass in the full list
   lang: string;
   query: string;
   currentPage: number;
@@ -55,7 +56,7 @@ const List = ({
   }, [searchResult]);
 
   // Helper function for pagination
-  const getPaginatedItems = <T extends { item?: Martyr; id?: string }>(
+  const getPaginatedItems = <T,>(
     items: T[],
     page: number,
     itemsPerPage: number,
@@ -100,11 +101,8 @@ const List = ({
     );
   }
 
-  const paginatedMartyrList = getPaginatedItems(
-    MartyrList,
-    currentPage,
-    perPage,
-  );
+  // Use the provided martyrs array instead of undefined MartyrList
+  const paginatedMartyrList = getPaginatedItems(martyrs, currentPage, perPage);
 
   return (
     <>
@@ -114,7 +112,7 @@ const List = ({
             key={item.id}
             {...createProfileProps(
               item,
-              MartyrList.findIndex((i) => i.id === item.id),
+              martyrs.findIndex((i) => i.id === item.id),
               lang as "bn" | "en",
             )}
           />
@@ -123,7 +121,7 @@ const List = ({
       <Pagination
         currentPage={currentPage}
         perPage={perPage}
-        totalItems={MartyrList.length}
+        totalItems={martyrs.length}
         setCurrentPage={setCurrentPage}
       />
     </>
@@ -132,12 +130,14 @@ const List = ({
 
 const SuspendedList = ({
   searchResult,
+  martyrs,
   lang,
   query = "",
   currentPage,
   setCurrentPage,
 }: {
   searchResult: SearchResults;
+  martyrs: Martyr[]; // Add the martyrs prop here as well
   lang: string;
   query?: string;
   currentPage: number;
@@ -155,6 +155,7 @@ const SuspendedList = ({
     >
       <List
         searchResult={searchResult}
+        martyrs={martyrs}
         lang={lang}
         query={query}
         currentPage={currentPage}

@@ -17,7 +17,13 @@ import {
 import { getTranslation, Translation } from "./components/translations";
 import { parseAsString, useQueryState } from "nuqs";
 
-const FindProfile = ({ translation }: { translation: Translation }) => {
+const FindProfile = ({
+  translation,
+  totalMartyrs,
+}: {
+  translation: Translation;
+  totalMartyrs: number;
+}) => {
   const [userID, setUserID] = useState("");
   const router = useRouter();
 
@@ -38,7 +44,7 @@ const FindProfile = ({ translation }: { translation: Translation }) => {
             {translation.findHeader}
           </CardTitle>
           <CardDescription className="mt-2 text-center">
-            {translation.findDescription(1)}
+            {translation.findDescription(totalMartyrs)}
           </CardDescription>
         </CardHeader>
         <form onSubmit={handleSubmit}>
@@ -63,7 +69,7 @@ const FindProfile = ({ translation }: { translation: Translation }) => {
   );
 };
 
-function Wrapper() {
+function Wrapper({ totalMartyrs }: { totalMartyrs: number }) {
   const [lang, setLang] = useQueryState(
     "lang",
     parseAsString.withDefault("bn"),
@@ -73,13 +79,13 @@ function Wrapper() {
   return (
     <>
       <Navbar lang={lang} setLang={setLang} />
-      <FindProfile translation={translation} />
+      <FindProfile translation={translation} totalMartyrs={totalMartyrs} />
       <Footer lang={lang as "bn" | "en"} />
     </>
   );
 }
 
-function AllProfiles() {
+function AllProfiles({ totalMartyrs }: { totalMartyrs: number }) {
   const lang = "bn";
   useEffect(() => {
     // focus on "find-profile" input
@@ -90,12 +96,15 @@ function AllProfiles() {
       fallback={
         <>
           <Navbar lang={lang} setLang={() => {}} />
-          <FindProfile translation={getTranslation(lang)} />
+          <FindProfile
+            translation={getTranslation(lang)}
+            totalMartyrs={totalMartyrs}
+          />
           <Footer lang={lang as "bn" | "en"} />
         </>
       }
     >
-      <Wrapper />
+      <Wrapper totalMartyrs={totalMartyrs} />
     </Suspense>
   );
 }

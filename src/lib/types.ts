@@ -1,5 +1,4 @@
 import { FuzzyResult } from "@nozbe/microfuzz";
-import { ObjectId } from "mongoose";
 
 // Common language-specific fields
 export interface LanguageContent {
@@ -7,14 +6,7 @@ export interface LanguageContent {
   en: string;
 }
 
-// Common bilingual fields for various user types
-export interface BilingualFields {
-  name: LanguageContent;
-  profession: LanguageContent;
-  info: LanguageContent;
-}
-
-// Language-specific content structure
+// Language-specific content structure for basic fields
 export interface LanguageSpecificContent {
   name: string;
   profession: string;
@@ -41,11 +33,13 @@ export type ProfileType = {
   showIndex?: boolean;
 };
 
-// Basic martyr data
-export interface Martyr extends BilingualFields {
+// Updated Martyr interface to match your data structure
+export interface Martyr {
   id: string;
+  bn: any;
+  en: any;
   date: string;
-  hasImage: boolean | number;
+  hasImage: boolean;
 }
 
 // Full martyr information

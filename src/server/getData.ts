@@ -9,23 +9,12 @@ export async function getData(): Promise<Martyr[]> {
   // Fetch all users
   const users = await User.find({}).lean();
 
-  // Transform the data
   const searchableData: Martyr[] = users
-    .filter((user) => user.show)
-    .map((user) => ({
-      id: user.id.toString(),
-      name: {
-        bn: user.bn.name,
-        en: user.en.name,
-      },
-      profession: {
-        bn: user.bn.profession,
-        en: user.en.profession,
-      },
-      info: {
-        bn: user.bn.info,
-        en: user.en.info,
-      },
+    .filter((user: any) => user.show)
+    .map((user: any) => ({
+      id: user.id,
+      bn: user.bn,
+      en: user.en,
       date: user.date,
       hasImage: !(user.image?.includes("default.jpg") ?? false),
     }));

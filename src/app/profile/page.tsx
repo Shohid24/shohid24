@@ -1,10 +1,23 @@
+import { getData } from "@/server/getData";
 import AllProfiles from "./AllProfiles";
 
-const Page = () => {
-  return <AllProfiles />;
-};
 
-export default Page;
+// Generate static params (needed even if empty for static generation)
+export async function generateStaticParams() {
+  return [];
+}
+
+async function fetchData() {
+  const data = await getData();
+  return { data };
+}
+
+export default async function Page() {
+  // This will only run at build time for static exports
+  const { data } = await fetchData();
+
+  return <AllProfiles totalMartyrs={data.length}/>;
+}
 
 export const metadata = {
   metadataBase: new URL("https://shohid24.pages.dev"),
