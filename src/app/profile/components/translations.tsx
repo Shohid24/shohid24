@@ -1,4 +1,3 @@
-import { totalMartyrs } from "@/lib/helpers/search";
 import { toBengali } from "@/lib/helpers/date";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
@@ -38,7 +37,7 @@ export const ENGLISH = {
     </>
   ),
   findHeader: "Find a Martyr by ID",
-  findDescription: (
+  findDescription: (totalMartyrs: number) => (
     <>
       We currently have
       <span className="px-1 font-bold text-red-500 dark:text-red-600">
@@ -88,7 +87,7 @@ export const BANGLA = {
     </>
   ),
   findHeader: "শহীদের আইডি দিয়ে খুঁজুন",
-  findDescription: (
+  findDescription: (totalMartyrs: number) => (
     <>
       বর্তমানে আমাদের তালিকায়
       <span className="px-1 font-bold text-red-500 dark:text-red-600">

@@ -2,76 +2,125 @@
 import { Suspense, useEffect } from "react";
 import Link from "next/link";
 import Head from "next/head";
+import { parseAsString, useQueryState } from "nuqs";
 
 import MaxwidthWrapper from "@/components/ui/MaxwidthWrapper";
 import Navbar from "@/components/Navbar";
 import Banner from "@/components/Banner";
 import Homepage from "@/components/Homepage";
 import Footer from "@/components/Footer";
+import RelativeTime from "@/components/sub/RelativeTime";
 
-import { parseAsString, useQueryState } from "nuqs";
 import { getTranslation } from "@/components/translations";
 import { getFontClass } from "@/lib/fontLoader";
-import LastUpdatedJson from "./../../../../public/lastUpdated.json";
-import RelativeTime from "@/components/sub/RelativeTime";
 import { Martyr } from "@/lib/types";
 
-const GetComponent = ({
-  lang,
-  setLang,
-}: {
-  lang: string;
-  setLang: React.Dispatch<React.SetStateAction<string>>;
-}) => {
+// Type for language options
+type LanguageOption = "en" | "bn";
+
+// Separate page head management into its own component
+const PageHead = ({ lang }: { lang: LanguageOption }) => {
   const translation = getTranslation(lang);
+
   useEffect(() => {
     document.title = translation.title;
     document
       .querySelector('meta[name="description"]')
       ?.setAttribute("content", translation.description);
   }, [translation]);
+
+  return (
+    <Head>
+      <title>{translation.title}</title>
+    </Head>
+  );
+};
+
+// Component for the submission button
+const SubmissionButton = ({ text }: { text: string }) => (
+  <Link
+    href="https://forms.gle/efEVqZEHHR4fZuyG7"
+    className="inline-block rounded-full bg-red-600 p-2.5 text-lg font-bold text-gray-100 underline decoration-red-300 underline-offset-4 shadow-lg shadow-red-700/50 transition-all duration-100 hover:scale-[1.01] hover:bg-red-700 hover:shadow-red-700/70 md:p-3 md:text-xl lg:text-2xl"
+    target="_blank"
+  >
+    {text}
+  </Link>
+);
+
+// Main content component with proper naming
+const LanguageAwareContent = ({
+  lang,
+  setLang,
+  data,
+  lastUpdated,
+}: {
+  lang: LanguageOption;
+  setLang: React.Dispatch<React.SetStateAction<string>>;
+  data: Martyr[];
+  lastUpdated: string;
+}) => {
+  const translation = getTranslation(lang);
+
   return (
     <div className={getFontClass(lang)}>
-      <Head>
-        <title>{translation.title}</title>
-      </Head>
+      <PageHead lang={lang} />
       <Navbar lang={lang} setLang={setLang} />
       <Banner />
       <MaxwidthWrapper>
-        <Link
-          href="https://forms.gle/efEVqZEHHR4fZuyG7"
-          className="inline-block rounded-full bg-red-600 p-2.5 text-lg font-bold text-gray-100 underline decoration-red-300 underline-offset-4 shadow-lg shadow-red-700/50 transition-all duration-100 hover:scale-[1.01] hover:bg-red-700 hover:shadow-red-700/70 md:p-3 md:text-xl lg:text-2xl"
-          target="_blank"
-        >
-          {translation.submitButton}
-        </Link>
-        {/* <Hero translation={translation} /> */}
-        <Homepage translation={translation} />
-        <RelativeTime
-          className="mt-10"
-          utcTime={LastUpdatedJson.lastUpdated}
-          lang={lang as "bn" | "en"}
-        />
+        <SubmissionButton text={translation.submitButton} />
+        <Homepage translation={translation} data={data}/>
+        <RelativeTime className="mt-10" utcTime={lastUpdated} lang={lang} />
       </MaxwidthWrapper>
-      <Footer lang={lang as "bn" | "en"} />
+      <Footer lang={lang} />
     </div>
   );
 };
 
-const Home_Sus = ({ data }: { data: Martyr }) => {
+// Component with Suspense support
+const SuspendedHome = ({
+  data,
+  lastUpdated,
+}: {
+  data: Martyr[];
+  lastUpdated: string;
+}) => {
   const [lang, setLang] = useQueryState(
     "lang",
     parseAsString.withDefault("bn"),
   );
-  return <GetComponent lang={lang as "en" | "bn"} setLang={setLang} />;
+
+  return (
+    <LanguageAwareContent
+      lang={lang as LanguageOption}
+      setLang={setLang}
+      data={data}
+      lastUpdated={lastUpdated}
+    />
+  );
 };
 
-function Home({ data }: { data: Martyr }) {
+// Main Home component
+const Home = ({
+  data,
+  lastUpdated,
+}: {
+  data: Martyr[];
+  lastUpdated: string;
+}) => {
   return (
-    <Suspense fallback={<GetComponent lang="bn" setLang={() => {}} />}>
-      <Home_Sus data={data} />
+    <Suspense
+      fallback={
+        <LanguageAwareContent
+          lang="bn"
+          setLang={() => {}}
+          data={data}
+          lastUpdated={lastUpdated}
+        />
+      }
+    >
+      <SuspendedHome data={data} lastUpdated={lastUpdated} />
     </Suspense>
   );
-}
+};
 
 export default Home;

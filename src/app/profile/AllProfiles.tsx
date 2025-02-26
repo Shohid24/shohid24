@@ -38,7 +38,7 @@ const FindProfile = ({ translation }: { translation: Translation }) => {
             {translation.findHeader}
           </CardTitle>
           <CardDescription className="mt-2 text-center">
-            {translation.findDescription}
+            {translation.findDescription(1)}
           </CardDescription>
         </CardHeader>
         <form onSubmit={handleSubmit}>

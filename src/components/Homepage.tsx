@@ -6,6 +6,7 @@ import { toBengali } from "@/lib/helpers/date";
 import List from "@/components/List";
 import type { Translation } from "@/components/translations";
 import { parseAsInteger, parseAsString, useQueryState } from "nuqs";
+import { Martyr } from "@/lib/types";
 
 const Homepage_Sus = ({ translation }: { translation: Translation }) => {
   const [firstLoad, setFirstLoad] = useState(true);
@@ -136,7 +137,13 @@ const Homepage_Sus = ({ translation }: { translation: Translation }) => {
   );
 };
 
-const Homepage = ({ translation }: { translation: Translation }) => {
+const Homepage = ({
+  translation,
+  data,
+}: {
+  translation: Translation;
+  data: Martyr[];
+}) => {
   const [currentPage, setCurrentPage] = useState(1);
   return (
     <Suspense

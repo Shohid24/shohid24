@@ -1,20 +1,24 @@
 import { getData } from "@/server/getData";
 import Home from "./components/Home";
-import type { Martyr } from "@/lib/types";
 
-// This function runs at build time in production
-export async function getStaticProps() {
-  const data = await getData();
+// Mark the page as statically generated
+export const dynamic = "force-static";
 
-  return {
-    props: {
-      data,
-    },
-  };
+// Generate static params (needed even if empty for static generation)
+export async function generateStaticParams() {
+  return [];
 }
 
-const Root = ({ data }: { data: Martyr }) => {
-  return <Home data={data} />;
-};
+async function fetchData() {
+  const data = await getData();
+  const lastUpdated = new Date().toISOString();
+  return { data, lastUpdated };
+}
 
-export default Root;
+export default async function Page() {
+  // This will only run at build time for static exports
+  const { data, lastUpdated } = await fetchData();
+
+  console.log("Last updated:", lastUpdated);
+  return <Home data={data} lastUpdated={lastUpdated} />;
+}
