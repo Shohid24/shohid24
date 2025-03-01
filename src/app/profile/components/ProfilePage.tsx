@@ -3,12 +3,13 @@ import Balancer from "react-wrap-balancer";
 import Profile from "@/components/Profile";
 
 import { Separator } from "@/components/ui/separator";
-import { BadgeCheck, BadgeX, Clock, EyeOff } from "lucide-react";
+import { BadgeCheck, BadgeX, EyeOff } from "lucide-react";
 import { IUser } from "@/server/schema/user";
 import { getTranslation } from "./translations";
 import { formatDate, toBengali } from "@/lib/helpers/date";
 import { cn, guid } from "@/lib/utils";
 import RelativeTime from "@/components/sub/RelativeTime";
+import Share from "@/components/sub/Share";
 
 const ProfilePage = ({
   martyr,
@@ -30,11 +31,26 @@ const ProfilePage = ({
     ? "/default.jpg"
     : `/photos/${id}.jpg`;
 
+  const engShareText = `\
+Read about ${name}, who was martyred on ${date} during the July 2024 Revolution of Bangladesh.
+
+#Shohid24 #Bangladesh
+
+
+`;
+  const bnShareText = `\
+${name}, ${toBengali(date)} এ জুলাই ২০২৪ বিপ্লবে শহীদ হন। তাঁর সম্পর্কে বিস্তারিত পড়ুন।
+
+#শহীদ২৪ #বাংলাদেশ
+
+
+`;
+
   return (
     <>
       <title>{translation.generateTitle(name)}</title>
       {!show && (
-        <div className="animate-drop-in mt-2 flex w-full items-center gap-4 rounded-lg border-l-4 border-red-500 bg-gradient-to-r from-red-950/5 to-red-900/10 px-4 py-2 shadow-lg backdrop-blur-sm transition-all duration-300 hover:shadow-red-500/10">
+        <div className="mt-2 flex w-full animate-drop-in items-center gap-4 rounded-lg border-l-4 border-red-500 bg-gradient-to-r from-red-950/5 to-red-900/10 px-4 py-2 shadow-lg backdrop-blur-sm transition-all duration-300 hover:shadow-red-500/10">
           <div className="rounded-full bg-red-500/10 p-2">
             <EyeOff className="h-5 w-5 text-red-500" />
           </div>
@@ -44,25 +60,36 @@ const ProfilePage = ({
         </div>
       )}
       <div className="my-5 flex flex-col items-center justify-between gap-2 md:flex-row md:items-stretch">
-        <Profile
-          noLink
-          header
-          id={String(id)}
-          name={name}
-          profession={profession}
-          info={info}
-          martyrDate={formatDate(date)}
-          imageUrl={imageUrl}
-          lang={lang}
-          showIndex={false}
-          className="max-h-52 w-full grid-cols-[auto_2fr] border-none md:-mt-2 md:grid-cols-1"
-        />
+        <div className="flex flex-col items-center justify-start">
+          <Profile
+            noLink
+            header
+            id={String(id)}
+            name={name}
+            profession={profession}
+            info={info}
+            martyrDate={formatDate(date)}
+            imageUrl={imageUrl}
+            lang={lang}
+            showIndex={false}
+            className="max-h-96 w-full grid-cols-[auto_2fr] border-none md:-mt-2 md:grid-cols-1"
+          />
+          <Separator className="my-1" />
+          <Share
+            url={
+              `https://shohid24.pages.dev/profile/${id}` +
+              (lang == "en" ? "?lang=en" : "")
+            }
+            title={lang == "bn" ? bnShareText : engShareText}
+          />
+        </div>
+
         <div className="h-auto w-full flex-1 rounded-md border p-2 text-start text-lg font-bold md:text-xl">
           <div className="mb-1.5 flex items-center justify-center gap-2 text-center text-sm tracking-wider text-primary/80">
             {verified ? (
               <>
                 {translation.verified}
-                <BadgeCheck size={16} className="text-blue-500" />
+                <BadgeCheck size={16} className="text-green-500" />
               </>
             ) : (
               <>

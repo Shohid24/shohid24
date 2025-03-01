@@ -1,8 +1,11 @@
 - [x] Add last updated info
 - [x] Show Verification status
 - [x] Show banner if `show=false`
-- [ ] Previous / Next navigation
 - [x] The home page will get data directly from mongodb
+- [x] Share button
+- [ ] Update the about text
+- [ ] Proper "New Martyr" submission page
+- [ ] Previous / Next navigation
 - [ ] `/profile/id.json` path for json data
 - [ ] News sources at each profile
 - [ ] News of Different Martyrs

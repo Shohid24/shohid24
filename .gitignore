@@ -2,7 +2,7 @@
 .env
 public/compressed
 __pycache__
-
+test.py
 # dependencies
 /node_modules
 /.pnp
