@@ -1,6 +1,14 @@
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 
+const CreditWebsites = [
+  "bssnews.net",
+  "kalerkantho.com",
+  "talesofjuly-sd.blogspot.com",
+  "shohid.info",
+  "redjuly.live",
+];
+
 export const ENGLISH = {
   lang: "en",
   title: "About Shohid24 - Listing all the martyrs of July Movement",
@@ -43,27 +51,22 @@ export const ENGLISH = {
       <br />
       All the source code and data of this website are publicly available on
       GitHub. <br />
-      We first saw the list of martyrs on{" "}
-      <Link
-        href="https://shohid.info"
-        target="_blank"
-        className="italic text-blue-700 underline-offset-2 hover:underline dark:text-blue-400"
-      >
-        shohid.info
-      </Link>
-      . Due to their website often being down and the code not being public, we
-      feared losing the data, which led to the decision to create this website.{" "}
       <br />
-      The initial information was collected from their website. After refining
-      and making some corrections, it was given here. <br />
-      We also took 10 martyrs&apos; from{" "}
-      <Link
-        href="https://redjuly.live"
-        target="_blank"
-        className="italic text-blue-700 underline-offset-2 hover:underline dark:text-blue-400"
-      >
-        redjuly.live
-      </Link>
+      We express our gratitude to the following websites and news portals for
+      providing information at various times.
+      <ul className="mb-5 mt-2">
+        {CreditWebsites.map((website) => (
+          <li key={website} className="ml-4 list-disc">
+            <Link
+              href={`https://${website}`}
+              target="_blank"
+              className="italic text-blue-700 underline-offset-2 hover:underline dark:text-blue-400"
+            >
+              {website}
+            </Link>
+          </li>
+        ))}
+      </ul>
       <br />
       We will try to regularly update this information. Your cooperation is
       greatly needed. <br />
@@ -112,28 +115,22 @@ export const BANGLA = {
       <br />
       এই ওয়েবসাইটটির সকল সোর্স কোড এবং ডেটা গিটহাবে পাবলিকলি দেওয়া আছে।
       <br />
-      সর্বপ্রথম{" "}
-      <Link
-        href="https://shohid.info"
-        target="_blank"
-        className="italic text-blue-700 underline-offset-2 hover:underline dark:text-blue-400"
-      >
-        shohid.info
-      </Link>
-      -তে শহীদদের লিস্ট দেখতে পাই। তাদের ওয়েবসাইট অনেক সময় ডাউন থাকায় ও কোড
-      পাবলিক না থাকায় ডেটা হারিয়ে যাওয়ার ভয় থেকে আমাদের এই ওয়েবসাইট বানানোর
-      সিদ্ধান্ত। <br />
-      প্রাথমিক তথ্যগুলো তাদের ওয়েবসাইট থেকেই সংগ্রহ করা। এরপর সেই তথ্য
-      পরিমার্জন ও কিছু সংশোধন করে এখানে দেওয়া হয়েছে। <br />
-      আমরা আরও ১০ জন শহীদের তথ্য নিয়েছি{" "}
-      <Link
-        href="https://redjuly.live"
-        target="_blank"
-        className="italic text-blue-700 underline-offset-2 hover:underline dark:text-blue-400"
-      >
-        redjuly.live
-      </Link>
-      থেকে।
+      <br />
+      বিভিন্ন সময় তথ্যাবলি নেওয়ায় নিচের ওয়েবসাইট এবং নিউজ পোর্টালদেরকে আমাদের
+      কৃতজ্ঞতা জানাই।
+      <ul className="mb-5 mt-2">
+        {CreditWebsites.map((website) => (
+          <li key={website} className="ml-4 list-disc">
+            <Link
+              href={`https://${website}`}
+              target="_blank"
+              className="italic text-blue-700 underline-offset-2 hover:underline dark:text-blue-400"
+            >
+              {website}
+            </Link>
+          </li>
+        ))}
+      </ul>
       <br />
       আমরা নিয়মিতভাবে এই তথ্যগুলি আপডেট করার চেষ্টা করব। এজন্য আপনাদের সহায়তা
       একান্ত কাম্য। <br />

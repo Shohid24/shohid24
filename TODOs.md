@@ -3,7 +3,7 @@
 - [x] Show banner if `show=false`
 - [x] The home page will get data directly from mongodb
 - [x] Share button
-- [ ] Update the about text
+- [x] Update the about text
 - [ ] Proper "New Martyr" submission page
 - [ ] Previous / Next navigation
 - [ ] `/profile/id.json` path for json data
