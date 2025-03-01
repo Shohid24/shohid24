@@ -189,40 +189,6 @@ const HomepageContent = ({
   );
 };
 
-// Loading skeleton component
-const HomepageSkeleton = ({
-  translation,
-  data,
-}: {
-  translation: Translation;
-  data: Martyr[];
-}) => {
-  const [currentPage, setCurrentPage] = useState(1);
-
-  return (
-    <main>
-      <div className="m-3 flex flex-col items-center justify-between gap-2 border-b py-2 text-start md:flex-row">
-        <h1 className="text-xl font-semibold md:text-2xl lg:text-3xl">
-          {translation.header}
-        </h1>
-        <Input
-          className="w-full md:max-w-64"
-          placeholder={translation.searchPlaceholder}
-        />
-      </div>
-
-      <List
-        martyrs={data}
-        searchResult={[]}
-        lang={translation.lang}
-        query=""
-        currentPage={currentPage}
-        setCurrentPage={setCurrentPage}
-      />
-    </main>
-  );
-};
-
 // Main homepage component with suspense
 const Homepage = ({
   translation,
@@ -233,7 +199,7 @@ const Homepage = ({
 }) => {
   return (
     <Suspense
-      fallback={<HomepageSkeleton translation={translation} data={data} />}
+      fallback={<HomepageContent translation={translation} data={data} />}
     >
       <HomepageContent translation={translation} data={data} />
     </Suspense>
