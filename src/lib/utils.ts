@@ -46,3 +46,8 @@ export function guid(): string {
   }
   return _p8() + _p8(true) + _p8(true) + _p8();
 }
+
+
+export function removeExtraLines(text: string): string {
+  return text.replace(/\n{3,}/g, "\n\n");
+}

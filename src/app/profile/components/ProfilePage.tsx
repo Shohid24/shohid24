@@ -7,7 +7,7 @@ import { BadgeCheck, BadgeX, EyeOff } from "lucide-react";
 import { IUser } from "@/server/schema/user";
 import { getTranslation } from "./translations";
 import { formatDate, toBengali } from "@/lib/helpers/date";
-import { cn, guid } from "@/lib/utils";
+import { cn, guid, removeExtraLines } from "@/lib/utils";
 import RelativeTime from "@/components/sub/RelativeTime";
 import Share from "@/components/sub/Share";
 
@@ -125,13 +125,13 @@ ${name}, ${toBengali(date)} এ জুলাই ২০২৪ বিপ্লব�
               lang={lang}
               className="w-full flex-col items-start"
               label={translation.howHeDied}
-              content={martyr[lang].cause}
+              content={removeExtraLines(martyr[lang].cause)}
             />
             <InfoBox
               lang={lang}
               className="w-full flex-col items-start"
               label={translation.biography}
-              content={martyr[lang].bio}
+              content={removeExtraLines(martyr[lang].bio)}
             />
           </section>
           <RelativeTime utcTime={lastUpdatedString} lang={lang} />
