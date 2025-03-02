@@ -3,7 +3,7 @@ import React from "react";
 const Logo = () => {
   return (
     <svg
-      className="w-24 text-red-600/95 dark:text-red-500 md:w-28"
+      className="w-24 text-red-600/95 dark:text-red-600 md:w-28"
       viewBox="0 0 376 112"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
