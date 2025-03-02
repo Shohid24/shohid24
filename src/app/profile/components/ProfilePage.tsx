@@ -40,9 +40,9 @@ Read about ${name}, who was martyred on ${date} during the July 2024 Revolution 
 
 `;
   const bnShareText = `\
-${name}, ${toBengali(date)} এ জুলাই ২০২৪ বিপ্লবে শহীদ হন। তাঁর সম্পর্কে বিস্তারিত পড়ুন।
+${name}, ${toBengali(date)} তারিখে ২০২৪ এর জুলাই বিপ্লবে শহীদ হন। তাঁর সম্পর্কে বিস্তারিত পড়ুন।
 
-#শহীদ২৪ #বাংলাদেশ
+#Shohid24 #Bangladesh
 
 
 `;
@@ -143,24 +143,26 @@ ${name}, ${toBengali(date)} এ জুলাই ২০২৪ বিপ্লব�
               label={translation.biography}
               content={removeExtraLines(martyr[lang].bio)}
             />
-            <div className="w-full rounded-md bg-muted/70 p-3">
-              <h2>{translation.sources}</h2>
-              <div>
-                {sources.map((source, i) => (
-                  <span key={i} className="ml-1 text-xs md:text-sm">
-                    {i + 1}.{" "}
-                    <a
-                      href={source}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="ml-2 tracking-wider text-blue-600"
-                    >
-                      {sliceTextResponsive(source, screenWidth)}
-                    </a>
-                  </span>
-                ))}
+            {sources.length > 0 && (
+              <div className="w-full rounded-md bg-muted/70 p-3">
+                <h2>{translation.sources}</h2>
+                <div>
+                  {sources.map((source, i) => (
+                    <span key={i} className="ml-1 text-xs md:text-sm block">
+                      {i + 1}.{" "}
+                      <a
+                        href={source}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="ml-2 tracking-wider text-blue-600"
+                      >
+                        {sliceTextResponsive(source, screenWidth)}
+                      </a>
+                    </span>
+                  ))}
+                </div>
               </div>
-            </div>
+            )}
           </section>
           <RelativeTime utcTime={lastUpdatedString} lang={lang} />
         </div>
