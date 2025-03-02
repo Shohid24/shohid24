@@ -44,8 +44,8 @@ const RelativeTime: React.FC<RelativeTimeProps> = ({
       }
       return `${convertToBengaliNumbers(remainingDays)} দিন আগে`;
     } else {
-      if (diffDays === 0) return "today";
-      if (diffDays === 1) return "yesterday";
+      if (diffDays === 0) return "Today";
+      if (diffDays === 1) return "Yesterday";
 
       const years = Math.floor(diffDays / 365);
       const months = Math.floor((diffDays % 365) / 30);

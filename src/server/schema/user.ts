@@ -21,6 +21,7 @@ export interface IUser extends Document {
   lastUpdated: Date | null;
   verified: boolean;
   show: boolean;
+  sources: string[];
 }
 
 const UserSchema = new Schema<IUser>(
@@ -53,6 +54,7 @@ const UserSchema = new Schema<IUser>(
     lastUpdated: { type: Date, default: null },
     verified: { type: Boolean, default: false },
     show: { type: Boolean, default: false },
+    sources: { type: [String], default: [] },
   },
   { collection: "individual" },
 );

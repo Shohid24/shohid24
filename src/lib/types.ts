@@ -30,7 +30,7 @@ export type ProfileType = {
   imageUrl?: string;
   index?: number;
   lang: "bn" | "en";
-  showIndex?: boolean;
+  show?: boolean;
 };
 
 // Updated Martyr interface to match your data structure

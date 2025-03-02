@@ -22,7 +22,7 @@ const Profile = ({
   imageUrl = "",
   index = 0,
   lang = "bn",
-  showIndex = true,
+  show = true,
   className,
   noLink,
   header,
@@ -45,7 +45,7 @@ const Profile = ({
   const content = (
     <>
       <div className="relative w-fit max-w-[150px] md:max-w-[190px]">
-        {showIndex && (
+        {show && (
           <span className="absolute left-0 top-0 h-7 min-w-8 rounded-md bg-red-500 px-1 text-xl font-black text-gray-100">
             {index + 1}
           </span>
@@ -96,7 +96,7 @@ const Profile = ({
           className="mt-auto flex items-center justify-start gap-1 text-nowrap"
           itemProp="MartyrDate"
         >
-          <Calendar size={18} />
+          <Calendar size={18} className="-mt-[1px]" />
           {lang == "bn" ? toBengali(martyrDate) : martyrDate}
         </p>
       </div>

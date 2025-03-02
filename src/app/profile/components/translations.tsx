@@ -21,6 +21,7 @@ export const ENGLISH = {
   howHeDied: "How he became a martyr:",
   biography: "Biography:",
   otherInfo: "Other Information:",
+  sources: "Source:",
   giveUsInfo: (
     <>
       It is difficult for us to collect all the information alone. If you have
@@ -71,6 +72,7 @@ export const BANGLA = {
   howHeDied: "যেভাবে শহীদ হয়েছেনঃ",
   biography: "জীবনীঃ",
   otherInfo: "অন্যান্য তথ্যঃ",
+  sources: "সোর্সঃ",
   giveUsInfo: (
     <>
       আমাদের একার পক্ষে সকল তথ্য সংগ্রহ করা কষ্টসাধ্য। এই শহীদের ব্যাপারে আর

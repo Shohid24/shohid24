@@ -31,7 +31,6 @@ export async function fetchJson(id: string) {
   }
 }
 
-
 /**
  * Generates a GUID string.
  * @returns {string} The generated GUID.
@@ -41,13 +40,35 @@ export async function fetchJson(id: string) {
  */
 export function guid(): string {
   function _p8(s?: boolean): string {
-      const p = (Math.random().toString(16) + "000000000").substr(2, 8);
-      return s ? "-" + p.substr(0, 4) + "-" + p.substr(4, 4) : p;
+    const p = (Math.random().toString(16) + "000000000").substr(2, 8);
+    return s ? "-" + p.substr(0, 4) + "-" + p.substr(4, 4) : p;
   }
   return _p8() + _p8(true) + _p8(true) + _p8();
 }
 
-
 export function removeExtraLines(text: string): string {
   return text.replace(/\n{3,}/g, "\n\n");
+}
+
+export function sliceTextResponsive(text: string, screenWidth: number): string {
+  let length = 40;
+
+  if (screenWidth < 640) {
+    // sm breakpoint
+    length = 40;
+  } else if (screenWidth < 768) {
+    // md breakpoint
+    length = 80;
+  } else if (screenWidth < 1024) {
+    // lg breakpoint
+    length = 55;
+  } else if (screenWidth < 1280) {
+    // xl breakpoint
+    length = 100;
+  } else if (screenWidth < 1920) {
+    // xxl breakpoint
+    length = 123;
+  }
+
+  return text.length > length ? text.slice(0, length) + "..." : text;
 }

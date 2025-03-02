@@ -1,4 +1,4 @@
-import { ReactNode } from "react";
+import { ReactNode, useEffect, useState } from "react";
 import Balancer from "react-wrap-balancer";
 import Profile from "@/components/Profile";
 
@@ -7,7 +7,7 @@ import { BadgeCheck, BadgeX, EyeOff } from "lucide-react";
 import { IUser } from "@/server/schema/user";
 import { getTranslation } from "./translations";
 import { formatDate, toBengali } from "@/lib/helpers/date";
-import { cn, guid, removeExtraLines } from "@/lib/utils";
+import { cn, guid, removeExtraLines, sliceTextResponsive } from "@/lib/utils";
 import RelativeTime from "@/components/sub/RelativeTime";
 import Share from "@/components/sub/Share";
 
@@ -21,6 +21,7 @@ const ProfilePage = ({
   const id = martyr?.id;
   const verified = martyr.verified;
   const show = martyr.show;
+  const sources = martyr.sources;
   const translation = getTranslation(lang);
   const name = martyr[lang].name;
   const profession = martyr[lang].profession;
@@ -45,6 +46,15 @@ ${name}, ${toBengali(date)} এ জুলাই ২০২৪ বিপ্লব�
 
 
 `;
+
+  const [screenWidth, setScreenWidth] = useState(0);
+
+  useEffect(() => {
+    const checkWidthChange = () => setScreenWidth(window.innerWidth);
+    checkWidthChange();
+    window.addEventListener("resize", checkWidthChange);
+    return () => window.removeEventListener("resize", checkWidthChange);
+  }, []);
 
   return (
     <>
@@ -71,7 +81,7 @@ ${name}, ${toBengali(date)} এ জুলাই ২০২৪ বিপ্লব�
             martyrDate={formatDate(date)}
             imageUrl={imageUrl}
             lang={lang}
-            showIndex={false}
+            show={false}
             className="max-h-96 w-full grid-cols-[auto_2fr] border-none md:-mt-2 md:grid-cols-1"
           />
           <Separator className="my-1" />
@@ -133,6 +143,24 @@ ${name}, ${toBengali(date)} এ জুলাই ২০২৪ বিপ্লব�
               label={translation.biography}
               content={removeExtraLines(martyr[lang].bio)}
             />
+            <div className="w-full rounded-md bg-muted/70 p-3">
+              <h2>{translation.sources}</h2>
+              <div>
+                {sources.map((source, i) => (
+                  <span key={i} className="ml-1 text-xs md:text-sm">
+                    {i + 1}.{" "}
+                    <a
+                      href={source}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="ml-2 tracking-wider text-blue-600"
+                    >
+                      {sliceTextResponsive(source, screenWidth)}
+                    </a>
+                  </span>
+                ))}
+              </div>
+            </div>
           </section>
           <RelativeTime utcTime={lastUpdatedString} lang={lang} />
         </div>
