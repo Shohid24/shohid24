@@ -43,7 +43,7 @@ export default function RootLayout({
         <meta name="msvalidate.01" content="4BEF61FA980C565F3A8B089F8484F9F0" />
       </head>
       <body
-        className={`${getFontClass("bn")} antialiased selection:bg-indigo-400 selection:text-gray-950 dark:selection:bg-indigo-800 dark:selection:text-gray-200`}
+        className={`${getFontClass("bn")} antialiased selection:bg-red-500 selection:text-gray-950 selection:dark:bg-red-800 selection:dark:text-gray-200`}
       >
         <ThemeProvider
           attribute="class"
