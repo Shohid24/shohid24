@@ -104,7 +104,7 @@ const Profile = ({
   );
 
   const sharedClassName = cn(
-    "grid h-full grid-cols-1 grid-rows-[auto_1fr] w-[150px] rounded-md border p-1 gap-2 mb-3 md:w-52 md:p-2 mx-0",
+    "grid h-full grid-cols-1 grid-rows-[auto_1fr] w-[150px] rounded-md border p-1 md:gap-4 gap-2 mb-3 md:w-52 md:p-2 mx-0",
     !noLink && "group",
     className,
   );

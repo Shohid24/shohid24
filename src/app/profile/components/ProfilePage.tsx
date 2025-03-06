@@ -70,7 +70,7 @@ ${name}, ${toBengali(date)} তারিখে ২০২৪ এর জুলা�
         </div>
       )}
       <div className="my-5 flex flex-col items-center justify-between gap-2 md:flex-row md:items-stretch">
-        <div className="flex flex-col items-center justify-start">
+        <div className="mb-3 flex w-full flex-col items-center md:mb-0 md:w-fit">
           <Profile
             noLink
             header
@@ -84,7 +84,7 @@ ${name}, ${toBengali(date)} তারিখে ২০২৪ এর জুলা�
             show={false}
             className="max-h-96 w-full grid-cols-[auto_2fr] border-none md:-mt-2 md:grid-cols-1"
           />
-          <Separator className="my-1" />
+          <Separator className="-mt-3 mb-1" />
           <Share
             url={
               `https://shohid24.pages.dev/profile/${id}` +
@@ -108,7 +108,7 @@ ${name}, ${toBengali(date)} তারিখে ২০২৪ এর জুলা�
               </>
             )}
           </div>
-          <Separator className="mb-2" />
+          <Separator className="mx-auto mb-2 w-56" />
           <section className="grid grid-cols-1 gap-2 md:grid-cols-[1fr_2fr] lg:grid-cols-[1fr_2fr_3fr]">
             <InfoBox
               lang={lang}
@@ -148,7 +148,7 @@ ${name}, ${toBengali(date)} তারিখে ২০২৪ এর জুলা�
                 <h2>{translation.sources}</h2>
                 <div>
                   {sources.map((source, i) => (
-                    <span key={i} className="ml-1 text-xs md:text-sm block">
+                    <span key={i} className="ml-1 block text-xs md:text-sm">
                       {i + 1}.{" "}
                       <a
                         href={source}
