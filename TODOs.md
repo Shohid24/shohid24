@@ -8,7 +8,5 @@
 - [x] "See Also" section in each profile
 - [ ] Proper "New Martyr" submission page
 - [ ] Edit Mode on shohid24 page itself. After edit, it'll have a **submit for review** button
-- [ ] Previous / Next navigation
 - [ ] `/profile/id.json` path for json data
 - [ ] News of Different Martyrs
-- [ ] Filter by Date
