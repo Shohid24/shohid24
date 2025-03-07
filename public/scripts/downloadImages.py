@@ -1,11 +1,13 @@
 import os
+import sys
 import requests
 from pymongo import MongoClient
 from dotenv import load_dotenv
 from pathlib import Path
 
-# Load environment variables
+# Load
 load_dotenv()
+sys.stdout.reconfigure(encoding='utf-8')
 
 LOCAL = os.environ.get("LOCAL")
 MONGO_URI = os.getenv("MONGO_URI")

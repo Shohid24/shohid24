@@ -4,7 +4,6 @@ import User from "@/server/schema/user";
 
 import type { Martyr } from "@/lib/types";
 
-
 // sorts by the date first, then by the name
 export async function getData(): Promise<Martyr[]> {
   await MongoConnection();
@@ -17,6 +16,8 @@ export async function getData(): Promise<Martyr[]> {
       bn: user.bn,
       en: user.en,
       date: user.date,
+      verified: user.verified,
+      show: user.show,
       hasImage: !(user.image?.includes("default.jpg") ?? false),
     }));
 

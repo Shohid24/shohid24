@@ -40,10 +40,23 @@ export async function fetchJson(id: string) {
  */
 export function guid(): string {
   function _p8(s?: boolean): string {
-    const p = (Math.random().toString(16) + "000000000").substr(2, 8);
-    return s ? "-" + p.substr(0, 4) + "-" + p.substr(4, 4) : p;
+    const p = (Math.random().toString(16) + "000000000").substring(2, 8);
+    return s ? "-" + p.substring(0, 4) + "-" + p.substring(4, 4) : p;
   }
   return _p8() + _p8(true) + _p8(true) + _p8();
+}
+
+export function getTwoRandom<T>(arr: T[]): [T, T] {
+  const len = arr.length;
+  const firstIdx = Math.floor(Math.random() * len);
+  let secondIdx;
+
+  // Ensure second index is different from first
+  do {
+      secondIdx = Math.floor(Math.random() * len);
+  } while (secondIdx === firstIdx);
+
+  return [arr[firstIdx], arr[secondIdx]];
 }
 
 export function removeExtraLines(text: string): string {

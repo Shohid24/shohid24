@@ -1,8 +1,9 @@
-import MainSection from "../components/Main";
-import { Button } from "@/components/ui/button";
-import Link from "next/link";
 import MongoConnection from "@/server/db";
 import User, { IUser } from "@/server/schema/user";
+import MainSection from "../components/Main";
+import { getData } from "@/server/getData";
+import { notFound } from "next/navigation";
+import { getTwoRandom } from "@/lib/utils";
 
 await MongoConnection();
 
@@ -41,29 +42,17 @@ export default async function Page({
 }) {
   const { id } = await params;
   const user = (await User.findOne({ id: id }).lean()) as IUser | null;
+  const data = (await getData()).filter(
+    (item) => item.verified && item.bn.info && item.id !== id,
+  );
+  const seeAlso = getTwoRandom(data);
 
   if (!user) {
-    return (
-      <div className="flex flex-col items-center justify-center gap-5 py-5">
-        <h2 className="my-5 text-2xl font-semibold md:text-4xl">
-          404 Profile not found
-        </h2>
-        <p>
-          No profile with id=
-          <code className="mx-1 rounded-md bg-primary/80 p-1 text-primary-foreground/80">
-            {id}
-          </code>{" "}
-          found.
-        </p>
-        <Button variant="secondary" asChild>
-          <Link href="/">Go Home</Link>
-        </Button>
-      </div>
-    );
+    return notFound();
   }
 
   // ✅ Convert Mongoose document to a plain JSON object
   const jsonUser: IUser = JSON.parse(JSON.stringify(user));
 
-  return <MainSection martyr={jsonUser} />;
+  return <MainSection martyr={jsonUser} seeAlso={seeAlso} />;
 }

@@ -10,13 +10,17 @@ import { formatDate, toBengali } from "@/lib/helpers/date";
 import { cn, guid, removeExtraLines, sliceTextResponsive } from "@/lib/utils";
 import RelativeTime from "@/components/sub/RelativeTime";
 import Share from "@/components/sub/Share";
+import AlsoSee from "./AlsoSee";
+import { Martyr } from "@/lib/types";
 
 const ProfilePage = ({
   martyr,
   lang,
+  seeAlso,
 }: {
   martyr: IUser;
   lang: "bn" | "en";
+  seeAlso: [Martyr, Martyr];
 }) => {
   const id = martyr?.id;
   const verified = martyr.verified;
@@ -166,8 +170,13 @@ ${name}, ${toBengali(date)} তারিখে ২০২৪ এর জুলা�
           </section>
           <RelativeTime utcTime={lastUpdatedString} lang={lang} />
         </div>
+        
       </div>
-      <section className="mx-auto my-2 flex max-w-screen-md flex-col items-center justify-center gap-2 text-balance text-sm md:text-base lg:text-lg">
+      <section className="max-w-screen-md items-end mx-auto">
+          <AlsoSee seeAlso={seeAlso} lang={lang}/>
+        
+      </section>
+      <section className="mx-auto my-2 flex max-w-screen-md flex-col items-center justify-center gap-2 text-balance text-sm md:text-base">
         {translation.giveUsInfo}
       </section>
     </>
