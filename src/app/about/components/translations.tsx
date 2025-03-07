@@ -49,8 +49,17 @@ export const ENGLISH = {
       future.
       <br />
       <br />
-      All the source code and data of this website are publicly available on
-      GitHub. <br />
+      You may have seen other initiatives to list the martyrs as well. So, what sets
+      us apart?
+      <br />
+      While many similar initiatives have been started, most have stopped at
+      some point. Currently, we are the only ones still actively adding and
+      updating data regularly.
+      <br />
+      Our database is the largest and most up-to-date among all similar efforts.
+      Additionally, all the source code and data for this website are publicly
+      available on GitHub.
+      <br />
       <br />
       We express our gratitude to the following websites and news portals for
       providing information at various times.
@@ -68,7 +77,7 @@ export const ENGLISH = {
         ))}
       </ul>
       <br />
-      We will try to regularly update this information. Your cooperation is
+      InShaAllah we will try to regularly update this information. Your cooperation is
       greatly needed. <br />
     </>
   ),
@@ -113,11 +122,20 @@ export const BANGLA = {
       সামনে দেশের জন্য জীবন দিতে আমাদেরও প্রস্তুত থাকতে হবে।
       <br />
       <br />
-      এই ওয়েবসাইটটির সকল সোর্স কোড এবং ডেটা গিটহাবে পাবলিকলি দেওয়া আছে।
+      শহীদদের তালিকাভুক্ত করার জন্য এরকম উদ্যোগ অনেকেই নিয়েছেন। তাহলে আমরা
+      কীভাবে আলাদা?
+      <br />
+      যদিও অনেকেই এ ধরনের উদ্যোগ শুরু করেছিলেন, তাদের বেশিরভাগই কোনো না কোনো
+      সময়ে গিয়ে থেমে গিয়েছেন। বর্তমানে, একমাত্র আমরাই নিয়মিত তথ্য সংযোজন এবং
+      পরিমার্জন করছি।
+      <br />
+      আমাদের ডেটাবেজ আপাতত সবচেয়ে সমৃদ্ধ এবং অনুরূপ সব প্রচেষ্টার মধ্যে সবচেয়ে
+      আপ-টু-ডেট। এছাড়াও, আমাদের ওয়েবসাইটের সমস্ত সোর্স কোড এবং তথ্য গিটহাবে
+      পাবলিক করে রাখা হয়েছে।
       <br />
       <br />
-      বিভিন্ন সময় তথ্যাবলি নেওয়ায় নিচের ওয়েবসাইট এবং নিউজ পোর্টালদেরকে আমাদের
-      কৃতজ্ঞতা জানাই।
+      বিভিন্ন সময় তথ্যাবলি সংগ্রহ করতে পারায় নিচের ওয়েবসাইট এবং নিউজ
+      পোর্টালদেরকে আমাদের আন্তরিক কৃতজ্ঞতা জানাই।
       <ul className="mb-5 mt-2">
         {CreditWebsites.map((website) => (
           <li key={website} className="ml-4 list-disc">
@@ -132,7 +150,7 @@ export const BANGLA = {
         ))}
       </ul>
       <br />
-      আমরা নিয়মিতভাবে এই তথ্যগুলি আপডেট করার চেষ্টা করব। এজন্য আপনাদের সহায়তা
+      ইনশাআল্লাহ্‌ আমরা নিয়মিতভাবে এই তথ্যগুলি আপডেট করার চেষ্টা করব। এজন্য আপনাদের সহায়তা
       একান্ত কাম্য। <br />
     </>
   ),
