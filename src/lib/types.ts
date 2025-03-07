@@ -1,20 +1,10 @@
 import { FuzzyResult } from "@nozbe/microfuzz";
 
-// Common language-specific fields
-export interface LanguageContent {
-  bn: string;
-  en: string;
-}
-
-// Language-specific content structure for basic fields
+// Extended language-specific content for MartyrInfo
 export interface LanguageSpecificContent {
   name: string;
   profession: string;
   info: string;
-}
-
-// Extended language-specific content for MartyrInfo
-export interface ExtendedLanguageContent extends LanguageSpecificContent {
   birthPlace: string;
   bio: string;
   cause: string;
@@ -39,6 +29,8 @@ export interface Martyr {
   bn: any;
   en: any;
   date: string;
+  verified: boolean;
+  show: boolean;
   hasImage: boolean;
 }
 
@@ -47,8 +39,8 @@ export type MartyrInfo = {
   id: string;
   age: string;
   dob: string;
-  bn: ExtendedLanguageContent;
-  en: ExtendedLanguageContent;
+  bn: LanguageSpecificContent;
+  en: LanguageSpecificContent;
 };
 
 // Search results type
