@@ -84,7 +84,7 @@ ${name}, ${toBengali(date)} তারিখে ২০২৪ এর জুলা�
             show={false}
             className="max-h-96 w-full grid-cols-[auto_2fr] border-none md:-mt-2 md:grid-cols-1"
           />
-          <Separator className="-mt-3 mb-1" />
+          <Separator className="-mt-3 mb-1 md:mt-0" />
           <Share
             url={
               `https://shohid24.pages.dev/profile/${id}` +
