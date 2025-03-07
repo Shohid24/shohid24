@@ -5,11 +5,12 @@ import { ENGLISH } from "@/components/translations";
 import { getFontClass } from "@/lib/fontLoader";
 import type { Metadata } from "next";
 import "./globals.css";
+import { HOSTED_URL } from "@/lib/constants";
 
 export const metadata: Metadata = {
   title: ENGLISH.title,
   description: ENGLISH.description,
-  metadataBase: new URL("https://shohid24.pages.dev"),
+  metadataBase: new URL(HOSTED_URL),
   keywords: [
     "shohid24",
     "shohid 24",

@@ -1,5 +1,4 @@
 import Link from "next/link";
-import { toBengali } from "../lib/helpers/date";
 
 export const ENGLISH = {
   lang: "en",

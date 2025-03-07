@@ -11,17 +11,16 @@ function ShortProfile({ martyr, lang }: { martyr: Martyr; lang: "bn" | "en" }) {
       className="flex-1 rounded-lg border p-2.5 transition-shadow hover:shadow-md"
     >
       <div className="flex items-center gap-4">
-        <div className="flex-shrink-0">
-          <Image
-            src={
-              martyr.hasImage ? `/compressed/${martyr.id}.jpg` : "/default.jpg"
-            }
-            alt={martyr[lang].name}
-            width={80}
-            height={80}
-            className="rounded-full object-cover"
-          />
-        </div>
+        <Image
+          src={
+            martyr.hasImage ? `/compressed/${martyr.id}.jpg` : "/default.jpg"
+          }
+          alt={martyr[lang].name}
+          width={80}
+          height={80}
+          className="aspect-square rounded-full object-cover"
+        />
+
         <div
           className="flex-grow text-start"
           itemScope
@@ -60,7 +59,7 @@ const AlsoSee = ({
 }) => {
   return (
     <div className="my-8">
-      <h2 className="mb-4 text-xl md:text-2xl lg:3xl font-semibold">
+      <h2 className="lg:3xl mb-4 text-xl font-semibold md:text-2xl">
         {lang === "en"
           ? "Also read about these martyrs"
           : "এই শহীদদের সম্পর্কেও পড়ুন"}

@@ -4,6 +4,7 @@ import MainSection from "../components/Main";
 import { getData } from "@/server/getData";
 import { notFound } from "next/navigation";
 import { getTwoRandom } from "@/lib/utils";
+import { HOSTED_URL } from "@/lib/constants";
 
 await MongoConnection();
 
@@ -31,7 +32,7 @@ export async function generateMetadata({
   return {
     title: `${user.en.name}'s Profile - July Martyr`,
     description: `${user.en.name}, a selfless martyr from the July Revolution in Bangladesh. Known for contributions as a ${user.en.profession}, martyred on ${user.date}, ${user.en.info}. View full details on Shohid24.`,
-    metadataBase: new URL("https://shohid24.pages.dev"),
+    metadataBase: new URL(HOSTED_URL),
   };
 }
 

@@ -6,7 +6,5 @@
 - [x] Update the about text
 - [x] News sources at each profile
 - [x] "See Also" section in each profile
-- [ ] Proper "New Martyr" submission page
-- [ ] Edit Mode on shohid24 page itself. After edit, it'll have a **submit for review** button
+- [x] Proper "New Martyr" submission page
 - [ ] `/profile/id.json` path for json data
-- [ ] News of Different Martyrs

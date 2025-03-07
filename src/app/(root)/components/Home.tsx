@@ -14,6 +14,7 @@ import RelativeTime from "@/components/sub/RelativeTime";
 import { getTranslation } from "@/components/translations";
 import { getFontClass } from "@/lib/fontLoader";
 import { Martyr } from "@/lib/types";
+import { SUBMIT_LINK } from "@/lib/constants";
 
 // Type for language options
 type LanguageOption = "en" | "bn";
@@ -39,7 +40,7 @@ const PageHead = ({ lang }: { lang: LanguageOption }) => {
 // Component for the submission button
 const SubmissionButton = ({ text }: { text: string }) => (
   <Link
-    href="https://forms.gle/efEVqZEHHR4fZuyG7"
+    href={SUBMIT_LINK}
     className="inline-block rounded-full bg-red-600 p-2.5 text-lg font-bold text-gray-100 underline decoration-red-300 underline-offset-4 shadow-lg shadow-red-700/50 transition-all duration-100 hover:scale-[1.01] hover:bg-red-700 hover:shadow-red-700/70 md:p-3 md:text-xl lg:text-2xl"
     target="_blank"
   >
@@ -68,7 +69,7 @@ const LanguageAwareContent = ({
       <Banner />
       <MaxwidthWrapper>
         <SubmissionButton text={translation.submitButton} />
-        <Homepage translation={translation} data={data}/>
+        <Homepage translation={translation} data={data} />
         <RelativeTime className="mt-10" utcTime={lastUpdated} lang={lang} />
       </MaxwidthWrapper>
       <Footer lang={lang} />

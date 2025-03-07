@@ -1,6 +1,7 @@
 import { toBengali } from "@/lib/helpers/date";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
+import { EDIT_PROFILE_LINK } from "@/lib/constants";
 
 export const ENGLISH = {
   lang: "en",
@@ -22,20 +23,21 @@ export const ENGLISH = {
   biography: "Biography:",
   otherInfo: "Other Information:",
   sources: "Source:",
-  giveUsInfo: (
-    <>
-      It is difficult for us to collect all the information alone. If you have
-      any more information about this martyr, please provide it to us.
+  giveUsInfo: (name: string, id: string) => (
+    <div>
+      Did you find any misinformation of <b>{name}</b>?
+      <br />
+      Or you want to give more information?
       <Button
         variant="outline"
-        className="font-semibold text-red-600 dark:text-red-500"
+        className="block font-semibold text-red-600 dark:text-red-500"
         asChild
       >
-        <Link href="https://forms.gle/efEVqZEHHR4fZuyG7" target="_blank">
-          Give us information
+        <Link href={`${EDIT_PROFILE_LINK}/${id}`} target="_blank">
+          Give information of {name}
         </Link>
       </Button>
-    </>
+    </div>
   ),
   findHeader: "Find a Martyr by ID",
   findDescription: (totalMartyrs: number) => (
@@ -73,20 +75,21 @@ export const BANGLA = {
   biography: "জীবনীঃ",
   otherInfo: "অন্যান্য তথ্যঃ",
   sources: "সোর্সঃ",
-  giveUsInfo: (
-    <>
-      আমাদের একার পক্ষে সকল তথ্য সংগ্রহ করা কষ্টসাধ্য। এই শহীদের ব্যাপারে আর
-      কোনো তথ্য জানা থাকলে অনুগ্রহ করে আমাদের তথ্য দিয়ে সহায়তা করুন।
+  giveUsInfo: (name: string, id: string) => (
+    <div>
+      <b>{name}</b> এর তথ্যে কোনো অসঙ্গতি পেয়েছেন?
+      <br />
+      অথবা আরো তথ্য যুক্ত করতে চান?
       <Button
         variant="outline"
-        className="font-semibold text-red-600 dark:text-red-500"
+        className="block font-semibold text-red-600 dark:text-red-500"
         asChild
       >
-        <Link href="https://forms.gle/efEVqZEHHR4fZuyG7" target="_blank">
-          আমাদের তথ্য দিন
+        <Link href={`${EDIT_PROFILE_LINK}/${id}`} target="_blank">
+          {name} এর তথ্য দিন
         </Link>
       </Button>
-    </>
+    </div>
   ),
   findHeader: "শহীদের আইডি দিয়ে খুঁজুন",
   findDescription: (totalMartyrs: number) => (

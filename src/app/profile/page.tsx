@@ -1,5 +1,6 @@
 import { getData } from "@/server/getData";
 import AllProfiles from "./AllProfiles";
+import { HOSTED_URL } from "@/lib/constants";
 
 
 // Generate static params (needed even if empty for static generation)
@@ -20,7 +21,7 @@ export default async function Page() {
 }
 
 export const metadata = {
-  metadataBase: new URL("https://shohid24.pages.dev"),
+  metadataBase: new URL(HOSTED_URL),
   title: "Find the profile of a martyr",
   description:
     "Shohid24 - Find the profile of a martyr in the July Student Movement in Bangladesh 2024. Find information about the hundreds of martyrs.",

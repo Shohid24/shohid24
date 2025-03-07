@@ -12,6 +12,7 @@ import RelativeTime from "@/components/sub/RelativeTime";
 import Share from "@/components/sub/Share";
 import AlsoSee from "./AlsoSee";
 import { Martyr } from "@/lib/types";
+import { HOSTED_URL } from "@/lib/constants";
 
 const ProfilePage = ({
   martyr,
@@ -91,8 +92,7 @@ ${name}, ${toBengali(date)} তারিখে ২০২৪ এর জুলা�
           <Separator className="-mt-3 mb-1 md:mt-0" />
           <Share
             url={
-              `https://shohid24.pages.dev/profile/${id}` +
-              (lang == "en" ? "?lang=en" : "")
+              `${HOSTED_URL}/profile/${id}` + (lang == "en" ? "?lang=en" : "")
             }
             title={lang == "bn" ? bnShareText : engShareText}
           />
@@ -170,14 +170,12 @@ ${name}, ${toBengali(date)} তারিখে ২০২৪ এর জুলা�
           </section>
           <RelativeTime utcTime={lastUpdatedString} lang={lang} />
         </div>
-        
       </div>
-      <section className="max-w-screen-md items-end mx-auto">
-          <AlsoSee seeAlso={seeAlso} lang={lang}/>
-        
+      <section className="mx-auto max-w-screen-md items-end">
+        <AlsoSee seeAlso={seeAlso} lang={lang} />
       </section>
       <section className="mx-auto my-2 flex max-w-screen-md flex-col items-center justify-center gap-2 text-balance text-sm md:text-base">
-        {translation.giveUsInfo}
+        {translation.giveUsInfo(martyr[lang].name, martyr.id)}
       </section>
     </>
   );
