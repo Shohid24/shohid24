@@ -171,11 +171,11 @@ ${name}, ${toBengali(date)} তারিখে ২০২৪ এর জুলা�
           <RelativeTime utcTime={lastUpdatedString} lang={lang} />
         </div>
       </div>
+      <div className="mx-auto my-2 flex max-w-screen-md flex-col items-center justify-center gap-2 text-balance text-sm md:text-base">
+        {translation.giveUsInfo(martyr[lang].name, martyr.id)}
+      </div>
       <section className="mx-auto max-w-screen-md items-end">
         <AlsoSee seeAlso={seeAlso} lang={lang} />
-      </section>
-      <section className="mx-auto my-2 flex max-w-screen-md flex-col items-center justify-center gap-2 text-balance text-sm md:text-base">
-        {translation.giveUsInfo(martyr[lang].name, martyr.id)}
       </section>
     </>
   );
