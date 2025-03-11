@@ -38,7 +38,6 @@ def download_missing_images():
 
         # Skip if image already exists
         # TODO: Add different logic so you don't need to download all of them
-        LOCAL = True
         if image_path.exists() and LOCAL:
             skipped_count += 1
             continue
