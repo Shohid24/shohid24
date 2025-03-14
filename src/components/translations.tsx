@@ -16,15 +16,7 @@ export const ENGLISH = {
     </>
   ),
   searchPlaceholder: "Search by name, institution or profession (ctrl+k)",
-  footerText: (
-    <>
-      &copy; {new Date().getFullYear()} Shohid24
-      <br />
-      <span className="text-base">
-        This is our effort to honor the martyrs of &apos;24.
-      </span>
-    </>
-  ),
+  footerText: <>This is our effort to honor the martyrs of &apos;24.</>,
   maintainerText: (
     <>
       Maintained by{" "}
@@ -85,15 +77,7 @@ export const BANGLA = {
   ),
   searchPlaceholder: "নাম, প্রতিষ্ঠান বা পেশা সার্চ করুন (ctrl+k)",
   // {toBengali(new Date().getFullYear())}
-  footerText: (
-    <span className="tracking-wide">
-      &copy; শহীদ২৪
-      <br />
-      <span className="text-base">
-        ২৪ এর শহীদদের স্মরণে রাখতে আমাদের এই প্রচেষ্টা
-      </span>
-    </span>
-  ),
+  footerText: <>&apos;২৪ এর শহীদদের স্মরণে রাখতে আমাদের এই প্রচেষ্টা</>,
   maintainerText: (
     <>
       রক্ষণাবেক্ষণে{" "}
