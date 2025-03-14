@@ -30,7 +30,7 @@ const Footer = ({ lang }: { lang: "bn" | "en" }) => {
         <div className="flex flex-col gap-8 md:flex-row md:justify-between">
           {/* Left side - Logo and description */}
           <div className="space-y-4 md:max-w-sm">
-            <div className="flex items-center gap-2 justify-center md:justify-start">
+            <div className="flex items-center justify-center gap-2 md:justify-start">
               <Image
                 priority
                 src="/images/icon.svg"
@@ -43,7 +43,7 @@ const Footer = ({ lang }: { lang: "bn" | "en" }) => {
                 {translation.logoName}
               </span>
             </div>
-            <p className="text-sm text-muted-foreground">
+            <p className="text-sm tracking-wide text-muted-foreground">
               {translation.footerText}
             </p>
             <div className="flex items-center justify-center gap-4 md:justify-start">
@@ -51,7 +51,7 @@ const Footer = ({ lang }: { lang: "bn" | "en" }) => {
                 <Link
                   key={index}
                   href={social.href}
-                  className="text-muted-foreground transition-colors hover:text-primary"
+                  className="rounded-md p-1 text-muted-foreground transition-colors hover:bg-muted hover:text-primary"
                 >
                   <social.icon className="h-4 w-4 md:h-5 md:w-5" />
                   <span className="sr-only">
@@ -86,7 +86,7 @@ const Footer = ({ lang }: { lang: "bn" | "en" }) => {
         <div className="mt-10 border-t border-border pt-6">
           <p
             className={cn(
-              "text-center text-xs text-muted-foreground",
+              "text-center text-xs text-muted-foreground selection:bg-blue-600/85 selection:text-gray-50 selection:dark:bg-blue-800 selection:dark:text-gray-100 md:text-sm",
               translation.lang == "en" && "font-mono tracking-tighter",
             )}
           >
