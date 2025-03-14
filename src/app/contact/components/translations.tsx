@@ -1,41 +1,68 @@
-import Link from "next/link";
-import { Button } from "@/components/ui/button";
-
-export const ENGLISH = {
-  title: "Contact Us - Shohid24",
-  description:
-    "If you need to correct any martyr information or have any issues, please contact us. Shohid24",
-  header: "Contact Us",
-  text: "If you encounter any problems with the website or have any complaints, please contact us at the address below:",
-
-  telegramChannel: "https://t.me/Shohid24Web",
-  telegramGroup: "https://t.me/Shohid24Discussion",
-  telegramPersonal: "https://t.me/Nusab19",
-  email: "mailto:nusab19@duck.com",
-  labelChannel: "Telegram Channel:",
-  labelGroup: "Telegram Group:",
-  labelPersonal: "Developer's Telegram:",
-  labelEmail: "Email:",
-};
-
-export const BANGLA = {
-  title: "আমাদের সাথে যোগাযোগ - শহীদ২৪",
-  description:
-    "শহীদদের তথ্য সংশোধন বা যেকোনো সমস্যায় আমাদের সাথে যোগাযোগ করুন। শহীদ২৪",
-  header: "আমাদের সাথে যোগাযোগ করুন",
-  text: "ওয়েবসাইটে কোনো সমস্যা থাকলে কিংবা কোনো অভিযোগ থাকলে নিচের ঠিকানায় আমাদের সাথে যোগাযোগ করুনঃ",
-  telegramChannel: "https://t.me/Shohid24Web",
-  telegramGroup: "https://t.me/Shohid24Discussion",
-  telegramPersonal: "https://t.me/Nusab19",
-  email: "mailto:nusab19@duck.com",
-  labelChannel: "টেলিগ্রাম চ্যানেলঃ",
-  labelGroup: "টেলিগ্রাম গ্রুপঃ",
-  labelPersonal: "ডেভেলপারের টেলিগ্রামঃ",
-  labelEmail: "ইমেইলঃ",
-};
-
+// This is a partial implementation - you'll need to add the new translation keys to your existing file
 export function getTranslation(lang: string) {
-  return lang === "bn" ? BANGLA : ENGLISH;
+  const translations = {
+    en: {
+      title: "Contact Us - Shohid24",
+      description: "Get in touch with Shohid24. We're here to help.",
+      header: "Contact Us",
+      text: "We'd love to hear your feedback and suggestions. Please feel free to reach out using any of the methods below.",
+      labelEmail: "Email",
+      labelPhone: "Phone",
+      labelLocation: "Location",
+      labelWebsite: "Website",
+      labelFacebook: "Facebook",
+      labelPersonal: "Telegram Personal",
+      labelGroup: "Telegram Group",
+      labelChannel: "Telegram Channel",
+      labelX:"X (Twitter)",
+      email: "mailto:shohid24.info@gmail.com",
+      telegramPersonal: "https://t.me/Nusab19",
+      telegramGroup: "https://t.me/Shohid24Discussion",
+      telegramChannel: "https://t.me/Shohid24Web",
+      xLink: "https://x.com/Shohid24X",
+      contactFormTitle: "Send us a message",
+      formName: "Name",
+      formNamePlaceholder: "Your name",
+      formEmail: "Email",
+      formEmailPlaceholder: "Your email",
+      formSubject: "Subject",
+      formSubjectPlaceholder: "Message subject",
+      formMessage: "Message",
+      formMessagePlaceholder: "Your message",
+      formSubmit: "Send Message",
+    },
+    bn: {
+      title: "যোগাযোগ করুন - শহীদ২৪",
+      description: "শহীদ২৪ এর সাথে যোগাযোগ করুন। আমরা সাহায্য করতে এখানে আছি।",
+      header: "যোগাযোগ করুন",
+      text: "আমরা আপনার মতামত ও পরামর্শ শুনতে চাই। নিচের যেকোনো পদ্ধতি ব্যবহার করে যোগাযোগ করতে দ্বিধা করবেন না।",
+      labelEmail: "ইমেইল",
+      labelPhone: "ফোন",
+      labelLocation: "অবস্থান",
+      labelWebsite: "ওয়েবসাইট",
+      labelFacebook: "ফেসবুক",
+      labelPersonal: "টেলিগ্রাম ব্যক্তিগত",
+      labelGroup: "টেলিগ্রাম গ্রুপ",
+      labelChannel: "টেলিগ্রাম চ্যানেল",
+      labelX:"X (টুইটার)",
+      email: "mailto:shohid24.info@gmail.com",
+      telegramPersonal: "https://t.me/Nusab19",
+      telegramGroup: "https://t.me/Shohid24Discussion",
+      telegramChannel: "https://t.me/Shohid24Web",
+      xLink: "https://x.com/Shohid24X",
+      contactFormTitle: "আমাদের একটি বার্তা পাঠান",
+      formName: "নাম",
+      formNamePlaceholder: "আপনার নাম",
+      formEmail: "ইমেইল",
+      formEmailPlaceholder: "আপনার ইমেইল",
+      formSubject: "বিষয়",
+      formSubjectPlaceholder: "বার্তার বিষয়",
+      formMessage: "বার্তা",
+      formMessagePlaceholder: "আপনার বার্তা",
+      formSubmit: "বার্তা পাঠান",
+    },
+  }
+
+  return translations[lang as keyof typeof translations] || translations.bn
 }
 
-export type Translation = typeof ENGLISH;

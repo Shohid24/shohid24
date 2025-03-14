@@ -24,8 +24,8 @@ const Footer = ({ lang }: { lang: "bn" | "en" }) => {
   ];
 
   return (
-    <footer className="border-t border-border">
-      <MaxWidthWrapper className={`py-10 ${getFontClass(translation.lang)}`}>
+    <footer className="mt-10 border-t border-border">
+      <MaxWidthWrapper className={`py-5 ${getFontClass(translation.lang)}`}>
         {/* Top section with logo and links */}
         <div className="flex flex-col gap-8 md:flex-row md:justify-between">
           {/* Left side - Logo and description */}
@@ -39,7 +39,7 @@ const Footer = ({ lang }: { lang: "bn" | "en" }) => {
                 height={40}
                 className="rounded-md border"
               />
-              <span className="text-xl font-bold text-primary">
+              <span className="text-xl font-bold text-primary md:text-2xl">
                 {translation.logoName}
               </span>
             </div>
