@@ -9,7 +9,8 @@ from pathlib import Path
 load_dotenv()
 sys.stdout.reconfigure(encoding='utf-8')
 
-LOCAL = os.environ.get("LOCAL")
+# LOCAL = os.environ.get("LOCAL")
+LOCAL = True
 MONGO_URI = os.getenv("MONGO_URI")
 client = MongoClient(MONGO_URI)
 db = client.prod
