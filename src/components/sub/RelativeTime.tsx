@@ -1,6 +1,7 @@
 import React from "react";
 import { Clock } from "lucide-react";
 import { cn } from "@/lib/utils";
+import ResponsiveTooltip from "../ui/ResponsiveTooltip";
 
 interface RelativeTimeProps {
   utcTime: string; // ISO UTC timestamp
@@ -91,9 +92,11 @@ const RelativeTime: React.FC<RelativeTimeProps> = ({
       <span className="font-normal">
         {lang === "bn" ? "সর্বশেষ পরিবর্তন:" : "Last Modified:"}
       </span>
-      <time dateTime={formatDateForSEO(utcTime)} className="font-semibold">
-        {getRelativeTime(utcTime, lang)}
-      </time>
+      <ResponsiveTooltip content={formatDateForSEO(utcTime)}>
+        <time dateTime={formatDateForSEO(utcTime)} className="font-semibold">
+          {getRelativeTime(utcTime, lang)}
+        </time>
+      </ResponsiveTooltip>
     </div>
   );
 };

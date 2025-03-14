@@ -45,7 +45,7 @@ Read about ${name}, who was martyred on ${date} during the July 2024 Revolution 
 
 `;
   const bnShareText = `\
-${name}, ${toBengali(date)} তারিখে ২০২৪ এর জুলাই বিপ্লবে শহীদ হন। তাঁর সম্পর্কে বিস্তারিত পড়ুন।
+${name}, ${toBengali(date)} তারিখে ২০২৪ এর জুলাই বিপ্লবে শহীদ হন। তাঁর সম্পর্কে বিস্তারিত পড়ুন।
 
 #Shohid24 #Bangladesh
 
@@ -98,7 +98,7 @@ ${name}, ${toBengali(date)} তারিখে ২০২৪ এর জুলা�
           />
         </div>
 
-        <div className="h-auto w-full flex-1 rounded-md border p-2 text-start text-lg font-bold md:text-xl">
+        <div className="flex h-auto w-full flex-1 flex-col rounded-md border p-2 text-start text-lg font-bold md:text-xl">
           <div className="mb-1.5 flex items-center justify-center gap-2 text-center text-sm tracking-wider text-primary/80">
             {verified ? (
               <>
@@ -168,7 +168,11 @@ ${name}, ${toBengali(date)} তারিখে ২০২৪ এর জুলা�
               </div>
             )}
           </section>
-          <RelativeTime utcTime={lastUpdatedString} lang={lang} />
+          <RelativeTime
+            utcTime={lastUpdatedString}
+            lang={lang}
+            className="mt-auto"
+          />
         </div>
       </div>
       <div className="mx-auto my-2 flex max-w-screen-md flex-col items-center justify-center gap-2 text-balance text-sm md:text-base">
