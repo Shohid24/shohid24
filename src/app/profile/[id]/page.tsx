@@ -20,6 +20,7 @@ export async function generateMetadata({
 }) {
   const { id } = await params;
   const user = (await User.findOne({ id: id }).lean()) as IUser | null;
+  const isDefaultImage = user?.image.endsWith("default.jpg");
 
   if (!user) {
     return {
@@ -33,6 +34,9 @@ export async function generateMetadata({
     title: `${user.en.name}'s Profile - July Martyr`,
     description: `${user.en.name}, a selfless martyr from the July Revolution in Bangladesh. Known for contributions as a ${user.en.profession}, martyred on ${user.date}, ${user.en.info}. View full details on Shohid24.`,
     metadataBase: new URL(HOSTED_URL),
+    openGraph: {
+      images: [isDefaultImage ? "/default.jpg" : `/photos/${id}.jpg`],
+    },
   };
 }
 
