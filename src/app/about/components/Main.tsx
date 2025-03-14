@@ -11,7 +11,7 @@ const Main = ({ translation }: { translation: Translation }) => {
         </h1>
         <Balancer
           key={translation.lang} // Change key to force re-render
-          className="px-2 text-base animate-in fade-in-50 md:text-lg"
+          className="px-2 text-sm md:text-base animate-in fade-in-50"
           ratio={0.95}
           preferNative={false}
         >
