@@ -51,16 +51,16 @@ const SuspendedContact = () => {
             <ContactCard
               icon={<Facebook className="h-6 w-6 text-primary" />}
               title={translation.labelFacebook || "Facebook"}
-              content="Shohid24FB"
-              link="https://www.facebook.com/Shohid24FB"
+              content="fb.com/Shohid24FB"
+              link={translation.fbLink}
             />
 
             {/* Twitter X */}
             <ContactCard
               icon={TwitterXIcon}
               title={translation.labelX || "Twitter"}
-              content="Shohid24FB"
-              link="https://www.facebook.com/Shohid24FB"
+              content="x. com/Shohid24"
+              link={translation.xLink}
             />
 
             {/* Telegram Group */}

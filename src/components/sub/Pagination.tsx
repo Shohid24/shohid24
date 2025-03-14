@@ -108,7 +108,7 @@ const Pagination: React.FC<PaginationProps> = ({
             </Button>
           </TooltipTrigger>
           <TooltipContent className="hidden bg-primary/85 md:block">
-            <kbd>Ctrl+&lt;</kbd>
+            <kbd>Left Arrow &lt;</kbd>
           </TooltipContent>
         </Tooltip>
       </TooltipProvider>
@@ -149,7 +149,7 @@ const Pagination: React.FC<PaginationProps> = ({
             </Button>
           </TooltipTrigger>
           <TooltipContent className="hidden bg-primary/85 md:block">
-            <kbd>Ctrl+&gt;</kbd>
+            <kbd>Right Arrow &gt;</kbd>
           </TooltipContent>
         </Tooltip>
       </TooltipProvider>
