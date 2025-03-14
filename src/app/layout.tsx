@@ -19,6 +19,7 @@ export const metadata: Metadata = {
     "Martyr list of July Movement",
     "July Massacre",
     "shohid.info",
+    "july andolon shohid",
   ],
 };
 
