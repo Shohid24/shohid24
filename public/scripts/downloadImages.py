@@ -1,3 +1,4 @@
+import datetime
 import os
 import sys
 import requests
@@ -7,7 +8,7 @@ from pathlib import Path
 
 # Load
 load_dotenv()
-sys.stdout.reconfigure(encoding='utf-8')
+sys.stdout.reconfigure(encoding="utf-8")
 
 # LOCAL = os.environ.get("LOCAL")
 LOCAL = True
@@ -39,9 +40,14 @@ def download_missing_images():
 
         # Skip if image already exists
         # TODO: Add different logic so you don't need to download all of them
-        if image_path.exists() and LOCAL:
+        diff = datetime.datetime.now() - user["lastUpdated"]
+        if diff > datetime.timedelta(days=2): # skip users updated fore than 2 days ago.
             skipped_count += 1
             continue
+
+        # if image_path.exists() and LOCAL:
+        #     skipped_count += 1
+        #     continue
 
         if not image_url:
             continue
