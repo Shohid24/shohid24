@@ -11,7 +11,7 @@ if os.path.exists("public/photos"):
 MONGO_URI = os.getenv("MONGO_URI")
 client = MongoClient(MONGO_URI)
 db = client["prod"]
-collection = db["individuals"]
+collection = db["individual"]
 data = list(collection.find())
 
 
