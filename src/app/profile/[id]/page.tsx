@@ -31,8 +31,8 @@ export async function generateMetadata({
   }
 
   return {
-    title: `${user.en.name}'s Profile - July Martyr`,
-    description: `${user.en.name}, a selfless martyr from the July Revolution in Bangladesh. Known for contributions as a ${user.en.profession}, martyred on ${user.date}, ${user.en.info}. View full details on Shohid24.`,
+    title: `${user.bn.name} - ${user.en.name}'s Profile - Shohid24`,
+    description: `${user.en.name}, a selfless martyr from the July Revolution in Bangladesh. Known for contribution as a ${user.en.profession}, martyred on ${user.date}, ${user.en.info}. View full details on Shohid24 (শহীদ২৪).`,
     metadataBase: new URL(HOSTED_URL),
     openGraph: {
       images: [isDefaultImage ? "/default.jpg" : `/photos/${id}.jpg`],

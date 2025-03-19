@@ -41,7 +41,7 @@ def download_missing_images():
         # Skip if image already exists
         # TODO: Add different logic so you don't need to download all of them
         diff = datetime.datetime.now() - user["lastUpdated"]
-        if diff > datetime.timedelta(days=2): # skip users updated fore than 2 days ago.
+        if diff > datetime.timedelta(days=7): # skip users updated fore than 7 days ago.
             skipped_count += 1
             continue
 
