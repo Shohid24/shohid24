@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 
 const CreditWebsites = [
   "bssnews.net",
+  "bdarchives.org",
   "kalerkantho.com",
   "talesofjuly-sd.blogspot.com",
   "shohid.info",
