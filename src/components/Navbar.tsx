@@ -33,7 +33,7 @@ const Navbar = ({
       )}
     >
       <div>
-        <Link
+        <a
           href={`/?lang=${lang}`}
           className={cn(
             "text-3xl font-bold tracking-tight text-red-600/90 dark:text-red-500/90",
@@ -41,7 +41,7 @@ const Navbar = ({
           )}
         >
           <Logo />
-        </Link>
+        </a>
       </div>
       <div className="flex items-center justify-center gap-2">
         <div className="flex items-center justify-center gap-2 md:gap-5">
