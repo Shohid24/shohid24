@@ -65,7 +65,7 @@ export default function Share({
             <button
               onClick={copyToClipboard}
               className="rounded-full p-2 -mr-1 md:mr-0 transition-colors hover:bg-gray-100 hover:text-gray-900"
-              aria-label="Copy link to clipboard"
+              // aria-label="Copy link to clipboard"
             >
               {copied ? (
                 <CheckCircle2 className="h-5 w-5 text-sky-500" />
@@ -84,7 +84,7 @@ export default function Share({
             <button
               onClick={() => share("facebook")}
               className="rounded-full p-1.5 transition-colors hover:bg-gray-100 hover:text-blue-600"
-              aria-label="Share on Facebook"
+              // aria-label="Share on Facebook"
             >
               {FacebookIcon}
             </button>
@@ -99,7 +99,7 @@ export default function Share({
             <button
               onClick={() => share("twitter")}
               className="rounded-full p-1.5 transition-colors hover:bg-gray-100 hover:text-blue-400"
-              aria-label="Share on Twitter"
+              // aria-label="Share on Twitter"
             >
               {TwitterXIcon}
             </button>
@@ -114,7 +114,7 @@ export default function Share({
             <button
               onClick={() => share("whatsapp")}
               className="rounded-full p-1.5 transition-colors hover:bg-gray-100 hover:text-green-500"
-              aria-label="Share on WhatsApp"
+              // aria-label="Share on WhatsApp"
             >
               {WhatsAppIcon}
             </button>
@@ -129,7 +129,7 @@ export default function Share({
             <button
               onClick={() => share("telegram")}
               className="rounded-full p-1.5 transition-colors hover:bg-gray-100 hover:text-blue-500"
-              aria-label="Share on Telegram"
+              // aria-label="Share on Telegram"
             >
               {TelegramIcon}
             </button>
