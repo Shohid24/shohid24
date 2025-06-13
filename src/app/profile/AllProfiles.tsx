@@ -16,6 +16,7 @@ import {
 } from "@/components/ui/card";
 import { getTranslation, Translation } from "./components/translations";
 import { parseAsString, useQueryState } from "nuqs";
+import { getLangPath } from "@/lib/utils/language";
 
 const FindProfile = ({
   translation,
@@ -31,10 +32,7 @@ const FindProfile = ({
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (userID.trim()) {
-      router.push(
-        `/profile/${userID.trim().toLowerCase()}` +
-          (lang == "en" ? `?lang=${lang}` : ""),
-      );
+      router.push(getLangPath(`/profile/${userID.trim().toLowerCase()}`, lang));
     }
   };
 

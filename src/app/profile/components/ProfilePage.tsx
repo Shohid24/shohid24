@@ -13,6 +13,7 @@ import Share from "@/components/sub/Share";
 import AlsoSee from "./AlsoSee";
 import { Martyr } from "@/lib/types";
 import { HOSTED_URL } from "@/lib/constants";
+import { getLangPath } from "@/lib/utils/language";
 
 const ProfilePage = ({
   martyr,
@@ -91,9 +92,7 @@ ${name}, ${toBengali(date)} তারিখে ২০২৪ এর জুলা�
           />
           <Separator className="-mt-3 mb-1 md:mt-0" />
           <Share
-            url={
-              `${HOSTED_URL}/profile/${id}` + (lang == "en" ? "?lang=en" : "")
-            }
+            url={getLangPath(`${HOSTED_URL}/profile/${id}`, lang)}
             title={lang == "bn" ? bnShareText : engShareText}
           />
         </div>
