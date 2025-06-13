@@ -10,6 +10,7 @@ import { cn } from "@/lib/utils";
 import { GITHUB_LINK } from "@/lib/constants";
 import { getFontClass } from "@/lib/fontLoader";
 import { useEffect } from "react";
+import { getLangPath } from "@/lib/utils/language";
 
 const Navbar = ({
   lang,
@@ -22,8 +23,7 @@ const Navbar = ({
 
   useEffect(() => {
     document
-      .querySelector(`html[lang="bn"`)
-      ?.setAttribute("lang", translation.lang);
+      .querySelector(`html[lang="bn"`)?.setAttribute("lang", translation.lang);
   }, [translation]);
   return (
     <MaxWidthWrapper
@@ -34,7 +34,7 @@ const Navbar = ({
     >
       <div>
         <a
-          href={`/?lang=${lang}`}
+          href={getLangPath("/", lang)}
           className={cn(
             "text-3xl font-bold tracking-tight text-red-600/90 dark:text-red-500/90",
             translation.lang === "en" && "text-2xl",
@@ -46,12 +46,15 @@ const Navbar = ({
       <div className="flex items-center justify-center gap-2">
         <div className="flex items-center justify-center gap-2 md:gap-5">
           <Anchor
-            href={`/about?lang=${lang}`}
+            href={getLangPath("/about", lang)}
             className="-mr-8 hidden md:block"
           >
             {translation.aboutName}
           </Anchor>
-          <Anchor href={`/contact?lang=${lang}`} className="hidden md:block">
+          <Anchor
+            href={getLangPath("/contact", lang)}
+            className="hidden md:block"
+          >
             {translation.contactName}
           </Anchor>
           <ToggleLanguage lang={lang} setLang={setLang} />

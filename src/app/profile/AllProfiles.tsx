@@ -26,12 +26,14 @@ const FindProfile = ({
 }) => {
   const [userID, setUserID] = useState("");
   const router = useRouter();
+  const lang = translation.lang;
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (userID.trim()) {
       router.push(
-        `/profile/${userID.trim().toLowerCase()}?lang=${translation.lang}`,
+        `/profile/${userID.trim().toLowerCase()}` +
+          (lang == "en" ? `?lang=${lang}` : ""),
       );
     }
   };

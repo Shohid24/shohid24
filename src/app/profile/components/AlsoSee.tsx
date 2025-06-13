@@ -3,11 +3,12 @@ import Link from "next/link";
 import type { Martyr } from "@/lib/types";
 import { Calendar } from "lucide-react";
 import { formatDate, toBengali } from "@/lib/helpers/date";
+import { getLangPath } from "@/lib/utils/language";
 
 function ShortProfile({ martyr, lang }: { martyr: Martyr; lang: "bn" | "en" }) {
   return (
     <Link
-      href={`/profile/${martyr.id}?lang=${lang}`}
+      href={getLangPath(`/profile/${martyr.id}`, lang)}
       className="flex-1 rounded-lg border p-2.5 transition-shadow hover:shadow-md"
     >
       <div className="flex items-center gap-4">

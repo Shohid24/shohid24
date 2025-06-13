@@ -6,6 +6,7 @@ import { ProfileType } from "@/lib/types";
 import { getTranslation } from "@/components/translations";
 import { cn } from "@/lib/utils";
 import { toBengali } from "@/lib/helpers/date";
+import { getLangPath } from "@/lib/utils/language";
 
 interface ProfileWithClassName extends ProfileType {
   className?: string;
@@ -114,7 +115,10 @@ const Profile = ({
   }
 
   return (
-    <Link href={`/profile/${id}?lang=${lang}`} className={sharedClassName}>
+    <Link
+      href={getLangPath(`/profile/${id}`, lang)}
+      className={sharedClassName}
+    >
       {content}
     </Link>
   );

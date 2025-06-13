@@ -12,6 +12,7 @@ import Link from "next/link";
 import { GITHUB_LINK } from "@/lib/constants";
 import Anchor from "./ui/Anchor";
 import { Separator } from "./ui/separator";
+import { getLangPath } from "@/lib/utils/language";
 
 const SidePanel = ({
   className,
@@ -20,6 +21,7 @@ const SidePanel = ({
   className?: string;
   translation: Translation;
 }) => {
+  const lang = translation.lang;
   return (
     <Sheet>
       <SheetTrigger className={className} title="Open Menu">
@@ -35,10 +37,10 @@ const SidePanel = ({
           <Separator />
         </SheetHeader>
         <div className="flex flex-col items-center justify-center gap-2 md:gap-5">
-          <Anchor href={`/about?lang=${translation.lang}`}>
+          <Anchor href={getLangPath("/about", lang)}>
             {translation.aboutName}
           </Anchor>
-          <Anchor href={`/contact?lang=${translation.lang}`}>
+          <Anchor href={getLangPath("/contact", lang)}>
             {translation.contactName}
           </Anchor>
           <Link
