@@ -26,7 +26,7 @@ The July Student Movement of 2024 was a significant moment in Bangladesh’s his
 
 ## How to Contribute
 
-1. **Submit a New Martyr**: If you have verified information about a martyr not listed on the website, you can contribute by submitting their details. [Submit a martyr](https://jsonify24.vercel.app/open/new).
+1. **Submit a New Martyr**: If you have verified information about a martyr not listed on the website, you can contribute by submitting their details. [Submit a martyr](https://shohid24.vercel.app/open/new).
 
 2. **Update Data**: Found incorrect information? Open an issue. Or message us directly in [Telegram](https://t.me/Shohid24Discussion/)
 
