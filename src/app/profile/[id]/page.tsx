@@ -5,6 +5,7 @@ import { getData } from "@/server/getData";
 import { notFound } from "next/navigation";
 import { getTwoRandom } from "@/lib/utils";
 import { HOSTED_URL } from "@/lib/constants";
+import { formatDate } from "@/lib/helpers/date";
 
 await MongoConnection();
 
@@ -32,7 +33,7 @@ export async function generateMetadata({
 
   return {
     title: `${user.bn.name} - ${user.en.name}'s Profile - Shohid24`,
-    description: `${user.en.name}, a selfless martyr from the July Revolution in Bangladesh. Known for contribution as a ${user.en.profession}, martyred on ${user.date}, ${user.en.info}. View full details on Shohid24 (শহীদ২৪).`,
+    description: `${user.en.name}, a selfless martyr from the July Revolution in Bangladesh. Known for contribution as a ${user.en.profession}, martyred on ${formatDate(user.date)}, ${user.en.info}. View full details on Shohid24 (শহীদ২৪).`,
     metadataBase: new URL(HOSTED_URL),
     openGraph: {
       images: [isDefaultImage ? "/default.jpg" : `/photos/${id}.jpg`],

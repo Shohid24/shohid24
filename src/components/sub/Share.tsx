@@ -98,7 +98,7 @@ export default function Share({
           <TooltipTrigger asChild>
             <button
               onClick={() => share("twitter")}
-              className="rounded-full p-1.5 transition-colors hover:bg-gray-100 hover:text-blue-400"
+              className="rounded-full p-1.5 transition-colors hover:bg-gray-100 hover:text-[#000000]"
               // aria-label="Share on Twitter"
             >
               {TwitterXIcon}
