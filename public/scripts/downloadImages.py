@@ -22,7 +22,7 @@ ses = requests.Session()
 def download_missing_images():
     # Create photos directory if it doesn't exist
     photos_dir = Path("public/photos")
-    # photos_dir.mkdir(parents=True, exist_ok=True)
+    photos_dir.mkdir(parents=True, exist_ok=True)
 
     # Get all users with image field
     users = users_collection.find({"image": {"$exists": True}})
