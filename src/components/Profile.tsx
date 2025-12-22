@@ -5,7 +5,7 @@ import { Calendar } from "lucide-react";
 import { ProfileType } from "@/lib/types";
 import { getTranslation } from "@/components/translations";
 import { cn } from "@/lib/utils";
-import { toBengali } from "@/lib/helpers/date";
+import { toBengali, convertToBengaliNumbers } from "@/lib/helpers/date";
 import { getLangPath } from "@/lib/utils/language";
 
 interface ProfileWithClassName extends ProfileType {
@@ -48,7 +48,7 @@ const Profile = ({
       <div className="relative w-fit max-w-[150px] md:max-w-[190px]">
         {show && (
           <span className="absolute left-0 top-0 h-7 min-w-8 rounded-md bg-red-500 px-1 text-xl font-black text-gray-100">
-            {index + 1}
+            {lang === "bn" ? convertToBengaliNumbers(index + 1) : index + 1}
           </span>
         )}
         {noLink ? (
@@ -90,14 +90,21 @@ const Profile = ({
         >
           {profession || translation.unavailable}
         </p>
-        <p className="text-sm md:text-base" itemProp="Institution">
+        <p className="text-xs md:text-sm tracking-wide" itemProp="Institution">
           {info || ""}
         </p>
         <p
-          className="mt-auto flex items-center justify-start gap-1 text-nowrap"
+          className="md:hidden mt-auto text-xs flex items-center justify-start gap-1 text-nowrap"
           itemProp="MartyrDate"
         >
-          <Calendar size={18} className="-mt-[1px]" />
+          <Calendar size={15} className="-mt-[0.5px]" />
+          {lang == "bn" ? toBengali(martyrDate) : martyrDate}
+        </p>
+        <p
+          className="md:flex hidden mt-auto text-sm flex items-center justify-start gap-1 text-nowrap"
+          itemProp="MartyrDate"
+        >
+          <Calendar size={16} className="-mt-[0.5px]" />
           {lang == "bn" ? toBengali(martyrDate) : martyrDate}
         </p>
       </div>

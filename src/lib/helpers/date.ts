@@ -28,6 +28,11 @@ const englishToBengaliNumerals: NumericMapping = Object.fromEntries(
   Object.entries(bengaliToEnglishNumerals).map(([k, v]) => [v, k]),
 );
 
+
+export function convertToBengaliNumbers(number: number): string {
+  return number.toString().replace(/\d/g, (digit) => englishToBengaliNumerals[digit] || digit);
+}
+
 // Month name mappings
 const monthNamesMappings: MonthNameMappings = {
   en: {

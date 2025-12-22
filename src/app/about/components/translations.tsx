@@ -62,6 +62,14 @@ export const ENGLISH = {
       available on GitHub.
       <br />
       <br />
+      We are not affiliated with any political party. <b>Shohid24</b> is our own independent and neutral project. We will never take sides with any party, no matter who they are.
+      <br />
+      However, our stance on the Awami League is clear:
+      <q className="ml-2 my-2 block bg-red-400/30 px-2 py-1 w-fit rounded-md">
+        The Awami League are <b>murderers</b>, the Awami League are <b>fascists</b>, and they will never be allowed to return to the soil of Bangladesh.
+      </q>
+
+      <br />
       We express our gratitude to the following websites and news portals for
       providing information at various times.
       <ul className="mb-5 mt-2">
@@ -134,6 +142,13 @@ export const BANGLA = {
       আপ-টু-ডেট। এছাড়াও, আমাদের ওয়েবসাইটের সমস্ত সোর্স কোড এবং তথ্য গিটহাবে
       পাবলিক করে রাখা হয়েছে।
       <br />
+      <br />
+      আমরা কোনো রাজনৈতিক দলের সাথে যুক্ত নই। <b>শহীদ২৪</b> আমাদের নিজস্ব এবং নিরপেক্ষ প্রজেক্ট। কোনো দলীয় পক্ষপাতিত্ব আমরা কখনোই নিবো না, সে যেই দলই হোক।
+      <br />
+      তবে আওয়ামী লীগ সম্পর্কে আমাদের অভিমত স্পষ্টঃ
+      <q className="ml-2 my-2 block bg-red-400/30 px-2 py-1 w-fit rounded-md">
+        আওয়ামী লীগ <b>খুনি</b>, আওয়ামী লীগ <b>ফ্যাসিস্ট</b>, আওয়ামী লীগ-কে বাংলাদেশের মাটিতে আর ফিরে আসতে দেওয়া হবে না।
+      </q>
       <br />
       বিভিন্ন সময় তথ্যাবলি সংগ্রহ করতে পারায় নিচের ওয়েবসাইট এবং নিউজ
       পোর্টালদেরকে আমাদের আন্তরিক কৃতজ্ঞতা জানাই।

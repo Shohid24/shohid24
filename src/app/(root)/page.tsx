@@ -13,7 +13,7 @@ async function fetchData() {
 }
 
 export default async function Page() {
-  // This will only run at build time for static exports
+  // to run at build time for static exports
   const { data, lastUpdated } = await fetchData();
 
   console.log("Last updated:", lastUpdated);
